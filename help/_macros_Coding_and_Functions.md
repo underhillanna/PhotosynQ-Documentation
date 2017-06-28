@@ -53,12 +53,12 @@ Sometimes you have multiple parameters calculated. To show the most important pa
 output["order"] = ["P1","P3","P2"];
 ```
 
-Just replace `P1`, `P2`, etc. with the names of the parameters you want to be ordered and appere on top of the list. Not all parameters need to be listed here.
+Just replace `P1`, `P2`, etc. with the names of the parameters you want to be ordered and appear on top of the list. Not all parameters need to be listed here.
 
 ***
 
 #### Show additional Traces
-The recorded trace `json.data_raw` will be shown with a measurement. In case you would like to show some extra traces based on your calculations, just add an array to your output parameters. This array need _more than 10 values_ to be shown as a sparkline.
+The recorded trace `json.data_raw` will be shown with a measurement. In case you would like to show some extra traces based on your calculations, just add an array to your output parameters. This array need _more than 4 values_ to be shown as a sparkline.
 
 ```javascript
 output["Additional Trace"] = [1,3,4,90,87,50,3,2,1,2,7,…];
@@ -67,7 +67,7 @@ output["Additional Trace"] = [1,3,4,90,87,50,3,2,1,2,7,…];
 ***
 
 #### Show Colors
-Sometimes representing a value as a color is more usefull than a plain number. These three options are available:
+Sometimes representing a value as a color is more useful than a plain number. These three options are available:
 + Hexadecimal: `#44bd78`
 + RGB (Red, Green, Blue): `rgb(68,189,120)` (values from 0 to 255)
 + RGBA (Red, Green, Blue, alpha): `rgba(68,189,120,0.5)` (values from 0 to 255), (alpha 0 to 1)
