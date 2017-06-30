@@ -4,17 +4,17 @@ Once you have selected the project that you want to contribute measurements to, 
 
 1. Before clamping the leaf, answer all of the questions listed in the project
 2. Select **measure.**  
-3. Clamp the leaf using the **Best Management Practices** listed below. The MultispeQ measures the leaf in its natural state. This means that changing the state of the leaf to take a measurement can affect your results!
+3. Clamp the leaf using the **Best Measurement Practices** listed below. The MultispeQ measures the leaf in its natural state. This means that changing the state of the leaf to take a measurement can affect your results!
 4. The protocol will take ~15 seconds to complete. Once the measurement is complete, confirm that the measurement quality is good.
 5. Select **ACCEPT** if you want to submit the measurement to the website or **DISCARD** if you want to discard the measurement and try again.
 
 ***Tips:*** If you are using the default protocol **Leaf Photosynthesis v1.0** the measurement will automatically start once you have opened the clamp and closed it over the leaf. Other protocols the measurement may begin as soon as you select **Take Measurement**. - **Make sure you know when the protocol you are using begins!**
 
-#### Best Management Practices
-   - do not position your body so you are shading the leaf or the light sensor (A)
-   - do not pull the leaf out of the shade and into the sun or vice versa
-   - do not change the angle of the leaf, this will change how the leaf is intercepting light
-   - in order for the compass measurement to be accurate, clamp the leaf on the left side when facing the stem. 
+#### Best Measurement Practices
+   - Do not position your body so you are shading the leaf or the light sensor (A)
+   - Do not pull the leaf out of the shade and into the sun or vice versa
+   - Do not change the angle of the leaf, this will change how the leaf is intercepting light
+   - In order for the compass measurement to be accurate, clamp the leaf on the left side when facing the stem. 
    - Make sure the leaf completely covers the light guide (B). If the leaves you are measuring are too small, you may need to [mask](https://photosynqprod.s3.amazonaws.com/files/photosynq.org/specialfeatures/measuring-small-leaves.pdf) the light guides and recalibrate the MultispeQ
 
 ![Best Measurement Practices](../images/tutorials/_data_collection_clamp_leaf.jpg)
