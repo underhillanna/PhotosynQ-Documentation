@@ -23,9 +23,15 @@ perl -p -i -e "s/INSERT_DATE/$(date +%b) $(date +%d), $(date +%Y)/g" PhotosynQ-G
 echo "Converting markdown to pdf";
 
 # Now we can build the pdfs as well
-#TODO: Tables need to be improved
-pandoc PhotosynQ-Help-Manual.md --latex-engine=xelatex --from=markdown_github --table-of-contents --wrap=auto --columns=81 --variable=geometry:"top=2cm, bottom=2cm, left=2cm, right=2cm" -o PhotosynQ-Help-Manual.pdf
-pandoc PhotosynQ-Getting-Started.md --latex-engine=xelatex --from=markdown_github --table-of-contents --wrap=auto --columns=81 --variable=geometry:"top=2cm, bottom=2cm, left=2cm, right=2cm" -o PhotosynQ-Getting-Started.pdf
+pandoc PhotosynQ-Help-Manual.md --from=markdown_github -o PhotosynQ-Help-Manual.html
+pandoc PhotosynQ-Getting-Started.md --from=markdown_github --table-of-contents -o PhotosynQ-Getting-Started.html
+
+pandoc PhotosynQ-Help-Manual.html --latex-engine=xelatex --table-of-contents --wrap=auto --variable=geometry:"top=2cm, bottom=2cm, left=2cm, right=5cm" -o PhotosynQ-Help-Manual.pdf
+pandoc PhotosynQ-Getting-Started.html --latex-engine=xelatex --table-of-contents --wrap=auto --variable=geometry:"top=2cm, bottom=2cm, left=2cm, right=5cm" -o PhotosynQ-Getting-Started.pdf
+
+# Clean up
+rm PhotosynQ-Help-Manual.html
+rm PhotosynQ-Getting-Started.html
 
 # Compiling finished
 echo "Done...";
