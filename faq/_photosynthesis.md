@@ -45,6 +45,8 @@ Cruz, J. A., Savage, L. J., Zegarac, R., Hall, C. C., Satoh-Cruz, M., Davis, G. 
 
 Kuhlgert, S., Austic, G., Zegarac, R. Osei-Bonsu, I.,Hoh, D., Chilvers, M. I., et al. (2016). **MultispeQ Beta: a tool for large-scale plant phenotyping connected to the open PhotosynQ network.** *R. Soc. Open Sci.* 3, 160592. [doi:10.1098/rsos.160592].
 
+Tietz, S., Hall, C. C., Cruz, J. A., Kramer, D. M. (2017) **NPQ<sub>(T)</sub>: a chlorophyll fluorescence parameter for rapid estimation and imaging of non-photochemical quenching of excitons in photosystem-II-associated antenna complexes** *Plant. Cell Environ.* 40(8), 1243–1255. [doi:10.1111/pce.12924]
+
 [doi:10.1146/annurev.arplant.59.032607.092759]: https://dx.doi.org/10.1146/annurev.arplant.59.032607.092759
 
 [doi:10.1016/S1360-1385(02)00010-9]: https://dx.doi.org/10.1016/S1360-1385(02)00010-9
@@ -54,3 +56,5 @@ Kuhlgert, S., Austic, G., Zegarac, R. Osei-Bonsu, I.,Hoh, D., Chilvers, M. I., e
 [doi:10.1016/j.cels.2016.06.001]: https://dx.doi.org/10.1016/j.cels.2016.06.001
 
 [doi:10.1098/rsos.160592]: https://dx.doi.org/10.1098/rsos.160592
+
+[doi:10.1111/pce.12924]: https://dx.doi.org/10.1111/pce.12924
