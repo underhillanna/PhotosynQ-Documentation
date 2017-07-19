@@ -35,7 +35,7 @@ This is all we need to record the photosystem II quantum efficiency, or Phi2. Th
 ***
 
 #### Pulses
-A measurement is divided into pulses. Pulses can be grouped into pulse sets. The example below shows a total of **4,090** pulses grouped into **4** pulse sets. Most of the following parameters require you to define those **4** groups. `pulses` defines those groups, `pulse_distance` defines how far apart each pulse is (in *µs*). The command `pulse_length` defines the pulse duration in *ms*.
+A measurement is divided into pulses. Pulses can be grouped into pulse sets. The example below shows a total of **4,090** pulses grouped into **4** pulse sets. Most of the following parameters require you to define those **4** groups. `pulses` defines those groups, `pulse_distance` defines how far apart each pulse is (in *µs*). The command `pulse_length` defines the pulse duration in *µs*.
 
 **Table View**
 
@@ -287,7 +287,7 @@ Putting all the pieces together, the protocol to measure Phi2 looks like this:
 
 | pulses | pulse_distance | pulse_length | pulsed_lights | pulsed_lights_brightness | nonpulsed_lights | nonpulsed_lights_brightness | detectors |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 4000 | 1000 |  30 | 0 | 0 | 2 | light_intensity | 0 |
+| 4000 | 1000 | 30 | 0 | 0 | 2 | light_intensity | 0 |
 | 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
 | 50 | 10000 | 30 | 3 | 2000 | 2 | 4500 | 1 |
 | 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
