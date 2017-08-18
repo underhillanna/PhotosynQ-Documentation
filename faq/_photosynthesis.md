@@ -1,5 +1,5 @@
 #### What are we measuring here?
-Photosynq is a platform to help you identifying plant phenotypes. Our standard measurement protocol will collect the following parameters*:
+PhotosynQ is a platform to help you identifying plant phenotypes. Our standard measurement protocol will collect the following parameters*:
 
 | Parameter | What does it mean? |
 | ---------- | ------- |

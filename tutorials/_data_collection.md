@@ -44,7 +44,7 @@ Here is a list of the most important parameters and their typical ranges. If you
 | Leaf Temp Differential | The difference between leaf temperature and ambient temperature in degrees Celsius. `The typical range is from -5 to +10` |
 | Light Intensity (PAR) | Photosynthetically Active Radiation in the 400 - 700 nanometer wavelengths that is used for photosynthesis. `Typical ranges 0 to approximately 2000 microeinsteins (under full sun)` |
 
-If you click on **Show More** you can see many more details about the sensor readings. Additional information about PhotosynQ parameters can be found [here](https://www.photosynq.org/faq/photosynthesis).
+If you click on **Show More** you can see many more details about the sensor readings. Additional information about PhotosynQ parameters can be found [here](https://photosynq.org/faq/photosynthesis).
   
 ***
 

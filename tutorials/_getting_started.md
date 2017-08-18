@@ -2,7 +2,7 @@
 
 Before you can start using PhotosynQ, you will need to create an account. 
 
-1.	You can create an account from the [website](www.photosynq.org), the desktop app, or the mobile app.  
+1.	You can create an account from the [website](https://photosynq.org/), the desktop app, or the mobile app.  
 	- Using the website: click on the ‘sign up’ button in the upper right corner of the website.  
 	- Using the desktop app: Download the **PhotosynQ** app from the chrome [webstore](https://chrome.google.com/webstore/category/apps) and select "sign up."
 	- Using the mobile app: Download the **PhotosynQ** app from the Google [Playstore](https://play.google.com/store/apps/details?id=org.photosynq.android.photosynq) and select "no account? Register here."
@@ -17,7 +17,7 @@ Before you can start using PhotosynQ, you will need to create an account.
 ### Connect an Instrument
 You can use Bluetooth or USB to connect your Instrument with your device. Depending on the instrument and device, some connection options may not be available.
 
-For data collection in the field, most people will use the mobile app. So lets focus on connecting the MultispeQ to your android phone. For tips on how to connect to the PhotosynQ desktop app please check out [Connect an instrument](https://www.photosynq.org/help/apps_Connect_an_Instrument) in the [Help Center](https://www.photosynq.org/help).
+For data collection in the field, most people will use the mobile app. So lets focus on connecting the MultispeQ to your android phone. For tips on how to connect to the PhotosynQ desktop app please check out [Connect an instrument](https://photosynq.org/help/apps_Connect_an_Instrument) in the [Help Center](https://photosynq.org/help).
 
 **Before connecting your MultispeQ to the Android or Desktop App you need to turn on the MultispeQ by pressing and holding the power button for 5 seconds.** There is no indicator light to let you know if it is turned on.
  
@@ -36,7 +36,7 @@ For data collection in the field, most people will use the mobile app. So lets f
 
 **You are now ready to take measurements with your MultispeQ!**
 
-*If you are having trouble connecting to the MultispeQ, please look for trouble shooting tips in the [help center](https://www.photosynq.org/help/apps_Connect_an_Instrument)
+*If you are having trouble connecting to the MultispeQ, please look for trouble shooting tips in the [help center](https://photosynq.org/help/apps_Connect_an_Instrument)
 
 ***
 
@@ -45,7 +45,7 @@ For data collection in the field, most people will use the mobile app. So lets f
 **Projects are the lifeblood of PhotosynQ, so it is important to understand what you are looking at!**
 
 - Inside the app, you can find all the projects you have either created or joined. You can do this by selecting the menu in the upper left corner of the app and then selecting **My Projects**.
-- Everyone is automatically joined to the tutorial project, [Getting Started with Multispeq](https://www.photosynq.org/projects/getting-started-with-multispeq)
+- Everyone is automatically joined to the tutorial project, [Getting Started with Multispeq](https://photosynq.org/projects/getting-started-with-multispeq)
 - Check out the overview and directions for the project.  
 	1. These are sometimes the only source of communication between the project creator and you.  
 	2. Reading the directions is vital to taking proper measurements.  
@@ -53,4 +53,4 @@ For data collection in the field, most people will use the mobile app. So lets f
 
 ![My Projects: List of joined or created projects available for data contribution.](../images/tutorials/_getting_started_my_projects.jpg)
 
-Take a few measurements using the **Getting Started with MultispeQ** project or [create your own project](https://www.photosynq.org/projects/categories).
+Take a few measurements using the **Getting Started with MultispeQ** project or [create your own project](https://photosynq.org/projects/categories).
