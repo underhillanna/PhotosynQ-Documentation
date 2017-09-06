@@ -12,3 +12,6 @@ Sometimes the app does not work as expected. Please try this first:
 - [x] Restart the browser.
 - [x] Make sure you have sufficient storage.
 - [x] Make sure you have an internet connection.
+
+#### Compatability with other browsers
+Currently only Google Chrome has the ability to communicate with serial devices like MultispeQ. 
