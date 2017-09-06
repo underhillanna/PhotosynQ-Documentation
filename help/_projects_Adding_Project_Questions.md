@@ -1,5 +1,5 @@
-### What is a project question?
-These questions are answered before every measurement and are important for improving the analysis and documentation of every contribution. Example questions could include:
+### What is a Project Question?
+In Projects you can define Questions which have to be answered before each measurement. These Questions can be used to input additional non sensor data (e.g. plant height) or to filter and categorize your measurements when you explore your Project data. Project Questions are important for improving the analysis and documentation of every contribution. Example questions could include:
 - What is the variety?
 - What is the treatment?
 - What is the replicate?
