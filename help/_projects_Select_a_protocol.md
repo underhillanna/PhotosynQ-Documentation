@@ -38,5 +38,5 @@ These are instructions that are sent to the instrument on how to conduct a measu
     - You can change the order of protocols by dragging them up or down the list
     - Hovering over the protocol name will bring up a pop-up window with the protocol description. Click on 'Read More' in the pop up to bring up the full protocol description.
     
-#### Does the order of Protocols matter?
+### Does the order of Protocols matter?
 The protocols will run in the order that you select them. Depending on what you are measuring, it may be important to keep them in a certain order. For example, measure photosynthetic yield before measuring relative chlorophyll content so that the LED's from the relative chlorophyll content measurement do not affect your photosynthetic yield value.
