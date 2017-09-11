@@ -20,6 +20,9 @@ A very basic set of statistical tools for your project data analysis.
 3. Click **Run ANOVA**.
 
 #### Chi Square test
-1. Pick the parameter that you want to test for. **Note**, the parameter must be a categorical variable.
+1. Pick the parameter that you want to test for. 
+
+***Note*** the parameter must be a categorical variable.
+
 2. Pick at least 2 series to compare.
 3. Click **Run Chi Square test**.
