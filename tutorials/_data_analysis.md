@@ -15,6 +15,9 @@ A t-test compares the values of a single parameter (e.g. ΦII) between two serie
 #### ANOVA
 Analysis of variance (ANOVA) compares a single parameter (e.g. ΦII) between more than two series. A One-Way ANOVA should be used when the series are created using one filter (e.g. Leaf #). This rule may not apply if the project is looking for several plant species and a second filter is used to select only one species. 
 
+#### Chi Square Test
+A chi-square test for independence compares two parameters in a project to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each another.
+
 ***
 
 ### Advanced Analysis
