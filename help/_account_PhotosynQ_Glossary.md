@@ -3,13 +3,13 @@ To help you getting started, here is a list of commonly used terms to help you t
 
 | Term | Definition |
 |---|-------------------------------------------------------|
-| **Device** | On PhotosynQ computers, phones and tablets are generally called **Devices**. |
+| **Device** | On PhotosynQ, computers, phones and tablets are generally called **Devices**. |
 | **App** | Program that can be installed on a Device. |
 | **Instrument** | Equipment that connects to **Apps** and are used to take **Measurements** (e.g. the MultispeQ). |
 | **Contribution** | **Measurements** taken for a project and submitted to PhotosynQ. |
-| **Discussion** | Projects, Protocols and Macros have a discussion section, to help having an easy exchange between users. |
-| **Discussion Post** | In a discussion every comment, question or shared image is called **Post**. |
-| **Discussion Thread** | In Projects **Discussions** can have multiple Topics or **Threads**. Protocols and Macros only have one **Thread**. |
+| **Discussion** | Projects, Protocols and Macros have a discussion section, to facilitate the easy exchange of ideas between users. |
+| **Discussion Post** | In a discussion, every comment, question or shared image is called **Post**. |
+| **Discussion Thread** | In Projects, **Discussions** can have multiple Topics or **Threads**. Protocols and Macros only have one **Thread**. |
 | **Firmware** | The software installed on an instrument. |
 | **Flag** | Some measurements might be of low quality, so they can be **flagged**. **Flagged** data is hidden during analysis but is **NOT** deleted from the project. |
 | **Macro** | **Macros** are small pieces of code connected to a **Protocol** to help analyzing the measurement, right after it is finished. |
