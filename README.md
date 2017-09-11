@@ -60,6 +60,20 @@ Make sure to use png, jpeg or gifs if animations are necessary.
 
 `<i class="fa fa-..."></i>` Will include the corresponding <http://fontawesome.io/> icon on the website.
 
+### Elasticlunr.js Search Index
+
+Manually generate a search index for Elasticlunr.js
+
+```bash
+$ node index.js create
+```
+
+Test the search function as it is used on PhotosynQ
+
+```bash
+$ node index.js search --term <search term>
+```
+
 ### Compile Master documents
 
 To generate one big help document and one tutorials document, use the compile script.
