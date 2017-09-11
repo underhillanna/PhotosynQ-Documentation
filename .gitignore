@@ -1,10 +1,8 @@
 # Script generated files #
 ##########################
-PhotosynQ-Help-Manual.md
-PhotosynQ-Getting-Started.md
-PhotosynQ-Help-Manual.pdf
-PhotosynQ-Getting-Started.pdf
-
+.vscode/
+dist/
+node_modules/
 
 # OS generated files #
 ######################
