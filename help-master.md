@@ -60,6 +60,10 @@
 [help/_apps_My_Projects.md]
 
 ## Projects
+[help/_projects_What_are_projects.md]
+
+***
+
 [help/_projects_Join_a_project.md]
 
 ***
@@ -126,6 +130,10 @@
 [help/_data_Set_Thresholds.md]
 
 ## Protocols
+[help/_protocols_Protocol_Basics.md]
+
+***
+
 [help/_protocols_View_your_Protocols.md]
 
 ***
@@ -143,6 +151,10 @@
 ***
 
 [help/_protocols_Run_a_Protocol.md]
+
+***
+
+[help/_protocols_Commands.md]
 
 ## Macros
 [help/_macros_View_your_Macros.md]
@@ -163,12 +175,22 @@
 
 [help/_macros_Coding_and_Functions.md]
 
+## Macros
+[help/_instruments_Instrument_basics.md]
+
+***
+
+[help/_instruments_What_does_the_MultispeQ_measure.md]
+
+***
+
+[help/_instruments_MultispeQ_v1.0_configuration.md]
+
 ## Tutorials & More
 + [Tutorials](https://photosynq.org/tutorials)
 + [Forums](https://photosynq.org/forums)
-+ [Frequently Asked Questions](https://photosynq.org/faq)
 + [Latest Updates (Blog)](https://blog.photosynq.org/)
-+ [Documentation](https://photosynq.org/documentation)
++ [API (Documentation)](https://photosynq.org/rdoc)
 + [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
