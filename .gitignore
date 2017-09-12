@@ -6,6 +6,8 @@ node_modules/
 
 # OS generated files #
 ######################
+*.sh
+!compile.sh
 .DS_Store
 .DS_Store?
 ._*
