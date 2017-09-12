@@ -38,8 +38,10 @@ The standard MultispeQ protocol measures the following parameters*:
 
 ***
 
+#### Check out this Talk of what the MultispeQ measures by Dr. Kramer
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pU5vOtE1wE8" frameborder="0" allowfullscreen></iframe>
 
-#### Check out this [explanatory video](https://www.youtube.com/watch?v=pU5vOtE1wE8&t) of what the MultispeQ measures by Dr. Kramer
+***
 
 #### Where can I find more information?
 You can search <https://pubmed.com> or <https://scholar.google.com> if you are looking for scientific literature. Below you find a small selection of literature that will get you started:
