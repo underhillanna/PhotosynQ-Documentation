@@ -16,6 +16,8 @@ In Projects you can define Questions which have to be answered before each measu
 5. Select 'Done reorder.'
 6. If you have added all of your questions and you are happy with the order of the questions, click on 'Save and Next.'
 
+![Add a Question](../images/help/_projects_Add_a_Question.png)
+
 #### Multiple Choice: 
 This is the best choice if you know all of the possible answers to the question
 1. Input the question in the 'Question' box
