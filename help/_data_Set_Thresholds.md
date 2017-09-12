@@ -7,7 +7,7 @@ You can set ranges for individual *numeric* **Parameters**, allowing you to excl
 #### Add Thresholds
 1. Select **Add** to add a new Threshold
 
-![Open Threshholds](../images/help/_data_Set Threshold.png)
+![Open Threshholds](../images/help/_data_Set_Threshold.png)
 
 2. Choose the **Parameter** and set the range.
 3. Add more Thresholds if you like.
