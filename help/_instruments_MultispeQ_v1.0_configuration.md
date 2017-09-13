@@ -1,6 +1,6 @@
 MultispeQ v1.0 Configuration
 -------
-![MultispeQ v1.0 ../images/help/](../images/help/_instruments_MultispeQ_v1.0_measurements.png)
+![MultispeQ v1.0 measurements](../images/help/_instruments_MultispeQ_v1.0_measurements.png)
 
 ## Lights
 There are sets of five LEDs each on the **main body** and the **leaf clamp**.
