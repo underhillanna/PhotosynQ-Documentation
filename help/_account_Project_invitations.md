@@ -10,6 +10,8 @@ Others can invite you to collaborate on a project.
 
 ***Tip:*** Below the project name it is indicated if you are invited as a **Collaborator** or **Administrator**.
 
+![Invitations](../images/help/_projects_Invitations.png)
+
 #### Decline Invitations
 1. Open your user page by clicking on your name in the top **Menu**.
 2. On the left hand side click on **Invitations**. The little badge indicates if there are new invites.
