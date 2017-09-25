@@ -3,6 +3,10 @@ echo -e "\033[92mBuild Master Documents for PhotosynQ\033[0m";
 echo "------------------------------------";
 echo "Compiling Help Files";
 
+# Generate new documentation index
+# This will collect also the firmware documentation if available
+node index.js create
+
 # Merge all files into one markdown document
 perl -ne 's/^\[(.+)\].*/`cat $1`/e;print' help-master.md > ./dist/PhotosynQ-Help-Manual.md
 perl -ne 's/^\[(.+)\].*/`cat $1`/e;print' tutorials-master.md > ./dist/PhotosynQ-Getting-Started.md
@@ -32,9 +36,6 @@ pandoc ./dist/PhotosynQ-Getting-Started.html --latex-engine=xelatex --table-of-c
 # Clean up
 rm ./dist/PhotosynQ-Help-Manual.html
 rm ./dist/PhotosynQ-Getting-Started.html
-
-# Generate new documentation index
-node index.js create
 
 # Compiling finished
 echo -e "\033[92mDone...\033[0m";
