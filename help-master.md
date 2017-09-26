@@ -175,7 +175,7 @@
 
 [help/_macros_Coding_and_Functions.md]
 
-## Macros
+## Instruments
 [help/_instruments_Instrument_basics.md]
 
 ***
