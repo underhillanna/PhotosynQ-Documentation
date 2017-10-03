@@ -24,7 +24,17 @@ var createIDX = function(options){
 	}catch(e){
 		console.log('Firmware Documentation Repo not found.');
 	}
-	
+
+	// Copy the protocol commands from the firmware documentation
+	try{
+		var file = '_instruments_Console_Commands.md'
+		var path = '../PhotosynQ-Firmware/commands/docs/'
+		jetpack.copy(path+file, './help/'+file, { overwrite: true });
+		console.log('Firmware Instrument Commands copied.');
+	}catch(e){
+		console.log('Firmware Documentation Repo not found.');
+	}
+
 	// Now loop through the files in help
 	var files = jetpack.inspectTree('./help/').children;
 	var hfc = 0;
