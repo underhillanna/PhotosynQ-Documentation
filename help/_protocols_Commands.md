@@ -77,6 +77,10 @@ The autogain function is added to the main section of the protocol. Multiple aut
 
 **Editor:** fixed
 
+**Devices:**
+
+`MultispeQ 1` 
+
 **Last Edited:** August 17, 2017
 
 ***
@@ -342,19 +346,7 @@ The returned sensor values from most `environmental` calls are accessible inside
 ***
 
 ### ir\_baseline<a id="ir_baseline"></a>
-Text with markdown formatting, no html
-
-**Input:** number, array, nested array, string
-
-**Code:**
-
-```javascript
-"command name": <number>,
-```
-
 **Type:** protocol
-
-**Editor:** table, fixed, editor instructions
 
 **Versions:**
 
@@ -1193,8 +1185,6 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 **Alias:**
 
 + open_close_start
-
-**Input:** number, array, nested array, string
 
 **Code:**
 
