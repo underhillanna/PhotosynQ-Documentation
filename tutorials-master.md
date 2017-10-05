@@ -25,12 +25,11 @@
 
 [tutorials/_building_a_macro.md]
 
-## More
-+ [Tutorials](https://photosynq.org/tutorials)
+## Help More
++ [Help](https://photosynq.org/help)
 + [Forums](https://photosynq.org/forums)
-+ [Frequently Asked Questions](https://photosynq.org/faq)
 + [Latest Updates (Blog)](https://blog.photosynq.org/)
-+ [Documentation](https://photosynq.org/documentation)
-+ [Videos (<i class="fa fa-youtube"></i> YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
++ [API (Documentation)](https://photosynq.org/rdoc)
++ [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
