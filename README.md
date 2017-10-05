@@ -85,6 +85,7 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 | File | Tutorial Content |
 | :-- | :-- |
 | [_getting_started.md](tutorials/_getting_started.md) | How to set up an account, connect an instrument and use a project. |
+| [_creating_a_project.md](tutorials/_creating_a_project.md) | How to create a new Project for data collection. |
 | [_data_collection.md](tutorials/_data_collection.md) | How to collect data for a Project. |
 | [_data_viewing.md](tutorials/_data_viewing.md) | How to view data in the Web-Browser. |
 | [_data_analysis.md](tutorials/_data_analysis.md) | Overview for data analysis. R and Python examples are documented in the corresponding repos. |

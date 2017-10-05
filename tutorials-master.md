@@ -5,6 +5,10 @@
 
 [tutorials/_getting_started.md]
 
+## Creating a Project
+
+[tutorials/_creating_a_project.md]
+
 ## Data Collection
 
 [tutorials/_data_collection.md]
