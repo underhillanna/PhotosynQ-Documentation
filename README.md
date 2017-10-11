@@ -34,6 +34,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
 + [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
 + [My Projects](help/_apps_My_Projects.md)
++ [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
  
 ### Projects
 + [What are projects?](help/_projects_What_are_projects.md)
