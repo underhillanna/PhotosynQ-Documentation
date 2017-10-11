@@ -99,10 +99,6 @@
 
 [help/_projects_Managing_Project_Settings.md]
 
-***
-
-[help/_projects_Viewing_Notes_and_Pictures.md]
-
 ## View & Analyze Data
 [help/_data_View_your_Project_Data.md]
 
@@ -137,6 +133,10 @@
 ***
 
 [help/_data_Set_Thresholds.md]
+
+***
+
+[help/_data_Viewing_Notes_and_Pictures.md]
 
 ## Protocols
 [help/_protocols_Protocol_Basics.md]
