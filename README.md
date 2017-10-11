@@ -46,6 +46,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Adding a Project Description](help/_projects_Adding_a_Project_Description.md)
 + [Editing a Project](help/_projects_Editing_a_Project.md)
 + [Managing Project Settings](help/_projects_Managing_Project_Settings.md)
++ [Adding Notes and Pictures](help/_projects_Viewing_Notes_and_Pictures.md)
  
 ### View & Analyze Data
 + [View your Project Data](help/_data_View_your_Project_Data.md)

@@ -59,6 +59,11 @@
 
 [help/_apps_My_Projects.md]
 
+***
+
+[help/_apps_Adding_Notes_and_Pictures.md]
+
+
 ## Projects
 [help/_projects_What_are_projects.md]
 
@@ -93,6 +98,10 @@
 ***
 
 [help/_projects_Managing_Project_Settings.md]
+
+***
+
+[help/_projects_Viewing_Notes_and_Pictures.md]
 
 ## View & Analyze Data
 [help/_data_View_your_Project_Data.md]
