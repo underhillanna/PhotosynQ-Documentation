@@ -15,7 +15,7 @@ To modify a measurement:
 
 ***Note: if you go back and add another note, it will overwrite your last note with the new note.***
 
-![Adding Mobile Notes and Pictures](../help/images/_mobile_add_notes.jpg)
+![Adding Mobile Notes and Pictures](../help/images/_mobile_add_notes.png)
 
 
 #### Desktop App
@@ -26,4 +26,4 @@ In the Desktop App, notes and pictures can only be added BEFORE you accept the m
 2. Type in a note, use the computer's camera to take a picture, or upload an image from your computer.
 3. Once you have added all of your notes and images, select **Add**.
 
-![Adding Desktop Notes and Pictures](../help/images/_dsktop_add_notes.jpg)
+![Adding Desktop Notes and Pictures](../help/images/_desktop_add_notes.png)
