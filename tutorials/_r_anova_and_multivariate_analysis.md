@@ -393,15 +393,15 @@ PhiNO2 <- aov(PhiNO ~ Block + sqrtPAR + TimeOfDay + Variety., photosynthesis)
 summary(PhiNO2)
 ```
 
-            Df  Sum Sq Mean Sq F value   Pr(>F)    
-Block        3 0.01223 0.00408   1.051   0.3747    
-sqrtPAR      1 0.08537 0.08537  22.003 1.11e-05 ***
-TimeOfDay    1 0.01840 0.01840   4.742   0.0324 *  
-Variety.     3 0.02843 0.00948   2.443   0.0702 .  
-Residuals   80 0.31040 0.00388                     
----
-Signif. codes:  0 "***" 0.001 "**" 0.01 "*" 0.05 "." 0.1 " " 1
-7 observations deleted due to missingness
+		    Df  Sum Sq Mean Sq F value   Pr(>F)    
+	Block        3 0.01223 0.00408   1.051   0.3747    
+	sqrtPAR      1 0.08537 0.08537  22.003 1.11e-05 ***
+	TimeOfDay    1 0.01840 0.01840   4.742   0.0324 *  
+	Variety.     3 0.02843 0.00948   2.443   0.0702 .  
+	Residuals   80 0.31040 0.00388                     
+	---
+	Signif. codes:  0 "***" 0.001 "**" 0.01 "*" 0.05 "." 0.1 " " 1
+	7 observations deleted due to missingness
 
 ```{r}
 plot(PhiNO2$fitted,PhiNO2$res,xlab="Fitted",ylab="Residuals")
