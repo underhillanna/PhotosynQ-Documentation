@@ -6,7 +6,7 @@ The standard MultispeQ protocol measures the following parameters*:
 | Light Intensity (PAR) | Photosynthetically active radiation. Fraction of the incoming light (400 nm to 700 nm) which can be utilized to drive photosynthesis|
 |Relative Chlorophyll | Otherwise known has "SPAD," relative chlorophyll is a measure of leaf “greenness”. This measurement is often correlated with leaf nitrogen levels|
 |Phi2 |Quantum yield of Photosystem II. This measurement is essentially the percentage of incoming light (excited electrons) that go into Photosystem II. Photosystem II is where most light energy is converted into food.|
-|PhiNPQ|Ratio of incoming light that goes towards non-photochemical quenching. The plant regulating excess energy in such a way as too reduce damage to the plant.|
+|PhiNPQ|Ratio of incoming light that goes towards non-photochemical quenching. The plant regulating excess energy in such a way as too reduce damage to the plant. *[Kuhlgert et al. Royal Soc Open Sci. (2016)][doi:10.1098/rsos.160592]*|
 |PhiNO|Ratio of incoming light that is lost via non-regulated processes. PhiNO is the combination of a number of unregulated processes whose by-products can inhibit photosynthesis or be harmful to the plant.|
 |Leaf Temp Differential| The difference between **Ambient Temperature** and leaf temperature (**contactless_temp**). Negative numbers mean that the leaf is cooler than the surrounding air and vice versa.
 |Leaf Angle|The angle of the leaf, from 0 - 90 degrees|
