@@ -8,7 +8,7 @@ The standard MultispeQ protocol measures the following parameters*:
 |Ambient Pressure|Atmospheric pressure (mbar) - This value is not corrected to sea level as found in weather reports|
 |Ambient Temperature|Ambient temperature in degree Celsius (°C)|
 |ECSt mAU|Total magnitude of ECS (electrochromic shift) decay during a light-dark transition (DIRK measurement) expressed in milli-absorbance unit. *[Sacksteder et al. Proc. Nat. Acad. Sci. (2000)][doi: 10.1073/pnas.97.26.14283], [Kramer et al. Photosynthesis Res. (1999)][doi.org/10.1023/A:1006212014787]*|
-|gH+| Steady-state rate of proton flux through the chloroplast ATP synthase. *[Kanazawa and Kramer, Proc. Nat. Acad. Sci. (2002)][doi/10.1073/pnas.182427499]*|
+|gH+| Steady-state rate of proton flux through the chloroplast ATP synthase. *[Kanazawa and Kramer, Proc. Nat. Acad. Sci. (2002)][doi: 10.1073/pnas.182427499]*|
 |Leaf Angle|The angle of the leaf, from 0 - 90 degrees|
 |Leaf Temperature Differential|  **Leaf Temperature** ( or **contactless_temp**) minus **Ambient Temperature**, negative numbers mean that the leaf is cooler than the surrounding air and vice versa.
 |LEF|Linear Electron Flow. The total flow of electrons from antennae complexes (where light is captured) into Photosystem II, taking the leaf absorptivity into account. Calculated as LEF = Phi2 x PAR x 0.45|
@@ -98,13 +98,14 @@ Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?
 
 [doi:10.1016/S1360-1385(02)00010-9]: https://dx.doi.org/10.1016/S1360-1385(02)00010-9
 
-[doi: 10.1073/pnas.97.26.14283]: www.pnas.org/cgi/doi/10.1073/pnas.97.26.14283
+[doi: 10.1073/pnas.97.26.14283]: http://www.pnas.org/content/97/26/14283
 
 [doi.org/10.1023/A:1006212014787]: https://doi.org/10.1023/A:1006212014787
 
 [doi:10.1111/j.1365-3040.2005.01294.x]: http://dx.doi.org/10.1111/j.1365-3040.2005.01294.x
 
-[doi: 10.1073/pnas.182427499]: www.pnas.org/cgi/doi/10.1073/pnas.182427499
+[doi: 10.1073/pnas.182427499]: http://www.pnas.org/content/99/20/12789#
+
 
 
 
