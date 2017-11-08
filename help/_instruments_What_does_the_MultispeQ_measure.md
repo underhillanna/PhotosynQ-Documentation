@@ -17,10 +17,10 @@ The standard MultispeQ protocol measures the following parameters*:
 |Phi2 |Quantum yield of Photosystem II. This measurement is essentially the percentage of incoming light (excited electrons) that go into Photosystem II. Photosystem II is where most light energy is converted into food.|
 |PhiNO|Ratio of incoming light that is lost via non-regulated processes. PhiNO is the combination of a number of unregulated processes whose by-products can inhibit photosynthesis or be harmful to the plant. *[Kuhlgert et al. Royal Soc Open Sci. (2016)][doi:10.1098/rsos.160592]*||
 |PhiNPQ|Ratio of incoming light that goes towards non-photochemical quenching. The plant regulating excess energy in such a way as too reduce damage to the plant. *[Kuhlgert et al. Royal Soc Open Sci. (2016)][doi:10.1098/rsos.160592]*|
-|PS1 Activity|Active Photosystem I that is operational to receive/pass electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*]
-|PS1 Open|Photosystem I that is ready to accept electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
-|PS1 Over Reduced|All the acceptor side of Photosystem I are occupied by electrons and cannot accept any more electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
-|PS1 Oxidized|One or all of the acceptors of Photosystem I have no electron(s). *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
+|PS1 Active Centers|Active Photosystem I that is operational to receive/pass electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*]
+|PS1 Open Centers|Photosystem I that is ready to accept electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
+|PS1 Over Reduced Centers|All the acceptor side of Photosystem I are occupied by electrons and cannot accept any more electrons. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
+|PS1 Oxidized Centers|One or all of the acceptors of Photosystem I have no electron(s). *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
 |Relative Chlorophyll|Otherwise known has "SPAD," relative chlorophyll is a measure of leaf “greenness”. This measurement is often correlated with leaf nitrogen levels|
 |Thickness| The thickness of the leaf as measured by the Hall Effect sensor embedded in the MultispeQ clamp.
 |vH+|  Proton conductivity of the chloroplast ATP synthase. *[Avenson et al. Plant Cell Environ. (2005)][doi:10.1111/j.1365-3040.2005.01294.x]*|
