@@ -137,5 +137,3 @@ To generate one big help document and one tutorials document, use the compile sc
 ```bash
 $ . compile.sh
 ```
-
-In order to generate the PDF files make sure, you have [Pandoc](http://pandoc.org/) and [LaTeX](https://www.latex-project.org/) installed.

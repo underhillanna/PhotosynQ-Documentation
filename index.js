@@ -4,6 +4,7 @@ const program = require('commander');
 const elasticlunr = require('elasticlunr');
 const jetpack = require('fs-jetpack');
 const mime = require('mime');
+var markdownpdf = require('markdown-pdf')
 
 var createIDX = function(options){
 
@@ -90,6 +91,22 @@ var searchIDX = function(options){
 	}
 }
 
+var createPDF = function (options){
+	var MARKDOWN_OPTIONS = {
+		cssPath: 'src/css/print.css',
+		phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
+		paperBorder: '1cm',
+		renderDelay: 5000, // 1500
+		runningsPath: 'src/runnings.js',
+		paperFormat: 'Letter',
+		paperOrientation: 'portrait',
+		remarkable: {"html":true}
+	};
+	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
+		console.log('📄 PDF created:',options.output);
+	});
+}
+
 program
   .version('0.0.2')
 
@@ -103,5 +120,12 @@ program
 	.option('-t, --term <term>','search term')
 	.description('Search terms based on the search index')
 	.action(searchIDX);
+
+program
+	.command('pdf')
+	.option('-i, --input <input>','Markdown File')
+	.option('-o, --output <output>','PDF File')
+	.description('Generate PDF from Markdown')
+	.action(createPDF)
 
 program.parse(process.argv);
