@@ -161,10 +161,6 @@
 
 [help/_protocols_Run_a_Protocol.md]
 
-***
-
-[help/_protocols_Commands.md]
-
 ## Macros
 [help/_macros_View_your_Macros.md]
 
