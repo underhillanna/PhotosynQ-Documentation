@@ -1,6 +1,6 @@
 ### Creating an account
 
-1.	 You can create an account from the website (<https://photosynq.org>), the desktop app, or the mobile app.
+1. 	You can create an account from the website (<https://photosynq.org>), the desktop app, or the mobile app.
 	+ **Website:** click on the ‘sign up’ button in the upper right corner of the website.  
 	+ **Desktop app:** Download the photosynq app from the [chrome webstore](https://chrome.google.com/webstore/category/apps) and select "sign up."
 	+ **Mobile app:** Download the photosynq app from the [Google Playstore](https://play.google.com/store/apps/details?id=org.photosynq.android.photosynq) and select "no account? Register here."
