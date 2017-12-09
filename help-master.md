@@ -22,7 +22,7 @@
 
 ***
 
-[help/_account_Change_your_mail_address.md]
+[help/_account_Change_your_email_address.md]
 
 ***
 

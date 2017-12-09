@@ -22,7 +22,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Manage your password](help/_account_Manage_your_password.md)
 + [PhotosynQ Glossary](help/_account_PhotosynQ_Glossary.md)
 + [Sign in to PhotosynQ](help/_account_Sign_in_to_PhotosynQ.md)
-+ [Change your email address](help/_account_Change_your_mail_address.md)
++ [Change your email address](help/_account_Change_your_email_address.md)
 + [Your subscriptions](help/_account_Your_subscriptions.md)
 + [Project invitations](help/_account_Project_invitations.md)
 + [Sign out of PhotosynQ](help/_account_Sign_out_of_PhotosynQ.md)
