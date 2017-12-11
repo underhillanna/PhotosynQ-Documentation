@@ -36,4 +36,5 @@
 + [API (Documentation)](https://photosynq.org/rdoc)
 + [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="./src/css/photosynq.css">

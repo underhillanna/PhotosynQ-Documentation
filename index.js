@@ -4,7 +4,7 @@ const program = require('commander');
 const elasticlunr = require('elasticlunr');
 const jetpack = require('fs-jetpack');
 const mime = require('mime');
-var markdownpdf = require('markdown-pdf')
+const markdownpdf = require('markdown-pdf');
 
 var createIDX = function(options){
 
@@ -96,11 +96,15 @@ var createPDF = function (options){
 		cssPath: 'src/css/print.css',
 		phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
 		paperBorder: '1cm',
-		renderDelay: 5000, // 1500
+		renderDelay: 1500,
 		runningsPath: 'src/runnings.js',
 		paperFormat: 'Letter',
 		paperOrientation: 'portrait',
-		remarkable: {"html":true}
+		remarkable: {
+			"html":true,
+			"linkify": true,
+			"plugins": []
+		}
 	};
 	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
 		console.log('📄 PDF created:',options.output);
