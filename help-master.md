@@ -191,6 +191,10 @@
 
 [help/_instruments_MultispeQ_v1.0_configuration.md]
 
+***
+
+[help/_instruments_How_to_Install_Firmware_Updates.md]
+
 ## Tutorials & More
 + [Tutorials](https://photosynq.org/tutorials)
 + [Forums](https://photosynq.org/forums)
