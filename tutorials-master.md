@@ -17,6 +17,10 @@
 
 [tutorials/_data_viewing.md]
 
+## Data Quality
+
+[tutorials/_data_quality.md]
+
 ## Data Analysis
 
 [tutorials/_data_analysis.md]

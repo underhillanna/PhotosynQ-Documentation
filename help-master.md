@@ -138,6 +138,14 @@
 
 [help/_data_Viewing_Notes_and_Pictures.md]
 
+***
+
+[help/_data_Data_Issues.md]
+
+***
+
+[help/_data_Flag_Measurements.md]
+
 ## Protocols
 [help/_protocols_Protocol_Basics.md]
 
