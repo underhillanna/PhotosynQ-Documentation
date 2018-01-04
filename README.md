@@ -58,6 +58,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Filter Data](help/_data_Filter_Data.md)
 + [Set Thresholds](help/_data_Set_Thresholds.md)
 + [Viewing Notes and Pictures](help/_data_Viewing_Notes_and_Pictures.md)
++ [Data Issues](help/_data_data_issues.md)
  
 ### Protocols
 + [Protocol Basics](help/_protocols_Protocol_Basics.md)
@@ -90,6 +91,7 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 | [_creating_a_project.md](tutorials/_creating_a_project.md) | How to create a new Project for data collection. |
 | [_data_collection.md](tutorials/_data_collection.md) | How to collect data for a Project. |
 | [_data_viewing.md](tutorials/_data_viewing.md) | How to view data in the Web-Browser. |
+| [_data_quality.md](tutorials/_data_quality.md) | How to identify measurement issue warnings and flag data. |
 | [_data_analysis.md](tutorials/_data_analysis.md) | Overview for data analysis. R and Python examples are documented in the corresponding repos. |
 | [_building_a_protocol.md](tutorials/_building_a_protocol.md) | How to build a simple Protocol. |
 | [_building_a_macro.md](tutorials/_building_a_macro.md) | How to build a simple Macro. |
