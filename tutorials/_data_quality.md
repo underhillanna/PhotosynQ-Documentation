@@ -24,14 +24,14 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 	
 	c. Select the **Show Issues** button below **Data Issues**
 
-![Identifying issues on the dashboard](../images/tutorials/_dashboard_issues)
+![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues)
 
 
 2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement (B).
 
 3. In the single datum view, any issues will be present as a red bar above the measurement results (C).
 
-![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_spreadsheet_single_datum)
+![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum)
 
 ***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard. 
 
@@ -41,7 +41,7 @@ If you submit data with issues to the website, you will still have the opportuni
 You can flag any measurement, for any reason. However, you have to provide a reason for flagging data, which will be visible to the community. Our hope is that data is only flagged for significant issues, such as the measurement issues mentioned above or because a measurement was mislabeled, etc, and not simply because the measurement is an outlier.
 
 #### Who can flag project measurements
-WIthin a given project, the only people who can flag a measurement are:
+Within a given project, the only people who can flag a measurement are:
 
 - The project lead  
 - Anyone who has administrative rights for that project  
@@ -56,3 +56,5 @@ a. If you have permission to flag that measurement, a text box will appear under
 b. If you do not have permission to flag that measurement, you will get a message stating: *Click here to report data issues in the project discussion forum*.
 3. Enter the reason for flagging the measurement into the text box. 
 4. Click **Submit** 
+
+![Flag data](../images/tutorials/_data_quality_flag_data)
