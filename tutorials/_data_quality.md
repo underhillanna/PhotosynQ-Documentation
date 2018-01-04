@@ -16,7 +16,7 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 
 #### How to identify data with 'issues' in the data explorer?
 
-1. We have added a default panel on the dashboard labelled **Data Quality - Issues** that provides information about how many of the *non-flagged* measurements have issues (A). If the panel is not visible, you can add it to your dashboard by:
+1. We have added a default panel on the dashboard labelled **Data Quality - Issues** that provides information about how many of the *non-flagged* measurements have issues. If the panel is not visible, you can add it to your dashboard by:
 
 	a. Select **Add Panel** in the dashboard
 	
@@ -29,9 +29,9 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 ![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues.jpg)
 
 
-2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement (B).
+2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement (left).
 
-3. In the single datum view, any issues will be present as a red bar above the measurement results (C).
+3. In the single datum view, any issues will be present as a red bar above the measurement results (right).
 
 ![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum.jpg)
 
