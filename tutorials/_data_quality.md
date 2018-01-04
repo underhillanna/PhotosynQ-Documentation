@@ -38,7 +38,9 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 
 
 #### Flagging data
-If you submit data with issues to the website, you will still have the opportunity to remove those measurements from future data viewing and analysis. This is accomplished by **Flagging** the measurements that have issues. **Flagging** hides measurements, so that they are not added to filtered series or downloaded as a csv for data analysis. However, flagging data **DOES NOT** delete the measurements from the website. Flagged data can always be viewed by clicking the **Include flagged datasets** box in the **Add Series** tab. 
+If you submit data with issues to the website, you will still have the opportunity to remove those measurements from future data viewing and analysis. This is accomplished by **Flagging** the measurements that have issues. **Flagging** hides measurements, so that they are not added to filtered series or downloaded as a csv for data analysis. However, flagging data **DOES NOT** delete the measurements from the website. Flagged data can always be viewed by clicking the **Include flagged datasets** box in the **Add Series** tab.
+
+![Include flagged dataset](../images/tutorials/_data_quality_include_flagged.jpg)
 
 You can flag any measurement, for any reason. However, you have to provide a reason for flagging data, which will be visible to the community. Our hope is that data is only flagged for significant issues, such as the measurement issues mentioned above or because a measurement was mislabeled, etc, and not simply because the measurement is an outlier.
 
