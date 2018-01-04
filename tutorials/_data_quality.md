@@ -14,7 +14,7 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 3. The leaf is dead or dying. Leaves in this condition can cause the Phi2, PhiNPQ or PhiNO values to be out of the expected range. This may be a completely valid measurement, or a measurement that should be discarded.
 
 
-#### How to identify data with 'issues' on the data explorer?
+#### How to identify data with 'issues' in the data explorer?
 
 1. We have added a default panel on the dashboard labelled **Data Quality - Issues** that provides information about how many of the *non-flagged* measurements have issues (A). If the panel is not visible, you can add it to your dashboard by:
 
