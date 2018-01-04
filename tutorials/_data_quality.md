@@ -4,7 +4,7 @@
 
 As we explained in the [Data Collection](https://photosynq.org/tutorials/data_collection#submitting-quality-measurements) tutorial, the best way to keep your data set clean is to discard low quality measurements before they get submitted to PhotosynQ. To help users filter out bad measurements, we have added a series of issue warnings to the default *Leaf Photosynthesis MultispeQ v1.0* and *Photosynthesis RIDES* protocols. These issue warnings are displayed in red on the results screen of both the android and desktop apps. We recommend that users discard measurements with warning message's, unless they are certain the measurement is accurate. If a poor quality measurement does get submitted to the website you will be able to **Flag** the data in the data explorer (see below).
 
-![Issue warnings on the android (left) and desktop (right) apps](../images/tutorials/_data_quality_issue_warning_in_apps)
+![Issue warnings on the android (left) and desktop (right) apps](../images/tutorials/_data_quality_issue_warning_in_apps.jpg)
 
 
 #### Common reasons for poor quality measurements
@@ -23,17 +23,19 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 	b. Select the **data quality** tab
 	
 	c. Select the **Show Issues** button below **Data Issues**
+	
+***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard. 
 
-![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues)
+![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues.jpg)
 
 
 2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement (B).
 
 3. In the single datum view, any issues will be present as a red bar above the measurement results (C).
 
-![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum)
+![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum.jpg)
 
-***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard. 
+
 
 #### Flagging data
 If you submit data with issues to the website, you will still have the opportunity to remove those measurements from future data viewing and analysis. This is accomplished by **Flagging** the measurements that have issues. **Flagging** hides measurements, so that they are not added to filtered series or downloaded as a csv for data analysis. However, flagging data **DOES NOT** delete the measurements from the website. Flagged data can always be viewed by clicking the **Include flagged datasets** box in the **Add Series** tab. 
@@ -57,4 +59,4 @@ b. If you do not have permission to flag that measurement, you will get a messag
 3. Enter the reason for flagging the measurement into the text box. 
 4. Click **Submit** 
 
-![Flag data](../images/tutorials/_data_quality_flag_data)
+![Flag data](../images/tutorials/_data_quality_flag_data.jpg)
