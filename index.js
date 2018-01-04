@@ -18,8 +18,8 @@ var createIDX = function(options){
 
 	// Copy the protocol commands from the firmware documentation
 	try{
-		var file = '_protocols_Commands.md'
-		var path = '../PhotosynQ-Firmware/commands/docs/'
+		var file = '_protocols_Commands.md';
+		var path = '../PhotosynQ-Firmware/commands/docs/';
 		jetpack.copy(path+file, './help/'+file, { overwrite: true });
 		console.log('Firmware Documentation copied.');
 	}catch(e){
@@ -28,8 +28,8 @@ var createIDX = function(options){
 
 	// Copy the protocol commands from the firmware documentation
 	try{
-		var file = '_instruments_Console_Commands.md'
-		var path = '../PhotosynQ-Firmware/commands/docs/'
+		var file = '_instruments_Console_Commands.md';
+		var path = '../PhotosynQ-Firmware/commands/docs/';
 		jetpack.copy(path+file, './help/'+file, { overwrite: true });
 		console.log('Firmware Instrument Commands copied.');
 	}catch(e){
@@ -39,11 +39,10 @@ var createIDX = function(options){
 	// Now loop through the files in help
 	var files = jetpack.inspectTree('./help/').children;
 	var hfc = 0;
-	
+
 	for(var i in files){
-		if( files[i].type != 'file' || mime.lookup(files[i].name) != 'text/markdown')
+		if( files[i].type != 'file' || mime.lookup(files[i].name) != 'text/markdown' || files[i].name == '_instruments_Console_Commands.md')
 			continue;
-		
 		var entry = jetpack.read('./help/'+files[i].name);
 		var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
 		var category = files[i].name.substr(1).split('_')[0];
@@ -54,7 +53,7 @@ var createIDX = function(options){
 			category: category,
 			content: entry.replace(/<[^>]*>/g, ' ')
 		});
-		
+
 		hfc++;
 	}
 
@@ -62,13 +61,13 @@ var createIDX = function(options){
 	jetpack.write(__dirname+'/dist/elasticlunr-help-idx.json', elasticIDX, { jsonIndent: 0 });
 	hfc++;
 	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspectTree(__dirname+'/dist/elasticlunr-help-idx.json').size / 1024).toFixed(2) +' kb).')
-}
+};
 
 var searchIDX = function(options){
 
-	var idxfile = jetpack.read(__dirname+'/dist/elasticlunr-help-idx.json','json');	
+	var idxfile = jetpack.read(__dirname+'/dist/elasticlunr-help-idx.json','json');
 	var idx = elasticlunr.Index.load(idxfile)
-		
+
 	if(options.term !== undefined || options.term != ''){
 		var results = idx.search( options.term,
 		{
@@ -89,7 +88,7 @@ var searchIDX = function(options){
 	else{
 		console.log('Enter a search term.');
 	}
-}
+};
 
 var createPDF = function (options){
 	var MARKDOWN_OPTIONS = {
@@ -106,18 +105,24 @@ var createPDF = function (options){
 			"plugins": []
 		}
 	};
+
+	var filename = jetpack.inspect(options.input).name;
+	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
+	jetpack.write(__dirname+'/dist/title.json', {title: filename }, { jsonIndent: 0 });
+	
 	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
+		jetpack.remove(__dirname+'/dist/title.json');
 		console.log('📄 PDF created:',options.output);
 	});
-}
+};
 
 program
-  .version('0.0.2')
+  .version('0.0.2');
 
 program
 	.command('create')
 	.description('Generate search index')
-	.action(createIDX)
+	.action(createIDX);
 
 program
 	.command('search')
@@ -130,6 +135,6 @@ program
 	.option('-i, --input <input>','Markdown File')
 	.option('-o, --output <output>','PDF File')
 	.description('Generate PDF from Markdown')
-	.action(createPDF)
+	.action(createPDF);
 
 program.parse(process.argv);
