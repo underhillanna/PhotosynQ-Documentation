@@ -2,7 +2,9 @@
 
 #### Identifying Measurements with Issues
 
-As we explained in the [Data Collection](https://photosynq.org/tutorials/data_collection#submitting-quality-measurements) tutorial, the best way to keep your data set clean is to discard low quality measurements before they get submitted to PhotosynQ. To help users filter out bad measurements, we have added a series of issue warnings to the default *Leaf Photosynthesis MultispeQ v1.0* and *Photosynthesis RIDES* protocols. These issue warnings are displayed in red on the results screen of both the android and desktop apps. We recommend that users discard measurements with warning message's, unless they are certain the measurement is accurate. If a poor quality measurement does get submitted to the website you will be able to **Flag** the data in the data explorer (see below).
+As we explained in the [Data Collection](https://photosynq.org/tutorials/data_collection#submitting-quality-measurements) tutorial, the best way to keep your data set clean is to discard low quality measurements before they get submitted to PhotosynQ. To help users filter out bad measurements, we have added a series of issue warnings to the default *Leaf Photosynthesis MultispeQ v1.0* and *Photosynthesis RIDES* protocols. These issue warnings are displayed in **red** on the results screen of both the android and desktop apps. We recommend that users discard measurements with warning message's, unless they are certain the measurement is accurate. If a poor quality measurement does get submitted to the website you will be able to **Flag** the data in the data explorer (see below).
+
+***Tip:*** The *Leaf Photosynthesis MultispeQ v1.0* protocol also has **yellow** issue warnings as well. These are for information only and you should NOT discard measurements for yellow warnings unless you are sure the measurements is bad.
 
 ![Issue warnings on the android (left) and desktop (right) apps](../images/tutorials/_data_quality_issue_warning_in_apps.jpg)
 
@@ -10,13 +12,13 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 #### Common reasons for poor quality measurements
 
 1. The device or leaf was not held steady throughout the measurement. This can be due to taking measurements in windy conditions or the data collector's hand shaking.
-2. The leaf is not fully covering the light guide. This is especially problematic for absorbance measurements such as relative chlorophyll content. This often results in a warning message stating that the relative chlorophyll content is either very low or out of the expected range.
-3. The leaf is dead or dying. Leaves in this condition can cause the Phi2, PhiNPQ or PhiNO values to be out of the expected range. This may be a completely valid measurement, or a measurement that should be discarded.
+2. The leaf did not fully cover the light guide. This is especially problematic for absorbance measurements such as relative chlorophyll content. This often results in an issue warning stating that the relative chlorophyll content is either very low or out of the expected range.
+3. The leaf was dead or dying. Leaves in this condition can cause the Phi2, PhiNPQ or PhiNO values to be out of the expected range. This may be a completely valid measurement, or a measurement that should be discarded.
 
 
 #### How to identify data with 'issues' in the data explorer?
 
-1. We have added a default panel on the dashboard labelled **Data Quality - Issues** that provides information about how many of the *non-flagged* measurements have issues. If the panel is not visible, you can add it to your dashboard by:
+1. We have added a default panel on the dashboard labelled **Data Quality - Issues** that provides information about how many of the *non-flagged* measurements have issue warnings. If the panel is not visible, you can add it to your dashboard by:
 
 	a. Select **Add Panel** in the dashboard
 	
