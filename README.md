@@ -58,6 +58,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Filter Data](help/_data_Filter_Data.md)
 + [Set Thresholds](help/_data_Set_Thresholds.md)
 + [Viewing Notes and Pictures](help/_data_Viewing_Notes_and_Pictures.md)
++ [Advanced Parameters](help/_data_Advanced_Parameters.md)
 + [Data Issues](help/_data_Data_Issues.md)
 + [Flag Measurements](help/_data_Flag_Measurements.md)
  
