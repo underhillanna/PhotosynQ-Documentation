@@ -12,7 +12,7 @@ The standard MultispeQ protocol measures the following parameters*:
 |Leaf Angle|The angle of the leaf, from 0 - 90 degrees|
 |Leaf Temperature Differential|  **Leaf Temperature** ( or **contactless_temp**) minus **Ambient Temperature**, negative numbers mean that the leaf is cooler than the surrounding air and vice versa.
 |LEF|Linear Electron Flow. The total flow of electrons from antennae complexes (where light is captured) into Photosystem II, taking the leaf absorptivity into account. Calculated as LEF = Phi2 x PAR x 0.45|
-|Light Intensity (PAR)|Photosynthetically active radiation. Fraction of the incoming light (400 nm to 700 nm) which can be utilized to drive photosynthesis|
+|Light Intensity (PAR)|Photosynthetically active radiation. Fraction of the incoming light (400 nm to 700 nm) which can be utilized to drive photosynthesis; µmol photons * m-2 * s-1|
 |NPQt | Estimate of non-photochemical quenching. The amount of incoming light that is regulated away from photosynthetic processes in order to reduce damage to the plant.|
 |Phi2 |Quantum yield of Photosystem II. This measurement is essentially the percentage of incoming light (excited electrons) that go into Photosystem II. Photosystem II is where most light energy is converted into food.|
 |PhiNO|Ratio of incoming light that is lost via non-regulated processes. PhiNO is the combination of a number of unregulated processes whose by-products can inhibit photosynthesis or be harmful to the plant. *[Kuhlgert et al. Royal Soc Open Sci. (2016)][doi:10.1098/rsos.160592]*||
