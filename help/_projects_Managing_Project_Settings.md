@@ -12,3 +12,5 @@ Project settings allow Project Lead's to decide you can contribute data to the p
 6. Once you have finished adding collaborators, select 'Create Project.'
 
 ***Note:*** All the confirmed collaborators will be listed on the bottom left under 'Collaborators' and all outstanding invitations will be listed on the bottom right under 'Invitations.'
+
+![Invite Collaborator](../images/help/_account_Invite_collaborator.jpg)
