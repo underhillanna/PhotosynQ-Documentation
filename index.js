@@ -17,10 +17,11 @@ var createIDX = function(options){
 	});
 
 	// Copy the protocol commands from the firmware documentation
+	var file, path;
 	try{
-		var file = '_protocols_Commands.md';
-		var path = '../PhotosynQ-Firmware/commands/docs/';
-		jetpack.copy(path+file, './help/'+file, { overwrite: true });
+		file = '_protocols_Commands.md';
+		path = '../PhotosynQ-Firmware/commands/docs/';
+		jetpack.copy( jetpack.path(path,file) , jetpack.path( './help',file), { overwrite: true });
 		console.log('Firmware Documentation copied.');
 	}catch(e){
 		console.log('Firmware Documentation Repo not found.');
@@ -28,9 +29,9 @@ var createIDX = function(options){
 
 	// Copy the protocol commands from the firmware documentation
 	try{
-		var file = '_instruments_Console_Commands.md';
-		var path = '../PhotosynQ-Firmware/commands/docs/';
-		jetpack.copy(path+file, './help/'+file, { overwrite: true });
+		file = '_instruments_Console_Commands.md';
+		path = '../PhotosynQ-Firmware/commands/docs/';
+		jetpack.copy( jetpack.path(path,file) , jetpack.path( './help',file), { overwrite: true });
 		console.log('Firmware Instrument Commands copied.');
 	}catch(e){
 		console.log('Firmware Documentation Repo not found.');
@@ -43,7 +44,7 @@ var createIDX = function(options){
 	for(var i in files){
 		if( files[i].type != 'file' || mime.lookup(files[i].name) != 'text/markdown' || files[i].name == '_instruments_Console_Commands.md')
 			continue;
-		var entry = jetpack.read('./help/'+files[i].name);
+		var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 		var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
 		var category = files[i].name.substr(1).split('_')[0];
 
@@ -60,16 +61,16 @@ var createIDX = function(options){
 	// Now generate the help index
 	jetpack.write(__dirname+'/dist/elasticlunr-help-idx.json', elasticIDX, { jsonIndent: 0 });
 	hfc++;
-	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspectTree(__dirname+'/dist/elasticlunr-help-idx.json').size / 1024).toFixed(2) +' kb).')
+	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','elasticlunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
 };
 
 var searchIDX = function(options){
 
-	var idxfile = jetpack.read(__dirname+'/dist/elasticlunr-help-idx.json','json');
-	var idx = elasticlunr.Index.load(idxfile)
+	var idxfile = jetpack.read( jetpack.path(__dirname,'dist','elasticlunr-help-idx.json') ,'json');
+	var idx = elasticlunr.Index.load(idxfile);
 
-	if(options.term !== undefined || options.term != ''){
-		var results = idx.search( options.term,
+	if(options.query !== undefined || options.query != ''){
+		var results = idx.search( options.query,
 		{
 // 			fields: {
 // 				title: {boost: 3},
@@ -77,9 +78,9 @@ var searchIDX = function(options){
 // 				content: {boost: 1}
 // 			},
 // 			bool: "OR",
-// 			expand: true
+			expand: true
 		});
-		console.log('\nSearch for "'+options.term + '" (Hits: '+results.length+')\n');
+		console.log('\nSearch for "'+ options.query + '" (Hits: '+results.length+')\n');
 
 		for(var i in results){
 			console.log((parseInt(i)+1)+'. '+results[i].ref+' (score: '+ results[i].score.toFixed(6) +')' );
@@ -93,7 +94,7 @@ var searchIDX = function(options){
 var createPDF = function (options){
 	var MARKDOWN_OPTIONS = {
 		cssPath: 'src/css/print.css',
-		phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
+		// phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
 		paperBorder: '1cm',
 		renderDelay: 1500,
 		runningsPath: 'src/runnings.js',
@@ -109,7 +110,7 @@ var createPDF = function (options){
 	var filename = jetpack.inspect(options.input).name;
 	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
 	jetpack.write(__dirname+'/dist/title.json', {title: filename }, { jsonIndent: 0 });
-	
+
 	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
 		jetpack.remove(__dirname+'/dist/title.json');
 		console.log('📄 PDF created:',options.output);
@@ -117,7 +118,7 @@ var createPDF = function (options){
 };
 
 program
-  .version('0.0.2');
+  .version('0.0.3');
 
 program
 	.command('create')
@@ -126,7 +127,7 @@ program
 
 program
 	.command('search')
-	.option('-t, --term <term>','search term')
+	.option('-q, --query <query>','Query (e.g. measurement)')
 	.description('Search terms based on the search index')
 	.action(searchIDX);
 

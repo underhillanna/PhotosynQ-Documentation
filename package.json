@@ -1,6 +1,6 @@
 {
   "name": "photosynq-documentation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create a elasticlunr index from markdown documents and build master documents and generate pdfs",
   "bin": {
     "pqc": "./index.js"
@@ -16,8 +16,7 @@
     "elasticlunr": "^0.9.5",
     "font-awesome": "^4.7.0",
     "fs-jetpack": "^1.0.0",
-    "markdown-pdf": "^6.0.0",
-    "mime": "^1.4.0",
-    "phantomjs-prebuilt": "^2.1.16"
+    "markdown-pdf": "^8.1.1",
+    "mime": "^1.4.0"
   }
 }
