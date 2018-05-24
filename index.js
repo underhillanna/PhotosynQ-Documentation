@@ -5,6 +5,7 @@ const elasticlunr = require('elasticlunr');
 const jetpack = require('fs-jetpack');
 const mime = require('mime');
 const markdownpdf = require('markdown-pdf');
+const version = require('./package.json').version;
 
 var createIDX = function(options){
 
@@ -118,7 +119,7 @@ var createPDF = function (options){
 };
 
 program
-  .version('0.0.3');
+  .version(version);
 
 program
 	.command('create')
