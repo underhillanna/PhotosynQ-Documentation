@@ -1,5 +1,6 @@
 # PhotosynQ Help Manual
-*Last Modified: INSERT_DATE*
+*Modified: {{ date }}
+Version: {{ version }}*
 
 ## Account Basics
 [help/_account_Create_an_Account.md]

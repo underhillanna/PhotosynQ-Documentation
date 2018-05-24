@@ -1,5 +1,6 @@
 # PhotosynQ Tutorials
-*Last Modified: INSERT_DATE*
+*Modified: {{ date }}
+Version: {{ version }}*
 
 ## Getting Started
 

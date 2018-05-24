@@ -1,5 +1,6 @@
 # PhotosynQ Firmware
-*Last Modified: INSERT_DATE*
+*Modified: {{ date }}
+Version: {{ version }}*
 
 ## Protocol Commands
 [help/_protocols_Commands.md]
