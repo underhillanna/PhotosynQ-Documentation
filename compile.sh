@@ -7,22 +7,11 @@ echo "Compiling Help Files";
 # This will collect also the firmware documentation if available
 node index.js create
 
-# Merge all files into one markdown document
-perl -ne 's/^\[(.+)\].*/`cat $1`/e;print' help-master.md > ./dist/PhotosynQ-Help-Manual.md
-perl -ne 's/^\[(.+)\].*/`cat $1`/e;print' tutorials-master.md > ./dist/PhotosynQ-Getting-Started.md
-perl -ne 's/^\[(.+)\].*/`cat $1`/e;print' firmware-master.md > ./dist/PhotosynQ-Firmware.md
-
-# Adding date to indicate latest updates
-echo "Adding Dates";
-perl -p -i -e "s/INSERT_DATE/$(date +%b) $(date +%d), $(date +%Y)/g" ./dist/PhotosynQ-Help-Manual.md
-perl -p -i -e "s/INSERT_DATE/$(date +%b) $(date +%d), $(date +%Y)/g" ./dist/PhotosynQ-Getting-Started.md
-perl -p -i -e "s/INSERT_DATE/$(date +%b) $(date +%d), $(date +%Y)/g" ./dist/PhotosynQ-Firmware.md
-
-# Remove all ../ from image paths
-echo "Fixing Image Paths";
-perl -p -i -e "s/\]\(\.\.\/images/\]\(images/g" ./dist/PhotosynQ-Help-Manual.md
-perl -p -i -e "s/\]\(\.\.\/images/\]\(images/g" ./dist/PhotosynQ-Getting-Started.md
-perl -p -i -e "s/\]\(\.\.\/images/\]\(images/g" ./dist/PhotosynQ-Firmware.md
+# Compiling the master markdown files from templates
+echo "Compile master files";
+node index.js compile -i help-master.md -o ./dist/PhotosynQ-Help-Manual.md -t 0.0.3
+node index.js compile -i tutorials-master.md -o ./dist/PhotosynQ-Getting-Started.md -t 0.0.3
+node index.js compile -i firmware-master.md -o ./dist/PhotosynQ-Firmware.md -t 0.0.3
 
 # Now we can build the pdfs as well
 echo "Converting markdown to pdf";

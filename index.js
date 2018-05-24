@@ -94,6 +94,27 @@ var searchIDX = function(options){
 	}
 };
 
+var compileMD = function(options){
+	var md = jetpack.read(options.input);
+	md = Mustache.render(md, {date: moment().format('LL'), version: (options.tag || '--') });
+
+	var files = md.match(/^\[(.+)\]/gm);
+	var file = null;
+
+	for(var i in files){
+		file = files[i].substr(1, (files[i].length -2) );
+		if(jetpack.exists( file ) == 'file'){
+			var content = jetpack.read(file);
+			var regex = files[i].replace('[', '\\[').replace(']', '\\]').replace('.', '\\.').replace('/', '\\/');
+			md = md.replace( new RegExp( regex, 'm' ), content );
+		}
+	}
+
+	md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
+
+	jetpack.write(options.output, md);
+};
+
 var createPDF = function (options){
 	var MARKDOWN_OPTIONS = {
 		cssPath: 'src/css/print.css',
@@ -133,6 +154,14 @@ program
 	.option('-q, --query <query>','Query (e.g. measurement)')
 	.description('Search terms based on the search index')
 	.action(searchIDX);
+
+program
+	.command('compile')
+	.option('-i, --input <input>','Markdown Template File')
+	.option('-o, --output <output>','Output file')
+	.option('-t, --tag <tag>','Set Version (tag) of the document')
+	.description('Generate master markdown file from template')
+	.action(compileMD);
 
 program
 	.command('pdf')
