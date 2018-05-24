@@ -4,6 +4,8 @@ const program = require('commander');
 const elasticlunr = require('elasticlunr');
 const jetpack = require('fs-jetpack');
 const mime = require('mime');
+const moment = require('moment-timezone');
+const Mustache = require('mustache');
 const markdownpdf = require('markdown-pdf');
 const version = require('./package.json').version;
 
@@ -43,7 +45,7 @@ var createIDX = function(options){
 	var hfc = 0;
 
 	for(var i in files){
-		if( files[i].type != 'file' || mime.lookup(files[i].name) != 'text/markdown' || files[i].name == '_instruments_Console_Commands.md')
+		if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown' || files[i].name == '_instruments_Console_Commands.md')
 			continue;
 		var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 		var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
@@ -114,7 +116,7 @@ var createPDF = function (options){
 
 	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
 		jetpack.remove(__dirname+'/dist/title.json');
-		console.log('📄 PDF created:',options.output);
+		console.log('PDF created: ', options.output);
 	});
 };
 
