@@ -1,7 +1,7 @@
 {
   "name": "photosynq-documentation",
   "version": "0.0.3",
-  "description": "Create a elasticlunr index from markdown documents and build master documents and generate pdfs",
+  "description": "Create a search index from markdown documents, build master documents and generate pdfs from markdown.",
   "bin": {
     "pqc": "./index.js"
   },
@@ -10,13 +10,18 @@
     "build": "node index.js"
   },
   "author": "Sebastian Kuhlgert <sebastian.kuhlgert@gmail.com>",
+  "contributors": [
+    "Dan TerAvest",
+    "Sean Reed",
+    "Sebastian Kuhlgert"
+  ],
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^2.15.1",
     "elasticlunr": "^0.9.5",
     "font-awesome": "^4.7.0",
-    "fs-jetpack": "^1.0.0",
+    "fs-jetpack": "^1.3.0",
     "markdown-pdf": "^8.1.1",
-    "mime": "^1.4.0"
+    "mime": "^2.3.1"
   }
 }
