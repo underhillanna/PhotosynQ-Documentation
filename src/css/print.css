@@ -375,7 +375,7 @@ table {
 
 th, td {
   border: 1pt solid #cccccc;
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 
 tr:nth-child(2n) {
