@@ -8,6 +8,7 @@ const moment = require('moment-timezone');
 const Mustache = require('mustache');
 const markdownpdf = require('markdown-pdf');
 const version = require('./package.json').version;
+const through2 = require('through2');
 
 var createIDX = function(options){
 
@@ -115,7 +116,15 @@ var compileMD = function(options){
 	jetpack.write(options.output, md);
 };
 
+function preProcessMd () {
+	return through2((data, enc, cb) => {
+		let nd = data.toString().trim();
+		cb( null, new Buffer( nd ) );
+	});
+  }
+
 var createPDF = function (options){
+
 	var MARKDOWN_OPTIONS = {
 		cssPath: 'src/css/print.css',
 		// phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
@@ -124,6 +133,7 @@ var createPDF = function (options){
 		runningsPath: 'src/runnings.js',
 		paperFormat: 'Letter',
 		paperOrientation: 'portrait',
+		preProcessMd: preProcessMd,
 		remarkable: {
 			"html":true,
 			"linkify": true,

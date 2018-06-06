@@ -208,6 +208,10 @@ Version: {{ version }}*
 
 [help/_instruments_MultispeQ_v1.0_configuration.md]
 
+***
+
+[help/_instruments_MultispeQ_v2.0_configuration.md]
+
 ## Tutorials & More
 + [Tutorials](https://photosynq.org/tutorials)
 + [Forums](https://photosynq.org/forums)
