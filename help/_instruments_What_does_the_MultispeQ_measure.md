@@ -98,13 +98,13 @@ Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?
 
 [doi:10.1016/S1360-1385(02)00010-9]: https://dx.doi.org/10.1016/S1360-1385(02)00010-9
 
-[doi: 10.1073/pnas.97.26.14283]: http://www.pnas.org/content/97/26/14283
+[doi: 10.1073/pnas.97.26.14283]: https://www.pnas.org/content/97/26/14283
 
 [doi.org/10.1023/A:1006212014787]: https://doi.org/10.1023/A:1006212014787
 
-[doi:10.1111/j.1365-3040.2005.01294.x]: http://dx.doi.org/10.1111/j.1365-3040.2005.01294.x
+[doi:10.1111/j.1365-3040.2005.01294.x]: https://dx.doi.org/10.1111/j.1365-3040.2005.01294.x
 
-[doi: 10.1073/pnas.182427499]: http://www.pnas.org/content/99/20/12789#
+[doi: 10.1073/pnas.182427499]: https://www.pnas.org/content/99/20/12789#
 
 
 

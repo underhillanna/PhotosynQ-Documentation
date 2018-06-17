@@ -67,13 +67,13 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 |-----|-----|:---:|
 | Main | Soshine Li-ion 26650 Protected Battery: 5500mAh 3.7V | [view][26650P-3.7-5500] |
 
-[LXZ1]: http://www.lumileds.com/products/color-leds/luxeon-z-colors
+[LXZ1]: https://www.lumileds.com/products/color-leds/luxeon-z-colors
 
-[OSRAM SFH 4441]: http://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-940-nm/sfh-4441/index.jsp
+[OSRAM SFH 4441]: https://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-940-nm/sfh-4441/index.jsp
 
-[OSRAM SFH 4451]: http://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-850-nm/sfh-4451/index.jsp
+[OSRAM SFH 4451]: https://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-850-nm/sfh-4451/index.jsp
 
-[ELSH-Q61F1-0LPNM-JF3F8]: http://www.everlight.com/SeriationProduct.aspx?Seq=A92E0EF4-2205-E411-8B3B-0002A54E500F
+[ELSH-Q61F1-0LPNM-JF3F8]: https://www.everlight.com/SeriationProduct.aspx?Seq=A92E0EF4-2205-E411-8B3B-0002A54E500F
 
 [APTD3216SF4C]: https://media.digikey.com/PDF/Data%20Sheets/Kingbright%20PDFs/APTD3216SF4C.pdf
 
@@ -85,16 +85,16 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 
 [MLX90615]: https://www.melexis.com/en/product/MLX90615/Digital-Plug-Play-Infrared-Thermometer-Ultra-Small-TO-Can
 
-[MMA8653FCR1]: http://www.nxp.com/products/sensors/accelerometers/3-axis-accelerometers/2g-4g-8g-low-g-10-bit-digital-accelerometer:MMA8653FC?lang_cd=en
+[MMA8653FCR1]: https://www.nxp.com/products/sensors/accelerometers/3-axis-accelerometers/2g-4g-8g-low-g-10-bit-digital-accelerometer:MMA8653FC?lang_cd=en
 
-[MAG3110FCR1]: http://www.nxp.com/products/sensors/magnetometers/high-accuracy-3d-magnetometer:MAG3110?lang_cd=en
+[MAG3110FCR1]: https://www.nxp.com/products/sensors/magnetometers/high-accuracy-3d-magnetometer:MAG3110?lang_cd=en
 
 [OHS3150U]: http://www.ttelectronics.com/sites/default/files/download-files/OHS3150U_3151U.pdf
 
-[TCS34715FN]: http://ams.com/eng/Products/Light-Sensors/Color-Sensors/TCS34715
+[TCS34715FN]: https://ams.com/eng/Products/Light-Sensors/Color-Sensors/TCS34715
 
-[BG-18]: http://www.us.schott.com/d/advanced_optics/380b879e-f6d3-4130-b7e9-52d794f9bc4b/1.2/schott-bandpass-bg18-jun-2017-en.pdf
+[BG-18]: https://www.us.schott.com/d/advanced_optics/380b879e-f6d3-4130-b7e9-52d794f9bc4b/1.2/schott-bandpass-bg18-jun-2017-en.pdf
 
 [HMC-5051]: http://www.uqgoptics.com/pdf/Hot%20mirrors%20data%20sheet.pdf
 
-[26650P-3.7-5500]: http://www.soshine.com.cn/a633.aspx
+[26650P-3.7-5500]: https://www.soshine.com.cn/a633.aspx
