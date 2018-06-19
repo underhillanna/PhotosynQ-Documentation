@@ -1,6 +1,6 @@
 ### Adding Notes and Pictures
 
-Whether you are in the field, or taking measurements from the PhotosynQ desktop app, after every measurement you can attach a note or picture that will be viewable online. 
+Whether you are in the field using the mobile app, or you are taking measurements with the desktop app, after every measurement you can attach a note and/or picture that will be viewable online.
 
 #### Mobile App
 
@@ -20,7 +20,7 @@ To modify a measurement:
 
 #### Desktop App
 
-In the Desktop App, notes and pictures can only be added BEFORE you accept the measurement
+In the Desktop App, notes and pictures can only be added BEFORE you save the measurement to the PhotosynQ platform. When you save measurements to the notebook, notes and pictures can be saved with the measurement at any time.
 
 1. Select **Add Notes** from the menu at the top of the page
 2. Type in a note, use the computer's camera to take a picture, or upload an image from your computer.
