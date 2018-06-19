@@ -9,4 +9,4 @@ Project locations allows others to find interesting projects in their vicinity a
 5. When you are finished click 'Save and Next.'
 
 #### How precise is the location data?
-For the location your mobile device uses assisted GPS which has a maximum precision of 7.8 meters (25.6 feet) due to US trade restrictions (http://www.gps.gov/systems/gps/).
+For the location your mobile device uses assisted GPS which has a maximum precision of 7.8 meters (25.6 feet) due to US trade restrictions (https://www.gps.gov/systems/gps/).
