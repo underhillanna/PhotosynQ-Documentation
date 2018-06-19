@@ -111,11 +111,11 @@ When you collect data in your project, the way it is collected, and later interp
    
 Measurements are either cached on the phone, or uploaded automatically to your project. Your results can be viewed and analyzed online by logging into PhotosynQ and finding your project in your profile. While you can see individual measurements on your phone, logging on to PhotosynQ will allow you to look at your whole dataset.
 
-For more help on how to collect high quality data, best measurement practices, uploading cached data or some tricks for data collection day, check out our [Data Collection Tutorial](http://photosynq.org/tutorials/data_collection)!
+For more help on how to collect high quality data, best measurement practices, uploading cached data or some tricks for data collection day, check out our [Data Collection Tutorial](https://photosynq.org/tutorials/data_collection)!
 
 ***
 
 #### Viewing Project Data
 Data can be viewed using the PhotosynQ data explorer on the PhotosynQ website.
 
-After your day of data collection, viewing PhotosynQ data is quick and easy! Log in to your PhotosynQ online account and go to your profile page by clicking your name on the homescreen. After this, find your project on the dashboard, click and allow your landing page with your data to load up. For a more indepth look into data viewing, series creation, making graphs or downloading your data, check out our tutorial [here](http://photosynq.org/tutorials/data_viewing). If you need some more help understanding the online data analysis tools, we have a guide for that too, check it out [here](http://photosynq.org/tutorials/data_analysis).
+After your day of data collection, viewing PhotosynQ data is quick and easy! Log in to your PhotosynQ online account and go to your profile page by clicking your name on the homescreen. After this, find your project on the dashboard, click and allow your landing page with your data to load up. For a more indepth look into data viewing, series creation, making graphs or downloading your data, check out our tutorial [here](https://photosynq.org/tutorials/data_viewing). If you need some more help understanding the online data analysis tools, we have a guide for that too, check it out [here](https://photosynq.org/tutorials/data_analysis).
