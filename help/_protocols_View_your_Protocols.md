@@ -1,7 +1,12 @@
 ### View your Protocols
 All the protocols you have developed on PhotosynQ are accessible to you at any time.
 
-#### Desktop (Google Chrome)
+#### Website
+1. Go to your user profile by clicking on your user name in the top menu bar. If you are not signed in, do that first.
+2. Select the **Protocols** tab to list all of your Protocols.
+3. Click on a Protocol to get to the Protocol page with the Protocol description, the Protocol Code and the Comments. On the right handside, you will further find the Protocol category, the connected macro and compatible instruments.
+
+#### Desktop App
 1. Open your protcols by selecting **Protocols** from the left menu bar.
 2. Click on the **My Protocols** to list all your protocols, if it is not already available.
 3. Click on a protocol in the list to show detailed information in the side bar.
