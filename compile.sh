@@ -19,6 +19,7 @@ node index.js compile -i ./build/tutorials-master.md -o ./dist/PhotosynQ-Getting
 node index.js compile -i ./build/firmware-master.md -o ./dist/PhotosynQ-Firmware.md -t $TAG
 
 node index.js compile -i ./build/MultispeQ-v1.0.md -o ./dist/PhotosynQ-MultispeQ-v1.0.md -t $TAG
+node index.js compile -i ./build/MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.md -t $TAG
 
 
 # Now we can build the pdfs as well
@@ -28,6 +29,7 @@ node index.js pdf -i ./dist/PhotosynQ-Getting-Started.md -o ./dist/PhotosynQ-Get
 node index.js pdf -i ./dist/PhotosynQ-Firmware.md -o ./dist/PhotosynQ-Firmware.pdf
 
 node index.js pdf -i ./dist/PhotosynQ-MultispeQ-v1.0.md -o ./dist/PhotosynQ-MultispeQ-v1.0.pdf
+node index.js pdf -i ./dist/PhotosynQ-MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.pdf
 
 # Compiling finished
 echo -e "\033[92mDone...\033[0m";
