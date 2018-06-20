@@ -7,7 +7,7 @@ When you visit the project page, click on **Join** in the left menu bar.
 #### Android
 When you visit a new project click on **Join**.
 
-#### Desktop (Google Chrome)
-In the right column click on **Join**
+#### Desktop
+When you click on a new project click on **Join** in the right menu bar.
 
-***Tip:*** Some projects cannot be joined, since they are limited to a closed group of users. If you are interested in joining, ask for an invitation as a collaborator.
+***Tip:*** Some projects cannot be joined, since they are limited to a closed group of users (indicated by the <i class="fa fa-lock"></i> lock icon). If you are interested in joining, ask for an invitation as a collaborator.

@@ -1,11 +1,11 @@
 ### Save a Protocol
-Once you are done, save your work use it for your projects and and share it with the comnunity.
+Once you have finished your Protocol, save your work to use it in your projects and to share it with the comnunity.
 
-#### Desktop (Google Chrome)
-1. Select **Protocol** from the menu and click on **Save**.
-2. Add a protocol name, description and pick a categroy.
+#### Desktop
+1. When you have the Protocol Editor open, select **Save** from the File menu or use the shortcut `CTRL/⌘+s`.
+2. In the save dialog, add a protocol name, description and pick a protocol category.
 3. Make sure, the correct macro is connected (not mandatory)
-4. Close the dialog by selecting **Save**.
+4. Save the protocol by selecting **Save**.
 
 #### Troubleshooting
 If you have issues saving the protocol, make sure you check these things first:

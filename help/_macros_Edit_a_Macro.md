@@ -1,13 +1,13 @@
 ### Edit a Macro
 You can change one of your macros or extend an already existing one at any time.
 
-#### Desktop (Google Chrome)
+#### Desktop
 1. Select **Macros** from the left menu bar.
 2. Double click on the macro in the list or click on **Edit** in the sidebar.
 3. Make your changes to the code.
-4. Select **Macro** from the top menu and click on **Save**.
+4. Select **Save as...** from the File menu or use the shortcut `CTRL/⌘+⇧+s`.
 5. Update the description if needed.
-6. Close the dialog by selecting **Save**.
+6. Save the changes by **Save As**.
 
 ***Tip:*** In case you altered a macro someone else had made, change the name too. In this case you only have the option **Save as**.
 

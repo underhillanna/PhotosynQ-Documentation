@@ -12,9 +12,9 @@ Sign in to access your work on PhotosynQ. You can only have one account active a
 2. Enter your email address and password.
 3. Tab on **Login**.
 
-#### Desktop (Google Chrome)
-1. Start the app using the chrome app launcher.
+#### Desktop
+1. Start the app by selecting the PhotosynQ app from your application folder.
 2. Enter your email address and password.
 3. Click on **Sign in**.
 
-***Tip:*** Make sure you have an internet connection when you sign in so your work can be synchronized.
+***Note:*** Make sure you have an internet connection when you sign in so your work can be synchronized.

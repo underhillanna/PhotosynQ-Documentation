@@ -4,10 +4,10 @@ To take measurements with your instrument you need to have a device with an app 
 #### Apps are available for which platforms?
 
 1. Android (mobile)
-2. Desktop (Google Chrome)
+2. Desktop
 	+ Mac OS X
 	+ Windows
-	+ Linux
+	+ ~~Linux~~
 	
 #### Will there be an iOS App?
 No, at least not in the near future. The current hardware of the MultispeQ is not able to communicate with iOS devices due to Bluetooth limitations.

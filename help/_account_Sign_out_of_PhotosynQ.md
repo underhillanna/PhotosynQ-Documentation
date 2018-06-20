@@ -9,6 +9,5 @@ It is quick and easy to sign out of PhotosynQ and you can sign back in at any ti
 2. Tab on your photo to bring up your profile.
 3. Tab on **Logout**.
 
-#### Desktop (Google Chrome)
-1. Click on your photo in the left menu bar.
-2. At the bottom of the appearing dialog click on **Sign out**.
+#### Desktop
+1. Select **File** from the application menu and click on **Sign out**.

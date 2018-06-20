@@ -1,9 +1,9 @@
 ### Run a Protocols
-All the protocols you have developed on PhotosynQ you can use independent from projects.
+All the protocols you or the community developed on PhotosynQ can use independent from projects. Those measurements can be saved to your notebook using the desktop app.
 
-#### Desktop (Google Chrome)
+#### Desktop
 1. Open your protcols by selecting **Protcols** from the left menu bar.
-2. Double click on a protocol in the list or click on a list and select **Run** from the sidebar.
+2. Double click on the protocol you want to run, or click on a list and select **Run** from the sidebar.
 
 ***Tip:*** Use **Add** next to **Run** in the sidebar to run multiple protocols one after another.
 
