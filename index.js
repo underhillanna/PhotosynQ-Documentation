@@ -97,22 +97,13 @@ var searchIDX = function(options){
 
 var compileMD = function(options){
 	var md = jetpack.read(options.input);
-	md = Mustache.render(md, {date: moment().format('LL'), version: (options.tag || '--') });
-
-	var files = md.match(/^\[(.+)\]/gm);
-	var file = null;
-
-	for(var i in files){
-		file = files[i].substr(1, (files[i].length -2) );
-		if(jetpack.exists( file ) == 'file'){
-			var content = jetpack.read(file);
-			var regex = files[i].replace('[', '\\[').replace(']', '\\]').replace('.', '\\.').replace('/', '\\/');
-			md = md.replace( new RegExp( regex, 'm' ), content );
-		}
+	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
+	var files = {};
+	for(var i in list){
+		files[list[i]] = jetpack.read(list[i]);
 	}
-
+	md = Mustache.render(md, {date: moment().format('LL'), version: (options.tag || '--') }, files);
 	md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
-
 	jetpack.write(options.output, md);
 };
 

@@ -1,16 +1,17 @@
-# PhotosynQ Firmware
-*Modified: {{ date }}
-Version: {{ version }}*
+# Firmware
+*<span class="text-muted">Modified:</span> {{ date }}
+<span class="text-muted">Version:</span> {{ version }}*
 
 ## Protocol Commands
-[help/_protocols_Commands.md]
+{{> help/_protocols_Commands.md}}
 
 ## Console Commands
 
-[help/_instruments_Console_Commands.md]
+{{> help/_instruments_Console_Commands.md}}
 
+## More Resources
 
-## Tutorials & More
++ [Help](https://photosynq.org/help)
 + [Tutorials](https://photosynq.org/tutorials)
 + [Forums](https://photosynq.org/forums)
 + [Latest Updates (Blog)](https://blog.photosynq.org/)

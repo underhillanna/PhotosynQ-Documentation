@@ -1,41 +1,43 @@
-# PhotosynQ Tutorials
-*Modified: {{ date }}
-Version: {{ version }}*
+# Tutorials
+*<span class="text-muted">Modified:</span> {{ date }}
+<span class="text-muted">Version:</span> {{ version }}*
 
 ## Getting Started
 
-[tutorials/_getting_started.md]
+{{> tutorials/_getting_started.md}}
 
 ## Creating a Project
 
-[tutorials/_creating_a_project.md]
+{{> tutorials/_creating_a_project.md}}
 
 ## Data Collection
 
-[tutorials/_data_collection.md]
+{{> tutorials/_data_collection.md}}
 
 ## Data Viewing
 
-[tutorials/_data_viewing.md]
+{{> tutorials/_data_viewing.md}}
 
 ## Data Quality
 
-[tutorials/_data_quality.md]
+{{> tutorials/_data_quality.md}}
 
 ## Data Analysis
 
-[tutorials/_data_analysis.md]
+{{> tutorials/_data_analysis.md}}
 
 ## Protocols
 
-[tutorials/_building_a_protocol.md]
+{{> tutorials/_building_a_protocol.md}}
 
 ## Macros
 
-[tutorials/_building_a_macro.md]
+{{> tutorials/_building_a_macro.md}}
 
-## Help More
+## More Resources
+
 + [Help](https://photosynq.org/help)
++ [Tutorials](https://photosynq.org/tutorials)
 + [Forums](https://photosynq.org/forums)
 + [Latest Updates (Blog)](https://blog.photosynq.org/)
 + [API (Documentation)](https://photosynq.org/rdoc)
