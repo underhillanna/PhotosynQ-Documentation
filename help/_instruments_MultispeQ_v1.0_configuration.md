@@ -73,7 +73,7 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 
 [OSRAM SFH 4451]: https://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-850-nm/sfh-4451/index.jsp
 
-[ELSH-Q61F1-0LPNM-JF3F8]: https://www.everlight.com/SeriationProduct.aspx?Seq=A92E0EF4-2205-E411-8B3B-0002A54E500F
+[ELSH-Q61F1-0LPNM-JF3F8]: https://media.digikey.com/pdf/Data%20Sheets/Everlight%20PDFs/Shuen1W_Series.pdf
 
 [APTD3216SF4C]: https://media.digikey.com/PDF/Data%20Sheets/Kingbright%20PDFs/APTD3216SF4C.pdf
 
@@ -97,4 +97,4 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 
 [HMC-5051]: http://www.uqgoptics.com/pdf/Hot%20mirrors%20data%20sheet.pdf
 
-[26650P-3.7-5500]: https://www.soshine.com.cn/a633.aspx
+[26650P-3.7-5500]: http://www.soshine.com.cn/a633.aspx

@@ -81,7 +81,7 @@ The MultispeQ v2.0 has a Li-ion battery which can be charged through the micro U
 
 [OSRAM SFH 4451]: https://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-850-nm/sfh-4451/index.jsp
 
-[ELSH-Q61F1-0LPNM-JF3F8]: https://www.everlight.com/SeriationProduct.aspx?Seq=A92E0EF4-2205-E411-8B3B-0002A54E500F
+[ELSH-Q61F1-0LPNM-JF3F8]: https://media.digikey.com/pdf/Data%20Sheets/Everlight%20PDFs/Shuen1W_Series.pdf
 
 [SFH 4786S]: https://dammedia.osram.info/media/resource/hires/osram-dam-4323044/SFH%204786S_2017-10-23.pdf
 
@@ -107,4 +107,4 @@ The MultispeQ v2.0 has a Li-ion battery which can be charged through the micro U
 
 [SK6812]: https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf
 
-[26650P-3.7-5500]: https://www.soshine.com.cn/a633.aspx
+[26650P-3.7-5500]: http://www.soshine.com.cn/a633.aspx
