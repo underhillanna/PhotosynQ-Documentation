@@ -5,7 +5,7 @@ MultispeQ v2.0 Configuration
 ### Lights
 There are sets of five LEDs each on the **main body** and the **leaf clamp**.
 
-##### Main Body
+#### Main Body
 
 | # | Emission Peak | Model | Specifications |
 |:---:|:---:|-----|:---:|
@@ -15,7 +15,7 @@ There are sets of five LEDs each on the **main body** and the **leaf clamp**.
 | 4 | 448nm | LED (blue), Lumileds, LXZ1-PR01 |[view][LXZ1] |
 | 5 | 950nm | LED (NIR), OSRAM, SFH 4441 | [view][OSRAM SFH 4441] |
 
-##### Leaf Clamp
+#### Leaf Clamp
 
 | # | Emission Peak | Model | Specifications |
 |:---:|:---:|-----|:---:|
@@ -25,7 +25,7 @@ There are sets of five LEDs each on the **main body** and the **leaf clamp**.
 | 9 | 730nm | LED (far red), Everlight, ELSH-Q61F1-0LPNM-JF3F8 | [view][ELSH-Q61F1-0LPNM-JF3F8] |
 | 10 | 820nm | LED (NIR), OSRAM SFH 4786S | [view][SFH 4786S] |
 
-##### Emission Spectra for LEDs
+#### Emission Spectra for LEDs
 
 ![Emission spectra for LEDs build in the MultispeQ v2.0 - Emission normalized to maximum emission peak](../images/help/_instruments_MultispeQ_v2.0_led_emission_spectra.png)
 
