@@ -10,6 +10,8 @@ const markdownpdf = require('markdown-pdf');
 const version = require('./package.json').version;
 const through2 = require('through2');
 const sizeOf = require('image-size');
+const markdownLinkCheck = require('markdown-link-check');
+const chalk = require('chalk');
 
 var createIDX = function(){
 
@@ -96,6 +98,97 @@ var searchIDX = function(options){
 	}
 };
 
+var pingLinks = function(){
+	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
+	var files = {};
+	var linkList = [];
+	var localList = [];
+	var deadLinks = [];
+	for(var i in list){
+		var content = jetpack.read(list[i]);
+		files[list[i]] = {'links':[], 'local': []}
+		var links = content.match(/(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim)
+		var internalLinks = content.match(/[^!]\[(.*?)\]\((\.{0,2}\/.*?)\)/gm);
+		var images = content.match(/!\[(.*?)\]\((.*?)\)/gm);
+		if(links){
+			for(var l in links){
+				files[list[i]].links.push(links[l])
+				if(linkList.indexOf(links[l]) == -1)
+					linkList.push(links[l])
+			}
+		}
+		if(internalLinks){
+			internalLinks = internalLinks.map(function(x){
+				return x.match(/[^!]\[(.*?)\]\((\.{0,2}\/.*?)\)/m)[2];
+			});
+			for(var l in internalLinks){
+				files[list[i]].local.push(internalLinks[l]);
+				if(localList.indexOf(internalLinks[l]) == -1)
+					localList.push(internalLinks[l]);
+			}
+		}
+		if(images){
+			images = images.map(function(x){
+				return x.match(/(!\[(.*?)\]\()(.*?)(\))/m)[3];
+			});
+			for(var l in images){
+				files[list[i]].local.push(images[l]);
+				if(localList.indexOf(images[l]) == -1)
+					localList.push('../'+images[l]);
+			}
+		}
+	}
+
+	console.log(chalk.yellow(`Testing ${linkList.length} Unique Links`));
+
+	markdownLinkCheck(linkList.join('\n'), {
+		baseUrl: 'https://photosynq.org',
+		showProgressBar: true
+	}, function (err, results) {
+		if (err) {
+			console.error('Error', err);
+			return;
+		}
+		results.forEach(function (result) {
+			if(result.status == 'dead')
+				deadLinks.push(result.link)
+		});
+		var errors = false;
+		for(var file in files){
+			console.log(`\n${chalk.cyan(file)}`);
+			var toCheck = false;
+			if(files[file]['links'] !== undefined){
+				for(var l in files[file]['links']){
+					toCheck = true;
+					if(deadLinks.indexOf(files[file]['links'][l]) > -1){
+						console.log(`[${chalk.red('✖')}] ${chalk.yellow('LINK')} ${files[file]['links'][l]}`);
+						errors = true;
+					}
+					else
+						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LINK')} ${files[file]['links'][l]}`);
+				}
+			}
+			if(files[file].local !== undefined){
+				for(var l in files[file].local){
+					toCheck = true;
+					if(files[file].local[l].match(/^data:image/))
+						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LOCAL')} base64 image`);
+					else if(jetpack.exists(files[file].local[l])){
+						console.log(`[${chalk.red('✖')}] ${chalk.yellow('LOCAL')} ${files[file].local[l]}`);
+						errors = true;
+					}
+					else
+						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LOCAL')} ${files[file].local[l]}`);
+				}			
+			}
+			if(!toCheck)
+				console.log(`- ${chalk.yellow('Nothing to Check')}`);
+		}
+		if(errors)
+			console.log(chalk.red(`\nError: ${deadLinks.length} Dead links or missing files found`));
+	});
+};
+
 var compileMD = function(options){
 	var md = jetpack.read(options.input);
 	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
@@ -119,25 +212,23 @@ function preProcessHtml () {
 	return through2((data, enc, cb) => {
 		let nd = data.toString().trim().split('\n');
 		nd = nd.map(function(element){
+
 			var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
 			if(src){
 				if(jetpack.exists(src[2])){
 					var dimensions = sizeOf(src[2]);
-					// console.log(src[2], (dimensions.width / dimensions.height))
 					if(dimensions.width < 800 && (dimensions.width / dimensions.height) < 1.5 ){
-						return element.replace('>',' style="max-width:50%">');
-					}
-					else{
-						return element;
+						element = element.replace('>',' style="max-width:50%">');
 					}
 				}
-				else{
-					return element;
-				}
 			}
-			else{
-				return element;
+
+			var href = element.match(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im);
+			if(href){
+				element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
 			}
+			
+			return element;
 		});
 		// Clean up to avoid empty pages
 		nd = nd.join('\n').replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
@@ -189,6 +280,11 @@ program
 	.option('-q, --query <query>','Query (e.g. measurement)')
 	.description('Search terms based on the search index')
 	.action(searchIDX);
+
+program
+	.command('test-links')
+	.description('Ping all links in markdown documents to see if they are alive')
+	.action(pingLinks);
 
 program
 	.command('compile')
