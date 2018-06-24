@@ -11,9 +11,13 @@ h2:before {
 }
 h3 {
     color: #277147;
+    border-bottom:1px solid #a1a1a1
 }
 a {
     color: #277147;
+}
+h1, h2, h3, h4, h5, h6 {
+    page-break-after:avoid !important;
 }
 hr {
     page-break-after:always !important;
@@ -29,4 +33,7 @@ body {
 
 .text-muted {
     color: #737373;
+}
+thead, tfoot {
+    display: table-header-group !important;
 }
