@@ -4,8 +4,6 @@ The spreadsheet allows you to view and download the data in the familiar spreads
 #### View the Spreadsheet
 Just select the **<i class="fa fa-table"></i> Spreadsheet** from the right menu underneath the Project name.
 
-***
-
 ![Spreadsheet menu, with dropdown menus for Protocols, Macros and Saving, as well as the currently displayed protocol name.](../images/help/_data_spreadsheet_menu.png)
 
 #### Protocols
