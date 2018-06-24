@@ -83,6 +83,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Instrument basics](help/_instruments_Instrument_basics.md)
 + [What does the MultispeQ measure?](help/_instruments_What_does_the_MultispeQ_measure.md)
 + [MultispeQ v1.0 Configuration](help/_instruments_MultispeQ_v1.0_configuration.md)
++ [MultispeQ v2.0 Configuration](help/_instruments_MultispeQ_v2.0_configuration.md)
 
 ## Tutorial - Pages
 
