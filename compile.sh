@@ -1,17 +1,16 @@
 #!/usr/bin/bash
 echo -e "\033[92mBuild Master Documents for PhotosynQ\033[0m";
 echo "------------------------------------";
-echo "Compiling Help Files";
+# Empty the distribution folder dist
+echo "Remove previous distribution files"
+rm ./dist/*
 
 # Generate new documentation index
 # This will collect also the firmware documentation if available
 node index.js create
 
-# Empty the distribution folder dist
-echo "Remove previous distribution files"
-rm ./dist/*
-
 # Compiling the master markdown files from templates
+# The tag gets used from the git repo
 TAG=$(git describe --abbrev=0 --tags)
 echo "Compile master files for Github tag $TAG";
 node index.js compile -i ./build/help-master.md -o ./dist/PhotosynQ-Help-Manual.md -t $TAG
