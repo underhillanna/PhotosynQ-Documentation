@@ -32,6 +32,7 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [PhotosynQ on computers, phones and tablets](help/_apps_PhotosynQ_on_computers_phones_and_tablets.md)
 + [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
++ [Desktop Application Settings](help/_apps_Desktop_Application_Settings.md)
 + [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
 + [My Projects](help/_apps_My_Projects.md)
 + [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
@@ -102,6 +103,17 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 | Analysis - Python | [Import Data](tutorials/_python_connect_python_to_photosynq.md) |
 
 ## Build
+
+### Folders
+
+```
+├── help              // Help Center files
+├── images
+│   ├── help          // Images used in Help Center
+│   ├── instruments   // Instrument Images
+│   └── tutorials     // Images used in Tutorials
+└── tutorials         // Tutorial files
+```
 
 ### Images
 All images are placed in the `images` folder in the corresponding folders. For now we don't have any special naming conventions. The description will appear on the website as a figure legend.
