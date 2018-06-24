@@ -9,8 +9,9 @@ const Mustache = require('mustache');
 const markdownpdf = require('markdown-pdf');
 const version = require('./package.json').version;
 const through2 = require('through2');
+const sizeOf = require('image-size');
 
-var createIDX = function(options){
+var createIDX = function(){
 
 	var elasticIDX = elasticlunr(function(){
 		this.addField('title');
@@ -112,7 +113,39 @@ function preProcessMd () {
 		let nd = data.toString().trim();
 		cb( null, new Buffer( nd ) );
 	});
-  }
+}
+
+function preProcessHtml () {
+	return through2((data, enc, cb) => {
+		let nd = data.toString().trim().split('\n');
+		nd = nd.map(function(element){
+			var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
+			if(src){
+				if(jetpack.exists(src[2])){
+					var dimensions = sizeOf(src[2]);
+					// console.log(src[2], (dimensions.width / dimensions.height))
+					if(dimensions.width < 800 && (dimensions.width / dimensions.height) < 1.5 ){
+						return element.replace('>',' style="max-width:50%">');
+					}
+					else{
+						return element;
+					}
+				}
+				else{
+					return element;
+				}
+			}
+			else{
+				return element;
+			}
+		});
+		// Clean up to avoid empty pages
+		nd = nd.join('\n').replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
+		nd = nd.replace(/<hr>\n{0,}<hr>/gim, '<hr>'); // Two page breaking <hr> in a row
+		// jetpack.write('./dist/'+nd.length+'.html',nd);
+		cb( null, new Buffer( nd ) );
+	});
+}
 
 var createPDF = function (options){
 
@@ -120,11 +153,12 @@ var createPDF = function (options){
 		cssPath: 'src/css/print.css',
 		// phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
 		paperBorder: '1cm',
-		renderDelay: 1500,
+		renderDelay: 2500,
 		runningsPath: 'src/runnings.js',
 		paperFormat: 'Letter',
 		paperOrientation: 'portrait',
 		preProcessMd: preProcessMd,
+		preProcessHtml: preProcessHtml,
 		remarkable: {
 			"html":true,
 			"linkify": true,
