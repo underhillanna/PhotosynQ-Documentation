@@ -1,4 +1,5 @@
 ### What is a Project?
+
 Data collected in PhotosynQ is organized and stored in Projects. Users define the Protocols and Project Questions for each Project.
 
 ### Create a new Project
@@ -9,6 +10,3 @@ Data collected in PhotosynQ is organized and stored in Projects. Users define th
 4. Click on 'Start a New Project.'
 
 ***Tip:*** Selecting a project category helps the project creation tool suggest the most appropriate protocols for your project.
-
-
-
