@@ -1,8 +1,9 @@
 ### PhotosynQ Glossary
+
 To help you getting started, here is a list of commonly used terms to help you to familiarize yourself with PhotosynQ.
 
 | Term | Definition |
-|---|-------------------------------------------------------|
+|------|------------|
 | **Device** | On PhotosynQ, computers, phones and tablets are generally called **Devices**. |
 | **App** | Program that can be installed on a Device. |
 | **Instrument** | Equipment that connects to **Apps** and are used to take **Measurements** (e.g. the MultispeQ). |
