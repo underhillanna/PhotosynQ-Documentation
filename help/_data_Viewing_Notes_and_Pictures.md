@@ -2,12 +2,11 @@
 
 Measurement notes and pictures are viewable in the online data explorer in the single measurement screen, inside the scatterplot graphs and in the spreadsheet view.
 
-#### Single Measurement 
+#### Single Measurement
 
 Inside single measurements, both your note and associated photos are readily available.
 
 ![View notes in single data view](../images/help/_data_Single_data_view_note.png)
-
 
 #### Scatter plots
 
@@ -20,7 +19,7 @@ Inside single measurements, both your note and associated photos are readily ava
 
 #### Spreadsheet View
 
-Notes are not automatically viewable in the spreadsheet, but can be added. 
+Notes are not automatically viewable in the spreadsheet, but can be added.
 
 1. Select the **More** drop down from the menu at the top of the spreadsheet.
 2. Check boxes for **Notes** and **Photo**.

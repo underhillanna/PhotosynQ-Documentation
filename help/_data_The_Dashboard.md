@@ -1,10 +1,13 @@
 ### Use the Dashboard
+
 The dashboard can show a number of **Panels** showing what is important to you. You can drag and rearrange panels as you like. Click on the big **+** to bring up the panel selection dialog, or add plots from the plot view.
 
 ***Tip:*** Next time you view the project data, your dashboard will be restored.
 
 #### Plots
-You can plot parameters against each other using the plot tool. 
+
+You can plot parameters against each other using the plot tool.
+
 1. In the menu bar above the plot select **Dashboard**
 2. Enter a name or use the suggested and click on **OK** to add the plot to your dashboard.
 
@@ -29,5 +32,6 @@ You can plot parameters against each other using the plot tool.
 ***Tip:*** These panels can help you identifying issues with a user, device or with the approach in general in which measurements are taken.
 
 #### Troubleshooting
+
 Sometimes your dashboard settings disappear the next time you load the project data.
 Make sure you allow the browser to store information in your browsers **local storage**.

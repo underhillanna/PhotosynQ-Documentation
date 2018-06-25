@@ -1,7 +1,9 @@
 ### Statistics
+
 A very basic set of statistical tools for your project data analysis.
 
 #### View the Spreadsheet
+
 1. Select the **<i class="fa fa-bar-chart"></i> Statistics** from the right menu underneath the Project name.
 2. Choose the type of statistics you wish to perform and select the signficance level.
 
@@ -10,9 +12,11 @@ A very basic set of statistical tools for your project data analysis.
 ***
 
 #### Summary
+
 1. Pick the parameter you want the statistical summary generated for and click on **Show Summary**.
 
 #### Student's t-test
+
 1. Pick the parameter and the two series you want to compare.
 2. Select one-tailed or two-tailed, depending on your dataset.
 3. Click on **Run t-test** to show the results.
@@ -20,6 +24,7 @@ A very basic set of statistical tools for your project data analysis.
 ![T-test](../images/help/_data_T_test.jpg)
 
 #### ANOVA
+
 1. Pick the parameter and at least two series to compare.
 2. Check **Create correlation matrix** to generate a table of t-test.
 3. Click **Run ANOVA**.
@@ -27,10 +32,10 @@ A very basic set of statistical tools for your project data analysis.
 ![ANOVA](../images/help/_data_ANOVA_selection.jpg)
 
 #### Chi Square test
-1. Pick the parameter that you want to test for. 
 
-***Note*** the parameter must be a categorical variable.
+1. Pick the parameter that you want to test for.
+
+    ***Note*** the parameter must be a categorical variable.
 
 2. Pick at least 2 series to compare.
 3. Click **Run Chi Square test**.
-
