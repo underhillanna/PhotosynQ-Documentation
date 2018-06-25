@@ -1,4 +1,5 @@
 #### What does the MultispeQ measure?
+
 The standard MultispeQ protocol measures the following parameters*:
 
 | Parameter | What does it mean? |
@@ -24,7 +25,7 @@ The standard MultispeQ protocol measures the following parameters*:
 |Relative Chlorophyll|Otherwise known has "SPAD," relative chlorophyll is a measure of leaf “greenness”. This measurement is often correlated with leaf nitrogen levels|
 |Thickness| The thickness of the leaf as measured by the Hall Effect sensor embedded in the MultispeQ clamp.
 |vH+|  Proton conductivity of the chloroplast ATP synthase. *[Avenson et al. Plant Cell Environ. (2005)][doi:10.1111/j.1365-3040.2005.01294.x]*|
-|**Advanced**| | 
+|**Advanced**| |
 |absorbance_wavelength|The absorbance of light from each wavelength that passed through the leaf|
 |angle_direction|Abbreviated cardinal direction (e.g. NW - North West)|
 |B|The raw amount of blue light captured by the PAR sensor|
@@ -45,8 +46,6 @@ The standard MultispeQ protocol measures the following parameters*:
 |tP700|"Tau" P700: the lifetime of P700 electron transfer. P700 is the primary electron acceptor of PS1.|
 |V_initial_P700|The initial rate of P700 steady-state electron transfer.
 
-
-
 \**Some of the parameters are not available for the beta version of the MultispeQ*
 
 ***
@@ -57,8 +56,8 @@ The standard MultispeQ protocol measures the following parameters*:
 ***
 
 #### Where can I find more information?
-You can search <https://pubmed.com> or <https://scholar.google.com> if you are looking for scientific literature. Below you find a small selection of literature that will get you started:
 
+You can search <https://pubmed.com> or <https://scholar.google.com> if you are looking for scientific literature. Below you find a small selection of literature that will get you started:
 
 Tietz, S., Hall, C. C., Cruz, J. A., Kramer, D. M. (2017) **NPQ<sub>(T)</sub>: a chlorophyll fluorescence parameter for rapid estimation and imaging of non-photochemical quenching of excitons in photosystem-II-associated antenna complexes** *Plant. Cell Environ.* 40(8), 1243–1255. [doi:10.1111/pce.12924].
 
@@ -82,8 +81,6 @@ Sacksteder, C. A., Kanazawa, A., Jacoby, M. E., Kramer, D. M. (2000). **The prot
 
 Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?** *Photosynthesis Res.* 60: 151-163 [doi.org/10.1023/A:1006212014787]
 
-
-
 [doi:10.1111/pce.12924]: https://dx.doi.org/10.1111/pce.12924
 
 [doi.org/10.3389/fpls.2017.00719]: https://dx.doi.org/10.3389/fpls.2017.00719
@@ -105,11 +102,3 @@ Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?
 [doi:10.1111/j.1365-3040.2005.01294.x]: https://dx.doi.org/10.1111/j.1365-3040.2005.01294.x
 
 [doi: 10.1073/pnas.182427499]: https://www.pnas.org/content/99/20/12789#
-
-
-
-
-
-
-  
-

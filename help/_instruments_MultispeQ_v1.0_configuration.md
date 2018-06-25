@@ -3,6 +3,7 @@ MultispeQ v1.0 Configuration
 ![MultispeQ v1.0 measurements](../images/help/_instruments_MultispeQ_v1.0_measurements.png)
 
 ### Lights
+
 There are sets of five LEDs each on the **main body** and the **leaf clamp**.
 
 #### Main Body
@@ -25,12 +26,12 @@ There are sets of five LEDs each on the **main body** and the **leaf clamp**.
 | 9 | 730nm | LED (far red), Everlight, ELSH-Q61F1-0LPNM-JF3F8 | [view][ELSH-Q61F1-0LPNM-JF3F8] |
 | 10 | 880nm | LED (NIR), Kingbright, APTD3216SF4C | [view][APTD3216SF4C] |
 
-
 #### Emission Spectra for LEDs
 
 ![Emission spectra for LEDs build in the MultispeQ v1.0 - Emission normalized to maximum emission peak](../images/help/_instruments_MultispeQ_v1.0_led_emission_spectra.png)
 
 ### Detectors
+
 The MultispeQ v1.0 comes with two detectors. One covering the near infrared on the **main body**, the other covering the visual range on the **leaf clamp**.
 
 | # | Detection Range | Model | Specifications |
@@ -41,6 +42,7 @@ The MultispeQ v1.0 comes with two detectors. One covering the near infrared on t
 \****Note:*** The detector 3 is covered with a BG-18 bandpass filter with a center wavelength around 493 nm. If you are using the detector to detect signals on the edges of the detection range, expect the signal strength to be low.
 
 ### Sensors
+
 The MultispeQ v1.0 has a set of sensors to measure the environmental parameters
 
 | Sensor | Model | Specifications |
@@ -53,6 +55,7 @@ The MultispeQ v1.0 has a set of sensors to measure the environmental parameters
 | PAR light sensor | AMS-TAOS USA, TCS34715FN + 700nm low pass filter | [view][TCS34715FN] |
 
 ### Filters
+
 The MultispeQ v1.0 has two filters, a Band Pass filter covering the visible light detector (#3) and a Low Pass filter used in the PAR sensor.
 
 | Filter | Model | Specifications |
@@ -61,6 +64,7 @@ The MultispeQ v1.0 has two filters, a Band Pass filter covering the visible ligh
 | Low Pass | UQC Optics, Hot Mirror HM-07 | [view][HMC-5051] |
 
 ### Battery
+
 The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro USB port.
 
 | Battery | Model | Specifications |
