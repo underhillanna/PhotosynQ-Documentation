@@ -212,6 +212,14 @@
 
 ***
 
+{{> help/_instruments_Instrument_Settings.md}}
+
+***
+
+{{> help/_instruments_Instrument_Calibrations.md}}
+
+***
+
 {{> help/_instruments_How_to_Install_Firmware_Updates.md}}
 
 ***
