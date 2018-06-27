@@ -129,7 +129,7 @@ Make sure to use png, jpeg or gifs if animations are necessary.
 
 `***Note:*** This is a Note for you.` Will create a yellow note box on the website. Don't use line breaks.
 
-`<i class="fa fa-..."></i>` Will include the corresponding <http://fontawesome.io/> icon on the website.
+`<i class="fa fa-..."></i>` Will include the corresponding <http://fontawesome.io/> icon (v4.7.0) on the website.
 
 ### Elasticlunr.js Search Index
 
