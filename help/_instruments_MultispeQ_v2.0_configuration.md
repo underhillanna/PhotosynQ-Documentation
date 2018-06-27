@@ -65,8 +65,7 @@ The MultispeQ v2.0 has two filters, a Band Pass filter covering the visible ligh
 
 ### Indicator Lights
 
-The MultispeQ v2.0 has now two indicator lights. One to indicate if the device is charging which is located next to the micro-USB port. The second one
-is located on top to indicate progress or required actions.
+The MultispeQ v2.0 has now two indicator lights. One to indicate if the device is charging which is located next to the micro-USB port. The second one is located on top to indicate progress or required actions.
 
 | LED | Model | Specifications |
 |-----|-----|:---:|
