@@ -17,8 +17,9 @@ The prefix defines the chapters on the index page <https://photosynq.org/help>.
 Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Chapter_1.md` This is important since `This_is_the_Chapter_1` will be used as the chapter title: _This is the Chapter 1_.
 
 ### Account Basics
+
 + [Create an Account](help/_account_Create_an_Account.md)
-+ [Edit your profile](help/_account_Edit_your_Profile.md)
++ [Edit your Profile](help/_account_Edit_your_Profile.md)
 + [Manage your password](help/_account_Manage_your_password.md)
 + [PhotosynQ Glossary](help/_account_PhotosynQ_Glossary.md)
 + [Sign in to PhotosynQ](help/_account_Sign_in_to_PhotosynQ.md)
@@ -27,27 +28,29 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Project invitations](help/_account_Project_invitations.md)
 + [Sign out of PhotosynQ](help/_account_Sign_out_of_PhotosynQ.md)
 + [Deactivate your PhotosynQ Account](help/_account_Deactivate_your_PhotosynQ_Account.md)
- 
-### Apps
-+ [PhotosynQ on computers, phones and tablets](help/_apps_PhotosynQ_on_computers_phones_and_tablets.md)
+
+### Applications (Mobile and Desktop)
+
++ [PhotosynQ on computers phones and tablets](help/_apps_PhotosynQ_on_computers_phones_and_tablets.md)
 + [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
 + [Desktop Application Settings](help/_apps_Desktop_Application_Settings.md)
 + [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
 + [My Projects](help/_apps_My_Projects.md)
 + [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
- 
+
 ### Projects
-+ [What are projects?](help/_projects_What_are_projects.md)
-+ [Join a Project](help/_projects_Join_a_project.md)
+
++ [What are projects](help/_projects_What_are_projects.md)
++ [Join a project](help/_projects_Join_a_project.md)
 + [Create a new Project](help/_projects_Create_a_new_Project.md)
-+ [Select a Protocol](help/_projects_Select_a_protocol.md)
++ [Select a protocol](help/_projects_Select_a_protocol.md)
 + [Adding Project Questions](help/_projects_Adding_Project_Questions.md)
 + [Project Locations](help/_projects_Project_Locations.md)
 + [Adding a Project Description](help/_projects_Adding_a_Project_Description.md)
 + [Editing a Project](help/_projects_Editing_a_Project.md)
 + [Managing Project Settings](help/_projects_Managing_Project_Settings.md)
- 
+
 ### View & Analyze Data
 + [View your Project Data](help/_data_View_your_Project_Data.md)
 + [The Dashboard](help/_data_The_Dashboard.md)
@@ -62,17 +65,19 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Advanced Parameters](help/_data_Advanced_Parameters.md)
 + [Data Issues](help/_data_Data_Issues.md)
 + [Flag Measurements](help/_data_Flag_Measurements.md)
- 
+
 ### Protocols
+
 + [Protocol Basics](help/_protocols_Protocol_Basics.md)
 + [View your Protocols](help/_protocols_View_your_Protocols.md)
-+ [Create a Protocol](help/_protocols_Create_a_new_Protocol.md)
++ [Create a new Protocol](help/_protocols_Create_a_new_Protocol.md)
 + [Save a Protocol](help/_protocols_Save_a_Protocol.md)
 + [Edit a Protocol](help/_protocols_Edit_a_Protocol.md)
 + [Run a Protocol](help/_protocols_Run_a_Protocol.md)
 + [Commands](help/_protocols_Commands.md)
- 
+
 ### Macros
+
 + [View your Macros](help/_macros_View_your_Macros.md)
 + [Create a new Macro](help/_macros_Create_a_new_Macro.md)
 + [Save a Macro](help/_macros_Save_a_Macro.md)
@@ -80,10 +85,12 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Coding and Functions](help/_macros_Coding_and_Functions.md)
 
 ### Instruments
+
 + [Instrument basics](help/_instruments_Instrument_basics.md)
-+ [What does the MultispeQ measure?](help/_instruments_What_does_the_MultispeQ_measure.md)
-+ [MultispeQ v1.0 Configuration](help/_instruments_MultispeQ_v1.0_configuration.md)
-+ [MultispeQ v2.0 Configuration](help/_instruments_MultispeQ_v2.0_configuration.md)
++ [What does the MultispeQ measure](help/_instruments_What_does_the_MultispeQ_measure.md)
++ [How to Install Firmware Updates](help/_instruments_How_to_Install_Firmware_Updates.md)
++ [MultispeQ v1.0 configuration](help/_instruments_MultispeQ_v1.0_configuration.md)
++ [MultispeQ v2.0 configuration](help/_instruments_MultispeQ_v2.0_configuration.md)
 
 ## Tutorial - Pages
 
