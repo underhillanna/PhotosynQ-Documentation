@@ -56,7 +56,7 @@
 
 ***
 
-{{> _apps_Desktop_Application_Settings.md}}
+{{> help/_apps_Desktop_Application_Settings.md}}
 
 ***
 
