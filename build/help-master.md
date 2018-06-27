@@ -42,7 +42,7 @@
 
 {{> help/_account_Deactivate_your_PhotosynQ_Account.md}}
 
-## App
+## Applications (Mobile and Desktop)
 
 {{> help/_apps_PhotosynQ_on_computers_phones_and_tablets.md}}
 
