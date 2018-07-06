@@ -4,15 +4,15 @@ To help you getting started, here is a list of commonly used terms to help you t
 
 | Term | Definition |
 |------|------------|
-| **Device** | On PhotosynQ, computers, phones and tablets are generally called **Devices**. |
 | **App** | Program that can be installed on a Device. |
-| **Instrument** | Equipment that connects to **Apps** and are used to take **Measurements** (e.g. the MultispeQ). |
 | **Contribution** | **Measurements** taken for a project and submitted to PhotosynQ. |
+| **Device** | On PhotosynQ, computers, phones and tablets are generally called **Devices**. |
 | **Discussion** | Projects, Protocols and Macros have a discussion section, to facilitate the easy exchange of ideas between users. |
 | **Discussion Post** | In a discussion, every comment, question or shared image is called **Post**. |
 | **Discussion Thread** | In Projects, **Discussions** can have multiple Topics or **Threads**. Protocols and Macros only have one **Thread**. |
 | **Firmware** | The software installed on an instrument. |
 | **Flag** | Some measurements might be of low quality, so they can be **flagged**. **Flagged** data is hidden during analysis but is **NOT** deleted from the project. |
+| **Instrument** | Equipment that connects to **Apps** and are used to take **Measurements** (e.g. the MultispeQ). |
 | **Macro** | **Macros** are small pieces of code connected to a **Protocol** to help analyzing the measurement, right after it is finished. |
 | **Project** | **Measurements** collected on PhotosynQ are organized and stored in **Projects**. Users can define **Protocols** and **Project Questions** for each **Project.**  |
 | **Project Administrator** | **Project Administrators** get invited by a **Project Lead** to help manage the **Project** and take measurements. |
