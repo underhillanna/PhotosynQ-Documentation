@@ -30,9 +30,17 @@
 
 {{> tutorials/_building_a_protocol.md}}
 
+## Protocols (Advanced)
+
+{{> tutorials/_building_an_advanced_protocol.md}}
+
 ## Macros
 
 {{> tutorials/_building_a_macro.md}}
+
+## Macros
+
+{{> tutorials/_building_an_advanced_macro.md}}
 
 ## More Resources
 
