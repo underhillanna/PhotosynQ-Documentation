@@ -7,6 +7,7 @@
 4. Now go back to the website or app and sign in.
 
 #### Troubleshooting
+
 - [x] Make sure that you are connected to the internet!
 - [x] Sometimes the confirmation emails end up in your SPAM folder. Make sure to check it first.
 
