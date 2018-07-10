@@ -194,7 +194,7 @@ var compileMD = function(options){
 	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
 	var files = {};
 	for(var i in list){
-		files[list[i]] = jetpack.read(list[i]);
+		files[list[i]] = jetpack.read(list[i]) + '\n';
 	}
 	md = Mustache.render(md, {date: moment().format('LL'), version: (options.tag || '--') }, files);
 	md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
