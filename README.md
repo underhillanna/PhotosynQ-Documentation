@@ -104,8 +104,8 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 | [_data_viewing.md](tutorials/_data_viewing.md) | How to view data in the Web-Browser. |
 | [_data_quality.md](tutorials/_data_quality.md) | How to identify measurement issue warnings and flag data. |
 | [_data_analysis.md](tutorials/_data_analysis.md) | Overview for data analysis. R and Python examples are documented in the corresponding repos. |
-| [_building_a_protocol.md](tutorials/_building_a_protocol.md) | How to build a simple Protocol. |
-| [_building_a_macro.md](tutorials/_building_a_macro.md) | How to build a simple Macro. |
+| [_building_a_protocol.md](tutorials/_building_a_protocol.md) | How to build a simple Protocol and how to build an advanced Protocol  ([_building_an_advanced_protocol.md](tutorials/_building_an_advanced_protocol.md)) |
+| [_building_a_macro.md](tutorials/_building_a_macro.md) | How to build a simple Macro and how to build an advanced Macro  ([_building_an_advanced_macro.md](tutorials/_building_an_advanced_macro.md)) |
 | [_videos.md](tutorials/_videos.md) | List of videos from the YouTube channel. |
 | Analysis - R | [Import Data](tutorials/_r_import_photosynq_data.md), [Anova and Multivariate Analysis](tutorials/_r_anova_and_multivariate_analysis.md), [Correlation and Mixed Effects](tutorials_r_correlation_and_mixed_effects.md/) |
 | Analysis - Python | [Import Data](tutorials/_python_connect_python_to_photosynq.md) |
