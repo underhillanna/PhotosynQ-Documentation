@@ -7,6 +7,8 @@
 
 ## Console Commands
 
+Using the Console in the Desktop application, you can use these commands to directly communicate with the Instrument. It allows to change settings and display informations, which are mostly only for advanced users or developers. When working with the console and these commands, be careful! Some of the commands will introduce changes without warning, which could lead to Instrument to malfunction.
+
 {{> help/_instruments_Console_Commands.md}}
 
 ## More Resources
