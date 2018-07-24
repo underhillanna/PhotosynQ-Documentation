@@ -23,33 +23,12 @@ var createIDX = function(){
 		this.saveDocument(false);
 	});
 
-	// Copy the protocol commands from the firmware documentation
-	var file, path;
-	try{
-		file = '_protocols_Commands.md';
-		path = '../PhotosynQ-Firmware/commands/docs/';
-		jetpack.copy( jetpack.path(path,file) , jetpack.path( './help',file), { overwrite: true });
-		console.log('Firmware Documentation copied.');
-	}catch(e){
-		console.log('Firmware Documentation Repo not found.');
-	}
-
-	// Copy the protocol commands from the firmware documentation
-	try{
-		file = '_instruments_Console_Commands.md';
-		path = '../PhotosynQ-Firmware/commands/docs/';
-		jetpack.copy( jetpack.path(path,file) , jetpack.path( './help',file), { overwrite: true });
-		console.log('Firmware Instrument Commands copied.');
-	}catch(e){
-		console.log('Firmware Documentation Repo not found.');
-	}
-
 	// Now loop through the files in help
 	var files = jetpack.inspectTree('./help/').children;
 	var hfc = 0;
 
 	for(var i in files){
-		if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown' || files[i].name == '_instruments_Console_Commands.md')
+		if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown')
 			continue;
 		var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 		var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
@@ -179,7 +158,7 @@ var pingLinks = function(){
 					}
 					else
 						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LOCAL')} ${files[file].local[l]}`);
-				}			
+				}
 			}
 			if(!toCheck)
 				console.log(`- ${chalk.yellow('Nothing to Check')}`);
@@ -227,7 +206,7 @@ function preProcessHtml () {
 			if(href){
 				element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
 			}
-			
+
 			return element;
 		});
 		// Clean up to avoid empty pages
@@ -271,7 +250,7 @@ program
   .version(version);
 
 program
-	.command('create')
+	.command('index')
 	.description('Generate search index')
 	.action(createIDX);
 
