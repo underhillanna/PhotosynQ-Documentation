@@ -7,7 +7,7 @@ rm ./dist/*
 
 # Generate new documentation index
 # This will collect also the firmware documentation if available
-node index.js create
+node index.js index
 
 # Compiling the master markdown files from templates
 # The tag gets used from the git repo
