@@ -31,7 +31,7 @@ node index.js pdf -i ./dist/PhotosynQ-MultispeQ-v1.0.md -o ./dist/PhotosynQ-Mult
 node index.js pdf -i ./dist/PhotosynQ-MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.pdf
 
 echo "Compiling markdown into ebook";
-node index epub -o ./dist/PhotosynQ-Documentation.epub -i ./dist/PhotosynQ-Help-Manual.md ./dist/PhotosynQ-Getting-Started.md ./dist/PhotosynQ-Firmware.md
+node index epub -t "PhotosynQ Documentation" -a '["Sebastian", "Dan", "Sean"]' -o ./dist/PhotosynQ-Documentation.epub -i ./dist/PhotosynQ-Help-Manual.md ./dist/PhotosynQ-Getting-Started.md ./dist/PhotosynQ-Firmware.md
 
 # Compiling finished
 echo -e "\033[92mDone...\033[0m";
