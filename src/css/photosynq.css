@@ -37,3 +37,49 @@ body {
 thead, tfoot {
     display: table-header-group !important;
 }
+
+/* Additional Styles for PhotosynQ*/
+a {
+    color: #428bca;
+}
+
+a:link:not([href^="#"]):after {
+    content: "";
+}
+
+pre {
+    padding: 5px;
+    background-color: transparent;
+    border-left: 2px solid #ddd;
+}
+
+pre > code, pre, tt, code, kbd, samp {
+    font-family: "Sans Mono", "Consolas", "Courier", monospace;
+    font-size: 12px;
+    color: inherit;
+    background-color: transparent;
+    white-space: pre-wrap;
+    padding: 1em;
+}
+
+body, a, h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+tr th, tr td {
+    page-break-inside: avoid !important;
+}
+
+body > * {
+    -webkit-font-smoothing: none; /* || antialiased || subpixel-antialiased */
+    filter: contrast(1);
+    zoom : 0.75;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    white-space: nowrap;
+}

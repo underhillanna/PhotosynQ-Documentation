@@ -390,33 +390,3 @@ thead tr td, thead tr th {
   border-bottom-width: 1pt;
   border-bottom-color: #666666;
 }
-
-/* Additional Styles for PhotosynQ*/
-a {
-  color: #428bca;
-}
-
-a:link:not([href^="#"]):after {
-  content: "";
-}
-
-pre {
-  padding: 5px;
-  background-color: transparent;
-  border-left: 2px solid #ddd;
-}
-
-pre > code, pre, tt, code, kbd, samp {
-  font-family: "Sans Mono", "Consolas", "Courier", monospace;
-  font-size: 12px;
-}
-
-body, a, h1, h2, h3, h4, h5, h6 {
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;  
-}
-
-tr th, tr td {
-  page-break-inside: avoid !important;  
-}
-
-body { zoom : 0.75 }
