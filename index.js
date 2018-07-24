@@ -16,6 +16,8 @@ const sizeOf = require('image-size');
 const markdownLinkCheck = require('markdown-link-check');
 const chalk = require('chalk');
 
+const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
+
 var createIDX = function(){
 
 	var elasticIDX = elasticlunr(function(){
@@ -78,6 +80,184 @@ var searchIDX = function(options){
 	else{
 		console.log('Enter a search term.');
 	}
+};
+
+var commands = function(options){
+	var time = moment().utc().format(timeStamp);
+
+	if(options.new !== undefined){
+		var file = "./firmware/"+options.new+".json";
+
+		if(jetpack.exists(file)){
+			console.log(chalk.red('Error: Command already exists'));
+			return;
+		}
+
+		// The command data code
+		var data = {
+			"name": options.new,
+			"description": "",
+			"alias": [],
+			"input": "",
+			"values": [],
+			"example": "",
+			"type": "",
+			"editor": "",
+			"versions": [],
+			"devices":[],
+			"time":{
+			"modified": time,
+			"created": time
+			},
+			"deprecated": false,
+			"url": "",
+			"dependencies":[],
+			"parent": ""
+		};
+
+		jetpack.write(file, data, { jsonIndent: 2 });
+		console.log(chalk.green(`Command ${options.new} created`));
+		return;
+	}
+
+	if(options.view !== undefined){
+		var file = "./firmware/"+options.view+".json";
+
+		if(!jetpack.exists(file)){
+			console.log(chalk.red('Error: Command doesn\'t exists'));
+			return;
+		}
+
+		var cmd = jetpack.read(file, 'json');
+		var output = chalk.yellow('\n'+ cmd.name + '\n') + '------------------------\n';
+		output += chalk.grey(cmd.description+'\n\n');
+		output += 'Alias: '+ chalk.grey( (cmd.alias.join(', ') || '') +'\n');
+		output += 'Input: '+ chalk.grey(cmd.input+'\n');
+		output += 'Values: '+ chalk.grey( (cmd.values.join(', ') || '') +'\n');
+		output += 'Example: '+ chalk.grey(cmd.example+'\n');
+		output += 'Type: '+ chalk.grey(cmd.type+'\n');
+		output += 'Editor: '+ chalk.grey(cmd.editor+'\n');
+		output += 'Versions: '+ chalk.cyan( (cmd.versions.reverse().join(', ') || '') +'\n');
+		output += 'Instruments: '+ chalk.cyan( (cmd.devices.join(', ') || '') +'\n');
+		output += 'Created: '+ chalk.grey(cmd.time.created+'\n');
+		output += 'Modified: '+ chalk.grey(cmd.time.modified+'\n');
+		output += 'Url: '+ chalk.grey(cmd.url+'\n');
+		output += 'Dependancies: '+ chalk.cyan( (cmd.dependencies.join(', ') || '') +'\n');
+		output += 'Parent: '+ chalk.grey(cmd.parent+'\n');
+
+		if(cmd.deprecated)
+			output += chalk.red('Command is deprecated');
+
+		console.log(output);
+		return;
+	}
+
+	if(options.release !== undefined){
+		var files = jetpack.list('./firmware');
+		for(var f in files){
+			var content = null;
+			if(files[f].match(/\.json$/)){
+				content = jetpack.read('./firmware/'+files[f], 'json');
+				if(!content.depreacted){
+					content.time.modified = time;
+					if(content.versions.indexOf(options.release) == -1)
+						content.versions.push(options.release);
+				}
+				jetpack.write('./firmware/'+files[f], content, { jsonIndent: 2 });
+			}
+		}
+		console.log(chalk.green(`Release ${options.release} created`));
+		return;
+	}
+
+	if(options.documents !== undefined){
+		var protocols = '';
+		var consolecmds = '';
+
+		var files = jetpack.list('./firmware');
+		for(var f in files){
+			var content = null;
+			if(files[f].match(/\.json$/)){
+				content = jetpack.read('./firmware/'+files[f], 'json');
+
+				var document = '### '+content.name + ((content.deprecated) ? ' `deprecated`' : '') + '\n\n' ;
+				if(content.description != "")
+					document += content.description+'\n\n';
+				if(content.alias.length > 0)
+					document += '**Alias:**\n\n'+ content.alias.map(function(a){
+						return '+ ' + a;
+					}) + '\n\n';
+
+				if(content.editor != "")
+					document += '**Input:** '+ content.input +'\n\n';
+
+				if(content.values.length > 0)
+					document += '**Values:**\n\n'+ content.values.map(function(a){
+						return '+ '+ a;
+					}).join(' ') + '\n\n';
+
+				if(content.example != "")
+					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
+
+				if(content.editor != "")
+					document += '**Editor:** '+ content.editor +'\n\n';
+
+				if(content.versions.length > 0)
+					document += '**Versions:**\n\n'+ content.versions.reverse().map(function(a){
+						return '`' + a + '`';
+					}).join(' ') + '\n\n';
+
+				if(content.devices.length > 0)
+					document += '**Instruments:**\n\n'+ content.devices.map(function(a){
+						return '`' + a + '`';
+					}).join(' ') + '\n\n';
+
+				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
+				if(content.url != "")
+					document += '**Url:** <'+ content.url+'>\n\n';
+				if(content.dependencies.length > 0)
+					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
+						return '+ ' + a;
+					}) + '\n\n';
+				if(content.parent != "")
+					document += '**Parent:** <'+ content.parent+'>\n\n';
+
+				// Add a page - break
+				document += '***\n\n';
+
+				if(content.type == 'console'){
+					consolecmds += document;
+				}
+
+				if(content.type == 'protocol'){
+					protocols += document;
+				}
+			}
+		}
+
+		consolecmds = consolecmds.trim();
+		protocols = protocols.trim();
+
+		jetpack.write('./help/_instruments_Console_Commands.md', consolecmds);
+		jetpack.write('./help/_protocols_Commands.md', protocols);
+		console.log(chalk.green(`Documents created`));
+		return;
+	}
+
+	if(options.merge !== undefined){
+		var files = jetpack.list('./firmware');
+		var merged = [];
+		for(var f in files){
+			if(files[f].match(/\.json$/)){
+				content = jetpack.read('./firmware/'+files[f], 'json');
+				merged.push(content);
+			}
+		}
+		jetpack.write('./dist/firmware.json', merged, { jsonIndent: 2 });
+		console.log(chalk.green(`Files merged`));
+		return;
+	}
+
 };
 
 var pingLinks = function(){
@@ -380,6 +560,17 @@ program
 	.option('-q, --query <query>','Query (e.g. measurement)')
 	.description('Search terms based on the search index')
 	.action(searchIDX);
+
+program
+	.command('cmd')
+	.option('-n, --new <command>','Add a new command')
+	.option('-v, --view <command>','View a new command')
+	.option('-r, --release <version>','Add a new release version to commands that are not deprecated')
+	.option('-d, --documents','Generate new help documents')
+	.option('-m, --merge','Merge all files into one JSON file')
+	.description('Manage firmware commands')
+	.action(commands);
+
 
 program
 	.command('test-links')
