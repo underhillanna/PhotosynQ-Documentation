@@ -5,6 +5,9 @@ echo "------------------------------------";
 echo "Remove previous distribution files"
 rm ./dist/*
 
+# Get all the firmware commands and build the help files
+node index.js cmd --documents
+
 # Generate new documentation index
 # This will collect also the firmware documentation if available
 node index.js index
@@ -20,6 +23,8 @@ node index.js compile -i ./build/firmware-master.md -o ./dist/PhotosynQ-Firmware
 node index.js compile -i ./build/MultispeQ-v1.0.md -o ./dist/PhotosynQ-MultispeQ-v1.0.md -t $TAG
 node index.js compile -i ./build/MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.md -t $TAG
 
+# add the file for the server to the distribution as well
+node index.js cmd --merge
 
 # Now we can build the pdfs as well
 echo "Converting markdown to pdf";
