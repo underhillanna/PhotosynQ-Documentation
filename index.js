@@ -7,6 +7,9 @@ const mime = require('mime');
 const moment = require('moment-timezone');
 const Mustache = require('mustache');
 const markdownpdf = require('markdown-pdf');
+const epub = require('epub-gen');
+const Remarkable = require('remarkable');
+const Entities = require('html-entities').XmlEntities;
 const version = require('./package.json').version;
 const through2 = require('through2');
 const sizeOf = require('image-size');
@@ -246,6 +249,124 @@ var createPDF = function (options){
 	});
 };
 
+
+var createEPUB = function (){
+
+	var cwd = jetpack.cwd();
+
+    var option = {
+        title: "", // *Required, title of the book.
+        author: "", // *Required, string or array.
+		// publisher: "", // optional
+		version: 3, // or 2
+		css: jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) ), // sting with css
+		// fonts: ,
+		lang: 'en',
+        cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
+		content: [],
+		remarkable: {
+			"html":true,
+			"linkify": true,
+			"plugins": []
+		}
+	};
+
+	const entities = new Entities();
+	var output = null;
+	var collect = false;
+	for(var i in process.argv){
+		if(process.argv[i].match(/^-i|--input/)){
+			collect = true;
+			continue;
+		}
+		if(process.argv[i].match(/^-o|--output/)){
+			if(process.argv[(parseInt(i)+1)] !== undefined){
+				output = process.argv[(parseInt(i)+1)];
+			}
+			collect = false;
+			continue;
+		}
+		if(process.argv[i].match(/^-a|--author/)){
+			if(process.argv[(parseInt(i)+1)] !== undefined){
+				option.author = process.argv[(parseInt(i)+1)];
+				try{
+					option.author = JSON.parse(option.author);
+				}
+				catch(e){}
+			}
+			collect = false;
+			continue;
+		}
+		if(process.argv[i].match(/^-t|--title/)){
+			if(process.argv[(parseInt(i)+1)] !== undefined){
+				option.title = process.argv[(parseInt(i)+1)];
+			}
+			collect = false;
+			continue;
+		}
+		if(collect){
+			var read = jetpack.read(process.argv[i]);
+			if(read !== undefined)
+				jetpack.append( jetpack.path( cwd, 'dist', 'temp.md' ), read);
+		}
+	}
+
+	if(!output){
+		console.log('\nNo output file defined\n');
+		return;
+	}
+
+	if(!jetpack.exists(jetpack.path( cwd, 'dist', 'temp.md' ))){
+		console.log('\nNo input file defined\n');
+		return;
+	}
+
+	var _html = "";
+
+	jetpack.createReadStream(jetpack.path( cwd, 'dist', 'temp.md' ))
+	.pipe(preProcessMd())
+	.pipe(
+		through2(
+			function transform (chunk, enc, cb) {
+				_html += chunk;
+				cb();
+			},
+			function flush (cb) {
+				var self = this;
+				var mdParser = new Remarkable(option.remarkable);
+				self.push(mdParser.render(_html));
+				self.push(null);
+				cb();
+			}
+		)
+	)
+	.pipe(preProcessHtml())
+	.on('data', function (data) {
+		_html = data.toString().trim().split('\n');
+		var chapters = {};
+		var chapterTitle = null;
+
+		for(var i in _html){
+			if(_html[i].match(/^<h2>/)){
+				chapterTitle = _html[i].replace(/<\/?[^>]+(>|$)/g, "");
+				chapters[chapterTitle] = "";
+				continue;
+			}
+			if(chapterTitle){
+				chapters[chapterTitle] += _html[i].replace(/images/i, jetpack.path(cwd, 'images'));
+			}
+		}
+		for(var c in chapters){
+			option.content.push({
+				title: entities.decode(c),
+				data: chapters[c]
+			});
+		}
+		new epub(option, output);
+		jetpack.remove(jetpack.path( cwd, 'dist', 'temp.md' ));
+	});
+};
+
 program
   .version(version);
 
@@ -279,5 +400,14 @@ program
 	.option('-o, --output <output>','PDF File')
 	.description('Generate PDF from Markdown')
 	.action(createPDF);
+
+program
+	.command('epub')
+	.option('-i, --input <input>','Markdown File')
+	.option('-o, --output <output>','ePub File')
+	.option('-t, --title [title]','Ebook Title')
+	.option('-a, --author','Ebook Author(s)')
+	.description('Generate ePub from Markdown')
+	.action(createEPUB);
 
 program.parse(process.argv);
