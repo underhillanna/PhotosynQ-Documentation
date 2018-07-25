@@ -179,8 +179,7 @@ var commands = function(options){
 			var content = null;
 			if(files[f].match(/\.json$/)){
 				content = jetpack.read('./firmware/'+files[f], 'json');
-
-				var document = '### '+content.name + ((content.deprecated) ? ' `deprecated`' : '') + '\n\n' ;
+				var document = '### '+ content.name.replace(/(\_)/g,'\\$1') + ((content.deprecated) ? ' `deprecated`' : '') + '\n\n' ;
 				if(content.description != "")
 					document += content.description+'\n\n';
 				if(content.alias.length > 0)
