@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const program = require('commander');
-const elasticlunr = require('elasticlunr');
+const lunr = require('lunr');
 const jetpack = require('fs-jetpack');
 const mime = require('mime');
 const moment = require('moment-timezone');
@@ -20,57 +20,46 @@ const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
 var createIDX = function(){
 
-	var elasticIDX = elasticlunr(function(){
-		this.addField('title');
-		this.addField('content');
+	// Set up index and loop through the files in help
+	var hfc = 0;
+	var lunrIDX = lunr(function(){
+		this.field('title');
+		this.field('content');
 		// the id
-		this.setRef('href');
-		this.saveDocument(false);
+		this.ref('href');
+
+		var files = jetpack.inspectTree('./help/').children;
+
+		for(var i in files){
+			if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown')
+				continue;
+			var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
+			var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
+			var category = files[i].name.substr(1).split('_')[0];
+
+			this.add({
+				href: files[i].name.substr(1),
+				title: title,
+				content: entry.replace(/<[^>]*>/g, ' ')
+			});
+
+			hfc++;
+		}
 	});
 
-	// Now loop through the files in help
-	var files = jetpack.inspectTree('./help/').children;
-	var hfc = 0;
-
-	for(var i in files){
-		if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown')
-			continue;
-		var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
-		var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
-		var category = files[i].name.substr(1).split('_')[0];
-
-		elasticIDX.addDoc({
-			href: files[i].name.substr(1),
-			title: title,
-			category: category,
-			content: entry.replace(/<[^>]*>/g, ' ')
-		});
-
-		hfc++;
-	}
-
 	// Now generate the help index
-	jetpack.write(__dirname+'/dist/elasticlunr-help-idx.json', elasticIDX, { jsonIndent: 0 });
+	jetpack.write(__dirname+'/dist/lunr-help-idx.json', lunrIDX, { jsonIndent: 0 });
 	hfc++;
-	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','elasticlunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
+	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','lunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
 };
 
 var searchIDX = function(options){
 
-	var idxfile = jetpack.read( jetpack.path(__dirname,'dist','elasticlunr-help-idx.json') ,'json');
-	var idx = elasticlunr.Index.load(idxfile);
+	var idxfile = jetpack.read( jetpack.path(__dirname,'dist','lunr-help-idx.json') ,'json');
+	var idx = lunr.Index.load(idxfile);
 
 	if(options.query !== undefined || options.query != ''){
-		var results = idx.search( options.query,
-		{
-// 			fields: {
-// 				title: {boost: 3},
-// 				category: {boost: 2},
-// 				content: {boost: 1}
-// 			},
-// 			bool: "OR",
-			expand: true
-		});
+		var results = idx.search( options.query);
 		console.log('\nSearch for "'+ options.query + '" (Hits: '+results.length+')\n');
 
 		for(var i in results){
@@ -103,8 +92,7 @@ var commands = function(options){
 			"example": "",
 			"type": "",
 			"editor": "",
-			"versions": [],
-			"devices":[],
+			"compatibility": {},
 			"time":{
 			"modified": time,
 			"created": time
@@ -138,7 +126,7 @@ var commands = function(options){
 		output += 'Type: '+ chalk.grey(cmd.type+'\n');
 		output += 'Editor: '+ chalk.grey(cmd.editor+'\n');
 		output += 'Versions: '+ chalk.cyan( (cmd.versions.reverse().join(', ') || '') +'\n');
-		output += 'Instruments: '+ chalk.cyan( (cmd.devices.join(', ') || '') +'\n');
+		output += 'Instruments: '+ chalk.cyan( (Object.keys(cmd.compatibility).join(', ') || '') +'\n');
 		output += 'Created: '+ chalk.grey(cmd.time.created+'\n');
 		output += 'Modified: '+ chalk.grey(cmd.time.modified+'\n');
 		output += 'Url: '+ chalk.grey(cmd.url+'\n');
@@ -201,19 +189,19 @@ var commands = function(options){
 				if(content.editor != "")
 					document += '**Editor:** '+ content.editor +'\n\n';
 
-				if(content.versions.length > 0)
-					document += '**Versions:**\n\n'+ content.versions.reverse().map(function(a){
-						return '`' + a + '`';
-					}).join(' ') + '\n\n';
+				// if(content.versions.length > 0)
+				// 	document += '**Versions:**\n\n'+ content.versions.reverse().map(function(a){
+				// 		return '`' + a + '`';
+				// 	}).join(' ') + '\n\n';
 
-				if(content.devices.length > 0)
-					document += '**Instruments:**\n\n'+ content.devices.map(function(a){
+				if(Object.keys(content.compatibility).length > 0)
+					document += '**Instruments:**\n\n'+ Object.keys(content.compatibility).map(function(a){
 						return '`' + a + '`';
 					}).join(' ') + '\n\n';
 
 				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
-				if(content.url != "")
-					document += '**Url:** <'+ content.url+'>\n\n';
+				// if(content.url != "")
+				// 	document += '**Url:** <'+ content.url+'>\n\n';
 				if(content.dependencies.length > 0)
 					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
 						return '+ ' + a;
@@ -273,9 +261,9 @@ var pingLinks = function(){
 		var images = content.match(/!\[(.*?)\]\((.*?)\)/gm);
 		if(links){
 			for(var l in links){
-				files[list[i]].links.push(links[l])
+				files[list[i]].links.push(links[l]);
 				if(linkList.indexOf(links[l]) == -1)
-					linkList.push(links[l])
+					linkList.push(links[l]);
 			}
 		}
 		if(internalLinks){
@@ -312,7 +300,7 @@ var pingLinks = function(){
 		}
 		results.forEach(function (result) {
 			if(result.status == 'dead')
-				deadLinks.push(result.link)
+				deadLinks.push(result.link);
 		});
 		var errors = false;
 		for(var file in files){
