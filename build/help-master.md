@@ -202,6 +202,10 @@
 
 {{> help/_macros_Coding_and_Functions.md}}
 
+***
+
+{{> help/_macros_Provided_Functions.md}}
+
 ## Instruments
 
 {{> help/_instruments_Instrument_basics.md}}
