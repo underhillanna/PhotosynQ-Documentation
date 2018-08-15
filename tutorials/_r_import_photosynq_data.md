@@ -21,9 +21,9 @@ df <- PhotosynQ::getProject("john.doe@domain.com",243)
 Replace the ID and the email address with your information. A popup window will ask you to enter your password.
 
 ### View the Project Data
-Now we want to view all of the data in our project. In this example we used two different protocols, so we need to create a unique dataframe for each protocol. If you are using the MultispeQ v1.0 we have created a new default protocol (Leaf Photosynthesis MultispeQ V1.0) that includes all of the standard PhotosynQ parameters in a single protocol.
+Now we want to view all of the data in our project. In this example we used two different protocols, so we need to create a unique data-frame for each protocol. If you are using the MultispeQ v1.0 we have created a new default protocol (Leaf Photosynthesis MultispeQ V1.0) that includes all of the standard PhotosynQ parameters in a single protocol.
 
-Also, unless we tell R otherwise, we will import all of the data from the project. In this example, we will limit the dataframe to only measurements that were not flagged (if a data point is not flagged, then its status is listed as 'submitted'), and only the measurements where 'top' was the answer to the project questions "Leaf.Location".
+Also, unless we tell R otherwise, we will import all of the data from the project. In this example, we will limit the data-frame to only measurements that were not flagged (if a data point is not flagged, then its status is listed as 'submitted'), and only the measurements where 'top' was the answer to the project questions "Leaf.Location".
 
 ```{r}
 # Select a Protocol from the List of Data Frames. This is based on the measurement protocol that your project uses. 
@@ -49,7 +49,7 @@ Many of the parameters measured by the MultispeQ instrument are affected by fact
 + instrument/user variation. This could be caused user bias in selection of which leaf to measure or by device to device variation (especially in the MultispeQ Beta instruments, the new MultispeQ v1.0 instruments are much more consistent across instruments)
 + this is not an exhaustive list, but rather a summary of the most common factors affecting photosynthesis measurements.
 
-In order to account for these factors, we will need to transform some of the data that we have imported from www.photosynq.org so that we can incorporate them into the statistical models.
+In order to account for these factors, we will need to transform some of the data that we have imported from <https://photosynq.org> so that we can incorporate them into the statistical models.
 
 Standard transformations include:  
 +transform the light intensity by its square root to make its effect on photosynthetic parameters linear. This is important when you are using linear models like the ANOVA and Mixed Effects models in the next two tutorials

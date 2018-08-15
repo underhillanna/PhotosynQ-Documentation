@@ -4,8 +4,8 @@ Before you can start using PhotosynQ, you will need to create an account.
 
 1.	You can create an account from the [website](https://photosynq.org/), the desktop app, or the mobile app.  
 	- Using the website: click on the ‘sign up’ button in the upper right corner of the website.  
-	- Using the desktop app: Download the **PhotosynQ** app from the chrome [webstore](https://chrome.google.com/webstore/category/apps) and select "sign up."
-	- Using the mobile app: Download the **PhotosynQ** app from the Google [Playstore](https://play.google.com/store/apps/details?id=org.photosynq.android.photosynq) and select "no account? Register here."
+	- Using the desktop app: Download the **Desktop** app from [PhotosynQ](https://photosynq.org/software) and select "sign up."
+	- Using the mobile app: Download the **Mobile** app from the Google [Playstore](https://play.google.com/store/apps/details?id=org.photosynq.android.photosynq) and select "no account? Register here."
 2.	Create a username and password for your account. This login will be used across the PhotosynQ platform.
 3.	Check your email for a confirmation.  
 	- If you do not see it, check your spam folder.  

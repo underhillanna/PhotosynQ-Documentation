@@ -5,7 +5,7 @@ Correlation and Mixed Effects
 
 In this tutorial we want to evaluate how the parameters we measure with the MultispeQ relate to crop outputs. We will use the same experiment that we used in the previous tutorial: "ANOVA and multivariate analysis."
 
-However, in this tutorial,the data was transformed in a csv file so we cannot generate the dataframe directly from photosynq.org.
+However, in this tutorial,the data was transformed in a csv file so we cannot generate the data-frame directly from <https://photosynq.org>.
 
 The first step will be to generate a correlation matrix of crop yield against the mean of each PhotosynQ parameter. Next, we will use a mixed effect model to account for factors that affect the PhotosynQ parameters: 1) light intensity, 2) time of measurement, 3) location within the field, etc.
 
@@ -108,7 +108,7 @@ data$Block <- factor(data$Block, ordered = TRUE)
 ```
 
 
-Now we will run a mixed effect model for SPAD. We will set block as a random effect. Plot is the fixed effect whose coefficent we are interested in.
+Now we will run a mixed effect model for SPAD. We will set block as a random effect. Plot is the fixed effect whose coefficient we are interested in.
 
 ```{r}
 SPAD <- lmer(SPAD ~ Plot + (1|Block), data)
