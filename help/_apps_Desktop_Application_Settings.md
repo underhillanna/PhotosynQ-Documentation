@@ -12,7 +12,7 @@ You can find the Applications Settings under the **Settings dialog** clicking on
 
 Updates are automatically downloaded when available helping you to keep your Application up to date. When the download is finished, you can restart the Application to install the update, or wait until you start it up the next time.
 
-When you deactive the Auto Updates, you will be asked if you want to download the update and install it.
+When you deactivate the Auto Updates, you will be asked if you want to download the update and install it.
 
 Every time you open the Application it will check for new updates. If you want to check in between, just select *Check for Updates...* from your Menu.
 
@@ -21,7 +21,7 @@ Every time you open the Application it will check for new updates. If you want t
 
 #### Reconnect Instrument on Start
 
-When activiated, the next time you start the Application, it will try to reconnect to the last connected Instrument.
+When activated, the next time you start the Application, it will try to reconnect to the last connected Instrument.
 
 #### Compact Protocol Code
 
@@ -41,7 +41,7 @@ The language used inside the Application. Currently only English is supported. W
 
 #### Data
 
-The diskspace used by the Application to save things like Projects, Protocols and Macros, as well as images and your Notebook.
+The disk-space used by the Application to save things like Projects, Protocols and Macros, as well as images and your Notebook.
 
 **Reset**
 All Projects, Protocols, Macros, images, cached Measurements and your Notebook will be deleted. Also you will be signed out. To synchronize your data from PhotosynQ you have to sign in again.
@@ -51,4 +51,4 @@ All Projects, Protocols, Macros, images, cached Measurements and your Notebook w
 **Clear Cache**
 All Projects, Protocols, Macros and images will be deleted and your data from PhotosynQ will be synchronized again.
 
-***Info:*** Measurements cached and your Notenook will not be deleted.
+***Info:*** Measurements cached and your Notebook will not be deleted.

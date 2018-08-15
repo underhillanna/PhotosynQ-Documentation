@@ -4,7 +4,7 @@ All the protocols you or the community developed on PhotosynQ can use independen
 
 #### Desktop
 
-1. Open your protcols by selecting **Protcols** from the left menu bar.
+1. Open your protocols by selecting **Protocols** from the left menu bar.
 2. Double click on the protocol you want to run, or click on a list and select **Run** from the sidebar.
 
 ***Tip:*** Use **Add** next to **Run** in the sidebar to run multiple protocols one after another.

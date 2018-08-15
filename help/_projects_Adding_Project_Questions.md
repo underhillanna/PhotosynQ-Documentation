@@ -45,7 +45,7 @@ This type of question is particularly useful if the images help to answer the qu
 
 #### Short Answer
 
-This type of question is best if you do not know all of the posible answers when you create the project.
+This type of question is best if you do not know all of the possible answers when you create the project.
 
 1. Input the question into the question box.
 2. Select 'Save.'

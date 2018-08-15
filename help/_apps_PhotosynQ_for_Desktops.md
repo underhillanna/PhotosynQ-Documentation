@@ -1,6 +1,6 @@
 ### PhotosynQ for Desktops
 
-Taking measurements in the in the lab, developing new measurement protocols and macros? The desktop allows you to do that, amongst many other more benchtop related tasks.
+Taking measurements in the in the lab, developing new measurement protocols and macros? The desktop allows you to do that, amongst many other more bench top related tasks.
 
 #### Download the PhotosynQ app
 

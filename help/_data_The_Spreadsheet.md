@@ -17,7 +17,7 @@ multiple Protocols or you imported additional data, use the dropdown to select d
 2. Pick the protocol you want to view.
 3. Select **More** from above the spreadsheet to select additional information including *Users*, *Device IDs*, *Notes*, *Photos*, *Location* and *Status (e.g. flagged)*
 
-***Info:*** When you add addtional data to your measurements later on, the additional data will be available as
+***Info:*** When you add additional data to your measurements later on, the additional data will be available as
 **Imported Data (Custom Data)**.
 
 #### More

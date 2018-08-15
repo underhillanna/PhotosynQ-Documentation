@@ -31,7 +31,7 @@ We have programmed issue warnings into the default *Leaf Photosynthesis Multispe
 
 #### Adding issue warnings to Macros
 
-Anyone can add isse warnings to their own macro's by following the code structure below.
+Anyone can add issue warnings to their own macro's by following the code structure below.
 
 #### Code Structure
 

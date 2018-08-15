@@ -14,7 +14,7 @@
 ```javascript
 /**
  * Macro for data evaluation on PhotosynQ.org
- * by: Jon Doe
+ * by: John Doe
  * created: June 25, 2018 1:37 PM
  */
 
@@ -102,7 +102,7 @@ If people take measurements in the field, they might run into quality issues, th
 
 + **Info**: Just let users know that (color:blue)
 + **Warning**: Give users a warning, that there might be something wrong and they should take a closer look (color: yellow)
-+ **Danger**: Use this message, when you think something went terribly wrong. In the future, measurments containing this message will be flagged as bad datapoints automatically. (color:red)
++ **Danger**: Use this message, when you think something went terribly wrong. In the future, measurements containing this message will be flagged as bad data points automatically. (color:red)
 
 To add messages, use the Functions menu and select the type of measurement you need. Replace the word `message` with your message.
 

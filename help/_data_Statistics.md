@@ -5,7 +5,7 @@ A very basic set of statistical tools for your project data analysis.
 #### View the Spreadsheet
 
 1. Select the **<i class="fa fa-bar-chart"></i> Statistics** from the right menu underneath the Project name.
-2. Choose the type of statistics you wish to perform and select the signficance level.
+2. Choose the type of statistics you wish to perform and select the significance level.
 
 ![Statistics](../images/help/_data_statistics.png)
 

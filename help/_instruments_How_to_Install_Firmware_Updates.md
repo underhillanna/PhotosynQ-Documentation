@@ -36,7 +36,7 @@ Wait for the firmware to be uploaded to the instrument. **Don't turn off your in
 
 #### Step 6
 
-After the update is finished the intrument will restart. Check if version number of the firmware has increased.
+After the update is finished the instrument will restart. Check if version number of the firmware has increased.
 
 ### Desktop App
 
@@ -60,7 +60,7 @@ If the installation is finished, wait for the instrument to restart. When the re
 
 #### Step 5
 
-After the update is finished the intrument will restart. Check if version number of the firmware has increased.
+After the update is finished the instrument will restart. Check if version number of the firmware has increased.
 
 ***
 
@@ -74,7 +74,7 @@ After the update is finished the intrument will restart. Check if version number
 
 #### Preparation
 
-Make sure you have a verified .hex file from [PhotosynQ][Firmware-Github]. Select the file matching your instrument name and version (e.g. `multispeq1.ino.hex` for Multispeq v1.0). Place this file in an easy-to-find location (like your Desktop).
+Make sure you have a verified .hex file from [PhotosynQ][Firmware-Github]. Select the file matching your instrument name and version (e.g. `multispeq1.ino.hex` for MultispeQ v1.0). Place this file in an easy-to-find location (like your Desktop).
 
 #### Step 1
 
@@ -85,7 +85,7 @@ Select the **"Check"** button to bring up the firmware update dialog.
 
 #### Step 2
 
-Click on the **"Manual Update" button and select the previously donwnloaded file. Confirm that you want to update the firmware on your instrument.
+Click on the **"Manual Update" button and select the previously downloaded file. Confirm that you want to update the firmware on your instrument.
 
 #### Step 3
 

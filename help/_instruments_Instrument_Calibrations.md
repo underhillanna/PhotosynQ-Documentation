@@ -1,6 +1,6 @@
 ### Instrument Calibrations
 
-PhotosynQ Instruments come pre-calibrated from the factory. Over time you can repeat the calibrations to ensure high quality measurements. Depending on the Instrument the available callibrations can vary. Currently you need to use the Desktop Application to adjust your Instrument settings.
+PhotosynQ Instruments come pre-calibrated from the factory. Over time you can repeat the calibrations to ensure high quality measurements. Depending on the Instrument the available calibrations can vary. Currently you need to use the Desktop Application to adjust your Instrument settings.
 
 ***Note:*** The Chrome App does not support Instrument Calibrations. Please switch to the new Desktop Application.
 

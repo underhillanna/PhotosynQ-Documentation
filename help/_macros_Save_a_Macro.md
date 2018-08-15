@@ -1,6 +1,6 @@
 ### Save a Macro
 
-Once you are done, save your work and share it with the comnunity.
+Once you are done, save your work and share it with the community.
 
 #### Desktop
 

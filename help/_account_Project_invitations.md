@@ -10,12 +10,12 @@ To invite collaborators while creating a project:
 
 1. In the **Settings** tab, select **Collaborators only** from the "Who can contribute data to your project" drop down menu
 2. Enter the email address of the collaborator you are inviting in the **Invite collaborator** box
-3. After typing in the email adress, click the **Add** button. You can invite as many collaborators has you want, and you can choose if you want them to be a collaborator (meaning they can contribute data) or an administrator (meaning they can edit you project)
+3. After typing in the email address, click the **Add** button. You can invite as many collaborators has you want, and you can choose if you want them to be a collaborator (meaning they can contribute data) or an administrator (meaning they can edit you project)
 4. Once you have finished inviting collaborators, click **Save and Finish** from the bottom of the page
 
 ![Invite Collaborator](../images/help/_account_Invite_collaborator.jpg)
 
-Inviting collaborators to an exisiting project:
+Inviting collaborators to an existing project:
 
 1. Go to the project homepage on https://photosynq.org
 2. Click on the **Options** menu. The options menu will only be visible if you are the project administrator
