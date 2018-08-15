@@ -35,7 +35,13 @@ var createIDX = function(){
 				continue;
 			var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 			var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
-			var category = files[i].name.substr(1).split('_')[0];
+
+			var mdParser = new Remarkable({
+				"html":true,
+				"linkify": true,
+				"plugins": []
+			});
+			entry = mdParser.render(entry);
 
 			this.add({
 				href: files[i].name.substr(1),
@@ -62,8 +68,10 @@ var searchIDX = function(options){
 		var results = idx.search( options.query);
 		console.log('\nSearch for "'+ options.query + '" (Hits: '+results.length+')\n');
 
+		console.log( JSON.stringify(results, null, 2) )
+
 		for(var i in results){
-			console.log((parseInt(i)+1)+'. '+results[i].ref+' (score: '+ results[i].score.toFixed(6) +')' );
+			console.log((parseInt(i)+1)+'. '+results[i].ref+' (score: '+ results[i].score +')' );
 		}
 	}
 	else{
