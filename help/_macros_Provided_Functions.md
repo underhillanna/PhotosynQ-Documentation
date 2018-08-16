@@ -4,34 +4,114 @@
 
 Extract every n-th element from an array.
 
-#### Parameters
+**Parameters**
 
 -   `arr` **[Array][1]&lt;[number][2]>** Input array.
 -   `size` **[number][2]** Step size. (optional, default `1`)
 -   `idx` **[number][2]** Starting point. (optional, default `0`)
 
-#### Examples
+**Examples**
 
 ```javascript
-ArrayNth( [1,2,3,4,5,6], 2, 2 );
-// returns [ 3, 5 ]
+ArrayNth( [ 1, 2, 3, 4, 5, 6], 2, 2 );
+// returns [3, 5]
 ```
 
 Returns **([Array][1]&lt;[number][2]> | void)** Every n-th element.
 
+### ArrayRange
+
+This is a flexible function to generate an array of arithmetic progressions.
+All arguments must be integers.
+
+**Parameters**
+
+-   `start` **[number][2]** Start value. (optional, default `0`)
+-   `stop` **[number][2]** Stop value.
+-   `step` **[number][2]** Step size. (optional, default `1`)
+-   `transform` **(`"none"` \| `"log"` \| `"ln"` \| `"x2"`)** Generate a progression and transform numbers. (optional, default `"none"`)
+
+**Examples**
+
+```javascript
+ArrayRange(10);
+// returns [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+ArrayRange(1,11);
+// returns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+ArrayRange(0, 30, 5);
+// returns [0, 5, 10, 15, 20, 25]
+
+ArrayRange(0, 10, 3);
+// returns [0, 3, 6, 9]
+
+ArrayRange(0, 10, 3, "x2");
+// returns [0, 9, 36, 81]
+
+ArrayRange(0, -10, -1);
+// returns [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+
+ArrayRange(0);
+// returns []
+
+ArrayRange(1,0);
+// returns []
+```
+
+Returns **([Array][1]&lt;[number][2]> | void)** 
+
+### ArrayUnZip
+
+This function transforms an array of [x, y] pairs into an object with an array of x and an array of y values
+
+**Parameters**
+
+-   `input` **[Array][1]&lt;[array][1]>** Array of [x, y] pairs.
+
+**Examples**
+
+```javascript
+ArrayUnZip( [ [1, 4], [2, 5], [3, 6] ] );
+//returns {x: [1, 2, 3], y: [4, 5, 6]}
+```
+
+Returns **([object][3] | void)** { x: [x1, x2, ..., xn], y: [y1, y2, ..., yn] }
+
+### ArrayZip
+
+This function transforms two arrays into one array of x,y pairs
+Both arrays supplied need to have the same size.
+
+**Parameters**
+
+-   `x` **[Array][1]&lt;[number][2]>** values.
+-   `y` **[Array][1]&lt;[number][2]>** values.
+
+**Examples**
+
+```javascript
+var x = [1, 2, 3];
+var y = [4, 5, 6];
+ArrayZip(x,y)
+//returns [ [1, 4], [2, 5], [3, 6] ]
+```
+
+Returns **([Array][1]&lt;[number][2]> | void)** \[ [x1,y1], [x2,y2], ..., [xn,yn] ].
+
 ### GetIndexByLabel
 
-Find the positions for protocols within a protocol set matching the
+Find the positions for protocols within a protocol set matching the 
 provided label. If only one label exists within a set, a number is returned.
 When multiple protocols in the set have the same label an array with all
 indexes of matching labels is returned.
 
-#### Parameters
+**Parameters**
 
--   `label` **[string][3]** Label from the protocol set
--   `json` **[object][4]** Required! The protocol content
+-   `label` **[string][4]** Label from the protocol set
+-   `json` **[object][3]** Required! The protocol content
 
-#### Examples
+**Examples**
 
 ```javascript
 GetIndexByLabel( "PAM", json );
@@ -44,18 +124,18 @@ Returns **([number][2] \| [Array][1]&lt;[number][2]>)** Single index or an array
 
 Generate a protocol lookup table for a protocol set.
 
-#### Parameters
+**Parameters**
 
--   `json` **[object][4]** 
+-   `json` **[object][3]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 GetLabelLookup(json);
 // returns e.g. { "PAM": [0,2], "ECS": [1]}
 ```
 
-Returns **[object][4]** Lookup table
+Returns **[object][3]** Lookup table
 
 ### GetProtocolByLabel
 
@@ -64,31 +144,31 @@ If only one label exists, one protocol object is returned.
 When multiple protocols in the set have the same label an array with all
 protcol objects of matching labels is returned.
 
-#### Parameters
+**Parameters**
 
--   `label` **[string][3]** The label from the protocol set
--   `json` **[Object][4]** Required! The protocol content
+-   `label` **[string][4]** The label from the protocol set
+-   `json` **[Object][3]** Required! The protocol content
 
-#### Examples
+**Examples**
 
 ```javascript
 GetIndexByLabel( "PAM", json );
 // returns e.g. { "label": "PAM", ...} or [{ "label": "PAM", ...}, { "label": "PAM", ...}]
 ```
 
-Returns **([Object][4] \| [Array][1]&lt;[Object][4]>)** Single protocol or an array of protocols
+Returns **([Object][3] \| [Array][1]&lt;[Object][3]>)** Single protocol or an array of protocols
 
 ### MathLINREG
 
 Function to perform a simple linear regression (y = mx +b), returning slope, y-intercent, 
 correlation coefficient (R) and coefficient of determination (R²).
 
-#### Parameters
+**Parameters**
 
 -   `x` **[Array][1]&lt;[number][2]>** x-values
 -   `y` **[Array][1]&lt;[number][2]>** y-values
 
-#### Examples
+**Examples**
 
 ```javascript
 MathLINREG([60,61,62,63,65], [3.1,3.6,3.8,4,4.1]);
@@ -100,17 +180,17 @@ MathLINREG([60,61,62,63,65], [3.1,3.6,3.8,4,4.1]);
 }
 ```
 
-Returns **[object][4]** Linear regression results
+Returns **[object][3]** Linear regression results
 
 ### MathLN
 
 Returns the natural logarithm (base E) of a number.
 
-#### Parameters
+**Parameters**
 
 -   `value` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 MathLN(10);
@@ -123,11 +203,11 @@ Returns **[number][2]**
 
 Returns the logarithm (base 10) of a number.
 
-#### Parameters
+**Parameters**
 
 -   `value` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 MathLOG(10);
@@ -141,11 +221,11 @@ Returns **[number][2]**
 Get the maximum value from an array of numbers. The function fails,
 if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathMAX([1,2,3,4.5]);
@@ -159,11 +239,11 @@ Returns **[number][2]**
 Calculate the variance from an array of numbers. The function fails,
 if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathMEAN([1,2,3,4.5]);
@@ -177,11 +257,11 @@ Returns **[number][2]**
 Calculate the median from an array of numbers. The function fails,
 if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathMEDIAN([1,2,3,4.5]);
@@ -195,11 +275,11 @@ Returns **[number][2]**
 Get the minimum value from an array of numbers. The function fails,
 if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathMIN([1,2,3,4.5]);
@@ -212,12 +292,12 @@ Returns **[number][2]**
 
 Calculate the variance from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `value` **[number][2]** 
 -   `digets` **[number][2]** number of digits (optional, default `2`)
 
-#### Examples
+**Examples**
 
 ```javascript
 MathROUND(1.23456789, 5);
@@ -230,11 +310,11 @@ Returns **[number][2]**
 
 Calculate the standard error from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathSTDERR([1,2,3,4.5]);
@@ -247,11 +327,11 @@ Returns **[number][2]**
 
 Calculate the variance from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathSTDEV([1,2,3,4.5]);
@@ -264,11 +344,11 @@ Returns **[number][2]**
 
 Calculate the variance from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathSTDEVS([1,2,3,4.5]);
@@ -281,11 +361,11 @@ Returns **[number][2]**
 
 Calculate the sum from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathSum([1,2,3,4.5]);
@@ -298,11 +378,11 @@ Returns **[number][2]**
 
 Calculate the variance from an array of numbers. The function fails, if the array is empty or has invalid values.
 
-#### Parameters
+**Parameters**
 
 -   `values` **[Array][1]&lt;[number][2]>** numbers
 
-#### Examples
+**Examples**
 
 ```javascript
 MathVARIANCE([1,2,3,4.5]);
@@ -316,57 +396,57 @@ Returns **[number][2]**
 Add an Info Message for the User.
 Use these messages to give additional information (if necessary).
 
-#### Parameters
+**Parameters**
 
--   `msg` **[string][3]** Info Message
--   `output` **[object][4]** object that is returned at the end
+-   `msg` **[string][4]** Info Message
+-   `output` **[object][3]** object that is returned at the end
 
-#### Examples
+**Examples**
 
 ```javascript
 info('Your Info Message', output);
 // output['messages']['info']['Your Info Message']
 ```
 
-Returns **[object][4]** pushes the message into the output object
+Returns **[object][3]** pushes the message into the output object
 
 ### warning
 
 Add an Warning Message for the User.
 Use these messages to indicate a potential issue and direct the user to check the measurement again.
 
-#### Parameters
+**Parameters**
 
--   `msg` **[string][3]** Warning Message
--   `output` **[object][4]** object that is returned at the end
+-   `msg` **[string][4]** Warning Message
+-   `output` **[object][3]** object that is returned at the end
 
-#### Examples
+**Examples**
 
 ```javascript
 warning('Your Warning Message', output);
 // output['messages']['warning']['Your Warning Message']
 ```
 
-Returns **[object][4]** pushes the message into the output object
+Returns **[object][3]** pushes the message into the output object
 
 ### danger
 
 Add an Danger Message for the User. These messages will be shown in the data viewer as well.
 Use these messages to indicate a problematic issue that will most likely result in an invalid measurement.
 
-#### Parameters
+**Parameters**
 
--   `msg` **[string][3]** Danger Message
--   `output` **[object][4]** object that is returned at the end
+-   `msg` **[string][4]** Danger Message
+-   `output` **[object][3]** object that is returned at the end
 
-#### Examples
+**Examples**
 
 ```javascript
 danger('Your Danger Message', output);
 // output['messages']['info']['Your Danger Message']
 ```
 
-Returns **[object][4]** pushes the message into the output object
+Returns **[object][3]** pushes the message into the output object
 
 ### Math.abs
 
@@ -374,11 +454,11 @@ Returns **[object][4]** pushes the message into the output object
 
 Math.abs(x) returns the absolute value of x
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.abs(4.7);
@@ -395,11 +475,11 @@ Returns **[number][2]**
 
 Math.acos(x) returns the arccosine of x, in radians
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.acos(0.5);
@@ -414,11 +494,11 @@ Returns **[number][2]**
 
 Math.asin(x) returns the arcsine of x, in radians
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.asin(0.5);
@@ -433,11 +513,11 @@ Returns **[number][2]**
 
 Math.atan(x) returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.atan(0.5);
@@ -452,12 +532,12 @@ Returns **[number][2]**
 
 Math.atan2(y, x) returns the arctangent of the quotient of its arguments
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 -   `y` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.atan2(0.5,2);
@@ -472,11 +552,11 @@ Returns **[number][2]**
 
 Math.ceil(x) returns the value of x rounded up to its nearest integer
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.ceil(4.7);
@@ -491,11 +571,11 @@ Returns **[number][2]**
 
 Math.cos(x) returns the cosine of x (x is in radians)
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.cos(1);
@@ -510,11 +590,11 @@ Returns **[number][2]**
 
 Math.exp(x) returns the value of Ex
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.exp(3);
@@ -529,11 +609,11 @@ Returns **[number][2]**
 
 Math.floor(x) returns the value of x rounded down to its nearest integer
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.floor(4.7);
@@ -548,11 +628,11 @@ Returns **[number][2]**
 
 Math.log(x) returns the natural logarithm (base E) of x
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.log(4.7);
@@ -567,11 +647,11 @@ Returns **[number][2]**
 
 Math.max(x, y, z, ..., n) returns the number with the highest value
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.max(0, 150, 30, 20, -8, -200);
@@ -586,11 +666,11 @@ Returns **[number][2]**
 
 Math.min(x, y, z, ..., n) returns the number with the lowest value
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.min(0, 150, 30, 20, -8, -200);
@@ -605,12 +685,12 @@ Returns **[number][2]**
 
 Math.pow(x, y) returns the value of x to the power of y
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 -   `y` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.pow(3,2);
@@ -625,11 +705,11 @@ Returns **[number][2]**
 
 Math.round(x) returns the value of x rounded to its nearest integer
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.round(4.7);
@@ -646,11 +726,11 @@ Returns **[number][2]**
 
 Math.sin(x) returns the sine of x (x is in radians)
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.sin(1);
@@ -665,11 +745,11 @@ Returns **[number][2]**
 
 Math.sqrt(x)	returns the square root of x
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.sqrt(2);
@@ -684,11 +764,11 @@ Returns **[number][2]**
 
 Math.tan(x) returns the tangent of an angle
 
-#### Parameters
+**Parameters**
 
 -   `x` **[number][2]** 
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.tan(1);
@@ -703,7 +783,7 @@ Returns **[number][2]**
 
 Euler's number (approx. 2.718)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.E;
@@ -718,7 +798,7 @@ Returns **[number][2]** 2.718281828459045
 
 Natural logarithm of 2 (approx. 0.693)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.LN2;
@@ -733,7 +813,7 @@ Returns **[number][2]** 0.6931471805599453
 
 Natural logarithm of 10 (approx. 2.302)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.LN10;
@@ -748,7 +828,7 @@ Returns **[number][2]** 2.302585092994046
 
 Base-2 logarithm of E (approx. 1.442)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.LOG2E;
@@ -763,7 +843,7 @@ Returns **[number][2]** 1.4426950408889634
 
 Base-10 logarithm of E (approx. 0.434)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.LOG10E;
@@ -778,7 +858,7 @@ Returns **[number][2]** 0.4342944819032518
 
 PI (approx. 3.14)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.PI;
@@ -793,7 +873,7 @@ Returns **[number][2]** 3.141592653589793
 
 Square root of 1/2 (approx. 0.707)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.SQRT1_2;
@@ -808,7 +888,7 @@ Returns **[number][2]** 0.7071067811865476
 
 Square root of 2 (approx. 1.414)
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.SQRT2;
@@ -823,7 +903,7 @@ Returns **[number][2]** 1.4142135623730951
 
 Random number
 
-#### Examples
+**Examples**
 
 ```javascript
 Math.random();
@@ -838,15 +918,16 @@ Returns **[number][2]** between 0 and 1
 
 Function to perform a non-linear regression.
 
-#### Parameters
+**Parameters**
 
--   `data` **[object][4]** Data for the non-linear regression needs to be provided as an array of x,y pairs. `[[x1,y1], [x2,y2], ..., [xn,yn]]`
--   `options` **[object][4]** 
+-   `data` **[object][3]** Data for the non-linear regression needs to be provided as an array of x,y pairs. `[[x1,y1], [x2,y2], ..., [xn,yn]]`
+-   `options` **[object][3]** 
+    -   `options.equation` **[string][4]** Formula for the function to be fitted
+    -   `options.initial` **[Array][1]&lt;[number][2]>** Array with the initial guesses for parameters in equation
     -   `options.iterations` **[number][2]** Number of iterations (maximum 2000) (optional, default `200`)
     -   `options.cPts` **[number][2]?** Number of datapoints
     -   `options.cVar` **[number][2]** Number of independant variables
     -   `options.cPar` **[number][2]** Number of parameters
-    -   `options.equation` **[string][3]** Formula for the function to be fitted
     -   `options.RelaxF` **[number][2]** Fractional adjustment factor (Values smaller than 1 will make the covergence slower but more stable) (optional, default `1.0`)
     -   `options.SEy` **(`1` \| `"Y"` \| `"Sqrt(Y)"` \| `"w"` \| `"Rep"`)** Standard Error associated with the Y variable (Equal `1`, Relative `Y`, Counts `Sqrt(Y)`, Data `w`, Replicates `Rep` (optional, default `1`)
     -   `options.yTrans` **(`"Y"` \| `"LN(Y)"` \| `"SQRT(Y)"` \| `"1/Y"`)** Transformation (optional, default `"Y"`)
@@ -862,7 +943,7 @@ Function to perform a non-linear regression.
     -   `options.LeastAbs` **[boolean][32]** Least-Absolute -Value curve fitting (optional, default `false`)
     -   `options.cPctile` **[number][2]** Percentile (optional, default `50`)
 
-#### Examples
+**Examples**
 
 ```javascript
 NonLinearRegression(
@@ -874,28 +955,93 @@ NonLinearRegression(
  ],
  {
 	  equation: "",
-	  variables: <number>
+	  initial: [a, b, ..., h]
  }
 )
+
+
+// Available equations
+// "b + a * e(- x / c)"
+// "( a - c ) * e( - b * t ) + c"
+// "( c + a / ( 1 + b / x ) )"
+// "( c + a * a / ( 1 + b / x ) )"
+
+
+// returns
+// {
+//   text: <string>,
+//   ParameterEstimates: <string>,
+//   CovarianceMatrix: <string>,
+//   r2: <number>
+//   parameters: {
+//     name: <string>,
+//     value: <number>,
+//     sd_error: <number>,
+//     p: <number>
+//   },
+//   RMS_error: <number>,
+//   presets: <object>,
+//   iterations: <number>,
+//   RMS_errors: <array>
+// }
 ```
 
-Returns **[object][4]** 
+Returns **[object][3]** 
 
 ### TransformTrace
 
 The function transforms a given array by providing a second same length array, or a single number.
 
-#### Parameters
+**Parameters**
 
 -   `fn` **(`"add"` \| `"subtract"` \| `"multiply"` \| `"divide"` \| `"+"` \| `"-"` \| `"*"` \| `"/"` \| `"normToMin"` \| `"normToMax"` \| `"normToRange"` \| `"normToIdx"` \| `"normToVal"` \| `"ma"` \| `"sgf"` \| `"abs"`)** Available functions to transform the input array.
 -   `a1` **[Array][1]&lt;[number][2]>** Input array.
 -   `a2` **([number][2] \| [Array][1]&lt;[number][2]>)?** Second array or single number
 
-#### Examples
+**Examples**
 
 ```javascript
-TransformTrace('subtract', [1,2,3,4], [0,1,2,1]);
-// returns [1,1,1,3]
+TransformTrace('subtract', [1, 2, 3, 4], [0, 1, 2, 1]);
+// returns [1, 1, 1, 3]
+
+TransformTrace('add', [1, 2, 3, 4], [0, 1, 2, 1]);
+// returns [1, 3, 5, 5]
+
+TransformTrace('add', [1, 2, 3, 4], 5);
+// returns [6, 7, 8, 9]
+
+TransformTrace('normToMin', [1.5, 2, 3, 4]);
+// returns [1, 1.3333, 2, 2.6665]
+
+TransformTrace('normToMax', [1.5, 2, 3, 4]);
+// returns [0.375, 0.5, 0.75, 1]
+
+TransformTrace('normToRange', [1.5, 2, 3, 4]);
+// returns [0, 0.2, 0.6, 1]
+
+TransformTrace('normToIdx', [1.5, 2, 3, 4], 1);
+// returns [0.75, 1, 1.5, 2]
+
+TransformTrace('normToVal', [1, 2, 3, 4], 2);
+// returns [0.75, 1, 1.5, 2]
+
+// Smoothing (ma= Moving average, sgf= Savitzky-Golay filter)
+
+TransformTrace('ma', [1.5, 2, 3, 4]);
+// returns [1.6667, 2.1665, 3, 3.6665]
+
+TransformTrace('sgf', [1, 2, 3, 4]);
+// returns [6, 7, 8, 9]
+
+// Absorbance (abs) -log(I/I0)
+
+// In case no value is provided, I0 is the fist value from the array
+TransformTrace('abs', [1.5, 2, 3, 4]);
+// returns [-0, -0.12494, -0.30103, -0.42597]
+
+// The provided value is I0
+TransformTrace('abs', [1.5, 2, 3, 4], 1);
+// returns [-0.1761, -0.3010, -0.4771, -0.6021]
 ```
 
 Returns **([Array][1]&lt;[number][2]> | void)** Transformed array or null
@@ -904,9 +1050,9 @@ Returns **([Array][1]&lt;[number][2]> | void)** Transformed array or null
 
 [2]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
 [5]: https://www.w3schools.com/jsref/jsref_abs.asp
 
