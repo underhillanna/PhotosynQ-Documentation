@@ -101,7 +101,7 @@ Returns **([Array][1]&lt;[number][2]> | void)** \[ [x1,y1], [x2,y2], ..., [xn,yn
 
 ### GetIndexByLabel
 
-Find the positions for protocols within a protocol set matching the 
+Find the positions for protocols within a protocol set matching the
 provided label. If only one label exists within a set, a number is returned.
 When multiple protocols in the set have the same label an array with all
 indexes of matching labels is returned.
@@ -109,13 +109,17 @@ indexes of matching labels is returned.
 **Parameters**
 
 -   `label` **[string][4]** Label from the protocol set
--   `json` **[object][3]** Required! The protocol content
+-   `json` **[Object][3]** Required! The protocol content
+-   `array` **[boolean][5]** Always return an array (optional, default `false`)
 
 **Examples**
 
 ```javascript
 GetIndexByLabel( "PAM", json );
 // returns e.g. 1 or [1,2]
+
+GetIndexByLabel( "PAM", json, true );
+// returns e.g. [1] or [1,2]
 ```
 
 Returns **([number][2] \| [Array][1]&lt;[number][2]>)** Single index or an array of indexes
@@ -148,12 +152,16 @@ protcol objects of matching labels is returned.
 
 -   `label` **[string][4]** The label from the protocol set
 -   `json` **[Object][3]** Required! The protocol content
+-   `array` **[boolean][5]** Always return an array (optional, default `false`)
 
 **Examples**
 
 ```javascript
 GetIndexByLabel( "PAM", json );
 // returns e.g. { "label": "PAM", ...} or [{ "label": "PAM", ...}, { "label": "PAM", ...}]
+
+GetIndexByLabel( "PAM", json, true );
+// returns e.g. [{ "label": "PAM", ...}] or [{ "label": "PAM", ...}, { "label": "PAM", ...}]
 ```
 
 Returns **([Object][3] \| [Array][1]&lt;[Object][3]>)** Single protocol or an array of protocols
@@ -450,7 +458,7 @@ Returns **[object][3]** pushes the message into the output object
 
 ### Math.abs
 
--   **See: [https://www.w3schools.com/jsref/jsref_abs.asp][5]**
+-   **See: [https://www.w3schools.com/jsref/jsref_abs.asp][6]**
 
 Math.abs(x) returns the absolute value of x
 
@@ -471,7 +479,7 @@ Returns **[number][2]**
 
 ### Math.acos
 
--   **See: [https://www.w3schools.com/jsref/jsref_acos.asp][6]**
+-   **See: [https://www.w3schools.com/jsref/jsref_acos.asp][7]**
 
 Math.acos(x) returns the arccosine of x, in radians
 
@@ -490,7 +498,7 @@ Returns **[number][2]**
 
 ### Math.asin
 
--   **See: [https://www.w3schools.com/jsref/jsref_asin.asp][7]**
+-   **See: [https://www.w3schools.com/jsref/jsref_asin.asp][8]**
 
 Math.asin(x) returns the arcsine of x, in radians
 
@@ -509,7 +517,7 @@ Returns **[number][2]**
 
 ### Math.atan
 
--   **See: [https://www.w3schools.com/jsref/jsref_atan.asp][8]**
+-   **See: [https://www.w3schools.com/jsref/jsref_atan.asp][9]**
 
 Math.atan(x) returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
 
@@ -528,7 +536,7 @@ Returns **[number][2]**
 
 ### Math.atan2
 
--   **See: [https://www.w3schools.com/jsref/jsref_atan2.asp][9]**
+-   **See: [https://www.w3schools.com/jsref/jsref_atan2.asp][10]**
 
 Math.atan2(y, x) returns the arctangent of the quotient of its arguments
 
@@ -548,7 +556,7 @@ Returns **[number][2]**
 
 ### Math.ceil
 
--   **See: [https://www.w3schools.com/jsref/jsref_ceil.asp][10]**
+-   **See: [https://www.w3schools.com/jsref/jsref_ceil.asp][11]**
 
 Math.ceil(x) returns the value of x rounded up to its nearest integer
 
@@ -567,7 +575,7 @@ Returns **[number][2]**
 
 ### Math.cos
 
--   **See: [https://www.w3schools.com/jsref/jsref_cos.asp][11]**
+-   **See: [https://www.w3schools.com/jsref/jsref_cos.asp][12]**
 
 Math.cos(x) returns the cosine of x (x is in radians)
 
@@ -586,7 +594,7 @@ Returns **[number][2]**
 
 ### Math.exp
 
--   **See: [https://www.w3schools.com/jsref/jsref_exp.asp][12]**
+-   **See: [https://www.w3schools.com/jsref/jsref_exp.asp][13]**
 
 Math.exp(x) returns the value of Ex
 
@@ -605,7 +613,7 @@ Returns **[number][2]**
 
 ### Math.floor
 
--   **See: [https://www.w3schools.com/jsref/jsref_floor.asp][13]**
+-   **See: [https://www.w3schools.com/jsref/jsref_floor.asp][14]**
 
 Math.floor(x) returns the value of x rounded down to its nearest integer
 
@@ -624,7 +632,7 @@ Returns **[number][2]**
 
 ### Math.log
 
--   **See: [https://www.w3schools.com/jsref/jsref_log.asp][14]**
+-   **See: [https://www.w3schools.com/jsref/jsref_log.asp][15]**
 
 Math.log(x) returns the natural logarithm (base E) of x
 
@@ -643,7 +651,7 @@ Returns **[number][2]**
 
 ### Math.max
 
--   **See: [https://www.w3schools.com/jsref/jsref_max.asp][15]**
+-   **See: [https://www.w3schools.com/jsref/jsref_max.asp][16]**
 
 Math.max(x, y, z, ..., n) returns the number with the highest value
 
@@ -662,7 +670,7 @@ Returns **[number][2]**
 
 ### Math.min
 
--   **See: [https://www.w3schools.com/jsref/jsref_min.asp][16]**
+-   **See: [https://www.w3schools.com/jsref/jsref_min.asp][17]**
 
 Math.min(x, y, z, ..., n) returns the number with the lowest value
 
@@ -681,7 +689,7 @@ Returns **[number][2]**
 
 ### Math.pow
 
--   **See: [https://www.w3schools.com/jsref/jsref_pow.asp][17]**
+-   **See: [https://www.w3schools.com/jsref/jsref_pow.asp][18]**
 
 Math.pow(x, y) returns the value of x to the power of y
 
@@ -701,7 +709,7 @@ Returns **[number][2]**
 
 ### Math.round
 
--   **See: [https://www.w3schools.com/jsref/jsref_round.asp][18]**
+-   **See: [https://www.w3schools.com/jsref/jsref_round.asp][19]**
 
 Math.round(x) returns the value of x rounded to its nearest integer
 
@@ -722,7 +730,7 @@ Returns **[number][2]**
 
 ### Math.sin
 
--   **See: [https://www.w3schools.com/jsref/jsref_sin.asp][19]**
+-   **See: [https://www.w3schools.com/jsref/jsref_sin.asp][20]**
 
 Math.sin(x) returns the sine of x (x is in radians)
 
@@ -741,7 +749,7 @@ Returns **[number][2]**
 
 ### Math.sqrt
 
--   **See: [https://www.w3schools.com/jsref/jsref_sqrt.asp][20]**
+-   **See: [https://www.w3schools.com/jsref/jsref_sqrt.asp][21]**
 
 Math.sqrt(x)	returns the square root of x
 
@@ -760,7 +768,7 @@ Returns **[number][2]**
 
 ### Math.tan
 
--   **See: [https://www.w3schools.com/jsref/jsref_tan.asp][21]**
+-   **See: [https://www.w3schools.com/jsref/jsref_tan.asp][22]**
 
 Math.tan(x) returns the tangent of an angle
 
@@ -779,7 +787,7 @@ Returns **[number][2]**
 
 ### Math.E
 
--   **See: [https://www.w3schools.com/jsref/jsref_e.asp][22]**
+-   **See: [https://www.w3schools.com/jsref/jsref_e.asp][23]**
 
 Euler's number (approx. 2.718)
 
@@ -794,7 +802,7 @@ Returns **[number][2]** 2.718281828459045
 
 ### Math.LN2
 
--   **See: [https://www.w3schools.com/jsref/jsref_ln2.asp][23]**
+-   **See: [https://www.w3schools.com/jsref/jsref_ln2.asp][24]**
 
 Natural logarithm of 2 (approx. 0.693)
 
@@ -809,7 +817,7 @@ Returns **[number][2]** 0.6931471805599453
 
 ### Math.LN10
 
--   **See: [https://www.w3schools.com/jsref/jsref_ln10.asp][24]**
+-   **See: [https://www.w3schools.com/jsref/jsref_ln10.asp][25]**
 
 Natural logarithm of 10 (approx. 2.302)
 
@@ -824,7 +832,7 @@ Returns **[number][2]** 2.302585092994046
 
 ### Math.LOG2E
 
--   **See: [https://www.w3schools.com/jsref/jsref_log2e.asp][25]**
+-   **See: [https://www.w3schools.com/jsref/jsref_log2e.asp][26]**
 
 Base-2 logarithm of E (approx. 1.442)
 
@@ -839,7 +847,7 @@ Returns **[number][2]** 1.4426950408889634
 
 ### Math.LOG10E
 
--   **See: [https://www.w3schools.com/jsref/jsref_log10e.asp][26]**
+-   **See: [https://www.w3schools.com/jsref/jsref_log10e.asp][27]**
 
 Base-10 logarithm of E (approx. 0.434)
 
@@ -854,7 +862,7 @@ Returns **[number][2]** 0.4342944819032518
 
 ### Math.PI
 
--   **See: [https://www.w3schools.com/jsref/jsref_pi.asp][27]**
+-   **See: [https://www.w3schools.com/jsref/jsref_pi.asp][28]**
 
 PI (approx. 3.14)
 
@@ -869,7 +877,7 @@ Returns **[number][2]** 3.141592653589793
 
 ### Math.SQRT1_2
 
--   **See: [https://www.w3schools.com/jsref/jsref_sqrt1_2.asp][28]**
+-   **See: [https://www.w3schools.com/jsref/jsref_sqrt1_2.asp][29]**
 
 Square root of 1/2 (approx. 0.707)
 
@@ -884,7 +892,7 @@ Returns **[number][2]** 0.7071067811865476
 
 ### Math.SQRT2
 
--   **See: [https://www.w3schools.com/jsref/jsref_sqrt2.asp][29]**
+-   **See: [https://www.w3schools.com/jsref/jsref_sqrt2.asp][30]**
 
 Square root of 2 (approx. 1.414)
 
@@ -899,7 +907,7 @@ Returns **[number][2]** 1.4142135623730951
 
 ### Math.random
 
--   **See: [https://www.w3schools.com/jsref/jsref_random.asp][30]**
+-   **See: [https://www.w3schools.com/jsref/jsref_random.asp][31]**
 
 Random number
 
@@ -914,7 +922,7 @@ Returns **[number][2]** between 0 and 1
 
 ### NonLinearRegression
 
--   **See: [http://statpages.info/nonlin.html][31]**
+-   **See: [http://statpages.info/nonlin.html][32]**
 
 Function to perform a non-linear regression.
 
@@ -939,8 +947,8 @@ Function to perform a non-linear regression.
     -   `options.x6Trans` **(`"X6"` \| `"LN(X6)"` \| `"SQRT(X6)"` \| `"1/X6"`)** Transformation (optional, default `"X6"`)
     -   `options.x7Trans` **(`"X7"` \| `"LN(X7)"` \| `"SQRT(X7)"` \| `"1/X7"`)** Transformation (optional, default `"X7"`)
     -   `options.x8Trans` **(`"X8"` \| `"LN(X8)"` \| `"SQRT(X8)"` \| `"1/X8"`)** Transformation (optional, default `"X8"`)
-    -   `options.Centered` **[boolean][32]** Centered Approximation to Partial Derivatives (optional, default `false`)
-    -   `options.LeastAbs` **[boolean][32]** Least-Absolute -Value curve fitting (optional, default `false`)
+    -   `options.Centered` **[boolean][5]** Centered Approximation to Partial Derivatives (optional, default `false`)
+    -   `options.LeastAbs` **[boolean][5]** Least-Absolute -Value curve fitting (optional, default `false`)
     -   `options.cPctile` **[number][2]** Percentile (optional, default `50`)
 
 **Examples**
@@ -1054,58 +1062,58 @@ Returns **([Array][1]&lt;[number][2]> | void)** Transformed array or null
 
 [4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[5]: https://www.w3schools.com/jsref/jsref_abs.asp
+[5]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[6]: https://www.w3schools.com/jsref/jsref_acos.asp
+[6]: https://www.w3schools.com/jsref/jsref_abs.asp
 
-[7]: https://www.w3schools.com/jsref/jsref_asin.asp
+[7]: https://www.w3schools.com/jsref/jsref_acos.asp
 
-[8]: https://www.w3schools.com/jsref/jsref_atan.asp
+[8]: https://www.w3schools.com/jsref/jsref_asin.asp
 
-[9]: https://www.w3schools.com/jsref/jsref_atan2.asp
+[9]: https://www.w3schools.com/jsref/jsref_atan.asp
 
-[10]: https://www.w3schools.com/jsref/jsref_ceil.asp
+[10]: https://www.w3schools.com/jsref/jsref_atan2.asp
 
-[11]: https://www.w3schools.com/jsref/jsref_cos.asp
+[11]: https://www.w3schools.com/jsref/jsref_ceil.asp
 
-[12]: https://www.w3schools.com/jsref/jsref_exp.asp
+[12]: https://www.w3schools.com/jsref/jsref_cos.asp
 
-[13]: https://www.w3schools.com/jsref/jsref_floor.asp
+[13]: https://www.w3schools.com/jsref/jsref_exp.asp
 
-[14]: https://www.w3schools.com/jsref/jsref_log.asp
+[14]: https://www.w3schools.com/jsref/jsref_floor.asp
 
-[15]: https://www.w3schools.com/jsref/jsref_max.asp
+[15]: https://www.w3schools.com/jsref/jsref_log.asp
 
-[16]: https://www.w3schools.com/jsref/jsref_min.asp
+[16]: https://www.w3schools.com/jsref/jsref_max.asp
 
-[17]: https://www.w3schools.com/jsref/jsref_pow.asp
+[17]: https://www.w3schools.com/jsref/jsref_min.asp
 
-[18]: https://www.w3schools.com/jsref/jsref_round.asp
+[18]: https://www.w3schools.com/jsref/jsref_pow.asp
 
-[19]: https://www.w3schools.com/jsref/jsref_sin.asp
+[19]: https://www.w3schools.com/jsref/jsref_round.asp
 
-[20]: https://www.w3schools.com/jsref/jsref_sqrt.asp
+[20]: https://www.w3schools.com/jsref/jsref_sin.asp
 
-[21]: https://www.w3schools.com/jsref/jsref_tan.asp
+[21]: https://www.w3schools.com/jsref/jsref_sqrt.asp
 
-[22]: https://www.w3schools.com/jsref/jsref_e.asp
+[22]: https://www.w3schools.com/jsref/jsref_tan.asp
 
-[23]: https://www.w3schools.com/jsref/jsref_ln2.asp
+[23]: https://www.w3schools.com/jsref/jsref_e.asp
 
-[24]: https://www.w3schools.com/jsref/jsref_ln10.asp
+[24]: https://www.w3schools.com/jsref/jsref_ln2.asp
 
-[25]: https://www.w3schools.com/jsref/jsref_log2e.asp
+[25]: https://www.w3schools.com/jsref/jsref_ln10.asp
 
-[26]: https://www.w3schools.com/jsref/jsref_log10e.asp
+[26]: https://www.w3schools.com/jsref/jsref_log2e.asp
 
-[27]: https://www.w3schools.com/jsref/jsref_pi.asp
+[27]: https://www.w3schools.com/jsref/jsref_log10e.asp
 
-[28]: https://www.w3schools.com/jsref/jsref_sqrt1_2.asp
+[28]: https://www.w3schools.com/jsref/jsref_pi.asp
 
-[29]: https://www.w3schools.com/jsref/jsref_sqrt2.asp
+[29]: https://www.w3schools.com/jsref/jsref_sqrt1_2.asp
 
-[30]: https://www.w3schools.com/jsref/jsref_random.asp
+[30]: https://www.w3schools.com/jsref/jsref_sqrt2.asp
 
-[31]: http://statpages.info/nonlin.html
+[31]: https://www.w3schools.com/jsref/jsref_random.asp
 
-[32]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[32]: http://statpages.info/nonlin.html
