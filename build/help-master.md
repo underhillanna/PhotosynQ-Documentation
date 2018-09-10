@@ -158,6 +158,14 @@
 
 {{> help/_data_Flag_Measurements.md}}
 
+***
+
+{{> help/_data_Sessions.md}}
+
+***
+
+{{> help/_data_Download_Data.md}}
+
 ## Protocols
 
 {{> help/_protocols_Protocol_Basics.md}}
