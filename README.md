@@ -65,6 +65,8 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Advanced Parameters](help/_data_Advanced_Parameters.md)
 + [Data Issues](help/_data_Data_Issues.md)
 + [Flag Measurements](help/_data_Flag_Measurements.md)
++ [Sessions](help/_data_Sessions.md)
++ [Download Data](help/_data_Download_Data.md)
 
 ### Protocols
 
