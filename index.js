@@ -199,7 +199,7 @@ var commands = function(options){
 					}).join(' ') + '\n\n';
 
 				if(content.example != "" && content.type == 'console')
-					document += '**Example:**\n\n```shell\n'+ content.example + '\n```\n\n';
+					document += '**Example:**\n\n```bash\n'+ content.example + '\n```\n\n';
 
 				if(content.example != "" && content.type == 'protocol')
 					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
@@ -221,8 +221,8 @@ var commands = function(options){
 					document += '**Instruments:**\n\n';
 					document += Object.keys(content.compatibility).map(function(a){
 						if(content.compatibility[a].length == 0)
-							return `+ ${a} \`none\``;
-						return `+ ${a} `+ content.compatibility[a].reverse().map(function(b){
+							return `+ ${a}: \`not available\``;
+						return `+ ${a}: `+ content.compatibility[a].reverse().map(function(b){
 							return '`'+b+'`';
 						}).join(' ');
 
