@@ -138,20 +138,20 @@ Make sure to use png, jpeg or gifs if animations are necessary.
 
 `***Note:*** This is a Note for you.` Will create a yellow note box on the website. Don't use line breaks.
 
-`<i class="fa fa-..."></i>` Will include the corresponding <http://fontawesome.io/> icon (v4.7.0) on the website.
+`<i class="fa fa-..."></i>` Will include the corresponding <https://fontawesome.com/v4.7.0/icons> icon (v4.7.0) on the website.
 
-### Elasticlunr.js Search Index
+### Lunr.js Search Index
 
-Manually generate a search index for Elasticlunr.js
+Manually generate a search index for Lunr.js
 
-```bash
-$ node index.js create
+```shell
+node index.js create
 ```
 
 Test the search function as it is used on PhotosynQ
 
-```bash
-$ node index.js search --term <search term>
+```shell
+node index.js search --term <search term>
 ```
 
 In order to generate the index make sure, you have [Node.js](https://nodejs.org/) installed.
