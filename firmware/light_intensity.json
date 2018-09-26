@@ -1,0 +1,30 @@
+{
+  "name": "light_intensity",
+  "description": "Instead of setting a fixed for an LED, use this parameter to acquire the ambient light intensity using the PAR sensor to recreate it inside the instrument.",
+  "alias": [],
+  "input": "string",
+  "values": [],
+  "example": "\"light_intensity\"",
+  "type": "parameter",
+  "editor": "table",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-08-17T20:11:48+00:00"
+  },
+  "deprecated": false,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ],
+    "MultispeQ 2": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ]
+  },
+  "access": "public"
+}

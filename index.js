@@ -102,13 +102,13 @@ var commands = function(options){
 			"editor": "",
 			"compatibility": {},
 			"time":{
-			"modified": time,
-			"created": time
+				"modified": time,
+				"created": time
 			},
 			"deprecated": false,
-			"url": "",
 			"dependencies":[],
-			"parent": ""
+			"parent": "",
+			"access": "public"
 		};
 
 		jetpack.write(file, data, { jsonIndent: 2 });
@@ -125,7 +125,8 @@ var commands = function(options){
 		}
 
 		var cmd = jetpack.read(file, 'json');
-		var output = chalk.yellow('\n'+ cmd.name + '\n') + '------------------------\n';
+		var output = chalk.yellow('\n'+ cmd.name);
+		output += '\n------------------------\n';
 		output += chalk.grey(cmd.description+'\n\n');
 		output += 'Alias: '+ chalk.grey( (cmd.alias.join(', ') || '') +'\n');
 		output += 'Input: '+ chalk.grey(cmd.input+'\n');
@@ -133,8 +134,14 @@ var commands = function(options){
 		output += 'Example: '+ chalk.grey(cmd.example+'\n');
 		output += 'Type: '+ chalk.grey(cmd.type+'\n');
 		output += 'Editor: '+ chalk.grey(cmd.editor+'\n');
-		output += 'Versions: '+ chalk.cyan( (cmd.versions.reverse().join(', ') || '') +'\n');
-		output += 'Instruments: '+ chalk.cyan( (Object.keys(cmd.compatibility).join(', ') || '') +'\n');
+		output += 'Instruments:\n';
+
+		var instruments = Object.keys(cmd.compatibility);
+		for(var i in instruments){
+			output += chalk.cyan( instruments[i]+':\n');
+			output += chalk.grey( ' + ' + cmd.compatibility[instruments[i]].join('\n + ') +'\n');
+		}
+
 		output += 'Created: '+ chalk.grey(cmd.time.created+'\n');
 		output += 'Modified: '+ chalk.grey(cmd.time.modified+'\n');
 		output += 'Url: '+ chalk.grey(cmd.url+'\n');
@@ -179,8 +186,8 @@ var commands = function(options){
 				if(content.description != "")
 					document += content.description+'\n\n';
 				if(content.alias.length > 0)
-					document += '**Alias:**\n\n'+ content.alias.map(function(a){
-						return '+ ' + a;
+					document += '**Alias:** '+ content.alias.map(function(a){
+						return '`' + a + '`';
 					}) + '\n\n';
 
 				if(content.editor != "")
@@ -191,31 +198,37 @@ var commands = function(options){
 						return '+ '+ a;
 					}).join(' ') + '\n\n';
 
-				if(content.example != "")
+				if(content.example != "" && content.type == 'console')
+					document += '**Example:**\n\n```shell\n'+ content.example + '\n```\n\n';
+
+				if(content.example != "" && content.type == 'protocol')
 					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
 
-				if(content.editor != "")
+				if(content.editor != "" && content.type == 'protocol')
 					document += '**Editor:** '+ content.editor +'\n\n';
 
-				// if(content.versions.length > 0)
-				// 	document += '**Versions:**\n\n'+ content.versions.reverse().map(function(a){
-				// 		return '`' + a + '`';
-				// 	}).join(' ') + '\n\n';
-
-				if(Object.keys(content.compatibility).length > 0)
-					document += '**Instruments:**\n\n'+ Object.keys(content.compatibility).map(function(a){
-						return '`' + a + '`';
-					}).join(' ') + '\n\n';
-
 				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
-				// if(content.url != "")
-				// 	document += '**Url:** <'+ content.url+'>\n\n';
+
 				if(content.dependencies.length > 0)
 					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
 						return '+ ' + a;
 					}) + '\n\n';
 				if(content.parent != "")
 					document += '**Parent:** <'+ content.parent+'>\n\n';
+
+
+				if(Object.keys(content.compatibility).length > 0){
+					document += '**Instruments:**\n\n';
+					document += Object.keys(content.compatibility).map(function(a){
+						if(content.compatibility[a].length == 0)
+							return `+ ${a} \`none\``;
+						return `+ ${a} `+ content.compatibility[a].reverse().map(function(b){
+							return '`'+b+'`';
+						}).join(' ');
+
+					}).join('\n') + '\n\n';
+
+				}
 
 				// Add a page - break
 				document += '***\n\n';

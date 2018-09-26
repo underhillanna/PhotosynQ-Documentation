@@ -1,0 +1,30 @@
+{
+  "name": "_protocol_set_",
+  "description": "Treating protocols as integrated sets.\n\nProtocols are separate units which produce separate data sets. Using `_protocol_set_`, multiple protocols can be chained together into one protocol.\n\n**Note:** This is different from chaining protocols together in a project. There, the protocols are still separate units within a measurement.",
+  "alias": [],
+  "input": "array",
+  "values": [],
+  "example": "\"_protocol_set_\": [\n   { Protocol 1 },\n   ...\n],",
+  "type": "protocol",
+  "editor": "fixed",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-08-17T14:50:19+00:00"
+  },
+  "deprecated": false,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ],
+    "MultispeQ 2": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ]
+  },
+  "access": "public"
+}

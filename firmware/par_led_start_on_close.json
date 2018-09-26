@@ -1,0 +1,30 @@
+{
+  "name": "par_led_start_on_close",
+  "description": "The Ambient light is recreated inside the instrument on closing the clamp. During the hold time, the ambient light is resampled in ~100 ms intervals and the LED output is adjusted to match. When the hold event occurs (e.g. the clamp is closed), the final ambient intensity and LED setting are held and used in the protocol. The number for the LED is defining the LED used for matching the ambient light intensity.",
+  "alias": [],
+  "input": "number",
+  "values": [],
+  "example": "\"par_led_start_on_close\": <number for LED>,",
+  "type": "protocol",
+  "editor": "fixed",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-08-17T14:48:00+00:00"
+  },
+  "deprecated": false,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ],
+    "MultispeQ 2": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ]
+  },
+  "access": "public"
+}

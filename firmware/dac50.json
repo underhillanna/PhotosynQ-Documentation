@@ -1,0 +1,31 @@
+{
+  "name": "dac50",
+  "description": "Set all DAC outputs to 50%",
+  "alias": [],
+  "input": "",
+  "values": [],
+  "example": "dac50",
+  "type": "console",
+  "editor": "",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-06-06T19:28:59+00:00"
+  },
+  "deprecated": true,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "1.06",
+      "1.07",
+      "1.08",
+      "1.10",
+      "1.11",
+      "1.14",
+      "1.16",
+      "1.17"
+    ],
+    "MultispeQ 2": []
+  },
+  "access": "public"
+}

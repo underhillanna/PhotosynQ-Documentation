@@ -1,0 +1,33 @@
+{
+  "name": "start_on_close",
+  "description": "If set to 0, the command will be ignored. If set to 1, will wait until the clamp is closed, then proceed with the rest of the experiment.",
+  "alias": [],
+  "input": "number",
+  "values": [
+    0,
+    1
+  ],
+  "example": "\"start_on_close\": <number>,",
+  "type": "protocol",
+  "editor": "fixed",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-08-17T14:46:55+00:00"
+  },
+  "deprecated": false,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ],
+    "MultispeQ 2": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ]
+  },
+  "access": "public"
+}

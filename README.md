@@ -116,7 +116,8 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 
 ### Folders
 
-```
+```shell
+├── firmware          // Firmware Command files
 ├── help              // Help Center files
 ├── images
 │   ├── help          // Images used in Help Center
@@ -126,6 +127,7 @@ Each file represents one tab on <https://photosynq.org/tutorials>.
 ```
 
 ### Images
+
 All images are placed in the `images` folder in the corresponding folders. For now we don't have any special naming conventions. The description will appear on the website as a figure legend.
 
 Include images as `![A figure description](../images/folder/file.*)`
@@ -156,10 +158,42 @@ node index.js search --term <search term>
 
 In order to generate the index make sure, you have [Node.js](https://nodejs.org/) installed.
 
+### Firmware
+
+The firmware folder contains individual files for each command, unsing the command as a filename `command.json`. Use the following command generate a template file for a new command.
+
+```shell
+node index.js cmd --new <command>
+```
+
+The standard structure for documenting a command is the following:
+
+```Javascript
+{
+    "name": "<string>",             // Command Name
+    "description": "<string>",      // Short Description of the Command's function
+    "alias": ["<string"],           // If the Command has an alias add it here, no separate file needed
+    "input": "string|array|number", // If the Command expects a string, number or array
+    "values": [],
+    "example": "<string>",          // Add an example on how to use the command
+    "type": "console|protocol",     // Where the Command can be used
+    "editor": "table|fixed",        // Location in the Protocol Editor
+    "compatibility": {},            // "Instrument Name": ["firmware version",...]
+    "time":{
+        "modified": "<time>",       // Timestamp YYYY-MM-DDTHH:mm:ssZ
+        "created": "<time>",        // Timestamp YYYY-MM-DDTHH:mm:ssZ
+    },
+    "deprecated": false,            // If a Command is deprecated set to true
+    "dependencies":[],              // Add Commands that are required with this command in protocols
+    "parent": "<string>",           // When the command nested within a command
+    "access": "public|private"      // If the command is in the outside documentation
+}
+```
+
 ### Compile Master documents
 
 To generate one big help document and one tutorials document, use the compile script.
 
-```bash
-$ . compile.sh
+```shell
+. compile.sh
 ```

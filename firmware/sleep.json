@@ -1,0 +1,38 @@
+{
+  "name": "sleep",
+  "description": "Puts instrument into sleep mode. Hold the button for at least 5s to wake it up.",
+  "alias": [],
+  "input": "",
+  "values": [],
+  "example": "sleep",
+  "type": "console",
+  "editor": "",
+  "time": {
+    "modified": "2018-07-30T23:15:11+00:00",
+    "created": "2017-06-06T19:27:09+00:00"
+  },
+  "deprecated": false,
+  "dependencies": [],
+  "parent": "",
+  "compatibility": {
+    "MultispeQ 1": [
+      "1.06",
+      "1.07",
+      "1.08",
+      "1.10",
+      "1.11",
+      "1.14",
+      "1.16",
+      "1.17",
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ],
+    "MultispeQ 2": [
+      "2.0035",
+      "2.0036",
+      "2.0038"
+    ]
+  },
+  "access": "public"
+}
