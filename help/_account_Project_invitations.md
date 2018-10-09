@@ -17,7 +17,7 @@ To invite collaborators while creating a project:
 
 Inviting collaborators to an existing project:
 
-1. Go to the project homepage on https://photosynq.org
+1. Go to the project homepage on <https://photosynq.org>
 2. Click on the **Options** menu. The options menu will only be visible if you are the project administrator
 3. Select **Settings**
 4. Follow steps 1-4 above to invite collaborators
