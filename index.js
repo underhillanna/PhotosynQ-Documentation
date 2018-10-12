@@ -18,17 +18,25 @@ const chalk = require('chalk');
 
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
-var createIDX = function(){
+var createIDX = function(options){
 
 	// Set up index and loop through the files in help
 	var hfc = 0;
+	var src_path = './help/';
+
+	if(options.source)
+		src_path = jetpack.path(options.source, 'help') + '/';
+
+	if(!jetpack.exists(src_path)){
+		console.log(chalk.red('Error:') + ' Source files not found');
+		return;
+	}
 	var lunrIDX = lunr(function(){
 		this.field('title');
 		this.field('content');
 		// the id
 		this.ref('href');
-
-		var files = jetpack.inspectTree('./help/').children;
+		var files = jetpack.inspectTree(src_path).children;
 
 		for(var i in files){
 			if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown')
@@ -253,16 +261,26 @@ var commands = function(options){
 	}
 
 	if(options.merge !== undefined){
-		var files = jetpack.list('./firmware');
+		var src_path = './firmware';
+		if(options.source)
+			src_path = jetpack.path(options.source, 'firmware' );
+
+		if(!jetpack.exists(src_path)){
+			console.log(chalk.red('Error:') + ' Source files not found');
+			return;
+		}
+		var files = jetpack.list(src_path);
 		var merged = [];
+		var file_path = null;
 		for(var f in files){
 			if(files[f].match(/\.json$/)){
-				content = jetpack.read('./firmware/'+files[f], 'json');
+				file_path = jetpack.path(src_path, files[f]);
+				content = jetpack.read(file_path, 'json');
 				merged.push(content);
 			}
 		}
-		jetpack.write('./dist/firmware.json', merged, { jsonIndent: 2 });
-		console.log(chalk.green(`Files merged`));
+		jetpack.write('./dist/firmware-commands.json', merged, { jsonIndent: 2 });
+		console.log(chalk.green(`${merged.length} Files merged`));
 		return;
 	}
 
@@ -361,13 +379,39 @@ var pingLinks = function(){
 
 var compileMD = function(options){
 	var md = jetpack.read(options.input);
-	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
-	var files = {};
-	for(var i in list){
-		files[list[i]] = jetpack.read(list[i]) + '\n';
+	var src_path = '.';
+
+	var date = moment().format('LL');
+	if(options.date){
+		date = moment(options.date).format('LL');
 	}
-	md = Mustache.render(md, {date: moment().format('LL'), version: (options.tag || '--') }, files);
-	md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
+
+	if (options.source)
+		src_path = options.source;
+
+	if(!jetpack.exists(src_path)){
+		console.log(chalk.red('Error:') + ' Source files not found');
+		return;
+	}
+
+	var list = jetpack.find(src_path, { matching: ['help/*.md', 'tutorials/*.md'] });
+	var files = {};
+	var file = null
+	for(var i in list){
+		if (options.source){
+			file = list[i].split('/');
+			file = file[file.length-2] + '/' + file[file.length-1];
+		}
+		else{
+			file = list[i];
+		}
+		files[file] = jetpack.read(list[i]) + '\n';
+	}
+	md = Mustache.render(md, {date: date, version: (options.tag || '--') }, files);
+	if (options.source)
+		md = md.replace(/\]\(\.\.\/images\//gm, ']('+jetpack.path(src_path, 'images')+'/');
+	else
+		md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
 	jetpack.write(options.output, md);
 };
 
@@ -615,6 +659,7 @@ program
 
 program
 	.command('index')
+	.option('-s, --source [dir]','Use files from a different source')
 	.description('Generate search index')
 	.action(createIDX);
 
@@ -631,12 +676,14 @@ program
 	.option('-r, --release <version>','Add a new release version to commands that are not deprecated')
 	.option('-d, --documents','Generate new help documents')
 	.option('-m, --merge','Merge all files into one JSON file')
+	.option('-s, --source [dir]','Compile files from a different source')
 	.description('Manage firmware commands')
 	.action(commands);
 
 
 program
 	.command('test-links')
+	.option('-s, --source [dir]','Compile files from a different source')
 	.description('Ping all links in markdown documents to see if they are alive')
 	.action(pingLinks);
 
@@ -645,6 +692,8 @@ program
 	.option('-i, --input <input>','Markdown Template File')
 	.option('-o, --output <output>','Output file')
 	.option('-t, --tag <tag>','Set Version (tag) of the document')
+	.option('-d, --date <date>','Set Date (date) of the document (ISO 8601 format)')
+	.option('-s, --source [dir]','Compile files from a different source')
 	.description('Generate master markdown file from template')
 	.action(compileMD);
 

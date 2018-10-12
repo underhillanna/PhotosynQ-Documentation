@@ -5,26 +5,34 @@ echo "------------------------------------";
 echo "Remove previous distribution files"
 rm ./dist/*
 
+# Get the latest release from Github
+TAG=$(git describe --abbrev=0 --tags)
+DATE=$(git log --tags --simplify-by-decoration --pretty="format:%aI" --max-count=1)
+echo "Compile files for Github tag $TAG ($DATE)";
+mkdir ./dist/tmp/
+git archive -o ./dist/latest.zip --prefix=tmp/ $TAG
+unzip ./dist/latest.zip -d ./dist -x tmp/src/* tmp/*.sh tmp/*.json tmp/*.js tmp/README.md tmp/LICENSE
+rm ./dist/latest.zip
+
 # Get all the firmware commands and build the help files
-node index.js cmd --documents
+node index.js cmd --documents -s ./dist/tmp
 
 # Generate new documentation index
-# This will collect also the firmware documentation if available
-node index.js index
+echo "Generate Search index"
+node index.js index -s ./dist/tmp
 
 # Compiling the master markdown files from templates
-# The tag gets used from the git repo
-TAG=$(git describe --abbrev=0 --tags)
-echo "Compile master files for Github tag $TAG";
-node index.js compile -i ./build/help-master.md -o ./dist/PhotosynQ-Help-Manual.md -t $TAG
-node index.js compile -i ./build/tutorials-master.md -o ./dist/PhotosynQ-Getting-Started.md -t $TAG
-node index.js compile -i ./build/firmware-master.md -o ./dist/PhotosynQ-Firmware.md -t $TAG
+echo "Compile master files from build templates"
+node index.js compile -i ./dist/tmp/build/help-master.md -o ./dist/PhotosynQ-Help-Manual.md -t $TAG -d $DATE -s ./dist/tmp
+node index.js compile -i ./dist/tmp/build/tutorials-master.md -o ./dist/PhotosynQ-Getting-Started.md -t $TAG -d $DATE -s ./dist/tmp
+node index.js compile -i ./dist/tmp/build/firmware-master.md -o ./dist/PhotosynQ-Firmware.md -t $TAG -d $DATE -s ./dist/tmp
 
-node index.js compile -i ./build/MultispeQ-v1.0.md -o ./dist/PhotosynQ-MultispeQ-v1.0.md -t $TAG
-node index.js compile -i ./build/MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.md -t $TAG
+node index.js compile -i ./dist/tmp/build/MultispeQ-v1.0.md -o ./dist/PhotosynQ-MultispeQ-v1.0.md -t $TAG -d $DATE -s ./dist/tmp
+node index.js compile -i ./dist/tmp/build/MultispeQ-v2.0.md -o ./dist/PhotosynQ-MultispeQ-v2.0.md -t $TAG -d $DATE -s ./dist/tmp
 
 # add the file for the server to the distribution as well
-node index.js cmd --merge
+echo "Generate Firmware Commands file for Server";
+node index.js cmd -s ./dist/tmp --merge
 
 # Now we can build the pdfs as well
 echo "Converting markdown to pdf";
