@@ -1,7 +1,23 @@
+body {
+    font-family: "Times New Roman",serif;
+    font-size: 1em;
+    -webkit-hyphens:none;
+    text-align: justify;
+}
+
+h1 {
+    page-break-before: auto;
+}
+
 h3 {
     color: #277147;
     border-bottom:1px solid #a1a1a1;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+}
+
 a {
     color: #277147;
 }
@@ -9,11 +25,21 @@ a {
 .text-muted {
     color: #737373;
 }
-thead, tfoot {
-    display: table-header-group !important;
+
+@page {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 /* Additional Styles for PhotosynQ*/
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    white-space: nowrap;
+}
+
 pre {
     padding: 5px;
     background-color: transparent;
@@ -27,28 +53,70 @@ pre > code, pre, tt, code, kbd, samp {
     background-color: transparent;
     white-space: pre-wrap;
     padding: 1em;
+    page-break-inside: avoid;
 }
 
-body, a, h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+table {
+    border-collapse: collapse;
 }
 
-tr th, tr td {
-    page-break-inside: avoid !important;
+thead, tfoot {
+    display: table-header-group !important;
 }
 
-thead tr {
-    background-color: #f5f5f5;
+/* tr, th, td {
+    margin: 0;
+    padding: 2px;
+    border: 1px solid black;
+    font-size: 100%;
+    vertical-align: baseline;
+} */
+
+thead th {
+    border-bottom:1px solid #a1a1a1;
 }
 
 tbody tr:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-code {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    white-space: nowrap;
+tr th, tr td {
+    padding: 0.2em;
+    page-break-inside: avoid !important;
+}
+
+ul{
+    list-style-type: square;
+}
+
+figure, figcaption {
+    width: 100% !important;
+    margin: 0px;
+}
+
+figcaption {
+    margin-top:5px;
+    font-size: 80%;
+}
+
+figcaption:before {
+    content: 'Fig. ';
+    font-weight: bolder;
+}
+
+/** Extra elements */
+.tip {
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    padding:5px;
+}
+
+.note {
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    padding:5px;
+}
+
+small {
+    font-size: 80%;
 }

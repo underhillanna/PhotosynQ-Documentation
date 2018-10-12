@@ -437,9 +437,7 @@ var createPDF = function (options){
 	});
 };
 
-
 var createEPUB = function (){
-
 	var cwd = jetpack.cwd();
 
     var option = {
@@ -450,6 +448,9 @@ var createEPUB = function (){
 		css: jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) ), // sting with css
 		// fonts: ,
 		lang: 'en',
+		tocTitle: 'Contents',
+		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
+		customOpfTemplatePath: './src/templates/content.opf.ejs',
         cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
 		content: [],
 		remarkable: {
@@ -470,6 +471,20 @@ var createEPUB = function (){
 		if(process.argv[i].match(/^-o|--output/)){
 			if(process.argv[(parseInt(i)+1)] !== undefined){
 				output = process.argv[(parseInt(i)+1)];
+			}
+			collect = false;
+			continue;
+		}
+		if(process.argv[i].match(/^-d|--date/)){
+			if(process.argv[(parseInt(i)+1)] !== undefined){
+				option.date = process.argv[(parseInt(i)+1)];
+			}
+			collect = false;
+			continue;
+		}
+		if(process.argv[i].match(/^-v|--version/)){
+			if(process.argv[(parseInt(i)+1)] !== undefined){
+				option.version = process.argv[(parseInt(i)+1)];
 			}
 			collect = false;
 			continue;
@@ -540,16 +555,56 @@ var createEPUB = function (){
 				chapters[chapterTitle] = "";
 				continue;
 			}
+			if(_html[i].match(/^<li>/)){
+				chapters[chapterTitle] += _html[i].replace(/^(\<li\>\s{0,})(\[x\])/i, "$1");
+				continue;
+			}
+			if(_html[i].match(/<em>Tip:<\/em>/)){
+				chapters[chapterTitle] += _html[i].replace(/^<p>/i, '<p class="tip">');
+				continue;
+			}
+			if(_html[i].match(/<em>Note:<\/em>/)){
+				chapters[chapterTitle] += _html[i].replace(/^<p>/i, '<p class="note">');
+				continue;
+			}
+			if(_html[i].match(/<img\/?[^>]+(>|$)/g)){
+				var img = '';
+				img += '<figure>';
+				img += _html[i].match(/<img\/?[^>]+(>|$)/)[0];
+				img += '<figcaption>';
+				var mdParser = new Remarkable(option.remarkable);
+				img += mdParser.render(_html[i].match(/(alt=)(\"([^>]+)(\"|$))/)[3]).replace(/<\/?p>/g, '');
+				img += '</figcaption>';
+				img += '</figure>';
+				chapters[chapterTitle] += _html[i].replace(/<img\/?[^>]+(>|$)/, img);
+				continue;
+			}
 			if(chapterTitle){
-				chapters[chapterTitle] += _html[i].replace(/images/i, jetpack.path(cwd, 'images'));
+				chapters[chapterTitle] += _html[i];
 			}
 		}
+		var date = moment(option.date).format('LL') || moment().format('LL');
+		var version = option.version || "unknown";
+
+		var header = '<div style="margin-top:45%; text-align:center">';
+			header += '<p>PhotosynQ Documentation</p>';
+			header += '<small>Modified: '+date+'</small><br>';
+			header += '<small>Version: '+version+'</small>';
+		header += '</div>';
+
+		option.content.push({
+			data: header,
+			excludeFromToc: true,
+			beforeToc: false
+		});
+
 		for(var c in chapters){
 			option.content.push({
 				title: entities.decode(c),
 				data: chapters[c]
 			});
 		}
+
 		new epub(option, output);
 		jetpack.remove(jetpack.path( cwd, 'dist', 'temp.md' ));
 	});
@@ -606,6 +661,8 @@ program
 	.option('-o, --output <output>','ePub File')
 	.option('-t, --title [title]','Ebook Title')
 	.option('-a, --author','Ebook Author(s)')
+	.option('-v, --version <version>','Version (Github tag)')
+	.option('-d, --date <date>','Release Date')
 	.description('Generate ePub from Markdown')
 	.action(createEPUB);
 
