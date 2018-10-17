@@ -2,6 +2,15 @@ MultispeQ v1.0 Configuration
 -------
 ![MultispeQ v1.0 measurements](../images/help/_instruments_MultispeQ_v1.0_measurements.png)
 
+| Body | Measurements |
+|:----|:----|
+| Size | 224.2 mm x 53.6 mm x 56.6 mm (l, w, h) |
+| Total Weight | 340 g (incl. battery)|
+| Light Guide Surface | 8 mm x 8 mm ( 64mm²) |
+| Leaf Clamp Opening | 13 mm |
+| Safety | Ring for leash |
+| Updates | Firmware updates through Applications |
+
 ### Lights
 
 There are sets of five LEDs each on the **main body** and the **leaf clamp**.
@@ -71,6 +80,10 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 |-----|-----|:---:|
 | Main | Soshine Li-ion 26650 Protected Battery: 5500mAh 3.7V | [view][26650P-3.7-5500] |
 
+#### References
+
+Kuhlgert, S., Austic, G., Zegarac, R. Osei-Bonsu, I.,Hoh, D., Chilvers, M. I., et al. (2016). **MultispeQ Beta: a tool for large-scale plant phenotyping connected to the open PhotosynQ network.** *R. Soc. Open Sci.* 3, 160592. [doi:10.1098/rsos.160592].
+
 [LXZ1]: https://www.lumileds.com/products/color-leds/luxeon-z-colors
 
 [OSRAM SFH 4441]: https://www.osram-os.com/osram_os/en/products/product-catalog/infrared-emitters%2c-detectors-andsensors/infrared-emitters/power-emitter-gt40mw/emitter-with-940-nm/sfh-4441/index.jsp
@@ -102,3 +115,5 @@ The MultispeQ v1.0 has a Li-ion battery which can be charged through the micro U
 [HMC-5051]: http://www.uqgoptics.com/pdf/Hot%20mirrors%20data%20sheet.pdf
 
 [26650P-3.7-5500]: http://www.soshine.com.cn/a633.aspx
+
+[doi:10.1098/rsos.160592]: https://dx.doi.org/10.1098/rsos.160592
