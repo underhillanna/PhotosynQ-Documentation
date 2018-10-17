@@ -25,4 +25,4 @@ In the Desktop App, notes and pictures can only be added BEFORE you save the mea
 2. Type in a note, use the computer's camera to take a picture, or upload an image from your computer.
 3. Once you have added all of your notes and images, select **Add**.
 
-![Adding Desktop Notes and Pictures](../images/help/_apps_desktop_add_notes.png)
+![Adding Desktop Notes (1) and Pictures (2)](../images/help/_apps_desktop_add_notes.png)
