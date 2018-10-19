@@ -44,10 +44,6 @@
 
 ## Applications (Mobile and Desktop)
 
-{{> help/_apps_PhotosynQ_on_computers_phones_and_tablets.md}}
-
-***
-
 {{> help/_apps_PhotosynQ_for_Android.md}}
 
 ***

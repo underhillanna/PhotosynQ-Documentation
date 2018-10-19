@@ -31,7 +31,6 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 
 ### Applications (Mobile and Desktop)
 
-+ [PhotosynQ on computers phones and tablets](help/_apps_PhotosynQ_on_computers_phones_and_tablets.md)
 + [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
 + [Desktop Application Settings](help/_apps_Desktop_Application_Settings.md)
