@@ -27,7 +27,7 @@ Log into PhotosynQ and select Create from the menu bar at the top of the page or
 
 #### Protocols
 
-**Pick the protocol** that best suits your device/needs, for 99% of people the pre-selected protocol will do. If you have an instrument other than a MultispeQ v1.0, or maybe small leaves, this protocol will be different. In this case select a protocol from the advanced list. Also, be sure to read the protocol description to make sure that it measures the parameters you are interested in and is compatible with your device and firmware version.
+**Pick the protocol** that best suits your device/needs, for 99% of people the pre-selected protocol will do. If you have an Instrument other than a MultispeQ v1.0, or maybe small leaves, this protocol will be different. In this case select a protocol from the advanced list. Also, be sure to read the protocol description to make sure that it measures the parameters you are interested in and is compatible with your device and firmware version.
 
 ![Select a Protocol. The standard protocol will be sufficient for most users.](../images/tutorials/_projects_select_protocol.png)
 
@@ -101,9 +101,9 @@ Finally, after you have created or edited your project, you need an internet con
 
 #### Connecting and Collecting Data on Your Project
 
-You will need to use the PhotosynQ mobile or desktop app to collect data, only the PhotosynQ apps can connect to the MultispeQ instrument, go here for connection tips.
+You will need to use the PhotosynQ mobile or desktop app to collect data, only the PhotosynQ apps can connect to the MultispeQ Instrument, go here for connection tips.
 
-Once your project is updated and you have connected to your Instrument like the MulitspeQ, you can collect a large volume of data and store it locally on the app, even if you do not have internet connection. Once you have finished collecting data, you will need to upload your data to the PhotosynQ server. 
+Once your project is updated and you have connected to your Instrument like the MultispeQ, you can collect a large volume of data and store it locally on the app, even if you do not have internet connection. Once you have finished collecting data, you will need to upload your data to the PhotosynQ server.
 
 When you collect data in your project, the way it is collected, and later interpreted/displayed is dependent on the protocol and the associated macro selected in project creation. If you chose Leaf Photosynthesis V1.0 like most, the measurement should take about ~15 seconds and return data on your phone that looks something like this:
 

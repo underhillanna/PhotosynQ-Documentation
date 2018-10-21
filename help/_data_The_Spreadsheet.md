@@ -56,7 +56,7 @@ Some columns are may contain information, that is not just a single value, but a
 
 #### Images
 
-If a measurement has an image saved with a measurement, either as an additional note or as an answer to a project question, an image icon <i class="fa fa-picture-o"></i> is shown. When hovering over the icon, the image will be shown, overlaying the series menu on the right. Copying an image from the spreadsheet,  or saving the spreadsheet will return the link to the image on PhotosynQ.
+If a measurement has an image saved with a measurement, either as an additional note or as an answer to a Project question, an image icon <i class="fa fa-picture-o"></i> is shown. When hovering over the icon, the image will be shown, overlaying the series menu on the right. Copying an image from the spreadsheet,  or saving the spreadsheet will return the link to the image on PhotosynQ.
 
 #### Color
 

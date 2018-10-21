@@ -1,6 +1,6 @@
 ### Why do PhotosynQ measurements require Protocols and Macros?
 
-On the PhotosynQ platform, we use **Protocols** to provide specific measurement instructions to the instrument, such as the MultispeQ. Every time a measurement is taken, the Protocol is sent to the instrument, and the results are sent back.
+On the PhotosynQ platform, we use **Protocols** to provide specific measurement instructions to the Instrument, such as the MultispeQ. Every time a measurement is taken, the Protocol is sent to the Instrument, and the results are sent back.
 
 You can choose to attach a **Macro** to a Protocol. Macros are used to make calculations after a measurement has been taken. Not every measurement requires post processing (e.g. a simple temperature measurement), but if you want to calculate a parameter from the measurement **Trace** or want to compare parameters (e.g. ambient temperature vs. leaf temperature), a Macro will calculate the parameters of interest and display the results instantly on your mobile device (e.g. a phone).
 

@@ -1,6 +1,6 @@
 ### Run a Protocols
 
-All the protocols you or the community developed on PhotosynQ can use independent from projects. Those measurements can be saved to your notebook using the desktop app.
+All the protocols you or the community developed on PhotosynQ can use independent from Projects. Those measurements can be saved to your notebook using the desktop app.
 
 #### Desktop
 

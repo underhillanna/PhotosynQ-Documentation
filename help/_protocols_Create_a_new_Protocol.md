@@ -6,15 +6,15 @@ If you want setup your own measurements, or make changes to existing ones.
 
 1. Make sure you have the desktop app installed and you are signed in.
 2. Select **New Protocol...** from the File menu.
-3. Connect the instrument you want to use the protocol with.
-4. Start building your protocol...
+3. Connect the Instrument you want to use the Protocol with.
+4. Start building your Protocol...
 
-***Tip:*** Use **<i class="fa fa-play"></i> Run** to test your protocol at any time.
+***Tip:*** Use **<i class="fa fa-play"></i> Run** to test your Protocol at any time.
 
 #### Troubleshooting
 
-When you have issues running the protocol on your device, make sure you check the following things first:
+When you have issues running the Protocol on your Instrument, make sure you check the following things first:
 
 - [x] Make sure, that there are no errors or warnings indicated.
-- [x] Check if your device is connected and can run already existing protocols.
-- [x] Confirm, that the latest update is installed on your device.
+- [x] Check if your Instrument is connected and can run already existing Protocols.
+- [x] Confirm, that the latest firmware is installed on your Instrument.

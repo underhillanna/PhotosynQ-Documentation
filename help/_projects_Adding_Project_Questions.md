@@ -45,7 +45,7 @@ This type of question is particularly useful if the images help to answer the qu
 
 #### Short Answer
 
-This type of question is best if you do not know all of the possible answers when you create the project.
+This type of question is best if you do not know all of the possible answers when you create the Project.
 
 1. Input the question into the question box.
 2. Select 'Save.'
@@ -59,7 +59,7 @@ Choose this question type if you want to force the data collector to take an ima
 
 #### Upload Questions/Answers form spreadsheet (.csv)
 
-This option is best for projects that involve a large population of plants or many project questions. For directions on how to set up your .csv, see the '[Using the csv Upload Feature](../tutorials/data_collection)' document.
+This option is best for Projects that involve a large population of plants or many Project questions. For directions on how to set up your .csv, see the '[Using the csv Upload Feature](../tutorials/data_collection)' document.
 
 1. Drag and drop the csv into the box or click on the box to choose the csv file to upload.
 2. Select 'Save.' It may take up to a minute for the file to upload.

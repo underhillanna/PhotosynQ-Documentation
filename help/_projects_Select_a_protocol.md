@@ -1,14 +1,14 @@
 ### What is a Protocol?
 
-These are instructions that are sent to the instrument on how to conduct a measurement. Which parameters you measure will be dependent on which protocol you choose for your project.
+These are instructions that are sent to the Instrument on how to conduct a measurement. Which parameters you measure will be dependent on which protocol you choose for your Project.
 
-***Tip:*** Read the protocol description carefully to be sure that it is measuring what you want to measure and that it is compatible with your instrument.
+***Tip:*** Read the protocol description carefully to be sure that it is measuring what you want to measure and that it is compatible with your Instrument.
 
 ### Choosing a Protocol
 
 #### Choosing 1 suggested protocol
 
-1. Suggested protocols for your project (based on the project category) will appear on the left.
+1. Suggested protocols for your Project (based on the Project category) will appear on the left.
 2. On the right will be a description of the protocol.
 3. Click on the protocol
 4. Click on 'Save and Next'
@@ -29,7 +29,7 @@ These are instructions that are sent to the instrument on how to conduct a measu
 
 #### Choosing protocols from the whole protocol list
 
-1. If the suggested protocols are not appropriate for your project, click on 'Advanced' below the suggested protocols
+1. If the suggested protocols are not appropriate for your Project, click on 'Advanced' below the suggested protocols
 2. Click on 'Click to show all protocols' to bring up the full list of protocols available on PhotosynQ
 3. To select a protocol, click on it or drag it over to the protocol list on the right.
 4. Select additional protocols the same as in step #3. **Protocols will run in the order that they are listed on the right**

@@ -1,4 +1,5 @@
 # PhotosynQ Documentation
+
 Documentation on how to use the PhotosynQ Platform, including Help, Tutorials and FAQs.
 
 ## Help - Pages
@@ -159,7 +160,7 @@ In order to generate the index make sure, you have [Node.js](https://nodejs.org/
 
 ### Firmware
 
-The firmware folder contains individual files for each command, unsing the command as a filename `command.json`. Use the following command generate a template file for a new command.
+The firmware folder contains individual files for each command, using the command as a filename `command.json`. Use the following command generate a template file for a new command.
 
 ```shell
 node index.js cmd --new <command>

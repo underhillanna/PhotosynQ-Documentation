@@ -23,4 +23,4 @@ When using the Desktop App in order to repeat the Instrument Calibrations, follo
 | Calibration | Description |
 |-------------|-------------|
 | Open/Close Positions | Re-calibrate the open/close position of the leaf clamp. This is required, when the Instrument is not properly starting a protocol that starts on open or close. |
-| Compass | Calibrate the instrument's internal compass. |
+| Compass | Calibrate the Instrument's internal compass. |

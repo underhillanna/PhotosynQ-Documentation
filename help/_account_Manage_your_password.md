@@ -23,6 +23,6 @@ You know your password and you want to change it, go to <https://photosynq.org>:
 
 #### Troubleshooting
 
-- [x] Sometimes the confirmation emails end up in you SPAM folder. Make sure to check it first.
+- [x] Sometimes the confirmation emails end up in your spam folder. Make sure to check it first.
 
 ***Still Issues?*** Please contact us (<support@photosynq.org>), so we can try to help you getting your account confirmed.

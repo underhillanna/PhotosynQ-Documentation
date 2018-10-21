@@ -6,7 +6,7 @@ All the macros you have developed on PhotosynQ are accessible to you at any time
 
 1. Go to your user profile by clicking on your user name in the top menu bar. If you are not signed in, do that first.
 2. Select the **Macros** tab to list all of your Macros.
-3. Click on a Macro to get to the Macro page with the Macro description, the Macro Code, the Measurement data and the Comments. On the right hand-side, you will further find the Protocol category, the connected macro and compatible instruments.
+3. Click on a Macro to get to the Macro page with the Macro description, the Macro Code, the Measurement data and the Comments. On the right hand-side, you will further find the Protocol category, the connected macro and compatible Instruments.
 
 #### Desktop
 

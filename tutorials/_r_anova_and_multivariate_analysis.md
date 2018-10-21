@@ -10,7 +10,7 @@ Many PhotosynQ users are interested in comparing the performance of different tr
 + spatial location in the field, this is usually as a identified by ‘block’ or ‘replicate’
 + leaf age and position in the canopy
 + growth stage when data was collected
-+ instrument/user variation. This could be caused user bias in selection of which leaf to measure or by device to device variation (especially in the MultispeQ Beta instruments, the new MultispeQ v1.0 instruments are much more consistent across instruments)
++ Instrument/User variation. This could be caused user bias in selection of which leaf to measure or by device to device variation (especially in the MultispeQ Beta Instruments, the new MultispeQ v1.0 Instrumentas are much more consistent across Instruments)
 + this is not an exhaustive list, but rather a summary of the most common factors affecting photosynthesis measurements.
 In this tutorial, we will compare the performance of 4 varieties of sunflower. We will use the dataset ‘sun’ if you want to follow along with the tutorial.
 
@@ -29,7 +29,7 @@ library(dplyr)
 ```
 
 #### Get Data from PhotosynQ
-Now, we need to get the Data from the PhotosynQ platform. More detailed instructions about how to import project data into R studio can be found in the "Import PhotosynQ Data into R" tutorial.
+Now, we need to get the Data from the PhotosynQ platform. More detailed instructions about how to import Project data into R studio can be found in the "Import PhotosynQ Data into R" tutorial.
 
 ```{r}
 # Get data from PhotosynQ

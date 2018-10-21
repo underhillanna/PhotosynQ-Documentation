@@ -25,14 +25,14 @@ You have a couple options for scatter plots, using **Makers**, **Lines** or **bo
 Bar charts available to display averages. You can display the **standard deviation or error** along with the average.
 
 1. Pick the **Parameter** you would like to average.
-2. You can group the averages by a **Category**. Currently only the project questions are available as categories.
+2. You can group the averages by a **Category**. Currently only the Project questions are available as categories.
 
 #### Histogram
 
 There are two types of histograms, a **regular** bar chart and a **2D histogram** for two parameters. The values are displayed as a heat map. Further you have **box plots** available.
 
 1. Pick the **Parameter** from the dropdown menu.
-2. Box plots can be grouped by a **Category**. Currently only the project questions are available as categories.
+2. Box plots can be grouped by a **Category**. Currently only the Project questions are available as categories.
 3. For the 2D histograms, select a second Parameter and a color gradient.
 
 ***Tip:*** Adding **Marker Size and / or Color** will help to emphasize differences and trends, as well as show relationships between Parameters.
@@ -73,7 +73,7 @@ Click on a marker of a **Scatter Plot** to open a new window and view the measur
 Scatter plots allow you to select data points by using the box or lasso selection tool from the bar. The dialog offers two options:
 
 1. Add the selected data as a new Series.
-2. Save the selected data points with the corresponding measurement ids, project questions and time stamps as a comma delimited file (.csv).
+2. Save the selected data points with the corresponding measurement ids, Project Questions and time stamps as a comma delimited file (.csv).
 
 #### Linear Regression
 

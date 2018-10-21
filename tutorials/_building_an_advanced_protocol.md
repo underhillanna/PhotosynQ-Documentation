@@ -26,7 +26,7 @@ In contrast to regular Protocols, when using Protocol Sets you have to use a Mac
 
 ### Special Commands
 
-There are a couple of commands to allow Protocols inside a **Protocol Set** to communicate with each other, meaning information like light intensity can be transferred from one Protocol to the next. This is *not possible* if regular Protocols are chained together (select multiple Protocols during project creation).
+There are a couple of commands to allow Protocols inside a **Protocol Set** to communicate with each other, meaning information like light intensity can be transferred from one Protocol to the next. This is *not possible* if regular Protocols are chained together (select multiple Protocols during Project creation).
 
 #### Labels
 

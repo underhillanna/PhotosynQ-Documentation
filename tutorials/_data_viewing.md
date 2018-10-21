@@ -2,9 +2,9 @@
 
 As soon as you have uploaded your data from the mobile or desktop app to the website you check it out on the **Data Viewer**.
 
-1. Go to your project page and click on **View Data** from the left side menu. 
-2. Wait for your data to load. This can take anywhere from a couple of seconds to a couple of minutes depending on the number of measurements in the project and the speed of your internet connection.
-3. Once your project data has loaded you will land on your project's **Dashboard**.
+1. Go to your Project page and click on **View Data** from the left side menu. 
+2. Wait for your data to load. This can take anywhere from a couple of seconds to a couple of minutes depending on the number of measurements in the Project and the speed of your internet connection.
+3. Once your Project data has loaded you will land on your Project's **Dashboard**.
 
 From the **Dashboard** you can choose to graph your data, view it on a map, view it as a spreadsheet, or conduct some simple statistical tests by clicking on the appropriate icon (see below).
 
@@ -14,28 +14,30 @@ From the **Dashboard** you can choose to graph your data, view it on a map, view
 
 ### Filter Your Data
 
-Looking at all of your data together may not be very informative. You can **Filter** your data to create separate **Series** that you can compare. 
+Looking at all of your data together may not be very informative. You can **Filter** your data to create separate **Series** that you can compare.
 
 To start generating **Series**
+
 1. Select **+ Add** from the right site menu to show the filter dialog.
 2. Expand the Project Question or other category that you want to filter by.
 3. Select your answer or answers for each Question.
 4. Choose whether you want to make a single series or multiple series
-- To add a single Series
-	1. Make your filter selections.
-	2. Select **+ Add** below the available filter options to create one series
+   - To add a single Series
+     1. Make your filter selections.
+     2. Select **+ Add** below the available filter options to create one series
 
-![Single Series](../images/tutorials/_data_viewing_one_series.png)
+   ![Single Series](../images/tutorials/_data_viewing_one_series.png)
 
-- To add multiple Series
-	1. Make your filter selections.
-	2. Select **<i class="fa fa-caret-up" aria-hidden="true"></i>** and choose **Import as separate series**.
+   - To add multiple Series
+     1. Make your filter selections.
+     2. Select **<i class="fa fa-caret-up" aria-hidden="true"></i>** and choose **Import as separate series**.
 
-![Multiple Series](../images/tutorials/_data_viewing_multiple_series.png)
+   ![Multiple Series](../images/tutorials/_data_viewing_multiple_series.png)
 
 ***
 
 ### Graph Data
+
 1. Click on the graph creator icon in the data viewer. 
 2. Select the kind of graph that you want to create from the dialog box. You can choose between a variety of scatter, bar, and histogram charts.
 3. Use the drop down menu's to choose which parameters you wish to graph.
@@ -50,26 +52,29 @@ For more help with plotting data, please visit the [Help Center](../help/data_Pl
 ***
 
 ### Map Data
-To view your measurements on a map or generate a heatmap select the **Map** icon from the dashboard.
 
-You can view your data overlaid on a satellite map or regular map and you can zoom in or out. You can also create a heatmap by selecting the parameter of interest in the upper left hand corner of the map.
+To view your measurements on a map or generate a heat-map select the **Map** icon from the dashboard.
+
+You can view your data overlaid on a satellite map or regular map and you can zoom in or out. You can also create a heat-map by selecting the parameter of interest in the upper left hand corner of the map.
 
 ![Map](../images/tutorials/_data_viewing_map.jpg)
 
 ***
 
 ### Data Spreadsheet
+
 You can view your data as a spreadsheet by clicking on the **Spreadsheet** icon from the dashboard.
 
 You have several options within the spreadsheet view:
-1. Download the entire table as a csv or text file by selecting the **Save** dropdown menu.
+
+1. Download the entire table as a `csv` or `text` file by selecting the **Save** dropdown menu.
 2. Add more information to the table, including the Device ID, Latitude and Longitude, etc from the **More** menu.
-3. Select which protocol you want to view from the **Protocols** menu. This only applies to projects with more that one measurement protocol.
+3. Select which protocol you want to view from the **Protocols** menu. This only applies to Projects with more that one measurement protocol.
 
 ![Spreadsheet](../images/tutorials/_data_viewing_spreadsheet.jpg)
 
-
 ### Single Measurements
+
 In order to access a single measurement, you have multiple options:
 
 1. Click on a marker in a scatter plot.
@@ -78,4 +83,4 @@ In order to access a single measurement, you have multiple options:
 
 ![Single Measurement. Use the Next and Previous buttons to navigate between measurements.](../images/tutorials/_data_viewing_single_measurement.png)
 
-***Tip:*** Viewing a single measurement allows you to verify a measurment and flag if necessary to indicate an insufficent quality, labeling error, etc.
+***Tip:*** Viewing a single measurement allows you to verify a measurement and flag if necessary to indicate an insufficient quality, labeling error, etc.

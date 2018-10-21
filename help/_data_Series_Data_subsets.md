@@ -1,14 +1,14 @@
 ### Series (Data subsets)
 
-Series are subsets of your complete project dataset. You can generate them by **filtering** your dataset based on your **project questions**.
+Series are subsets of your complete Project dataset. You can generate them by **filtering** your dataset based on your **Project Questions**.
 
-***Tip:*** You start out with the **Whole Dataset** selected. When you have filtered your dataset, it will be restored, the next time you load your project data.
+***Tip:*** You start out with the **Whole Dataset** selected. When you have filtered your dataset, it will be restored, the next time you load your Project data.
 
 #### Add a Series
 
 1. Select **+ Add** to show the filter dialog.
 2. Adjust your filters and select the **+ Add** button below the available filter options to create a series.
-3. For details on how to filter your project data, see filters.
+3. For details on how to filter your Project data, see filters.
 
 #### Remove a Series
 
@@ -33,5 +33,5 @@ Series are subsets of your complete project dataset. You can generate them by **
 
 #### Troubleshooting
 
-- [x] Sometimes your dashboard settings disappear the next time you load the project data.
+- [x] Sometimes your dashboard settings disappear the next time you load the Project data.
 - [x] Make sure you allow the browser to store information in your browsers **local storage**.

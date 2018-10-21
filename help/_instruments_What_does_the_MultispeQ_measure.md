@@ -39,10 +39,10 @@ The standard MultispeQ protocol measures the following parameters*:
 |G|The raw amount of green light captured by the PAR sensor|
 |kP700|The rate constant of P700 electron transfer. P700 is the primary electron acceptor of PS1.|
 |P700_DIRK_ampl|The amplitude of the P700 electron transfer in light-dark transition (DIRK measurement). It indicates the condition of PS1 electron transfer. *[Kanazawa et al. Front. Plant Sci. (2017)][doi.org/10.3389/fpls.2017.00719]*|
-|pitch|Pitch is the angle the instrument is held along the short axis|
+|pitch|Pitch is the angle the Instrument is held along the short axis|
 |qL|Fraction of Photosystem II centers which are in the open state|
 |R|The raw amount of red light captured by the PAR sensor|
-|roll|Roll is the angle the instrument is held along the long axis|
+|roll|Roll is the angle the Instrument is held along the long axis|
 |tP700|"Tau" P700: the lifetime of P700 electron transfer. P700 is the primary electron acceptor of PS1.|
 |V_initial_P700|The initial rate of P700 steady-state electron transfer.
 

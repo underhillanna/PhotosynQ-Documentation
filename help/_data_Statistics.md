@@ -1,6 +1,6 @@
 ### Statistics
 
-A very basic set of statistical tools for your project data analysis.
+A very basic set of statistical tools for your Project data analysis.
 
 #### View the Spreadsheet
 

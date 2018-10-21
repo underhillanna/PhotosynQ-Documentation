@@ -1,8 +1,8 @@
 ### Taking Quality Measurements
 
-Once you have selected the project that you want to contribute measurements to, you can start taking quality measurements by following these steps:
+Once you have selected the Project that you want to contribute measurements to, you can start taking quality measurements by following these steps:
 
-1. Before clamping the leaf, answer all of the questions listed in the project
+1. Before clamping the leaf, answer all of the questions listed in the Project
 2. Select **measure.**  
 3. Clamp the leaf using the **Best Measurement Practices** listed below. The MultispeQ measures the leaf in its natural state. This means that changing the state of the leaf to take a measurement can affect your results!
 4. The protocol will take ~15 seconds to complete. Once the measurement is complete, confirm that the measurement quality is good.
@@ -58,7 +58,7 @@ Now that you are familiar with the parameters, you can check the quality of each
 
 One of the most common warning messages you will receive is that your data is too noisy. Noise can come from the sample shaking in the wind, the leaf slipping in the measurement chamber or a shaky hand. Stabilizing your hand and leaf stem often helps, but sometimes things are more complex. For example, if you measure a dead leaf, the app informs you that the values are very low, meaning that either you didn't measure a plant or something is probably wrong.
 
-You can chose to keep the measurement from a dead leaf as a legitimate value or discard it. It depends on your project goals.  
+You can chose to keep the measurement from a dead leaf as a legitimate value or discard it. It depends on your Project goals.  
 
 If the measurement seems okay, values are in the reasonable range and there are no warnings you can go ahead and submit the measurement.
 

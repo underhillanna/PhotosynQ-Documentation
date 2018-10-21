@@ -8,7 +8,7 @@ With every session the following parameters get saved:
 2. Thresholds (if set and applied)
 3. Dashboard panels
 4. Plot
-5. Map position and heatmap settings
+5. Map position and heat-map settings
 
 ***Note:*** Sessions are **not** saving the exact state, but your settings. So if there are new measurements are added, the session will take those into account as well, the next time you apply a session to your dataset.
 

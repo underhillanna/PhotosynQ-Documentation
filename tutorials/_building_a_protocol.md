@@ -1,6 +1,6 @@
 ### Why do PhotosynQ measurements require Protocols and Macros?
 
-On the PhotosynQ platform, we use **Protocols** to provide specific measurement instructions to the instrument, such as the MultispeQ. Every time a measurement is taken, the Protocol is sent to the instrument, and the results are sent back.
+On the PhotosynQ platform, we use **Protocols** to provide specific measurement instructions to the Instrument, such as the MultispeQ. Every time a measurement is taken, the Protocol is sent to the Instrument, and the results are sent back.
 
 You can choose to attach a **Macro** to a Protocol. Macros are used to make calculations after a measurement has been taken. Not every measurement requires post processing (e.g. a simple temperature measurement), but if you want to calculate a parameter from the measurement **Trace** or want to compare parameters (e.g. ambient temperature vs. leaf temperature), a Macro will calculate the parameters of interest and display the results instantly on your mobile device (e.g. a phone).
 
@@ -8,21 +8,21 @@ You can choose to attach a **Macro** to a Protocol. Macros are used to make calc
 
 ### How do Protocols work
 
-Protocols are written in the **J**ava**S**cript **O**bject **N**otation or [JSON][JSON_URL]. It's important to note that most scripting languages have the capability to parse, modify and validate a protocol. If the Protocol is sent to the instrument, it needs to be *parsed as a string* before is gets sent. Unless you build your own application, the PhotosynQ apps will take care of that for you.
+Protocols are written in the **J**ava**S**cript **O**bject **N**otation or [JSON][JSON_URL]. It's important to note that most scripting languages have the capability to parse, modify and validate a protocol. If the Protocol is sent to the Instrument, it needs to be *parsed as a string* before is gets sent. Unless you build your own application, the PhotosynQ apps will take care of that for you.
 
 ### Before you Get Started
 
 In order to build your first Protocol, make sure you have the [Desktop App] installed. You will also need an Instrument like the MultispeQ to test your protocol.
 
 1. Select **Protocols** from the menu and click on `+ New` or select the **Protocol Editor** directly.
-2. Check out the detailed documentation on how to create a protocol in our [wiki on github]
-3. Make sure you have your instrument connected properly, so you can click on <code><i class="fa fa-play"></i> Run</code> to test your Protocol
+2. Check out the detailed documentation on how to create a protocol in our [wiki on Github]
+3. Make sure you have your Instrument connected properly, so you can click on <code><i class="fa fa-play"></i> Run</code> to test your Protocol
 4. Now you are ready to create your first Protocol…
 
 ### Measuring Photosystem II efficiency
 
 In this tutorial, we show you how to acquire a simple Phi2 value using the MultispeQ. Before we start, lets take a look at the measurement.
-![A simple fluorecence trace, recorded at a low light intensity.](../images/tutorials/_protocols_building_a_protocol.png)
+![A simple fluorescence trace, recorded at a low light intensity.](../images/tutorials/_protocols_building_a_protocol.png)
 
 **The measurement is divided into three parts:**
 
@@ -30,7 +30,7 @@ In this tutorial, we show you how to acquire a simple Phi2 value using the Multi
 2. **50** Pulses at a saturating light intensity
 3. **20** Pulses at ambient light intensity
 
-This is all we need to record the photosystem II quantum efficiency, or Phi2. The following protocol has another 4000 pulses prior to the above-mentioned protocol, to adapt the leaf to the ambient light intensity, which is recreated inside the MultispeQ instrument.
+This is all we need to record the photosystem II quantum efficiency, or Phi2. The following protocol has another 4000 pulses prior to the above-mentioned protocol, to adapt the leaf to the ambient light intensity, which is recreated inside the MultispeQ Instrument.
 
 #### Pulses
 
@@ -131,7 +131,7 @@ In this protocol we need an actinic light (which is not pulsed), so the plant ha
 ***
 
 #### Detectors
-Next we have to define the detector we want to use to record the fluorecence coming off the leaf. We use the command `detectors` to define which detector we will use for each pulse set. Since we can use multiple detectors per pulse set we use `[1]` instead of the `1` notation (using two detectors would look like this: `[1,2]`). When the detector is set to `0` no data is captured. Detector `1` is the 700 nm - 1150 nm, Hamamatsu S6775-01.
+Next we have to define the detector we want to use to record the fluorescence coming off the leaf. We use the command `detectors` to define which detector we will use for each pulse set. Since we can use multiple detectors per pulse set we use `[1]` instead of the `1` notation (using two detectors would look like this: `[1,2]`). When the detector is set to `0` no data is captured. Detector `1` is the 700 nm - 1150 nm, Hamamatsu S6775-01.
 
 **Table View**
 
@@ -160,7 +160,7 @@ Next we have to define the detector we want to use to record the fluorecence com
 
 #### Environmentals
 
-To record the ambient light intensity required for the non pulsed lights intensity, we have to add a command to include the PAR sensor using `light_intensity`. This is also where you could add other environmental parameters like temperature, relative humidity, etc, depending on the sensors available in your instrument.
+To record the ambient light intensity required for the non pulsed lights intensity, we have to add a command to include the PAR sensor using `light_intensity`. This is also where you could add other environmental parameters like temperature, relative humidity, etc, depending on the sensors available in your Instrument.
 
 **Table View (Fixed)**
 

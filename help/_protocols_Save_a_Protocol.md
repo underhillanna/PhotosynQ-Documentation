@@ -1,6 +1,6 @@
 ### Save a Protocol
 
-Once you have finished your Protocol, save your work to use it in your projects and to share it with the community.
+Once you have finished your Protocol, save your work to use it in your Projects and to share it with the community.
 
 #### Desktop
 

@@ -6,7 +6,7 @@ All the protocols you have developed on PhotosynQ are accessible to you at any t
 
 1. Go to your user profile by clicking on your user name in the top menu bar. If you are not signed in, do that first.
 2. Select the **Protocols** tab to list all of your Protocols.
-3. Click on a Protocol to get to the Protocol page with the Protocol description, the Protocol Code and the Comments. On the right hand-side, you will further find the Protocol category, the connected macro and compatible instruments.
+3. Click on a Protocol to get to the Protocol page with the Protocol description, the Protocol Code and the Comments. On the right hand-side, you will further find the Protocol category, the connected macro and compatible Instruments.
 
 #### Desktop App
 

@@ -13,10 +13,10 @@ A summary is created for one parameter (e.g. Phi2) at a time. A histogram to sho
 A t-test compares the values of a single parameter (e.g. ΦII) between two series. If the sample size is the same for both series, a one tailed t-test can be selected. If the numbers are different a two tailed t-test. In case a one tailed t-test is picked and the sample size differs between the two series a two tailed test is performed automatically.
 
 #### ANOVA
-Analysis of variance (ANOVA) compares a single parameter (e.g. ΦII) between more than two series. A One-Way ANOVA should be used when the series are created using one filter (e.g. Leaf #). This rule may not apply if the project is looking for several plant species and a second filter is used to select only one species. 
+Analysis of variance (ANOVA) compares a single parameter (e.g. ΦII) between more than two series. A One-Way ANOVA should be used when the series are created using one filter (e.g. Leaf #). This rule may not apply if the Project is looking for several plant species and a second filter is used to select only one species.
 
 #### Chi Square Test
-A chi-square test for independence compares two parameters in a project to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each another.
+A chi-square test for independence compares two parameters in a Project to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each another.
 
 ***
 
