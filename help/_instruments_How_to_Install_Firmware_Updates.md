@@ -102,4 +102,4 @@ Connect your Instrument and check if the firmware you wanted to install was inst
 When the firmware is transferred to the Instrument, it might be necessary to restart it and/or the desktop app.
 Sometimes you have to repeat this step because the Instrument may take a bit longer to boot up the first time.
 
-[Firmware-Github]: https://github.com/Photosynq/PhotosynQ-Firmware/releases
+[Firmware-Github]: https://github.com/Photosynq/MultispeQ-firmware/releases

@@ -15,7 +15,7 @@ Protocols are written in the **J**ava**S**cript **O**bject **N**otation or [JSON
 In order to build your first Protocol, make sure you have the [Desktop App] installed. You will also need an Instrument like the MultispeQ to test your protocol.
 
 1. Select **Protocols** from the menu and click on `+ New` or select the **Protocol Editor** directly.
-2. Check out the detailed documentation on how to create a protocol in our [wiki on Github]
+2. Check out the detailed documentation on individual commands in the [Help Center].
 3. Make sure you have your Instrument connected properly, so you can click on <code><i class="fa fa-play"></i> Run</code> to test your Protocol
 4. Now you are ready to create your first Protocol…
 
@@ -272,5 +272,5 @@ Putting all the pieces together, the protocol to measure Phi2 looks like this:
 ***Tip:*** Continue with the Macro Tutorial to learn how to calculate Phi2 from the recorded measurement.
 
 [JSON_URL]: https://www.w3schools.com/js/js_json_intro.asp
-[Desktop App]: https://chrome.google.com/webstore/detail/photosynq/mdbljehgiahgijmaeehfigldmmaofilg
-[wiki on github]: https://github.com/Photosynq/PhotosynQ-Firmware/wiki
+[Desktop App]: https://photosynq.org/software#desktop
+[Help Center]: https://photosynq.org/help/protocols_Commands

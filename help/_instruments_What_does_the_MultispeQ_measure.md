@@ -8,8 +8,8 @@ The standard MultispeQ protocol measures the following parameters*:
 |Ambient Humidity|Relative humidity in percent (%)|
 |Ambient Pressure|Atmospheric pressure (mbar) - This value is not corrected to sea level as found in weather reports|
 |Ambient Temperature|Ambient temperature in degree Celsius (°C)|
-|ECSt mAU|Total magnitude of ECS (electrochromic shift) decay during a light-dark transition (DIRK measurement) expressed in milli-absorbance unit. *[Sacksteder et al. Proc. Nat. Acad. Sci. (2000)][doi: 10.1073/pnas.97.26.14283], [Kramer et al. Photosynthesis Res. (1999)][doi.org/10.1023/A:1006212014787]*|
-|gH+| Steady-state rate of proton flux through the chloroplast ATP synthase. *[Kanazawa and Kramer, Proc. Nat. Acad. Sci. (2002)][doi: 10.1073/pnas.182427499]*|
+|ECSt mAU|Total magnitude of ECS (electrochromic shift) decay during a light-dark transition (DIRK measurement) expressed in milli-absorbance unit. *[Sacksteder et al. Proc. Nat. Acad. Sci. (2000)][doi:10.1073/pnas.97.26.14283], [Kramer et al. Photosynthesis Res. (1999)][doi.org/10.1023/A:1006212014787]*|
+|gH+| Steady-state rate of proton flux through the chloroplast ATP synthase. *[Kanazawa and Kramer, Proc. Nat. Acad. Sci. (2002)][doi:10.1073/pnas.182427499]*|
 |Leaf Angle|The angle of the leaf, from 0 - 90 degrees|
 |Leaf Temperature Differential|  **Leaf Temperature** ( or **contactless_temp**) minus **Ambient Temperature**, negative numbers mean that the leaf is cooler than the surrounding air and vice versa.
 |LEF|Linear Electron Flow. The total flow of electrons from antennae complexes (where light is captured) into Photosystem II, taking the leaf absorptivity into account. Calculated as LEF = Phi2 x PAR x 0.45|
@@ -32,7 +32,7 @@ The standard MultispeQ protocol measures the following parameters*:
 |compass|Cardinal direction in degrees from North|
 |compass_direction|Abbreviated cardinal direction (e.g. NW - North West)|
 |contactless_temp|Surface temperature in degree Celsius (°C)|
-|ECS_tau|The rate of ECS. This indicates the lifetime of steady-state proton translocation through the chloroplast ATP synthase. *[Sacksteder et al. Proc. Nat. Acad. Sci. (2000)][doi: 10.1073/pnas.97.26.14283], [Kramer et al. Photosynthesis Res. (1999)][doi.org/10.1023/A:1006212014787]*|
+|ECS_tau|The rate of ECS. This indicates the lifetime of steady-state proton translocation through the chloroplast ATP synthase. *[Sacksteder et al. Proc. Nat. Acad. Sci. (2000)][doi:10.1073/pnas.97.26.14283], [Kramer et al. Photosynthesis Res. (1999)][doi.org/10.1023/A:1006212014787]*|
 |FmPrime|Maximum variable fluorescence at steady-state conditions|
 |FoPrime|Minimum variable fluorescence during dark phase after steady-state|
 |Fs|Variable fluorescence at steady-state conditions|
@@ -75,30 +75,30 @@ Avenson, T. J., Kanazawa, A., Cruz, J. A., Takizawa, K., Ettinger, W.E., Kramer,
 
 Kramer, D. M., Cruz, J. A., and Kanazawa, A. (2003). **Balancing the central roles of the thylakoid proton gradient.** *Trends Plant Sci.* 8, 27–32. [doi:10.1016/S1360-1385(02)00010-9]
 
-Kanazawa, A., Kramer, D. K. (2002). ***In vivo* modulation of nonphotochemical exciton quenching (NPQ) by regulation of the chloroplast ATP synthase.** *Proc. Nat. Acad. Sci.* 99: 12789-12794. [doi: 10.1073/pnas.182427499]
+Kanazawa, A., Kramer, D. K. (2002). ***In vivo* modulation of nonphotochemical exciton quenching (NPQ) by regulation of the chloroplast ATP synthase.** *Proc. Nat. Acad. Sci.* 99: 12789-12794. [doi:10.1073/pnas.182427499]
 
-Sacksteder, C. A., Kanazawa, A., Jacoby, M. E., Kramer, D. M. (2000). **The proton to electron stoichiometry of steady-state photosynthesis in living plants: A proton-pumping Q cycle is continuously engaged.** *Proc. Nat. Acad. Sci.* 97, 14283-14288. [doi: 10.1073/pnas.97.26.14283]
+Sacksteder, C. A., Kanazawa, A., Jacoby, M. E., Kramer, D. M. (2000). **The proton to electron stoichiometry of steady-state photosynthesis in living plants: A proton-pumping Q cycle is continuously engaged.** *Proc. Nat. Acad. Sci.* 97, 14283-14288. [doi:10.1073/pnas.97.26.14283]
 
 Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?** *Photosynthesis Res.* 60: 151-163 [doi.org/10.1023/A:1006212014787]
 
-[doi:10.1111/pce.12924]: https://dx.doi.org/10.1111/pce.12924
+[doi:10.1111/pce.12924]: https://doi.org/10.1111/pce.12924
 
-[doi.org/10.3389/fpls.2017.00719]: https://dx.doi.org/10.3389/fpls.2017.00719
+[doi.org/10.3389/fpls.2017.00719]: https://doi.org/10.3389/fpls.2017.00719
 
-[doi:10.1098/rsos.160592]: https://dx.doi.org/10.1098/rsos.160592
+[doi:10.1098/rsos.160592]: https://doi.org/10.1098/rsos.160592
 
-[doi:10.1016/j.cels.2016.06.001]: https://dx.doi.org/10.1016/j.cels.2016.06.001
+[doi:10.1016/j.cels.2016.06.001]: https://doi.org/10.1016/j.cels.2016.06.001
 
 [doi:10.1104/pp.110.166652]: https://doi.org/10.1104/pp.110.166652
 
-[doi:10.1146/annurev.arplant.59.032607.092759]: https://dx.doi.org/10.1146/annurev.arplant.59.032607.092759
+[doi:10.1146/annurev.arplant.59.032607.092759]: https://doi.org/10.1146/annurev.arplant.59.032607.092759
 
-[doi:10.1016/S1360-1385(02)00010-9]: https://dx.doi.org/10.1016/S1360-1385(02)00010-9
+[doi:10.1016/S1360-1385(02)00010-9]: https://doi.org/10.1016/S1360-1385(02)00010-9
 
-[doi: 10.1073/pnas.97.26.14283]: https://www.pnas.org/content/97/26/14283
+[doi:10.1073/pnas.97.26.14283]: https://doi.org/10.1073/pnas.97.26.14283
 
 [doi.org/10.1023/A:1006212014787]: https://doi.org/10.1023/A:1006212014787
 
-[doi:10.1111/j.1365-3040.2005.01294.x]: https://dx.doi.org/10.1111/j.1365-3040.2005.01294.x
+[doi:10.1111/j.1365-3040.2005.01294.x]: https://doi.org/10.1111/j.1365-3040.2005.01294.x
 
-[doi: 10.1073/pnas.182427499]: https://www.pnas.org/content/99/20/12789#
+[doi:10.1073/pnas.182427499]: https://doi.org/10.1073/pnas.182427499
