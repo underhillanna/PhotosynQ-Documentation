@@ -162,6 +162,10 @@
 
 {{> help/_data_Download_Data.md}}
 
+***
+
+{{> help/_data_How_to_Cite.md}}
+
 ## Protocols
 
 {{> help/_protocols_Protocol_Basics.md}}
