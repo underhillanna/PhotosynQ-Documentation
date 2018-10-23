@@ -1,6 +1,6 @@
 {
   "name": "pulse_distance",
-  "description": "\"pulse_distance\" defines the distance, in microseconds (us) between pulses.",
+  "description": "`pulse_distance` defines the distance, in microseconds (µs) between pulses.",
   "alias": [],
   "input": "array",
   "values": [

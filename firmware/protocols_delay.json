@@ -1,6 +1,6 @@
 {
   "name": "protocols_delay",
-  "description": "\"protocols_delay\" defines the delay between protocol repeats in in milliseconds (us).",
+  "description": "`protocols_delay` defines the delay between protocol repeats in in milliseconds (ms).",
   "alias": [],
   "input": "auto",
   "values": [

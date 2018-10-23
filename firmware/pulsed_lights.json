@@ -1,6 +1,6 @@
 {
   "name": "pulsed_lights",
-  "description": "\"pulsed_lights\" defines which lights are pulsed, and in what order.  When set to 0, no lights are pulsed and no readings are recorded (see Example section here for details).",
+  "description": "`pulsed_lights` defines which lights are pulsed, and in what order. When set to 0, no lights are pulsed and no readings are recorded (see Example section here for details).",
   "alias": [],
   "input": "nested array",
   "values": [

@@ -1,6 +1,6 @@
 {
   "name": "environmental_array",
-  "description": "\"environmental_array\" defines additional sensors or functionality, just like \"environmental\".  However, \"environmental_array\" returns sensor data once per pulse, as defined in \"pulses\".  This allows a string of sensor measurements to be used in a single macro.  The advantage is you can calculate and return in real time things like rates of change, minima and maxima, etc.  See examples for details.  **Note:**  \"pulsed_lights_brightness\" must NOT be set to zero for any given pulse set for the sensors set in \"environmental_array\" to measure.",
+  "description": "`environmental_array` defines additional sensors or functionality, just like `environmental`.  However, `environmental_array` returns sensor data once per pulse, as defined in `pulses`.  This allows a string of sensor measurements to be used in a single macro.  The advantage is you can calculate and return in real time things like rates of change, minima and maxima, etc.  See examples for details.  **Note:**  `pulsed_lights_brightness` must NOT be set to zero for any given pulse set for the sensors set in `environmental_array` to measure.",
   "alias": [],
   "input": "nested array",
   "values": [],

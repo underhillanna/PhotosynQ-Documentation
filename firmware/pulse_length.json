@@ -1,6 +1,6 @@
 {
   "name": "pulse_length",
-  "description": "\"pulse_length\" defines the length, in microseconds (us), of a pulse.",
+  "description": "`pulse_length` defines the length, in microseconds (µs), of a pulse.",
   "alias": [],
   "input": "nested array",
   "values": [

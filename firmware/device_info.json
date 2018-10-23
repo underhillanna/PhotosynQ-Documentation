@@ -1,6 +1,6 @@
 {
   "name": "device_info",
-  "description": "Receive information from the instrument, including name, version, id, battery level, firmware and configuration.",
+  "description": "Receive information from the Instrument, including name, version, id, battery level, firmware and configuration.",
   "alias": [
     "1007"
   ],

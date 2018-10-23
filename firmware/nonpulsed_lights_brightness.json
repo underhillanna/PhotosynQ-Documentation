@@ -1,6 +1,6 @@
 {
   "name": "nonpulsed_lights_brightness",
-  "description": "\"nonpulsed_lights_brightness\" sets the brightness in microEinsteins (uE) of the nonpulsed lights.   Definition of microEinsteins (uE) here.",
+  "description": "`nonpulsed_lights_brightness` sets the brightness in microEinsteins (µE * s⁻¹ * m⁻²) of the nonpulsed lights.",
   "alias": [],
   "input": "nested array",
   "values": [

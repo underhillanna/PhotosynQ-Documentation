@@ -1,6 +1,6 @@
 {
   "name": "message",
-  "description": "\"message\" sends text to the user between pulse sets, and waits for a response before proceeding. Set <message type> to \"0\" to not send a message.  \"message\" should have the same length as \"pulses\".",
+  "description": "`message` sends text to the user between pulse sets, and waits for a response before proceeding. Set <message type> to \"0\" to not send a message. `message` should have the same length as `pulses`.",
   "alias": [],
   "input": "nested array",
   "values": [

@@ -1,6 +1,6 @@
 {
   "name": "pulses",
-  "description": "\"pulses\" defines the number of pulse sets, and quantity of pulses per set.",
+  "description": "`pulses` defines the number of pulse sets, and quantity of pulses per set.",
   "alias": [],
   "input": "array",
   "values": [
