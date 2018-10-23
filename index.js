@@ -182,10 +182,26 @@ var commands = function(options){
 	}
 
 	if(options.documents !== undefined){
-		var protocols = '';
-		var consolecmds = '';
+		var protocols = [];
+		var consolecmds = [];
 
 		var files = jetpack.list('./firmware');
+		var active = [];
+		var deprecated = [];
+
+		for(var f in files){
+			var content = null;
+			if(files[f].match(/\.json$/)){
+				content = jetpack.read('./firmware/'+files[f], 'json');
+				if(content.deprecated)
+					deprecated.push(files[f]);
+				else
+					active.push(files[f]);
+			}
+		}
+
+		files = active.concat(deprecated);
+
 		for(var f in files){
 			var content = null;
 			if(files[f].match(/\.json$/)){
@@ -219,11 +235,11 @@ var commands = function(options){
 
 				if(content.dependencies.length > 0)
 					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
-						return '+ ' + a;
-					}) + '\n\n';
+						return `+ ${a}`;
+					}).join('\n') + '\n\n';
+					
 				if(content.parent != "")
 					document += '**Parent:** <'+ content.parent+'>\n\n';
-
 
 				if(Object.keys(content.compatibility).length > 0){
 					document += '**Instruments:**\n\n';
@@ -238,21 +254,18 @@ var commands = function(options){
 
 				}
 
-				// Add a page - break
-				document += '***\n\n';
-
 				if(content.type == 'console'){
-					consolecmds += document;
+					consolecmds.push(document.trim());
 				}
 
 				if(content.type == 'protocol'){
-					protocols += document;
+					protocols.push(document.trim());
 				}
 			}
 		}
 
-		consolecmds = consolecmds.trim();
-		protocols = protocols.trim();
+		consolecmds = consolecmds.join('\n\n***\n\n').trim();
+		protocols = protocols.join('\n\n***\n\n').trim();
 
 		jetpack.write('./help/_instruments_Console_Commands.md', consolecmds);
 		jetpack.write('./help/_protocols_Commands.md', protocols);
