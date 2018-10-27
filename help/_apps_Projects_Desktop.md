@@ -1,4 +1,4 @@
-### Desktop Projects
+### Projects - Desktop
 
 While most users will use a mobile device in the field to collect data for Projects, the Desktop App provides almost all the features of the mobile app for data collection, as well as a few more for managing Projects.
 
