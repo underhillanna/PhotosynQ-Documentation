@@ -1,4 +1,4 @@
-### Desktop Macros
+### Macros - Desktop
 
 Macros are used to calculate parameters from a measurement. To work with Macros you can select **Macros** from the left side bar, you can select **View -> Macros** from the top menu bar or you can use the shortcut `Ctrl+4 / ⌘4`.
 

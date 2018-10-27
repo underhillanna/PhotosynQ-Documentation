@@ -1,4 +1,4 @@
-### Desktop Notebook
+### Notebook - Desktop
 
 If you are using the Desktop app you don't have to use **Projects** to save measurements. The **Notebook** allows save individual measurement along with notes and images. This is made for small scale experiments, as well as for testing and developing new measurement protocols.
 

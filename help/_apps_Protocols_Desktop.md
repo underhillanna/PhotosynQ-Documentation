@@ -1,4 +1,4 @@
-### Desktop Protocols
+### Protocols - Desktop
 
 Protocols are programming the instrument to run a measurement. To work with Protocols you can select **Protocols** from the left side bar, you can select **View -> Protocols** from the top menu bar or you can use the shortcut `Ctrl+3 / ⌘3`.
 

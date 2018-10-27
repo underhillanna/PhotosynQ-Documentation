@@ -1,4 +1,4 @@
-### Desktop Console
+### Console - Desktop
 
 The Console allows you to open a direct channel to your instrument to send commands and get additional information not available through the user interface. When opened while taking a measurement, you can use it to monitor the output.
 
