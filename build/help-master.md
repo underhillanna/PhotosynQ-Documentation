@@ -52,11 +52,36 @@
 
 ***
 
-{{> help/_apps_Desktop_Application_Settings.md}}
+{{> help/_apps_Connect_an_Instrument.md}}
 
 ***
 
-{{> help/_apps_Connect_an_Instrument.md}}
+{{> help/_apps_Projects_Desktop.md}}
+
+***
+
+{{> help/_apps_Notebook_Desktop.md}}
+
+***
+
+{{> help/_apps_Protocols_Desktop.md}}
+
+***
+
+{{> help/_apps_Macros_Desktop.md}}
+
+***
+
+{{> help/_apps_Console_Desktop.md}}
+
+***
+
+{{> help/_apps_General_Desktop.md}}
+
+***
+
+{{> help/_apps_Application_Settings_Desktop.md}}
+
 
 ***
 

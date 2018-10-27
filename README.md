@@ -34,8 +34,14 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 
 + [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
-+ [Desktop Application Settings](help/_apps_Desktop_Application_Settings.md)
 + [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
++ [Projects - Desktop](help/_apps_Projects_Desktop.md)
++ [Notebook - Desktop](help/_apps_Notebook_Desktop.md)
++ [Protocols - Desktop](help/_apps_Protocols_Desktop.md)
++ [Macros - Desktop](help/_apps_Macros_Desktop.md)
++ [Console - Desktop](help/_apps_Console_Desktop.md)
++ [General - Desktop](help/_apps_General_Desktop.md)
++ [Application Settings - Desktop](help/_apps_Desktop_Application_Settings_Desktop.md)
 + [My Projects](help/_apps_My_Projects.md)
 + [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
 
