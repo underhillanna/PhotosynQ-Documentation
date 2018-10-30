@@ -21,13 +21,13 @@ We have programmed issue warnings into the default *Leaf Photosynthesis Multispe
 
 ***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard. Once you have flagged a measurement, it is hidden from normal data viewing and analysis unless you check the **Include flagged datasets** box in the **Add Series** tab
 
-![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues.jpg)
+![1. Add panel to the dashboard 2. Open the Data Quality tab from the Dialog and select the **Show Issues** button. 3. The panel will be added to the dashboard.](../images/tutorials/_data_quality_dashboard_issues.png)
 
 2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement.
 
 3. In the single datum view, any issues will be present as a red bar above the measurement results.
 
-![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum.jpg)
+![1. Identifying issues in the spreadsheet (left) 2. Click on the ID in the first column to select bring up the data view. 3. See the details in the single datum view.](../images/tutorials/_data_quality_spreadsheet_single_datum.png)
 
 #### Adding issue warnings to Macros
 

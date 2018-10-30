@@ -26,23 +26,22 @@ As we explained in the [Data Collection](https://photosynq.org/tutorials/data_co
 	
 	c. Select the **Show Issues** button below **Data Issues**
 	
-***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard. 
+***Note:*** Only *non-flagged* measurements with issues will be displayed on the dashboard.
 
-![Identifying issues on the dashboard](../images/tutorials/_data_quality_dashboard_issues.jpg)
+![1. Add panel to the dashboard 2. Open the Data Quality tab from the Dialog and select the **Show Issues** button. 3. The panel will be added to the dashboard.](../images/tutorials/_data_quality_dashboard_issues.png)
 
 
 2. In the **Spreadsheet** view, there is an **Issues** column that will display how many issues exist for a given measurement (left).
 
 3. In the single datum view, any issues will be present as a red bar above the measurement results (right).
 
-![Identifying issues in the spreadsheet (left) and single datum view (right)](../images/tutorials/_data_quality_spreadsheet_single_datum.jpg)
-
+![1. Identifying issues in the spreadsheet (left) 2. Click on the ID in the first column to select bring up the data view. 3. See the details in the single datum view.](../images/tutorials/_data_quality_spreadsheet_single_datum.png)
 
 
 #### Flagging data
 If you submit data with issues to the website, you will still have the opportunity to remove those measurements from future data viewing and analysis. This is accomplished by **Flagging** the measurements that have issues. **Flagging** hides measurements, so that they are not added to filtered series or downloaded as a csv for data analysis. However, flagging data **DOES NOT** delete the measurements from the website. Flagged data can always be viewed by clicking the **Include flagged datasets** box in the **Add Series** tab.
 
-![Include flagged dataset](../images/tutorials/_data_quality_include_flagged.jpg)
+![1. Select the **add** button to create a new Series. 2. Check **Include flagged datasets** to add flagged datasets into your Series as well.](../images/tutorials/_data_quality_include_flagged.png)
 
 You can flag any measurement, for any reason. However, you have to provide a reason for flagging data, which will be visible to the community. Our hope is that data is only flagged for significant issues, such as the measurement issues mentioned above or because a measurement was mislabeled, etc, and not simply because the measurement is an outlier.
 
@@ -63,4 +62,4 @@ b. If you do not have permission to flag that measurement, you will get a messag
 3. Enter the reason for flagging the measurement into the text box. 
 4. Click **Submit** 
 
-![Flag data](../images/tutorials/_data_quality_flag_data.jpg)
+![1. If measurements have warnings double check if the measurement might has to be flagged. 2. Select the **Issues** tab to flag the dataset. 3. Enter a reason for flagging. 4. Submit the flagging.](../images/tutorials/_data_quality_flag_data.png)
