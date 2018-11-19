@@ -10,6 +10,8 @@ To take measurements and save them you have to run a Protocol from the **Protoco
 
 After the measurement is done, select the **Save** button or shortcut `Ctrl+S / ⌘S` to bring up the save dialog. Add a name for the measurement, as well as a name for the experiment. Further you can add notes and attach an image selecting a file from your local disk or using your webcam. Use the **Save** button at the bottom of dialog to save the measurement to the Notebook.
 
+***Tip:*** Notebook measurements are saved with the protocol used in the measurement. This is helpful, when developing a new Protocol and comparing variables.
+
 #### View Measurements
 
 To view a list of your taken measurements you can select **Notebook** from the left side bar, you can select **View -> Notebook** from the top menu bar or you can use the shortcut `Ctrl+2 / ⌘2`.
