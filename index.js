@@ -237,7 +237,7 @@ var commands = function(options){
 					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
 						return `+ ${a}`;
 					}).join('\n') + '\n\n';
-					
+
 				if(content.parent != "")
 					document += '**Parent:** <'+ content.parent+'>\n\n';
 
@@ -293,7 +293,7 @@ var commands = function(options){
 			}
 		}
 		jetpack.write('./dist/firmware-commands.json', merged, { jsonIndent: 2 });
-		console.log(chalk.green(`${merged.length} Files merged`));
+		console.log(chalk.green(`${Object.keys(merged).length} Files merged`));
 		return;
 	}
 
