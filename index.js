@@ -76,7 +76,7 @@ var searchIDX = function(options){
 		var results = idx.search( options.query);
 		console.log('\nSearch for "'+ options.query + '" (Hits: '+results.length+')\n');
 
-		console.log( JSON.stringify(results, null, 2) )
+		console.log( JSON.stringify(results, null, 2) );
 
 		for(var i in results){
 			console.log((parseInt(i)+1)+'. '+results[i].ref+' (score: '+ results[i].score +')' );
@@ -391,15 +391,21 @@ var pingLinks = function(){
 };
 
 var compileMD = function(options){
+
+	if(options.input === undefined){
+		console.log(chalk.red('Error:') + ' Input file not found');
+		return;
+	}
+
 	var md = jetpack.read(options.input);
 	var src_path = '.';
 
 	var date = moment().format('LL');
-	if(options.date){
+	if(options.date !== undefined){
 		date = moment(options.date).format('LL');
 	}
 
-	if (options.source)
+	if (options.source !== undefined)
 		src_path = options.source;
 
 	if(!jetpack.exists(src_path)){
@@ -409,7 +415,7 @@ var compileMD = function(options){
 
 	var list = jetpack.find(src_path, { matching: ['help/*.md', 'tutorials/*.md'] });
 	var files = {};
-	var file = null
+	var file = null;
 	for(var i in list){
 		if (options.source){
 			file = list[i].split('/');
