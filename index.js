@@ -283,13 +283,13 @@ var commands = function(options){
 			return;
 		}
 		var files = jetpack.list(src_path);
-		var merged = [];
+		var merged = {};
 		var file_path = null;
 		for(var f in files){
 			if(files[f].match(/\.json$/)){
 				file_path = jetpack.path(src_path, files[f]);
 				content = jetpack.read(file_path, 'json');
-				merged.push(content);
+				merged[content.name] = content;
 			}
 		}
 		jetpack.write('./dist/firmware-commands.json', merged, { jsonIndent: 2 });
