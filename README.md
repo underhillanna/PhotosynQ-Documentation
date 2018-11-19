@@ -35,15 +35,15 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
 + [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
 + [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
-+ [Projects - Desktop](help/_apps_Projects_Desktop.md)
-+ [Notebook - Desktop](help/_apps_Notebook_Desktop.md)
-+ [Protocols - Desktop](help/_apps_Protocols_Desktop.md)
-+ [Macros - Desktop](help/_apps_Macros_Desktop.md)
-+ [Console - Desktop](help/_apps_Console_Desktop.md)
-+ [General - Desktop](help/_apps_General_Desktop.md)
-+ [Application Settings - Desktop](help/_apps_Desktop_Application_Settings_Desktop.md)
 + [My Projects](help/_apps_My_Projects.md)
 + [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
++ [General - Desktop](help/_apps_General_-_Desktop.md)
++ [Application Settings - Desktop](help/_apps_Application_Settings_-_Desktop.md)
++ [Projects - Desktop](help/_apps_Projects_-_Desktop.md)
++ [Notebook - Desktop](help/_apps_Notebook_-_Desktop.md)
++ [Protocols - Desktop](help/_apps_Protocols_-_Desktop.md)
++ [Macros - Desktop](help/_apps_Macros_-_Desktop.md)
++ [Console - Desktop](help/_apps_Console_-_Desktop.md)
 
 ### Projects
 
@@ -58,13 +58,14 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Managing Project Settings](help/_projects_Managing_Project_Settings.md)
 
 ### View & Analyze Data
+
 + [View your Project Data](help/_data_View_your_Project_Data.md)
 + [The Dashboard](help/_data_The_Dashboard.md)
 + [Plot Data](help/_data_Plot_Data.md)
 + [The Map](help/_data_The_Map.md)
 + [The Spreadsheet](help/_data_The_Spreadsheet.md)
 + [Statistics](help/_data_Statistics.md)
-+ [Series (Data subsets)](help/_data_Series_Data_subsets.md)
++ [Series Data subsets](help/_data_Series_Data_subsets.md)
 + [Filter Data](help/_data_Filter_Data.md)
 + [Set Thresholds](help/_data_Set_Thresholds.md)
 + [Viewing Notes and Pictures](help/_data_Viewing_Notes_and_Pictures.md)
@@ -92,14 +93,18 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Save a Macro](help/_macros_Save_a_Macro.md)
 + [Edit a Macro](help/_macros_Edit_a_Macro.md)
 + [Coding and Functions](help/_macros_Coding_and_Functions.md)
++ [Provided Functions](help/_macros_Provided_Functions.md)
 
 ### Instruments
 
 + [Instrument basics](help/_instruments_Instrument_basics.md)
 + [What does the MultispeQ measure](help/_instruments_What_does_the_MultispeQ_measure.md)
++ [Instrument Settings](help/_instruments_Instrument_Settings.md)
++ [Instrument Calibrations](help/_instruments_Instrument_Calibrations.md)
 + [How to Install Firmware Updates](help/_instruments_How_to_Install_Firmware_Updates.md)
 + [MultispeQ v1.0 configuration](help/_instruments_MultispeQ_v1.0_configuration.md)
 + [MultispeQ v2.0 configuration](help/_instruments_MultispeQ_v2.0_configuration.md)
++ [Console Commands](help/_instruments_Console_Commands.md)
 
 ## Tutorial - Pages
 

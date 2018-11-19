@@ -56,40 +56,39 @@
 
 ***
 
-{{> help/_apps_Projects_Desktop.md}}
-
-***
-
-{{> help/_apps_Notebook_Desktop.md}}
-
-***
-
-{{> help/_apps_Protocols_Desktop.md}}
-
-***
-
-{{> help/_apps_Macros_Desktop.md}}
-
-***
-
-{{> help/_apps_Console_Desktop.md}}
-
-***
-
-{{> help/_apps_General_Desktop.md}}
-
-***
-
-{{> help/_apps_Application_Settings_Desktop.md}}
-
-
-***
-
 {{> help/_apps_My_Projects.md}}
 
 ***
 
 {{> help/_apps_Adding_Notes_and_Pictures.md}}
+
+***
+
+{{> help/_apps_General_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Application_Settings_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Projects_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Notebook_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Protocols_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Macros_-_Desktop.md}}
+
+***
+
+{{> help/_apps_Console_-_Desktop.md}}
 
 ## Projects
 
@@ -215,6 +214,10 @@
 
 {{> help/_protocols_Run_a_Protocol.md}}
 
+***
+
+{{> help/_protocols_Commands.md}}
+
 ## Macros
 
 {{> help/_macros_View_your_Macros.md}}
@@ -266,6 +269,10 @@
 ***
 
 {{> help/_instruments_MultispeQ_v2.0_configuration.md}}
+
+***
+
+{{> help/_instruments_Console_Commands.md}}
 
 ## More Resources
 
