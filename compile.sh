@@ -11,7 +11,7 @@ DATE=$(git log --tags --simplify-by-decoration --pretty="format:%aI" --max-count
 echo "Compile files for Github tag $TAG ($DATE)";
 mkdir ./dist/tmp/
 git archive -o ./dist/latest.zip --prefix=tmp/ $TAG
-unzip ./dist/latest.zip -d ./dist -x tmp/src/* tmp/*.sh tmp/*.json tmp/*.js tmp/README.md tmp/LICENSE
+unzip ./dist/latest.zip -d ./dist -x tmp/src/* tmp/*.sh tmp/package.json tmp/package-lock.json tmp/*.js tmp/README.md tmp/LICENSE
 rm ./dist/latest.zip
 
 # Get all the firmware commands and build the help files
