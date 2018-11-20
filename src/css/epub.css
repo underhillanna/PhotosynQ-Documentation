@@ -33,20 +33,23 @@ a {
 
 /* Additional Styles for PhotosynQ*/
 code {
+    font-family: "Sans Mono", "Consolas", "Courier", monospace;
     padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
     white-space: nowrap;
+    border-radius: 4px;
 }
 
 pre {
+    font-family: "Sans Mono", "Consolas", "Courier", monospace;
     padding: 5px;
     background-color: transparent;
     border-left: 2px solid #ddd;
 }
 
-pre > code, pre, tt, code, kbd, samp {
+pre > code {
     font-family: "Sans Mono", "Consolas", "Courier", monospace;
     font-size: 12px;
     color: inherit;

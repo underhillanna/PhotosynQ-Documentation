@@ -460,7 +460,6 @@ function preProcessHtml () {
 			if(href){
 				element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
 			}
-
 			return element;
 		});
 		// Clean up to avoid empty pages
@@ -642,8 +641,12 @@ var createEPUB = function (){
 				chapters[chapterTitle] += _html[i].replace(/<img\/?[^>]+(>|$)/, img);
 				continue;
 			}
+			if(_html[i].match(/<code class="language-\/?[^>]+(>|$)/g)){
+				chapters[chapterTitle] += _html[i].replace(/(<code class="language-\/?[^>]+(>|$))/i, '$1\n') + '\n';
+				continue;
+			}
 			if(chapterTitle){
-				chapters[chapterTitle] += _html[i];
+				chapters[chapterTitle] += _html[i]+'\n';
 			}
 		}
 		var date = moment(option.date).format('LL') || moment().format('LL');
