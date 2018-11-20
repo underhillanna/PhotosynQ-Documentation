@@ -164,12 +164,14 @@ To record the ambient light intensity required for the non pulsed lights intensi
 
 **Table View (Fixed)**
 
+```
     environmental
     [
         [
             "light_intensity"
         ]
     ]
+```
 
 **Advanced View**
 
@@ -193,8 +195,10 @@ To start the measurement as soon as we have clamped the leaf, in order to pertur
 
 **Table View (Fixed)**
 
+```
     open_close_start
     1
+```
 
 **Advanced View**
 
@@ -216,12 +220,13 @@ Putting all the pieces together, the protocol to measure Phi2 looks like this:
 **Table View**
 
 | pulses | pulse_distance | pulse_length | pulsed_lights | pulsed_lights_brightness | nonpulsed_lights | nonpulsed_lights_brightness | detectors |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 4000 | 1000 | 30 | 0 | 0 | 2 | light_intensity | 0 |
 | 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
 | 50 | 10000 | 30 | 3 | 2000 | 2 | 4500 | 1 |
 | 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
 
+```
     environmental
     [
         [
@@ -231,6 +236,7 @@ Putting all the pieces together, the protocol to measure Phi2 looks like this:
 
     open_close_start
     1
+```
 
 **Advanced View**
 
