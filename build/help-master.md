@@ -270,7 +270,7 @@
 
 {{> help/_instruments_MultispeQ_v2.0_configuration.md}}
 
-***
+## Console Commands
 
 {{> help/_instruments_Console_Commands.md}}
 
