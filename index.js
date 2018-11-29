@@ -536,12 +536,14 @@ var createPDF = function (options){
 		await page.addStyleTag({
 			content: jetpack.read( jetpack.path(__dirname, "src", "css", "print.css") ).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}` )
 		});
+
 		await page.addStyleTag({
 			path: jetpack.path(__dirname, "node_modules", "highlight.js", "styles", "github.css")
 		});
 
+		/** Make sure to install font-awesome into your font library! */
 		await page.addStyleTag({
-			content: jetpack.read( jetpack.path(__dirname, "node_modules", "font-awesome", "css", "font-awesome.css") ).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}` ) + `\n.fa {color: #000 !important;}`
+			path: jetpack.path(__dirname, "node_modules", "font-awesome", "css", "font-awesome.css")
 		});
 
 		await page.pdf({
