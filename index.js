@@ -485,7 +485,8 @@ function compileHTML(md, toBase64){
 				var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
 				var base64 = base64Img.base64Sync(src[2]);
 				var image = element.match(/<img\/?[^>]+(>|$)/)[0];
-				img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1${base64}$3`);
+				//img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1${base64}$3`);
+				img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
 			}
 			else{
 				img += element.match(/<img\/?[^>]+(>|$)/)[0];
@@ -523,22 +524,25 @@ var createPDF = function (options){
 	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
 
 	(async () => {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({
+			headless: true,
+			args: [ "--disable-web-security" ]
+		});
 
 		const page = await browser.newPage();
 
 		await page.setContent(html);
 
 		await page.addStyleTag({
-			path: './src/css/print.css'
+			content: jetpack.read( jetpack.path(__dirname, "src", "css", "print.css") ).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}` )
 		});
 		await page.addStyleTag({
 			path: jetpack.path(__dirname, "node_modules", "highlight.js", "styles", "github.css")
 		});
 
-		// await page.addStyleTag({
-		// 	path: jetpack.path(__dirname, "node_modules", "font-awesome", "css", "font-awesome.min.css")
-		// });
+		await page.addStyleTag({
+			content: jetpack.read( jetpack.path(__dirname, "node_modules", "font-awesome", "css", "font-awesome.css") ).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}` ) + `\n.fa {color: #000 !important;}`
+		});
 
 		await page.pdf({
 			displayHeaderFooter: true,
