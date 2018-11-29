@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-    font-family: "Times New Roman",serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     -webkit-hyphens:none;
     hyphens:none;
@@ -8,7 +8,13 @@ body {
 }
 
 h1 {
-    page-break-before: auto;
+    border-bottom: 1pt solid #cccccc;
+    padding-bottom: 0.25em;
+}
+
+h2 {
+    margin-top: 0px !important;
+    page-break-before: always !important;
 }
 
 h3 {
@@ -16,28 +22,94 @@ h3 {
     border-bottom:1px solid #a1a1a1;
 }
 
+h3 + p, h4 + p, h5 + p, h6 + p {
+    page-break-before: avoid !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
+    page-break-after:avoid !important;
 }
 
+/** Links */
 a {
-    color: #277147;
+    color: #428bca;
 }
 
-.text-muted {
-    color: #737373;
+a:link:not([href^="#"]):after {
+    content: "";
 }
 
-@page {
-    margin-top: 30px;
-    margin-bottom: 20px;
+/** Horizontal ruler */
+hr {
+    page-break-after:always !important;
+    border-color:transparent !important ;
 }
 
-/* Additional Styles for PhotosynQ*/
+/** Lists */
+ul {
+    list-style-type: square;
+}
+
+/** Tables */
+table {
+    max-width: 100% !important;
+    overflow: auto;
+    display: block; /* Fix for wide tables */
+    page-break-after:auto !important;
+    border-collapse: collapse !important;
+}
+
+thead, tfoot {
+    display: table-header-group !important;
+}
+
+thead, tbody, tfoot {
+    vertical-align: middle;
+}
+
+td {
+    page-break-inside:auto;
+}
+
+tr {
+    page-break-inside: avoid !important;
+}
+
+th {
+    font-weight: bolder;
+    text-align: center;
+}
+
+td, th, tr {
+    vertical-align: inherit;
+}
+
+th, td {
+    border: 1pt solid #cccccc;
+    padding: 0.25rem;
+}
+
+tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+thead tr td, thead tr th {
+    border-bottom-width: 1pt;
+    border-bottom-color: #666666;
+}
+
+/** Code **/
+pre > code, pre, tt, code, kbd, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New", monospace;
+    font-size: 12px;
+    color: inherit;
+    background-color: transparent;
+    white-space: pre-wrap;
+    padding: 1em;
+}
+
 code {
-    font-family: "Sans Mono", "Consolas", "Courier", monospace;
     padding: 2px 4px;
-    font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
     white-space: nowrap;
@@ -45,65 +117,56 @@ code {
 }
 
 pre {
-    font-family: "Sans Mono", "Consolas", "Courier", monospace;
     padding: 5px;
+    color: #000000;
     background-color: transparent;
     border-left: 2px solid #ddd;
 }
 
-pre > code {
-    font-family: "Sans Mono", "Consolas", "Courier", monospace;
-    font-size: 12px;
-    color: inherit;
-    background-color: transparent;
-    white-space: pre-wrap;
-    padding: 1em;
-    page-break-inside: avoid;
+/** User input */
+kbd {
+    font-family: Menlo,Monaco,Consolas,"Courier New", monospace;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
 }
 
-table {
-    border-collapse: collapse;
-}
-
-thead, tfoot {
-    display: table-header-group !important;
-}
-
-/* tr, th, td {
-    margin: 0;
-    padding: 2px;
-    border: 1px solid black;
-    font-size: 100%;
-    vertical-align: baseline;
-} */
-
-thead th {
-    border-bottom:1px solid #a1a1a1;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
-
-tr th, tr td {
-    padding: 0.2em;
+/** Figures */
+figure, figcaption {
+    border: none;
+    text-align: left;
+    color: #333333;
+    width: 100% !important;
+    margin: 0px 0px 20px 0px !important;
+    padding: 0px !important;
     page-break-inside: avoid !important;
 }
 
-ul{
-    list-style-type: square;
-}
-
-figure, figcaption {
-    width: 100% !important;
-    margin: 0px;
+figure img {
+    max-width: 100%;
 }
 
 figcaption {
-    margin-top:5px;
+    font-style: italic;
+    margin-top: 5px !important;
+    clear: both;
+}
+
+/** Input */
+input:disabled, textarea:disabled {
+    color: rgb(84, 84, 84);
+    cursor: default;
 }
 
 /** Extra elements */
+.text-muted {
+    color: #737373;
+}
+
 .tip {
     background-color: #d9edf7;
     border-color: #bce8f1;
@@ -124,8 +187,4 @@ figcaption {
     border-style: solid;
     border-width: 0px 0px 0px 5px !important;
     border-radius: 0px;
-}
-
-small {
-    font-size: 80%;
 }

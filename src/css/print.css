@@ -59,6 +59,11 @@ hr {
   border-color:transparent !important ;
 }
 
+/** Lists */
+ul {
+  list-style-type: square;
+}
+
 /** Tables */
 table {
   max-width: 100% !important;
