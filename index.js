@@ -491,7 +491,7 @@ function compileHTML(md, toBase64){
 				img += element.match(/<img\/?[^>]+(>|$)/)[0];
 			}
 			img += '<figcaption>';
-			img += element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '');
+			img +=  mdParser.render( element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '') );
 			img += '</figcaption>';
 			img += '</figure>';
 			element = element.replace(/<img\/?[^>]+(>|$)/, img);
