@@ -6,7 +6,6 @@ const jetpack = require('fs-jetpack');
 const mime = require('mime');
 const moment = require('moment-timezone');
 const Mustache = require('mustache');
-const markdownpdf = require('markdown-pdf');
 const epub = require('epub-gen');
 const Remarkable = require('remarkable');
 const Entities = require('html-entities').XmlEntities;
@@ -15,7 +14,9 @@ const through2 = require('through2');
 const sizeOf = require('image-size');
 const markdownLinkCheck = require('markdown-link-check');
 const chalk = require('chalk');
-
+const hljs = require('highlight.js');
+const puppeteer = require('puppeteer');
+const base64Img = require('base64-img');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
 var createIDX = function(options){
@@ -434,69 +435,138 @@ var compileMD = function(options){
 	jetpack.write(options.output, md);
 };
 
-function preProcessMd () {
-	return through2((data, enc, cb) => {
-		let nd = data.toString().trim();
-		cb( null, new Buffer( nd ) );
+function compileHTML(md, toBase64){
+	md = md.trim();
+	var mdParser = new Remarkable({
+		html: true,
+		breaks: true,
+		linkify: true,
+		plugins: [],
+		highlight: function (str, lang) {
+			if (lang && hljs.getLanguage(lang)) {
+			  try {
+				return hljs.highlight(lang, str).value;
+			  } catch (err) {}
+			}
+
+			try {
+			  return hljs.highlightAuto(str).value;
+			} catch (err) {}
+
+			return ''; // use external default escaping
+		}
 	});
-}
+	var html = mdParser.render(md);
+	html = html.split('\n');
+	html = html.map(function(element){
 
-function preProcessHtml () {
-	return through2((data, enc, cb) => {
-		let nd = data.toString().trim().split('\n');
-		nd = nd.map(function(element){
-
-			var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
-			if(src){
-				if(jetpack.exists(src[2])){
-					var dimensions = sizeOf(src[2]);
-					if(dimensions.width < 800 && (dimensions.width / dimensions.height) < 1.5 ){
-						element = element.replace('>',' style="max-width:50%">');
-					}
+		var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
+		if(src){
+			if(jetpack.exists(src[2])){
+				var dimensions = sizeOf(src[2]);
+				if(dimensions.height > 800 && (dimensions.width / dimensions.height) < 0.6 ){
+					element = element.replace('<img','<img style="max-width:50%" ');
 				}
 			}
+		}
 
-			var href = element.match(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im);
-			if(href){
-				element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
+		if(element.match(/<em>Tips?:<\/em>/)){
+			element = element.replace(/^<p>/i, '<p class="tip">');
+		}
+
+		if(element.match(/<em>Notes?:<\/em>/)){
+			element = element.replace(/^<p>/i, '<p class="note">');
+		}
+
+		if(element.match(/<img\/?[^>]+(>|$)/g)){
+			var img = '';
+			img += '<figure>';
+			if(toBase64){
+				var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
+				var base64 = base64Img.base64Sync(src[2]);
+				var image = element.match(/<img\/?[^>]+(>|$)/)[0];
+				img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1${base64}$3`);
 			}
-			return element;
-		});
-		// Clean up to avoid empty pages
-		nd = nd.join('\n').replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
-		nd = nd.replace(/<hr>\n{0,}<hr>/gim, '<hr>'); // Two page breaking <hr> in a row
-		// jetpack.write('./dist/'+nd.length+'.html',nd);
-		cb( null, new Buffer( nd ) );
+			else{
+				img += element.match(/<img\/?[^>]+(>|$)/)[0];
+			}
+			img += '<figcaption>';
+			img += element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '');
+			img += '</figcaption>';
+			img += '</figure>';
+			element = element.replace(/<img\/?[^>]+(>|$)/, img);
+		}
+
+		if(element.match(/^<li>/)){
+			element = element.replace(/^(\<li\>\s{0,})(\[x\])/i, `$1`);
+		}
+
+		var href = element.match(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im);
+		if(href){
+			element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
+		}
+		return element;
 	});
+	// Clean up to avoid empty pages
+	html = html.join('\n').replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
+	html = html.replace(/<hr>\n{0,}<hr>/gim, '<hr>'); // Two page breaking <hr> in a row
+	// jetpack.write('./dist/'+html.length+'.html',html);
+	return html;
 }
 
 var createPDF = function (options){
 
-	var MARKDOWN_OPTIONS = {
-		cssPath: 'src/css/print.css',
-		// phantomPath: 'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs',
-		paperBorder: '1cm',
-		renderDelay: 2500,
-		runningsPath: 'src/runnings.js',
-		paperFormat: 'Letter',
-		paperOrientation: 'portrait',
-		preProcessMd: preProcessMd,
-		preProcessHtml: preProcessHtml,
-		remarkable: {
-			"html":true,
-			"linkify": true,
-			"plugins": []
-		}
-	};
+	var md = jetpack.read(options.input);
+	var html = compileHTML(md, true);
 
 	var filename = jetpack.inspect(options.input).name;
 	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
-	jetpack.write(__dirname+'/dist/title.json', {title: filename }, { jsonIndent: 0 });
 
-	markdownpdf(MARKDOWN_OPTIONS).from(options.input).to(options.output, function (data) {
-		jetpack.remove(__dirname+'/dist/title.json');
-		console.log('PDF created: ', options.output);
-	});
+	(async () => {
+		const browser = await puppeteer.launch();
+
+		const page = await browser.newPage();
+
+		await page.setContent(html);
+
+		await page.addStyleTag({
+			path: './src/css/print.css'
+		});
+		await page.addStyleTag({
+			path: jetpack.path(__dirname, "node_modules", "highlight.js", "styles", "github.css")
+		});
+
+		// await page.addStyleTag({
+		// 	path: jetpack.path(__dirname, "node_modules", "font-awesome", "css", "font-awesome.min.css")
+		// });
+
+		await page.pdf({
+			displayHeaderFooter: true,
+			headerTemplate: `
+				<div class="text center"></div>`,
+			footerTemplate: `
+				<div class="text center" style="font-size:10px; font-family: Arial, Helvetica, sans-serif;">
+		 		<span class="pageNumber"></span> of <span class="totalPages"></span>
+			 	</div>`,
+			format: 'Letter',
+			margin: {
+				top: "20mm",
+				right: "20mm",
+				bottom: "20mm",
+				left: "20mm"
+			},
+			path: jetpack.path(__dirname,options.output),
+			printBackground: true,
+			scale: 1
+		}).then(function(){
+			console.log('PDF created: ', options.output);
+		}, function(error) {
+			console.log(error);
+		});
+
+		await browser.close();
+
+	})();
 };
 
 var createEPUB = function (){
@@ -589,7 +659,6 @@ var createEPUB = function (){
 	var _html = "";
 
 	jetpack.createReadStream(jetpack.path( cwd, 'dist', 'temp.md' ))
-	.pipe(preProcessMd())
 	.pipe(
 		through2(
 			function transform (chunk, enc, cb) {
@@ -598,14 +667,12 @@ var createEPUB = function (){
 			},
 			function flush (cb) {
 				var self = this;
-				var mdParser = new Remarkable(option.remarkable);
-				self.push(mdParser.render(_html));
+				self.push( compileHTML(_html) )
 				self.push(null);
 				cb();
 			}
 		)
 	)
-	.pipe(preProcessHtml())
 	.on('data', function (data) {
 		_html = data.toString().trim().split('\n');
 		var chapters = {};
@@ -615,34 +682,6 @@ var createEPUB = function (){
 			if(_html[i].match(/^<h2>/)){
 				chapterTitle = _html[i].replace(/<\/?[^>]+(>|$)/g, "");
 				chapters[chapterTitle] = "";
-				continue;
-			}
-			if(_html[i].match(/^<li>/)){
-				chapters[chapterTitle] += _html[i].replace(/^(\<li\>\s{0,})(\[x\])/i, "$1");
-				continue;
-			}
-			if(_html[i].match(/<em>Tip:<\/em>/)){
-				chapters[chapterTitle] += _html[i].replace(/^<p>/i, '<p class="tip">');
-				continue;
-			}
-			if(_html[i].match(/<em>Note:<\/em>/)){
-				chapters[chapterTitle] += _html[i].replace(/^<p>/i, '<p class="note">');
-				continue;
-			}
-			if(_html[i].match(/<img\/?[^>]+(>|$)/g)){
-				var img = '';
-				img += '<figure>';
-				img += _html[i].match(/<img\/?[^>]+(>|$)/)[0];
-				img += '<figcaption>';
-				var mdParser = new Remarkable(option.remarkable);
-				img += mdParser.render(_html[i].match(/(alt=)(\"([^>]+)(\"|$))/)[3]).replace(/<\/?p>/g, '');
-				img += '</figcaption>';
-				img += '</figure>';
-				chapters[chapterTitle] += _html[i].replace(/<img\/?[^>]+(>|$)/, img);
-				continue;
-			}
-			if(_html[i].match(/<code class="language-\/?[^>]+(>|$)/g)){
-				chapters[chapterTitle] += _html[i].replace(/(<code class="language-\/?[^>]+(>|$))/i, '$1\n') + '\n';
 				continue;
 			}
 			if(chapterTitle){

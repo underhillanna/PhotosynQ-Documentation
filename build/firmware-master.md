@@ -19,6 +19,3 @@ Using the Console in the Desktop application, you can use these commands to dire
 + [Latest Updates (Blog)](https://blog.photosynq.org/)
 + [API (Documentation)](https://photosynq.org/rdoc)
 + [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
-
-<link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="./src/css/photosynq.css">

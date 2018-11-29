@@ -1,7 +1,9 @@
+@charset "utf-8";
 body {
     font-family: "Times New Roman",serif;
     font-size: 1em;
     -webkit-hyphens:none;
+    hyphens:none;
     text-align: justify;
 }
 
@@ -99,25 +101,29 @@ figure, figcaption {
 
 figcaption {
     margin-top:5px;
-    font-size: 80%;
-}
-
-figcaption:before {
-    content: 'Fig. ';
-    font-weight: bolder;
 }
 
 /** Extra elements */
 .tip {
     background-color: #d9edf7;
-    border: 1px solid #bce8f1;
-    padding:5px;
+    border-color: #bce8f1;
+    color: #31708f;
+    padding:15px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 0px 0px 0px 5px !important;
+    border-radius: 0px;
 }
 
 .note {
     background-color: #fcf8e3;
-    border: 1px solid #faebcc;
-    padding:5px;
+    border-color: #faebcc;
+    color: #8a6d3b;
+    padding:15px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 0px 0px 0px 5px !important;
+    border-radius: 0px;
 }
 
 small {
