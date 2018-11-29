@@ -44,7 +44,7 @@ You can use Bluetooth or USB to connect your Instrument with your device. Depend
 
 If you are having trouble connecting to your Instrument, please go through this checklist first:
 
-- [x] Make sure your Instrument is fully charged (at least 6h, or over night).
-- [x] Make sure you have turned on the Instrument by pressing and holding the power button for 5 seconds. **The device will automatically shut off after 3 hours of inactivity**
-- [x] If you were using the Instrument with another mobile device, you will need to press and hold the power button for 5 seconds to disconnect it from the previous device and make it available to a new device.
-- [x] If you are using Windows 8 or lower, make sure you have the [serial driver](https://www.pjrc.com/teensy/td_download.html) installed.
+- Make sure your Instrument is fully charged (at least 6h, or over night).
+- Make sure you have turned on the Instrument by pressing and holding the power button for 5 seconds. **The device will automatically shut off after 3 hours of inactivity**
+- If you were using the Instrument with another mobile device, you will need to press and hold the power button for 5 seconds to disconnect it from the previous device and make it available to a new device.
+- If you are using Windows 8 or lower, make sure you have the [serial driver](https://www.pjrc.com/teensy/td_download.html) installed.

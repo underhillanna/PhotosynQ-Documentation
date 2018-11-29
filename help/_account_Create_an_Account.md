@@ -8,7 +8,7 @@
 
 #### Troubleshooting
 
-- [x] Make sure that you are connected to the internet!
-- [x] Sometimes the confirmation emails end up in your spam folder. Make sure to check it first.
+- Make sure that you are connected to the internet!
+- Sometimes the confirmation emails end up in your spam folder. Make sure to check it first.
 
 ***Still Issues?*** Please contact us (<support@photosynq.org>), so we can help you getting your account confirmed.

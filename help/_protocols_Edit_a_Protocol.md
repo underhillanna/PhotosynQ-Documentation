@@ -17,6 +17,6 @@ You can change one of your protocols or extend an already existing one at any ti
 
 If you have issues saving the protocol, make sure you check these things first:
 
-- [x] When a Protocol is finished, no warnings or errors are indicated.
-- [x] Make sure you have a name, description and category.
-- [x] Check that the name is not already taken.
+- When a Protocol is finished, no warnings or errors are indicated.
+- Make sure you have a name, description and category.
+- Check that the name is not already taken.

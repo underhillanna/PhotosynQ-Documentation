@@ -15,11 +15,11 @@ Currently Android v4.4 or greater is supported. Below you find a list with compa
 
 Sometimes the app does not work as expected. Please try this first:
 
-- [x] Make sure you have the latest version of the app.
-- [x] Make sure you have the latest Android Updates installed.
-- [x] Restart the app.
-- [x] Make sure you have sufficient storage.
-- [x] Make sure you have an internet connection.
+- Make sure you have the latest version of the app.
+- Make sure you have the latest Android Updates installed.
+- Restart the app.
+- Make sure you have sufficient storage.
+- Make sure you have an internet connection.
 
 ### Compatible Android Devices
 

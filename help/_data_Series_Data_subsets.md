@@ -33,5 +33,5 @@ Series are subsets of your complete Project dataset. You can generate them by **
 
 #### Troubleshooting
 
-- [x] Sometimes your dashboard settings disappear the next time you load the Project data.
-- [x] Make sure you allow the browser to store information in your browsers **local storage**.
+- Sometimes your dashboard settings disappear the next time you load the Project data.
+- Make sure you allow the browser to store information in your browsers **local storage**.

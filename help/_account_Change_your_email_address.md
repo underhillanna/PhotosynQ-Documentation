@@ -17,6 +17,6 @@ Need to change your current email address? No problem. Just follow the steps to 
 
 Before you contact us, make sure you checked the following steps:
 
-- [x] If the confirmation email is not in your inbox, please check your spam folder as well.
+- If the confirmation email is not in your inbox, please check your spam folder as well.
 
 ***Still Issues?*** Please contact us (<support@photosynq.org>), so we can try to help you out.

@@ -12,6 +12,6 @@ Once you are done, save your work and share it with the community.
 
 If you have issues saving the macro, make sure you check these things first:
 
-- [x] When a Macro done, make sure the output box is green, indicating that there was no error.
-- [x] Make sure you have a name, description.
-- [x] Check that the name is not already existing.
+- When a Macro done, make sure the output box is green, indicating that there was no error.
+- Make sure you have a name, description.
+- Check that the name is not already existing.

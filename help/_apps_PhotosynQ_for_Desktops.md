@@ -34,7 +34,7 @@ Updates are downloaded and installed automatically to make sure, you always have
 
 Sometimes the app does not work as expected. Please try this first:
 
-- [x] Make sure you have the latest version of the app.
-- [x] Make sure you have sufficient storage.
-- [x] Make sure you have an internet connection.
-- [x] Restart the device before installing.
+- Make sure you have the latest version of the app.
+- Make sure you have sufficient storage.
+- Make sure you have an internet connection.
+- Restart the device before installing.

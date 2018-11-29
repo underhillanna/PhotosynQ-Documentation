@@ -15,6 +15,6 @@ If you want setup your own measurements, or make changes to existing ones.
 
 When you have issues running the Protocol on your Instrument, make sure you check the following things first:
 
-- [x] Make sure, that there are no errors or warnings indicated.
-- [x] Check if your Instrument is connected and can run already existing Protocols.
-- [x] Confirm, that the latest firmware is installed on your Instrument.
+- Make sure, that there are no errors or warnings indicated.
+- Check if your Instrument is connected and can run already existing Protocols.
+- Confirm, that the latest firmware is installed on your Instrument.
