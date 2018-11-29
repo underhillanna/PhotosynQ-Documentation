@@ -571,14 +571,17 @@ var createPDF = function (options){
 
 var createEPUB = function (){
 	var cwd = jetpack.cwd();
+	var cssString = jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) );
+	cssString += jetpack.read( jetpack.path( cwd, "node_modules", "highlight.js", "styles", "github.css") );
+	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome')
 
     var option = {
         title: "", // *Required, title of the book.
         author: "", // *Required, string or array.
 		// publisher: "", // optional
 		version: 3, // or 2
-		css: jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) ), // sting with css
-		// fonts: ,
+		css: cssString, // sting with css
+		fonts: [ jetpack.path( cwd, 'node_modules', 'font-awesome', 'fonts', 'fontawesome-webfont.ttf' ) ],
 		lang: 'en',
 		tocTitle: 'Contents',
 		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
