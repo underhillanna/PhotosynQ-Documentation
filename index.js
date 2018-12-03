@@ -16,7 +16,6 @@ const markdownLinkCheck = require('markdown-link-check');
 const chalk = require('chalk');
 const hljs = require('highlight.js');
 const puppeteer = require('puppeteer');
-const base64Img = require('base64-img');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
 var createIDX = function(options){
@@ -435,7 +434,7 @@ var compileMD = function(options){
 	jetpack.write(options.output, md);
 };
 
-function compileHTML(md, toBase64){
+function compileHTML(md){
 	md = md.trim();
 	var mdParser = new Remarkable({
 		html: true,
@@ -481,16 +480,7 @@ function compileHTML(md, toBase64){
 		if(element.match(/<img\/?[^>]+(>|$)/g)){
 			var img = '';
 			img += '<figure>';
-			if(toBase64){
-				var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
-				var base64 = base64Img.base64Sync(src[2]);
-				var image = element.match(/<img\/?[^>]+(>|$)/)[0];
-				//img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1${base64}$3`);
-				img += image.replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
-			}
-			else{
-				img += element.match(/<img\/?[^>]+(>|$)/)[0];
-			}
+			img += element.match(/<img\/?[^>]+(>|$)/)[0].replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
 			img += '<figcaption>';
 			img +=  mdParser.render( element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '') );
 			img += '</figcaption>';
@@ -518,7 +508,7 @@ function compileHTML(md, toBase64){
 var createPDF = function (options){
 
 	var md = jetpack.read(options.input);
-	var html = compileHTML(md, true);
+	var html = compileHTML(md);
 
 	var filename = jetpack.inspect(options.input).name;
 	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
