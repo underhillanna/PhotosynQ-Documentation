@@ -1,9 +1,10 @@
-### Connect an Instrument
-You can use Bluetooth or USB to connect your Instrument with your device. Depending on the Instrument and device, some connection options may not be available.
+### Connect an Instrument - Mobile
 
-**Before connecting your MultispeQ to the Android or Desktop App you need to turn on the MultispeQ by pressing and holding the power button for 5 seconds**
+You can use Bluetooth to connect your Instrument with your device.
 
-![Connect an Instrument](../images/help/_apps_power_button.jpg)
+***Note:*** Before connecting your MultispeQ to the Desktop App you need to turn on the MultispeQ by pressing and holding the power button for at least 5 seconds.
+
+![Connect an Instrument](../images/help/_instruments_multispeq_power_button.jpg)
 
 #### Android - Bluetooth
 
@@ -17,28 +18,7 @@ You can use Bluetooth or USB to connect your Instrument with your device. Depend
 6. A pop-up will appear asking to pair the device by entering the Instrument PIN. **The PIN is 1234 and is the same for every MultispeQ.**
 7. After pairing the MultispeQ, you will be taken back to the Device list. Select your MultispeQ from the list, if the screen B (below) appears your device is connected.
 
-![Android - Bluetooth](../images/help/_apps_connecting_MultispeQ_Android.jpg)
-
-#### Desktop - USB
-
-1. Select **<i class="fa fa-sliders"></i> Settings** from the left menu bar.
-2. Choose the **Instrument** tab from the dialog.
-3. Pick the port the Instrument is connected to from the dropdown menu:
-    - Windows: **COM{number}**
-    - Mac OS: **usbmodem{number}**
-    - ~~Linux: **ACM{number}**~~
-4. Connect the device by clicking on **Connect**.
-
-#### Desktop - Bluetooth
-
-1. Make sure you have your Instrument connected to your Device through your OS preferences. The code for pairing is **1234**.
-2. Select **<i class="fa fa-sliders"></i> Settings** from the left menu bar.
-3. Choose the **Instrument** tab from the dialog.
-4. Pick the port the Instrument is connected to from the dropdown menu:
-    - Windows: **COM{number}**
-    - Mac OS: **Devicename_{number}**
-    - ~~Linux: **Not available**~~
-5. Connect the device by clicking on **Connect**.
+![Android - Bluetooth](../images/help/_mobile-app_connecting_MultispeQ_Android.jpg)
 
 ### Troubleshooting
 

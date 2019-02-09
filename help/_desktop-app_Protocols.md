@@ -21,23 +21,3 @@ You can create a new Macro by opening the Macro editor selecting **File -> New P
 You can edit a Macro simply by selecting a macro from the list of macros and open the editor by double clicking it or you can use the edit button in the right side bar to open the Macro Editor.
 
 When you are the creator of the Macro you can either overwrite the existing Macro or you can save it as a new Macro. In case you are not the creator, you can only save the macro as a new one.
-
-#### The Protocol Editor
-
-The **Protocol Editor** allows you to build new Protocols or modify existing ones. The Protocol then can be connected to a Macro to calculate parameters from the recorded measurement results.
-
-#### Table View
-
-The Protocol structure can get complicated, especially if you have very long pulse sets. The **Table View** will make it easier to keep track of those settings. If you are using protocol sets, the Table View will not work and you have to use the Advanced View.
-
-#### Advanced View
-
-The **Advanced View** allows to edit the Protocol code directly.
-
-![Warning about a potential issue in the code](../images/help/_apps_Desktop_Protocol_Editor_warning.png)
-
-When you have an Instrument connect, you will also get the commands for LEDs, Detectors and Miscellaneous Sensors.
-
-![Warning about a potential issue in the code](../images/help/_apps_Desktop_Protocol_Editor_autosuggest.png)
-
-![Hover over a command to get a detailed description.](../images/help/_apps_Desktop_Protocol_Editor_tooltip.png)

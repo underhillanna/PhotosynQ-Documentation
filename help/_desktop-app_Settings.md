@@ -1,4 +1,4 @@
-### Desktop Application Settings
+### Settings - Desktop
 
 You can find the Applications Settings under the **Settings dialog** clicking on **Application**. You can bring up the Settings dialog doing the following:
 
@@ -6,7 +6,7 @@ You can find the Applications Settings under the **Settings dialog** clicking on
 + **Windows & Linux** Menu->Edit->Preferences
 + **Mac** Menu->PhotosynQ->Preferences
 
-![Desktop Application Settings Dialog](../images/help/_apps_Desktop_Application_Settings.png)
+![Desktop Application Settings Dialog](../images/help/_desktop-app_Settings.png)
 
 #### Auto Update
 

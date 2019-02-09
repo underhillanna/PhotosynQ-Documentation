@@ -2,7 +2,7 @@
 
 The Console allows you to open a direct channel to your instrument to send commands and get additional information not available through the user interface. When opened while taking a measurement, you can use it to monitor the output.
 
-![Console after running the command `hello` to test the Instrument connection](../images/help/_apps_Desktop_Console_Window.png)
+![Console after running the command `hello` to test the Instrument connection](../images/help/_desktop-apps_Console_Window.png)
 
 #### Open the Console
 

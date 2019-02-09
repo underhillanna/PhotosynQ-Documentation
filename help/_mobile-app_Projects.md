@@ -1,4 +1,4 @@
-### Finding Projects in the PhotosynQ app
+### Projects - Mobile
 
 **Projects are the lifeblood of PhotosynQ, so it is important to understand what you are looking at!**
 
