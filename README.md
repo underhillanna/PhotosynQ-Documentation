@@ -41,8 +41,6 @@ Files are named using the prefix and the help title, e.g. `_account_This_is_the_
 + [Projects](help/_mobile-app_Projects.md)
 + [Adding Notes and Pictures](help/_mobile-app_Adding_Notes_and_Pictures.md)
 + [Quick Measurements](help/_mobile-app_Quick_Measurements.md)
-  
-<!-- + [](help/_mobile-app_.md) -->
 
 ### Desktop Application
 
