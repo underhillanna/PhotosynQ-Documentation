@@ -481,6 +481,8 @@ function compileHTML(md){
 			var img = '';
 			img += '<figure>';
 			img += element.match(/<img\/?[^>]+(>|$)/)[0].replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
+			if(!jetpack.exists( element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] ))
+				console.log(chalk.red(`Error - Missing file: `) + element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] +'\n');
 			img += '<figcaption>';
 			img +=  mdParser.render( element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '') );
 			img += '</figcaption>';
@@ -569,11 +571,11 @@ var createEPUB = function (){
 	var cwd = jetpack.cwd();
 	var cssString = jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) );
 	cssString += jetpack.read( jetpack.path( cwd, "node_modules", "highlight.js", "styles", "github.css") );
-	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome')
+	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome');
 
-    var option = {
-        title: "", // *Required, title of the book.
-        author: "", // *Required, string or array.
+  var option = {
+    title: "", // *Required, title of the book.
+    author: "", // *Required, string or array.
 		// publisher: "", // optional
 		version: 3, // or 2
 		css: cssString, // sting with css
@@ -582,13 +584,14 @@ var createEPUB = function (){
 		tocTitle: 'Contents',
 		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
 		customOpfTemplatePath: './src/templates/content.opf.ejs',
-        cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
+    cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
 		content: [],
 		remarkable: {
 			"html":true,
 			"linkify": true,
 			"plugins": []
-		}
+		},
+		verbose: true
 	};
 
 	const entities = new Entities();
@@ -687,8 +690,8 @@ var createEPUB = function (){
 				chapters[chapterTitle] += _html[i]+'\n';
 			}
 		}
-		var date = moment(option.date).format('LL') || moment().format('LL');
-		var version = option.version || "unknown";
+		var date = moment( (option.date === undefined) ? new Date() : option.date ).format('LL') || moment().format('LL');
+		var version = (option.version === undefined) ? "unknown" : option.version;
 
 		var header = '<div style="margin-top:45%; text-align:center">';
 			header += '<p>PhotosynQ Documentation</p>';
@@ -709,7 +712,7 @@ var createEPUB = function (){
 			});
 		}
 
-		new epub(option, output);
+		new epub(option, output)
 		jetpack.remove(jetpack.path( cwd, 'dist', 'temp.md' ));
 	});
 };
