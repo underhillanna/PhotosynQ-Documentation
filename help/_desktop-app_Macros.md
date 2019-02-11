@@ -1,6 +1,6 @@
 ### Macros - Desktop
 
-Macros are used to calculate parameters from a measurement. To work with Macros you can select **Macros** from the left side bar, you can select **View -> Macros** from the top menu bar or you can use the shortcut `Ctrl+4 / ⌘4`.
+Macros are used to calculate parameters from a measurement. To work with Macros you can select **Macros** from the left side bar, you can select **View → Macros** from the top menu bar or you can use the shortcut `Ctrl+4 / ⌘4`.
 
 **My Macros** shows a list of Macros you have created. **Explore** will provide a list of all Macros currently available on the Platform. Click on the list headers to sort the list of Macros by name, creator and date.
 
@@ -10,7 +10,7 @@ Select the search field in the top right corner `Ctrl+F / ⌘F` to enter a searc
 
 #### Create a new Macro
 
-You can create a new Macro by opening the Macro editor selecting **File -> New Macro** from the main menu. The Macro template will be automatically added to your Code Editor and you are ask to pick a measurement from your Notebook to use as your measurement template. You can select that measurement at any time selecting **Measurement** from the **Menu Bar**, but it is easier to start with a measurement provided.
+You can create a new Macro by opening the Macro editor selecting **File → New Macro** from the main menu. The Macro template will be automatically added to your Code Editor and you are ask to pick a measurement from your Notebook to use as your measurement template. You can select that measurement at any time selecting **Measurement** from the **Menu Bar**, but it is easier to start with a measurement provided.
 
 #### Editing an existing Macro
 

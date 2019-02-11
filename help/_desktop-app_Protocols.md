@@ -1,6 +1,6 @@
 ### Protocols - Desktop
 
-Protocols are programming the instrument to run a measurement. To work with Protocols you can select **Protocols** from the left side bar, you can select **View -> Protocols** from the top menu bar or you can use the shortcut `Ctrl+3 / ⌘3`.
+Protocols are programming the instrument to run a measurement. To work with Protocols you can select **Protocols** from the left side bar, you can select **View → Protocols** from the top menu bar or you can use the shortcut `Ctrl+3 / ⌘3`.
 
 **My Protocols** shows a list of Protocols you have created. **Explore** will provide a list of all Protocols currently available on the Platform. Click on the list headers to sort the list of Macros by name, creator and date.
 
@@ -14,7 +14,7 @@ To run a Protocol, you can select a protocol from the list with a **single click
 
 #### Create a new Protocol
 
-You can create a new Macro by opening the Macro editor selecting **File -> New Protocol** from the main menu or use the shortcut `Ctrl+5 / ⌘5`. The macro template will be automatically added to your Code Editor and you are ask to pick a measurement from your Notebook to use as your measurement template. You can select that measurement at any time selecting **Measurement** from the **Menu Bar**, but it is easier to start with a measurement provided.
+You can create a new Macro by opening the Macro editor selecting **File → New Protocol** from the main menu or use the shortcut `Ctrl+5 / ⌘5`. The macro template will be automatically added to your Code Editor and you are ask to pick a measurement from your Notebook to use as your measurement template. You can select that measurement at any time selecting **Measurement** from the **Menu Bar**, but it is easier to start with a measurement provided.
 
 #### Editing an existing Protocol
 
