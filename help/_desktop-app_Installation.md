@@ -53,4 +53,4 @@ Sometimes the app does not work as expected. Please try this first:
 - Make sure you have an internet connection.
 - Restart the device before installing.
 
-[application settings]: ./desktop/_desktop_app_Settings
+[application settings]: desktop-app_Settings
