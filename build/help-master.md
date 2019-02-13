@@ -220,7 +220,7 @@
 
 ***
 
-{{> help/help/_data_External_Libraries.md}}
+{{> help/_data_External_Libraries.md}}
 
 ***
 
