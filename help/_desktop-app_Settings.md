@@ -51,4 +51,4 @@ All Projects, Protocols, Macros, images, cached Measurements and your Notebook w
 **Clear Cache**
 All Projects, Protocols, Macros and images will be deleted and your data from PhotosynQ will be synchronized again.
 
-***Info:*** Measurements cached and your Notebook will not be deleted.
+***Note:*** Measurements cached and your Notebook will not be deleted.

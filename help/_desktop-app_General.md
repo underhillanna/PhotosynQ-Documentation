@@ -2,25 +2,29 @@
 
 The PhotosynQ Desktop Application allows to build and test measurement Protocols, Macros, contribute to Projects and save small scale experiments to the Notebook. It requires a PhotosynQ account and an internet connection when signing in and synchronizing content with the PhotosynQ cloud.
 
+#### Internet connection
+
+An internet connection is required when starting the app, to sign in and synchronize Projects, Protocols, Macros and Instrument information. Saving Protocols and Macros, as well as measurements requires an internet connection as well. Measurements taken for a Project can be cached and uploaded later, so they can be collected in areas without an internet connection.
+
 #### Keyboard Shortcuts
 
-| Windows      | Mac    | Description                                                       |
-| :----------- | :----- | :---------------------------------------------------------------- |
-| Ctrl+1       | ⌘1     | Show Project List                                                 |
-| Ctrl+2       | ⌘2     | Show Notebook                                                     |
-| Ctrl+3       | ⌘3     | Show Protocol List                                                |
-| Ctrl+4       | ⌘4     | Show Macro List                                                   |
-| Ctrl+5       | ⌘5     | Show Protocol Editor                                              |
-| Ctrl+6       | ⌘6     | Show Macro Editor                                                 |
-| Ctrl+7       | ⌘7     | Open Instrument Console                                           |
-| Ctrl+F       | ⌘F     | Search                                                            |
-| Ctrl+S       | ⌘S     | Save - Protocol / Macro / Measurement                             |
-| Shift+Ctrl+S | ⇧⌘S    | Save As - Protocol / Macro / Measurement                          |
-| Ctrl+Alt+S   | ⌃⌘S    | Synchronize Application with PhotosynQ                            |
-| Ctrl+Space   | ⌥Space | Show available Commands and Function in Protocol and Macro Editor |
-| Ctrl+Shift+R | ⌥⇧R    | Manually run a Macro calculation in the Editor                    |
-| Ctrl+Comma   | ⌘,     | Open Preferences                                                  |
-| Ctrl+Q       | ⌘Q     | Close Application                                                 |
+| Windows / Linux | Mac    | Description                                                       |
+| :-------------- | :----- | :---------------------------------------------------------------- |
+| Ctrl+1          | ⌘1     | Show Project List                                                 |
+| Ctrl+2          | ⌘2     | Show Notebook                                                     |
+| Ctrl+3          | ⌘3     | Show Protocol List                                                |
+| Ctrl+4          | ⌘4     | Show Macro List                                                   |
+| Ctrl+5          | ⌘5     | Show Protocol Editor                                              |
+| Ctrl+6          | ⌘6     | Show Macro Editor                                                 |
+| Ctrl+7          | ⌘7     | Open Instrument Console                                           |
+| Ctrl+F          | ⌘F     | Search                                                            |
+| Ctrl+S          | ⌘S     | Save - Protocol / Macro / Measurement                             |
+| Shift+Ctrl+S    | ⇧⌘S    | Save As - Protocol / Macro / Measurement                          |
+| Ctrl+Alt+S      | ⌃⌘S    | Synchronize Application with PhotosynQ                            |
+| Ctrl+Space      | ⌥Space | Show available Commands and Function in Protocol and Macro Editor |
+| Ctrl+Shift+R    | ⌥⇧R    | Manually run a Macro calculation in the Editor                    |
+| Ctrl+Comma      | ⌘,     | Open Preferences                                                  |
+| Ctrl+Q          | ⌘Q     | Close Application                                                 |
 
 #### Energy Saving
 
