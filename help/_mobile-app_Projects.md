@@ -2,9 +2,13 @@
 
 The Application allows you to take your Instrument together with your mobile device anywhere you want to take measurements. It's build in a way, that is intended to make large scale data collection in the field as easy as possible. To work with Projects you can select **My Projects** from the Menu.
 
+![My Projects Menu Bar](../images/help/_mobile-app_Android_Projects_Menu.png)
+
 #### My Projects
 
 My Projects is listing all projects you have created or joined, providing name, part of the about section and a Project image. You can update the list of Projects as well as the Projects themselves, by swiping down until the loading icon appears. Once it has disappeared, the list and Projects are updated.
+
+![Projects](../images/help/_mobile-app_Android_Projects.png)
 
 #### Select a Project
 
@@ -32,6 +36,8 @@ In case you have an Instrument connected a list of all available Project questio
 
 You have to answer all Project Questions in order to contribute a measurement. You can select Keep Answers below the Take Measurement button, if you take multiple measurement with the same set of answers.
 
+![Question options for Projects, Multiple Choice, User Answer & Scan Barcode, Attach Photo](../images/help/_mobile-app_Android_Project_Questions.png)
+
 ##### Scan Codes
 
 Answers can also be given, by scanning Bar or QR codes (requires webcam). Select the scan icon next to the input field to use your webcam to scan a code. A dialog will be open up and you can select the input source if you have multiple cameras, otherwise the standard camera will be selected. Hold the code in front of the camera to scan it. When the code was read successfully, the dialog will be closed and the code content added into the input field. You can close the dialog at any time using the Esc key.
@@ -43,6 +49,8 @@ Once you have answered all the Project Questions you can select the Take Measure
 ***Note:*** When you push the Take Measurement* button, the measurement, depending on the Protocol, might start right away.
 
 #### Save Contribution
+
+![Results for a Protocol for a Project](../images/help/_mobile-app_Android_Projects_Results.png)
 
 After the measurement has been taken, you can save the results to the Project using the Save button above the measurement results or you can Discard the measurement and repeat it. When you want to save your measurement, you can add notes and an image, either using a local file or your webcam and then save it to the Project using the Save button at the bottom of the dialog. When you don't have an internet connection your measurement will be cached and submitted to the Project, the next time you have a connection and the app is able to synchronize.
 
