@@ -4,7 +4,21 @@ The Measurements menu item is not to be confused with [Quick Measurements](mobil
 
 ![1. Select Measurements from the Menu. 2. Check the history of Measurements. 3. Select/Edit a single Measurement and upload them.](../images/help/_mobile-app_Android_Measurements.png)
 
+When no Measurements are selected, the following options are available to manage multiple Measurements.
+
+![Menu if no Measurements are selected](../images/help/_mobile-app_Android_Measurements_Menu.png)
+
+#### Select Pending
+
+Select all Measurements that have not been uploaded yet from the list of all Measurements for Projects on your device.
+
+#### Cleanup Measurements
+
+Once Measurements have been uploaded, they will remain on the list, indicated by a cloud icon. Use **Cleanup Measurements** from the **More Options** menu, to remove those Measurements. Measurements that are not uploaded yet will remain on the list.
+
 After selecting **Measurements** from the Menu, a list will all Measurements taken for Projects is presented. Each Measurement is presented as one list item with the Project title, the given answers to the Project questions and the date and time.
+
+![Available options for a selected Measurement](../images/help/_mobile-app_Android_Measurements_Menu_Selected.png)
 
 #### Editing Measurements
 
