@@ -68,11 +68,19 @@
 
 ***
 
-{{> help/_mobile-app_Adding_Notes_and_Pictures.md}}
+{{> help/_mobile-app_Discover.md}}
 
 ***
 
 {{> help/_mobile-app_Quick_Measurements.md}}
+
+***
+
+{{> help/_mobile-app_Measurements.md}}
+
+***
+
+{{> help/_mobile-app_Adding_Notes_and_Pictures.md}}
 
 ## Desktop Application
 
