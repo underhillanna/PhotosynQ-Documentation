@@ -1,12 +1,16 @@
 ### Connect an Instrument - Mobile
 
-You can use Bluetooth to connect your Instrument with your device.
+You can use Bluetooth to connect your Instrument to your device.
 
 ***Note:*** Before connecting your MultispeQ to the Desktop App you need to turn on the MultispeQ by pressing and holding the power button for at least 5 seconds.
 
-![Connect an Instrument](../images/help/_instruments_multispeq_power_button.jpg)
+![Turning on the MultispeQ using the button in the back](../images/help/_instruments_multispeq_power_button.jpg)
 
-#### Android - Bluetooth
+#### Android - Connect a new Instrument (Bluetooth)
+
+When connecting an Instrument for the first time, you have to pair it with your device. The pairing only needs to be done once, and only repeated, if the Instrument has been paired with a different device in between.
+
+![Connect a new Instrument](../images/help/_mobile-app_Android_Connect_New_Instrument.png)
 
 1. Go to the **My Projects** page within the app.
 2. Select the Instrument icon on the top right of the page.
@@ -18,7 +22,16 @@ You can use Bluetooth to connect your Instrument with your device.
 6. A pop-up will appear asking to pair the device by entering the Instrument PIN. **The PIN is 1234 and is the same for every MultispeQ.**
 7. After pairing the MultispeQ, you will be taken back to the Device list. Select your MultispeQ from the list, if the screen B (below) appears your device is connected.
 
-![Android - Bluetooth](../images/help/_mobile-app_connecting_MultispeQ_Android.jpg)
+#### Android - Connecting an already paired Instrument (Bluetooth)
+
+In case you already paired your Instrument with a device, you only have to select your Instrument from the list to connect it.
+
+![Connect an Instrument that has already been paired](../images/help/_mobile-app_Android_Connect_Instrument.png)
+
+1. Go to the **My Projects** page within the app.
+2. Select the Instrument icon on the top right of the page.
+3. A list of available Bluetooth Instruments will appear.
+4. Select your MultispeQ from the list, if the screen B (below) appears your device is connected.
 
 ### Troubleshooting
 
