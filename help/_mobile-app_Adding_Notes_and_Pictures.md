@@ -11,4 +11,4 @@ To modify a measurement:
 
 ***Note: if you go back and add another note, it will overwrite your last note with the new note.***
 
-![Adding Mobile Notes and Pictures](../images/help/_mobile-app_add_notes.png)
+![Adding Mobile Notes and Pictures](../images/help/_mobile-app_Android_add_notes.png)
