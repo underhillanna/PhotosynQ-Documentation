@@ -219,6 +219,14 @@ The standard structure for documenting a command is the following:
 
 To generate one big help document and one tutorials document, use the compile script.
 
+#### Build from latest commit
+
 ```shell
-. compile.sh
+npm run build
+```
+
+#### Build from latest tag (release)
+
+```shell
+npm run release
 ```
