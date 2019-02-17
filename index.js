@@ -31,11 +31,15 @@ var createIDX = function(options){
 		console.log(chalk.red('Error:') + ' Source files not found');
 		return;
 	}
+
+	var titles = {};
+
 	var lunrIDX = lunr(function(){
 		this.field('title');
 		this.field('content');
 		// the id
 		this.ref('href');
+
 		var files = jetpack.inspectTree(src_path).children;
 
 		for(var i in files){
@@ -44,11 +48,17 @@ var createIDX = function(options){
 			var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 			var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
 
+			titles[files[i].name.substr(1)] = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
+
+			if(entry.match(/#{3}\s.+/))
+				title = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
+
 			var mdParser = new Remarkable({
 				"html":true,
 				"linkify": true,
 				"plugins": []
 			});
+
 			entry = mdParser.render(entry);
 
 			this.add({
@@ -62,6 +72,10 @@ var createIDX = function(options){
 	});
 
 	// Now generate the help index
+	lunrIDX = JSON.parse(JSON.stringify(lunrIDX));
+
+	lunrIDX.displayFields = titles;
+
 	jetpack.write(__dirname+'/dist/lunr-help-idx.json', lunrIDX, { jsonIndent: 0 });
 	hfc++;
 	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','lunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
