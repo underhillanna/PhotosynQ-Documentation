@@ -2,11 +2,11 @@
 
 The Console allows you to open a direct channel to your instrument to send commands and get additional information not available through the user interface. When opened while taking a measurement, you can use it to monitor the output.
 
-![Console after running the command `hello` to test the Instrument connection](../images/help/_apps_Desktop_Console_Window.png)
+![Console after running the command `hello` to test the Instrument connection](../images/help/_desktop-app_Console_Window.png)
 
 #### Open the Console
 
-You can bring up the Console window, by selecting **View -> Console** from the top menu bar or use the shortcut `Ctrl+7 / ⌘7`
+You can bring up the Console window, by selecting **View → Console** from the top menu bar or use the shortcut `Ctrl+7 / ⌘7`
 
 #### Sending a Command
 
@@ -28,4 +28,4 @@ When disconnecting an Instrument, the list of commands will be emptied. If you w
 
 #### Available Commands
 
-You can find a list of console commands [here](./_instruments/_Console_Commands) or you can use the command `--help or -h` inside the console. The command will return a list of available commands and a brief description. Use `[command] --help or -h` to get more information about an individual command.
+You can find a list of console commands [here](instruments_Console_Commands) or you can use the command `--help or -h` inside the console. The command will return a list of available commands and a brief description. Use `[command] --help or -h` to get more information about an individual command.

@@ -42,53 +42,93 @@
 
 {{> help/_account_Deactivate_your_PhotosynQ_Account.md}}
 
-## Applications (Mobile and Desktop)
+## Mobile Application
 
-{{> help/_apps_PhotosynQ_for_Android.md}}
-
-***
-
-{{> help/_apps_PhotosynQ_for_Desktops.md}}
+{{> help/_mobile-app_PhotosynQ_for_Android.md}}
 
 ***
 
-{{> help/_apps_Connect_an_Instrument.md}}
+{{> help/_mobile-app_Installation.md}}
 
 ***
 
-{{> help/_apps_My_Projects.md}}
+{{> help/_mobile-app_General.md}}
 
 ***
 
-{{> help/_apps_Adding_Notes_and_Pictures.md}}
+{{> help/_mobile-app_Connect_an_Instrument.md}}
 
 ***
 
-{{> help/_apps_General_-_Desktop.md}}
+{{> help/_mobile-app_Settings.md}}
 
 ***
 
-{{> help/_apps_Application_Settings_-_Desktop.md}}
+{{> help/_mobile-app_Projects.md}}
 
 ***
 
-{{> help/_apps_Projects_-_Desktop.md}}
+{{> help/_mobile-app_Discover.md}}
 
 ***
 
-{{> help/_apps_Notebook_-_Desktop.md}}
+{{> help/_mobile-app_Quick_Measurements.md}}
 
 ***
 
-{{> help/_apps_Protocols_-_Desktop.md}}
+{{> help/_mobile-app_Measurements.md}}
 
 ***
 
-{{> help/_apps_Macros_-_Desktop.md}}
+{{> help/_mobile-app_Adding_Notes_and_Pictures.md}}
+
+## Desktop Application
+
+{{> help/_desktop-app_Installation.md}}
 
 ***
 
-{{> help/_apps_Console_-_Desktop.md}}
+{{> help/_desktop-app_General.md}}
+
+***
+
+{{> help/_desktop-app_Connect_an_Instrument.md}}
+
+***
+
+{{> help/_desktop-app_Settings.md}}
+
+***
+
+{{> help/_desktop-app_Projects.md}}
+
+***
+
+{{> help/_desktop-app_Adding_Notes_and_Pictures.md}}
+
+***
+
+{{> help/_desktop-app_Notebook.md}}
+
+***
+
+{{> help/_desktop-app_Protocols.md}}
+
+***
+
+{{> help/_desktop-app_Macros.md}}
+
+***
+
+{{> help/_desktop-app_Protocol_Editor.md}}
+
+***
+
+{{> help/_desktop-app_Macro_Editor.md}}
+
+***
+
+{{> help/_desktop-app_Console.md}}
 
 ## Projects
 
@@ -188,7 +228,7 @@
 
 ***
 
-{{> help/help/_data_External_Libraries.md}}
+{{> help/_data_External_Libraries.md}}
 
 ***
 

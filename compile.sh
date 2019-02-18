@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-echo -e "\033[92mBuild Master Documents for PhotosynQ\033[0m";
+echo "\033[92mBuild Master Documents for PhotosynQ\033[0m";
 echo "------------------------------------";
 # Empty the distribution folder dist
 echo "Remove previous distribution files"
@@ -8,9 +8,16 @@ rm ./dist/*
 # Get the latest release from Github
 TAG=$(git describe --abbrev=0 --tags)
 DATE=$(git log --tags --simplify-by-decoration --pretty="format:%aI" --max-count=1)
+
+if [ "$1" = "HEAD" ]
+then
+    TAG=$(git rev-parse --short HEAD)
+    DATE=$(git log --simplify-by-decoration --pretty="format:%aI" --max-count=1)
+fi
+
 echo "Compile files for Github tag $TAG ($DATE)";
 mkdir ./dist/tmp/
-git archive -o ./dist/latest.zip --prefix=tmp/ $TAG
+git archive -o ./dist/latest.zip --prefix=tmp/ HEAD
 unzip ./dist/latest.zip -d ./dist -x tmp/src/* tmp/*.sh tmp/package.json tmp/package-lock.json tmp/*.js tmp/README.md tmp/LICENSE
 rm ./dist/latest.zip
 
@@ -51,4 +58,4 @@ rm ./dist/*.md
 rm -r ./dist/tmp
 
 # Compiling finished
-echo -e "\033[92mDone\033[0m";
+echo "\033[92mDone\033[0m";

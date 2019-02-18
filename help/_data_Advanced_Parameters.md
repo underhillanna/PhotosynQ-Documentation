@@ -14,4 +14,4 @@ If you want to show or hide the **Advanced Parameters**, simply select the menu 
 
 #### Creating Macros
 
-In case you are creating a Macro for a Protocol, you can use the `order` key ([more](/macros_Coding_and_Functions)), to provide an array with **Primary Parameters**. Macros without this key/value pair will only output **Primary Parameters**.
+In case you are creating a Macro for a Protocol, you can use the `order` key ([more](macros_Coding_and_Functions)), to provide an array with **Primary Parameters**. Macros without this key/value pair will only output **Primary Parameters**.

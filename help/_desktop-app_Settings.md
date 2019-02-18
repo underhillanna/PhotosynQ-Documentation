@@ -1,12 +1,12 @@
-### Desktop Application Settings
+### Settings - Desktop
 
 You can find the Applications Settings under the **Settings dialog** clicking on **Application**. You can bring up the Settings dialog doing the following:
 
 + Left Menu bar <i class="fa fa-sliders"></i> Settings Icon
-+ **Windows & Linux** Menu->Edit->Preferences
-+ **Mac** Menu->PhotosynQ->Preferences
++ **Windows & Linux** Menu → Edit → Preferences
++ **Mac** Menu → PhotosynQ → Preferences
 
-![Desktop Application Settings Dialog](../images/help/_apps_Desktop_Application_Settings.png)
+![Desktop Application Settings Dialog](../images/help/_desktop-app_Settings.png)
 
 #### Auto Update
 
@@ -16,8 +16,8 @@ When you deactivate the Auto Updates, you will be asked if you want to download 
 
 Every time you open the Application it will check for new updates. If you want to check in between, just select *Check for Updates...* from your Menu.
 
-+ **Windows & Linux** Menu->Edit->Check for Updates...
-+ **Mac** Menu->PhotosynQ->Check for Updates...
++ **Windows & Linux** Menu → Edit → Check for Updates...
++ **Mac** Menu → PhotosynQ → Check for Updates...
 
 #### Reconnect Instrument on Start
 
@@ -51,4 +51,4 @@ All Projects, Protocols, Macros, images, cached Measurements and your Notebook w
 **Clear Cache**
 All Projects, Protocols, Macros and images will be deleted and your data from PhotosynQ will be synchronized again.
 
-***Info:*** Measurements cached and your Notebook will not be deleted.
+***Note:*** Measurements cached and your Notebook will not be deleted.

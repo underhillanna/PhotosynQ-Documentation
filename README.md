@@ -9,13 +9,14 @@ The prefix defines the chapters on the index page <https://photosynq.org/help>.
 | Prefix | Chapter Content |
 | :-- | :-- |
 | \_account\_ | Topics related to the user account on the PhotosynQ website. |
-| \_apps\_ | Topics related to the Desktop and Mobile App. |
+| \_mobile-app\_ | Topics related to the Mobile App. |
+| \_desktop-app\_ | Topics related to the Desktop App. |
 | \_data\_ | Information on how to view collected Data in the Web-Browser. |
 | \_macros\_ | Topics related on using and building Macros. |
 | \_projects\_ | Topics related on setting up and using Projects.|
 | \_protocols\_ | Topics related on using and building Protocols. |
 
-Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Chapter_1.md` This is important since `This_is_the_Chapter_1` will be used as the chapter title: _This is the Chapter 1_.
+Files are named using the prefix and the help title, e.g. `_account_This_is_the_Chapter_1.md` This is important since `This_is_the_Chapter_1` will be used as the chapter title: _This is the Chapter 1_.
 
 ### Account Basics
 
@@ -30,20 +31,31 @@ Files are named using the prefix and the help title, e.g. `_apps_This_is_the_Cha
 + [Sign out of PhotosynQ](help/_account_Sign_out_of_PhotosynQ.md)
 + [Deactivate your PhotosynQ Account](help/_account_Deactivate_your_PhotosynQ_Account.md)
 
-### Applications (Mobile and Desktop)
+### Mobile Application
 
-+ [PhotosynQ for Android](help/_apps_PhotosynQ_for_Android.md)
-+ [PhotosynQ for Desktops](help/_apps_PhotosynQ_for_Desktops.md)
-+ [Connect an Instrument](help/_apps_Connect_an_Instrument.md)
-+ [My Projects](help/_apps_My_Projects.md)
-+ [Adding Notes and Pictures](help/_apps_Adding_Notes_and_Pictures.md)
-+ [General - Desktop](help/_apps_General_-_Desktop.md)
-+ [Application Settings - Desktop](help/_apps_Application_Settings_-_Desktop.md)
-+ [Projects - Desktop](help/_apps_Projects_-_Desktop.md)
-+ [Notebook - Desktop](help/_apps_Notebook_-_Desktop.md)
-+ [Protocols - Desktop](help/_apps_Protocols_-_Desktop.md)
-+ [Macros - Desktop](help/_apps_Macros_-_Desktop.md)
-+ [Console - Desktop](help/_apps_Console_-_Desktop.md)
++ [PhotosynQ for Android](help/_mobile-app_PhotosynQ_for_Android.md)
++ [Installation](help/_mobile-app_Installation.md)
++ [General](help/_mobile-app_General.md)
++ [Connect an Instrument](help/_mobile-app_Connect_an_Instrument.md)
++ [Application Settings](help/_mobile-app_Settings.md)
++ [Projects](help/_mobile-app_Projects.md)
++ [Adding Notes and Pictures](help/_mobile-app_Adding_Notes_and_Pictures.md)
++ [Quick Measurements](help/_mobile-app_Quick_Measurements.md)
+
+### Desktop Application
+
++ [Installation](help/_desktop-app_Installation.md)
++ [General](help/_desktop-app_General.md)
++ [Connect an Instrument](help/_desktop-app_Connect_an_Instrument.md)
++ [Application Settings](help/_desktop-app_Settings.md)
++ [Projects](help/_desktop-app_Projects.md)
++ [Adding Notes and Pictures](help/_desktop-app_Adding_Notes_and_Pictures.md)
++ [Notebook](help/_desktop-app_Notebook.md)
++ [Protocols](help/_desktop-app_Protocols.md)
++ [Macros](help/_desktop-app_Macros.md)
++ [Protocol Editor](help/_desktop-app_Protocol_Editor.md)
++ [Macro Editor](help/_desktop-app_Macro_Editor.md)
++ [Console](help/_desktop-app_app_Console.md)
 
 ### Projects
 
@@ -207,6 +219,14 @@ The standard structure for documenting a command is the following:
 
 To generate one big help document and one tutorials document, use the compile script.
 
+#### Build from latest commit
+
 ```shell
-. compile.sh
+npm run build
+```
+
+#### Build from latest tag (release)
+
+```shell
+npm run release
 ```

@@ -14,7 +14,7 @@ After the measurement is done, select the **Save** button or shortcut `Ctrl+S / 
 
 #### View Measurements
 
-To view a list of your taken measurements you can select **Notebook** from the left side bar, you can select **View -> Notebook** from the top menu bar or you can use the shortcut `Ctrl+2 / ⌘2`.
+To view a list of your taken measurements you can select **Notebook** from the left side bar, you can select **View → Notebook** from the top menu bar or you can use the shortcut `Ctrl+2 / ⌘2`.
 
 The measurements you have taken, are listed by experiments. If you want to change the sorting, use the **Sort by** dropdown menu above the table.
 A click on a measurement will bring up details in the side bar on the right. You can also use the up and down arrow keys to navigate within the list.
@@ -47,10 +47,10 @@ To more easily find important measurements, you can mark them as favorites by se
 
 You can share measurements with others, by exporting them from the Notebook. Select the measurements by checking the checkboxes in the measurement list. Then pick **Export Selected** from the **Action** dropdown menu above the measurement list. Enter a filename and save the selected measurements to a location on your hard-drive.
 
-You can export the whole Notebook (consider this a backup), by selecting **File -> Export Notebook** from the main menu bar. Enter a filename and save the entire notebook to a location on your hard-drive.
+You can export the whole Notebook (consider this a backup), by selecting **File → Export Notebook** from the main menu bar. Enter a filename and save the entire notebook to a location on your hard-drive.
 
 #### Import Measurements / Notebook
 
-To import a set of exported measurements or an entire Notebook, simply select **File -> Import Notebook** from the main menu bar. Select the file you want to import from your local hard-drive and data will be imported into your Notebook.
+To import a set of exported measurements or an entire Notebook, simply select **File → Import Notebook** from the main menu bar. Select the file you want to import from your local hard-drive and data will be imported into your Notebook.
 
 ***Note:*** Duplicates will be imported without a warning.

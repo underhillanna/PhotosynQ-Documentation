@@ -2,24 +2,9 @@
 
 Taking measurements in the field, on the move? You can use the app to find and join Projects, take measurements and contribute them.
 
-#### Which Android Versions are supported?
+#### Supported Android Versions
 
 Currently Android v4.4 or greater is supported. Below you find a list with compatible devices. However some devices might experience issues. In this case help us and send us an email at <support@photosynq.org>.
-
-#### Download the PhotosynQ app
-
-1. Search for **PhotosynQ** in the [Google Play store](https://play.google.com/).
-2. Tab the **Install** button. Check your permissions and **Accept**
-
-#### Troubleshooting
-
-Sometimes the app does not work as expected. Please try this first:
-
-- Make sure you have the latest version of the app.
-- Make sure you have the latest Android Updates installed.
-- Restart the app.
-- Make sure you have sufficient storage.
-- Make sure you have an internet connection.
 
 ### Compatible Android Devices
 

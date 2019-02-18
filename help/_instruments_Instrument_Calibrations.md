@@ -12,7 +12,7 @@ When using the Desktop App in order to repeat the Instrument Calibrations, follo
 2. Select **Instrument** from the **Settings** dialog.
 3. Depending on the connected Instrument, you will see your available calibrations.
 
-![Settings Dialog to show available Instrument calibrations.](../images/help/_instrument_Instrument_Settings_Desktop_App.png)
+![Settings Dialog to show available Instrument calibrations.](../images/help/_instruments_Instrument_Settings_Desktop_App.png)
 
 #### Calibrations MultispeQ v1.0
 
