@@ -23,11 +23,11 @@ A chi-square test for independence compares two parameters in a Project to see i
 ### Advanced Analysis
 These are basic tutorials on how to do advanced data analysis outside the data viewer and use the available packages.
 
-| Tutorial | Python | R-Studio |
-| :-- | :--: | :--: |
-| Import PhotosynQ Data| [View][Python-View1] | [View][R-View1] \| [PDF][R-PDF1] \| [.Rmd][R-Rmd1] |
-| Anova and Multivariate Analysis | &times; | [View][R-View2] \| [PDF][R-PDF2] \| [.Rmd][R-Rmd2] |
-| Correlation and Mixed Effects | &times; | [View][R-View3] \| [PDF][R-PDF3] \| [.Rmd][R-Rmd3] |
+| Tutorial                        |        Python        |                      R-Studio                    |
+| :------------------------------ | :------------------: | :----------------------------------------------: |
+| Import PhotosynQ Data           | [View][Python-View1] | [View][R-View1] ǀ [PDF][R-PDF1] ǀ [.Rmd][R-Rmd1] |
+| Anova and Multivariate Analysis |          ×           | [View][R-View2] ǀ [PDF][R-PDF2] ǀ [.Rmd][R-Rmd2] |
+| Correlation and Mixed Effects   |          ×           | [View][R-View3] ǀ [PDF][R-PDF3] ǀ [.Rmd][R-Rmd3] |
 
 
 
