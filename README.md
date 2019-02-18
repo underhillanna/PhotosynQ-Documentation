@@ -37,17 +37,19 @@ Files are named using the prefix and the help title, e.g. `_account_This_is_the_
 + [Installation](help/_mobile-app_Installation.md)
 + [General](help/_mobile-app_General.md)
 + [Connect an Instrument](help/_mobile-app_Connect_an_Instrument.md)
-+ [Application Settings](help/_mobile-app_Settings.md)
++ [Settings](help/_mobile-app_Settings.md)
 + [Projects](help/_mobile-app_Projects.md)
-+ [Adding Notes and Pictures](help/_mobile-app_Adding_Notes_and_Pictures.md)
++ [Discover](help/_mobile-app_Discover.md)
 + [Quick Measurements](help/_mobile-app_Quick_Measurements.md)
++ [Measurements](help/_mobile-app_Measurements.md)
++ [Adding Notes and Pictures](help/_mobile-app_Adding_Notes_and_Pictures.md)
 
 ### Desktop Application
 
 + [Installation](help/_desktop-app_Installation.md)
 + [General](help/_desktop-app_General.md)
 + [Connect an Instrument](help/_desktop-app_Connect_an_Instrument.md)
-+ [Application Settings](help/_desktop-app_Settings.md)
++ [Settings](help/_desktop-app_Settings.md)
 + [Projects](help/_desktop-app_Projects.md)
 + [Adding Notes and Pictures](help/_desktop-app_Adding_Notes_and_Pictures.md)
 + [Notebook](help/_desktop-app_Notebook.md)
@@ -55,7 +57,7 @@ Files are named using the prefix and the help title, e.g. `_account_This_is_the_
 + [Macros](help/_desktop-app_Macros.md)
 + [Protocol Editor](help/_desktop-app_Protocol_Editor.md)
 + [Macro Editor](help/_desktop-app_Macro_Editor.md)
-+ [Console](help/_desktop-app_app_Console.md)
++ [Console](help/_desktop-app_Console.md)
 
 ### Projects
 

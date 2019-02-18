@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-echo "\033[92mBuild Master Documents for PhotosynQ\033[0m";
+echo -e "\033[92mBuild Master Documents for PhotosynQ\033[0m";
 echo "------------------------------------";
 # Empty the distribution folder dist
 echo "Remove previous distribution files"
@@ -58,4 +58,4 @@ rm ./dist/*.md
 rm -r ./dist/tmp
 
 # Compiling finished
-echo "\033[92mDone\033[0m";
+echo -e "\033[92mDone\033[0m";
