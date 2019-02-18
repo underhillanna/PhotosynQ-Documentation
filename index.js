@@ -15,6 +15,7 @@ const sizeOf = require('image-size');
 const markdownLinkCheck = require('markdown-link-check');
 const chalk = require('chalk');
 const hljs = require('highlight.js');
+const hljsLinenums = require('code-highlight-linenums');
 const puppeteer = require('puppeteer');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
@@ -458,12 +459,20 @@ function compileHTML(md){
 		highlight: function (str, lang) {
 			if (lang && hljs.getLanguage(lang)) {
 			  try {
-				return hljs.highlight(lang, str).value;
+				return hljsLinenums(str.trim(), {
+					hljs: hljs,
+					lang: lang,
+					start: 1
+				});
 			  } catch (err) {}
 			}
 
 			try {
-			  return hljs.highlightAuto(str).value;
+				return hljsLinenums(str.trim(), {
+					hljs: hljs,
+					lang: 'auto',
+					start: 1
+				});
 			} catch (err) {}
 
 			return ''; // use external default escaping
@@ -544,6 +553,10 @@ var createPDF = function (options){
 		});
 
 		await page.addStyleTag({
+			path: jetpack.path(__dirname, "src", "css", "linenumbers.css")
+		});
+
+		await page.addStyleTag({
 			path: jetpack.path(__dirname, "node_modules", "highlight.js", "styles", "github.css")
 		});
 
@@ -585,6 +598,7 @@ var createEPUB = function (){
 	var cwd = jetpack.cwd();
 	var cssString = jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) );
 	cssString += jetpack.read( jetpack.path( cwd, "node_modules", "highlight.js", "styles", "github.css") );
+	cssString += jetpack.read( jetpack.path( cwd, "src", "css", "linenumbers.css") );
 	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome');
 
   var option = {
@@ -598,12 +612,12 @@ var createEPUB = function (){
 		tocTitle: 'Contents',
 		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
 		customOpfTemplatePath: './src/templates/content.opf.ejs',
-    cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
+    	cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
 		content: [],
 		remarkable: {
-			"html":true,
-			"linkify": true,
-			"plugins": []
+			html:true,
+			linkify: true,
+			plugins: []
 		},
 		verbose: true
 	};
