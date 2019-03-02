@@ -11,10 +11,11 @@ Once you have selected the Project that you want to contribute measurements to, 
 ***Tips:*** If you are using the default protocol **Leaf Photosynthesis v1.0** the measurement will automatically start once you have opened the clamp and closed it over the leaf. Other protocols the measurement may begin as soon as you select **Take Measurement**. - **Make sure you know when the protocol you are using begins!**
 
 #### Best Measurement Practices
+
    - Do not position your body so you are shading the leaf or the light sensor (A)
    - Do not pull the leaf out of the shade and into the sun or vice versa
    - Do not change the angle of the leaf, this will change how the leaf is intercepting light
-   - In order for the compass measurement to be accurate, clamp the leaf on the left side when facing the stem. 
+   - In order for the compass measurement to be accurate, clamp the leaf on the left side when facing the stem.
    - Make sure the leaf completely covers the light guide (B). If the leaves you are measuring are too small, you may need to [mask](https://photosynqprod.s3.amazonaws.com/files/photosynq.org/specialfeatures/measuring-small-leaves.pdf) the light guides and recalibrate the MultispeQ
 
 ![Best Measurement Practices](../images/tutorials/_data_collection_clamp_leaf.jpg)
@@ -32,6 +33,7 @@ The graphical representation of the measurement is called a **trace**. The param
 ![Understanding a Measurement](../images/tutorials/_data_collection_results.jpg)
 
 #### Most Important Parameters
+
 Here is a list of the most important parameters and their typical ranges. If your measurement is outside of the given ranges, your measurement may be bad and you may want to discard it and redo the measurement.
 
 |   Parameter  | About |
@@ -71,6 +73,7 @@ To take another measurement, click on **new measurement**.
 #### Submit Cached Data
 
 If you would prefer to manually submit your data, or to limit the auto upload feature to when you have wifi connection only (to avoid using mobile data), go to the **Settings** tab in the mobile app menu.
+
 - This provides you more freedom to reconfirm all the measurements before submitting them to the website.
 - Before measurements are submitted to the website, you can add notes, pictures, or even delete measurements directly from the **Measurements** tab.
 
