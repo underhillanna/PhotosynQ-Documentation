@@ -36,17 +36,6 @@ This is all we need to record the photosystem II quantum efficiency, or Phi2. Th
 
 A measurement is divided into pulses. Pulses can be grouped into pulse sets. The example below shows a total of **4,090** pulses grouped into **4** pulse sets. Most of the following parameters require you to define those **4** groups. `pulses` defines those groups, `pulse_distance` defines how far apart each pulse is (in *µs*). The command `pulse_length` defines the pulse duration in *µs*.
 
-**Table View**
-
-| pulses | pulse_distance | pulse_length |
-| :-- | :-- |  :-- |
-| 4000 | 1000 |  30 |
-| 20 | 10000 | 30 |
-| 50 | 10000 | 30 |
-| 20 | 10000 | 30 |
-
-**Advanced View**
-
 ```javascript
 [
     {
@@ -69,15 +58,6 @@ A measurement is divided into pulses. Pulses can be grouped into pulse sets. The
 #### Pulsed lights
 
 Once we have defined are pulse groups, we need to define the lights we want to use to probe the fluorescence. `pulsed_lights` defines which lights are pulsed during each pulse set. `0` means that there is no light pulsing, `3` uses the 605 nm LED (amber), Lumileds LXZ1-PL01. `pulsed_lights_brightness` defines the light intensity of each pulse. Since multiple lights can be pulsed, lights or brightness are written like `[3]` this and not simply like `3`. Multiple light would be written in this way: `[2,3]`.
-
-**Table View**
-
-| pulsed_lights | pulsed_lights_brightness |
-| :-- | :-- |
-| 0 | 0 |
-| 3 | 2000 |
-| 3 | 2000 |
-| 3 | 2000 |
 
 **Advanced View**
 
@@ -102,15 +82,6 @@ Once we have defined are pulse groups, we need to define the lights we want to u
 
 In this protocol we need an actinic light (which is not pulsed), so the plant has light available to continue doing photosynthesis during the measurement. To set the intensity we use the command `light_intensity` to reproduce the ambient light intensity, which is recorded by the PAR sensor. Light `2` is the 655 nm LED (red), Lumileds LXZ1-PA01.
 
-**Table View**
-
-| nonpulsed_lights | nonpulsed_lights_brightness |
-| :-- | :-- |
-| 2 | light_intensity |
-| 2 | light_intensity |
-| 2 | 4500 |
-| 2 | light_intensity |
-
 **Advanced View**
 
 ```javascript
@@ -131,16 +102,8 @@ In this protocol we need an actinic light (which is not pulsed), so the plant ha
 ***
 
 #### Detectors
+
 Next we have to define the detector we want to use to record the fluorescence coming off the leaf. We use the command `detectors` to define which detector we will use for each pulse set. Since we can use multiple detectors per pulse set we use `[1]` instead of the `1` notation (using two detectors would look like this: `[1,2]`). When the detector is set to `0` no data is captured. Detector `1` is the 700 nm - 1150 nm, Hamamatsu S6775-01.
-
-**Table View**
-
-| detectors |
-| :-- |
-| 0 |
-| 1 |
-| 1 |
-| 1 |
 
 **Advanced View**
 
@@ -162,19 +125,6 @@ Next we have to define the detector we want to use to record the fluorescence co
 
 To record the ambient light intensity required for the non pulsed lights intensity, we have to add a command to include the PAR sensor using `light_intensity`. This is also where you could add other environmental parameters like temperature, relative humidity, etc, depending on the sensors available in your Instrument.
 
-**Table View (Fixed)**
-
-```
-    environmental
-    [
-        [
-            "light_intensity"
-        ]
-    ]
-```
-
-**Advanced View**
-
 ```javascript
 [
     {
@@ -193,15 +143,6 @@ To record the ambient light intensity required for the non pulsed lights intensi
 
 To start the measurement as soon as we have clamped the leaf, in order to perturb it as little as possible, we add the following command: `1` indicates the measurement starts as soon as the clamp is closed and `0` starts the measurement as soon as you select `Start Measurement` on your device.
 
-**Table View (Fixed)**
-
-```
-    open_close_start
-    1
-```
-
-**Advanced View**
-
 ```javascript
 [
     {
@@ -216,29 +157,6 @@ To start the measurement as soon as we have clamped the leaf, in order to pertur
 ### The final Protocol
 
 Putting all the pieces together, the protocol to measure Phi2 looks like this:
-
-**Table View**
-
-| pulses | pulse_distance | pulse_length | pulsed_lights | pulsed_lights_brightness | nonpulsed_lights | nonpulsed_lights_brightness | detectors |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 4000 | 1000 | 30 | 0 | 0 | 2 | light_intensity | 0 |
-| 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
-| 50 | 10000 | 30 | 3 | 2000 | 2 | 4500 | 1 |
-| 20 | 10000 | 30 | 3 | 2000 | 2 | light_intensity | 1 |
-
-```
-    environmental
-    [
-        [
-            "light_intensity"
-        ]
-    ]
-
-    open_close_start
-    1
-```
-
-**Advanced View**
 
 ```javascript
 [

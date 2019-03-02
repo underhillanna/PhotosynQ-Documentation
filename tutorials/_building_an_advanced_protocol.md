@@ -4,8 +4,6 @@ In the previous tutorial we showed you how to write a Protocol for a simple Phi2
 
 ***Tip:*** The advantage of using a Protocol with a _Protocol set_, rather selecting multiple Protocols to be executed one after another is, that your Macro has access to all protocols inside that set.
 
-***Note:*** At this point you can only edit Protocols with **Protocol Sets** using the **Advanced View**.
-
 ### Protocol Sets
 
 The key to chain multiple Protocols together into one is the `_protocol_set_` command. In the example below, you see how the command is used inside a Protocol. All Protocols you would like to execute as one you can put into the `_protocol_set_` array. For example you can copy and paste existing protocols into the `_protocol_set_: [...]`. Make sure you remove the square brackets <code><s>[</s>{Protocol}<s>]</s></code> before you add the Protocol into the **Protocol Set**.
