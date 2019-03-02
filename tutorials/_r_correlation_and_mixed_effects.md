@@ -10,6 +10,7 @@ However, in this tutorial,the data was transformed in a csv file so we cannot ge
 The first step will be to generate a correlation matrix of crop yield against the mean of each PhotosynQ parameter. Next, we will use a mixed effect model to account for factors that affect the PhotosynQ parameters: 1) light intensity, 2) time of measurement, 3) location within the field, etc.
 
 ### Import Libraries
+
 ```{r}
 library("broom")
 library("dplyr")
@@ -21,8 +22,7 @@ library("lme4")
 
 ### Simple Correlation
 
-We will use the dataset 'sun2.' This dataset contains the mean values of each PhotosynQ parameter and the crop yield for each plot. 
-
+We will use the dataset 'sun2.' This dataset contains the mean values of each PhotosynQ parameter and the crop yield for each plot.
 
 First, we need to open up our data file.
 
@@ -87,7 +87,6 @@ Now, we will use a mixed effect model to generate adjusted coefficients for each
 
 We will use the dataset 'sun,' which is the same dataset used in the "ANOVA and multivariate analysis tutorial."
 
-
 First, we need to read our data file
 
 ```{r}
@@ -106,7 +105,6 @@ We need to set block to a categorical variable
 ```{r}
 data$Block <- factor(data$Block, ordered = TRUE)
 ```
-
 
 Now we will run a mixed effect model for SPAD. We will set block as a random effect. Plot is the fixed effect whose coefficient we are interested in.
 
