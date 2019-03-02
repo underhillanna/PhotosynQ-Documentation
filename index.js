@@ -15,6 +15,7 @@ const sizeOf = require('image-size');
 const markdownLinkCheck = require('markdown-link-check');
 const chalk = require('chalk');
 const hljs = require('highlight.js');
+const hljsLinenums = require('code-highlight-linenums');
 const puppeteer = require('puppeteer');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
@@ -31,11 +32,15 @@ var createIDX = function(options){
 		console.log(chalk.red('Error:') + ' Source files not found');
 		return;
 	}
+
+	var titles = {};
+
 	var lunrIDX = lunr(function(){
 		this.field('title');
 		this.field('content');
 		// the id
 		this.ref('href');
+
 		var files = jetpack.inspectTree(src_path).children;
 
 		for(var i in files){
@@ -44,11 +49,17 @@ var createIDX = function(options){
 			var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
 			var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
 
+			titles[files[i].name.substr(1)] = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
+
+			if(entry.match(/#{3}\s.+/))
+				title = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
+
 			var mdParser = new Remarkable({
 				"html":true,
 				"linkify": true,
 				"plugins": []
 			});
+
 			entry = mdParser.render(entry);
 
 			this.add({
@@ -62,6 +73,10 @@ var createIDX = function(options){
 	});
 
 	// Now generate the help index
+	lunrIDX = JSON.parse(JSON.stringify(lunrIDX));
+
+	lunrIDX.displayFields = titles;
+
 	jetpack.write(__dirname+'/dist/lunr-help-idx.json', lunrIDX, { jsonIndent: 0 });
 	hfc++;
 	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','lunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
@@ -444,12 +459,20 @@ function compileHTML(md){
 		highlight: function (str, lang) {
 			if (lang && hljs.getLanguage(lang)) {
 			  try {
-				return hljs.highlight(lang, str).value;
+				return hljsLinenums(str.trim(), {
+					hljs: hljs,
+					lang: lang,
+					start: 1
+				});
 			  } catch (err) {}
 			}
 
 			try {
-			  return hljs.highlightAuto(str).value;
+				return hljsLinenums(str.trim(), {
+					hljs: hljs,
+					lang: 'auto',
+					start: 1
+				});
 			} catch (err) {}
 
 			return ''; // use external default escaping
@@ -530,6 +553,10 @@ var createPDF = function (options){
 		});
 
 		await page.addStyleTag({
+			path: jetpack.path(__dirname, "src", "css", "linenumbers.css")
+		});
+
+		await page.addStyleTag({
 			path: jetpack.path(__dirname, "node_modules", "highlight.js", "styles", "github.css")
 		});
 
@@ -571,6 +598,7 @@ var createEPUB = function (){
 	var cwd = jetpack.cwd();
 	var cssString = jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) );
 	cssString += jetpack.read( jetpack.path( cwd, "node_modules", "highlight.js", "styles", "github.css") );
+	cssString += jetpack.read( jetpack.path( cwd, "src", "css", "linenumbers.css") );
 	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome');
 
   var option = {
@@ -584,12 +612,12 @@ var createEPUB = function (){
 		tocTitle: 'Contents',
 		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
 		customOpfTemplatePath: './src/templates/content.opf.ejs',
-    cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
+    	cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
 		content: [],
 		remarkable: {
-			"html":true,
-			"linkify": true,
-			"plugins": []
+			html:true,
+			linkify: true,
+			plugins: []
 		},
 		verbose: true
 	};
