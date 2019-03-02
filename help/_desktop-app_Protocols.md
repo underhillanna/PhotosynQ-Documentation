@@ -2,6 +2,8 @@
 
 Protocols are programming the instrument to run a measurement. To work with Protocols you can select **Protocols** from the left side bar, you can select **View → Protocols** from the top menu bar or you can use the shortcut `Ctrl+3 / ⌘3`.
 
+![The Protocol List](../images/help/_desktop-app_Protocols_List.png)
+
 **My Protocols** shows a list of Protocols you have created. **Explore** will provide a list of all Protocols currently available on the Platform. Click on the list headers to sort the list of Macros by name, creator and date.
 
 A **single click** on a Protocol from the list will bring up details about the Macro in the right side bar. Here you can also see the discussion around the macro as well as add new comments. A **double click** will directly run the Protocol.
