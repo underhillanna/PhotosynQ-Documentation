@@ -8,23 +8,34 @@ An internet connection is required when starting the app, to sign in and synchro
 
 #### Keyboard Shortcuts
 
-| Windows / Linux | Mac    | Description                                                       |
-| :-------------- | :----- | :---------------------------------------------------------------- |
-| Ctrl+1          | ⌘1     | Show Project List                                                 |
-| Ctrl+2          | ⌘2     | Show Notebook                                                     |
-| Ctrl+3          | ⌘3     | Show Protocol List                                                |
-| Ctrl+4          | ⌘4     | Show Macro List                                                   |
-| Ctrl+5          | ⌘5     | Show Protocol Editor                                              |
-| Ctrl+6          | ⌘6     | Show Macro Editor                                                 |
-| Ctrl+7          | ⌘7     | Open Instrument Console                                           |
-| Ctrl+F          | ⌘F     | Search                                                            |
-| Ctrl+S          | ⌘S     | Save - Protocol / Macro / Measurement                             |
-| Shift+Ctrl+S    | ⇧⌘S    | Save As - Protocol / Macro / Measurement                          |
-| Ctrl+Alt+S      | ⌃⌘S    | Synchronize Application with PhotosynQ                            |
-| Ctrl+Space      | ⌥Space | Show available Commands and Function in Protocol and Macro Editor |
-| Ctrl+Shift+R    | ⌥⇧R    | Manually run a Macro calculation in the Editor                    |
-| Ctrl+Comma      | ⌘,     | Open Preferences                                                  |
-| Ctrl+Q          | ⌘Q     | Close Application                                                 |
+| Windows / Linux | Mac  | Description                              |
+| :-------------- | :--- | :--------------------------------------- |
+| Ctrl+1          | ⌘1   | Show Project List                        |
+| Ctrl+2          | ⌘2   | Show Notebook                            |
+| Ctrl+3          | ⌘3   | Show Protocol List                       |
+| Ctrl+4          | ⌘4   | Show Macro List                          |
+| Ctrl+5          | ⌘5   | Show Protocol Editor                     |
+| Ctrl+6          | ⌘6   | Show Macro Editor                        |
+| Ctrl+7          | ⌘7   | Open Instrument Console                  |
+| Ctrl+F          | ⌘F   | Search                                   |
+| Ctrl+S          | ⌘S   | Save - Protocol / Macro / Measurement    |
+| Shift+Ctrl+S    | ⇧⌘S  | Save As - Protocol / Macro / Measurement |
+| Ctrl+Alt+S      | ⌃⌘S  | Synchronize Application with PhotosynQ   |
+| Ctrl+Comma      | ⌘,   | Open Preferences                         |
+
+##### Protocol & Macro Editor
+
+| Windows / Linux | Mac    | Description                           |
+| :-------------- | :----- | :------------------------------------ |
+| Ctrl-F          | ⌘-F    | Search                                |
+| Ctrl-H          | ⌘⌥F    | Replace                               |
+| Ctrl+Space      | ^Space | Show available Commands and Functions |
+| Ctrl+Shift+R    | ⌥⇧R    | Manually run a Macro calculation      |
+| Ctrl++          | ⌘+     | Increase Font Size                    |
+| Ctrl+-          | ⌘-     | Decrease Font Size                    |
+| Ctrl+0          | ⌘0     | Reset Font Size                       |
+
+***Tip:*** More shortcuts for the Editors [here](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts)
 
 #### Energy Saving
 
