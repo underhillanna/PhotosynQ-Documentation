@@ -1,6 +1,6 @@
 ### Macro Editor - Desktop
 
-![1. Menu Bar, 2. Code Editor, 3. Traces and 4. Macro Output](../images/help/_desktop-app_Macro_Editor.png)
+![The Macro Editor Window](../images/help/_desktop-app_Macro_Editor.png)
 
 #### 1. Menu Bar
 
@@ -36,6 +36,6 @@ Most Protocols use at last one of the detectors record traces or spectra. To mak
 
 #### 5. Macro Output
 
-The Macro is executed as you are writing the code, so you can see for example, how changes in an equation affect the output in real time. By default this automatic calculation is activated, indicated by the checkbox labeled with **Auto**. In some cases, the calculations can cause the editor to behave sluggish, especially when you output a lot of traces. In this case you can deactivate the automatic calculations by removing the check from the checkbox. To see the Macro output you can run a calculation using the keyboard shortcut `Ctrl+Shift+R / ⌥⇧R`.
+The Macro is executed as you are writing the code, so you can see for example, how changes in an equation affect the output in real time. By default this automatic calculation is activated, indicated by the checkbox labeled with **Auto**. In some cases, the calculations can cause the editor to behave sluggish, especially when you output a lot of traces. In this case you can deactivate the automatic calculations by removing the check from the checkbox. To see the Macro output you can run a calculation using the keyboard shortcut `Ctrl+Shift+R / ⌥⇧R` or `Ctrl+Enter / ⌘Enter`.
 
 ***Tip:*** Make sure you test your Macro extensively, using multiple measurements. Otherwise, you might end up with a large number of failed calculations.
