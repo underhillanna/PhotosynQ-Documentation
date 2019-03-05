@@ -4,6 +4,8 @@ While most users will use a mobile device in the field to collect data for Proje
 
 To work with Projects you can select **Projects** from the left side bar, you can select **View → Projects** from the top menu bar or you can use the shortcut `Ctrl+1 / ⌘1`.
 
+![The Project List](../images/help/_desktop-app_Project_List.png)
+
 #### My Projects
 
 When working with Projects, you will find a list of all the Projects you have join under **My Projects**. You can sort the list of Projects, by clicking on the table headers.
@@ -53,6 +55,8 @@ Some Projects cannot be joined, since they are only accessible to a small group 
 #### Contributing to a Project
 
 To contribute to a Project, select a Project from the **My Projects** list and click on the **Contribute** button in the right side bar or just double click on the Project in the list. You can always go back to the list of your Projects by clicking on the **back** button in front on the Project title on the top.
+
+![Contributions to a Project with Project Questions, including Multiple Choice, Short Answer, Adding Images](../images/help/_desktop-app_Project_Contribute.png)
 
 A list of all available Project questions will displayed and depending on the type of question you will have the following input options:
 
