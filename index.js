@@ -159,7 +159,6 @@ var commands = function(options){
 		output += 'Values: '+ chalk.grey( (cmd.values.join(', ') || '') +'\n');
 		output += 'Example: '+ chalk.grey(cmd.example+'\n');
 		output += 'Type: '+ chalk.grey(cmd.type+'\n');
-		output += 'Editor: '+ chalk.grey(cmd.editor+'\n');
 		output += 'Instruments:\n';
 
 		var instruments = Object.keys(cmd.compatibility);
@@ -251,9 +250,6 @@ var commands = function(options){
 
 				if(content.example != "" && content.type == 'protocol')
 					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
-
-				if(content.editor != "" && content.type == 'protocol')
-					document += '**Editor:** '+ content.editor +'\n\n';
 
 				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
 
