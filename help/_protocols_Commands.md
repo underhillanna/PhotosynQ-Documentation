@@ -6,7 +6,7 @@ Protocols are separate units which produce separate data sets. Using `_protocol_
 
 **Note:** This is different from chaining protocols together in a project. There, the protocols are still separate units within a measurement.
 
-**Input:** array
+**Input:** [array]
 
 **Example:**
 
@@ -16,8 +16,6 @@ Protocols are separate units which produce separate data sets. Using `_protocol_
    ...
 ],
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -47,8 +45,6 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 ],
 ```
 
-**Editor:** fixed
-
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035`
@@ -60,7 +56,7 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 
 `averages` sets the number of times to average the protocol. The protocol will be repeated equal to the number of averages, and the resulting data will be averaged and outputted as a single data point. Averaging is often used to reduce noise and improve the quality of measurements.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -71,8 +67,6 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 ```Javascript
 "averages": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -97,8 +91,6 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 "averages_delay": <number>,
 ```
 
-**Editor:** fixed
-
 **Dependancies:**
 
 + averages
@@ -116,7 +108,7 @@ When `dac_lights` is set to 1, `pulsed_lights_brightness` and `nonpulsed_lights_
 
 **Note:** Setting brightness to high using raw DAC values could permanently disable LEDs, so be careful!
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -127,8 +119,6 @@ When `dac_lights` is set to 1, `pulsed_lights_brightness` and `nonpulsed_lights_
 ```Javascript
 "dac_lights": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -156,8 +146,6 @@ When `dac_lights` is set to 1, `pulsed_lights_brightness` and `nonpulsed_lights_
 ],
 ```
 
-**Editor:** table
-
 **Dependancies:**
 
 + pulses
@@ -179,7 +167,7 @@ Adjusting Energy Save Timeout Time. The value of time is in milliseconds, and mu
 
 **Important:** Note that the change in `energy_save_timeout` will remain in effect until the instrument is reset, when it will return to the default value of 120 s.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -190,8 +178,6 @@ Adjusting Energy Save Timeout Time. The value of time is in milliseconds, and mu
 ```Javascript
 "energy_save_timeout": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -217,8 +203,6 @@ The returned sensor values from most `environmental` calls are accessible inside
 ],
 ```
 
-**Editor:** fixed
-
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035` `1.17` `1.16` `1.14` `1.11` `1.10` `1.08` `1.07` `1.06`
@@ -240,8 +224,6 @@ The returned sensor values from most `environmental` calls are accessible inside
   ...
 ],
 ```
-
-**Editor:** fixed
 
 **Dependancies:**
 
@@ -271,15 +253,13 @@ The returned sensor values from most `environmental` calls are accessible inside
 
 Each protocol or sub-protocol can now output a `label` that can be used to indicate something about the protocol, conditions etc.
 
-**Input:** string
+**Input:** [string]
 
 **Example:**
 
 ```Javascript
 "label": <string>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -292,15 +272,13 @@ Each protocol or sub-protocol can now output a `label` that can be used to indic
 
 This parameter sets the time (in ms) at which the hold commands timeout. The default value is 15000, or 15 seconds. This value applies to the following control points: `start_on_open`, `start_on_close`, `start_on_open_close`.
 
-**Input:** number
+**Input:** [number]
 
 **Example:**
 
 ```Javascript
 "max_hold_time": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -327,8 +305,6 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
   ...
 ],
 ```
-
-**Editor:** table
 
 **Dependancies:**
 
@@ -361,8 +337,6 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
   ...
 ],
 ```
-
-**Editor:** table
 
 **Dependancies:**
 
@@ -397,8 +371,6 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 ],
 ```
 
-**Editor:** table
-
 **Dependancies:**
 
 + pulses
@@ -417,7 +389,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 `number_samples` sets the number of samples taken by the ADC (analog to digital converter) on the sample and hold circuit. The median value of these samples is then saved as a single detector value in "data_raw".  The ADC is used to measure the detectors (1 - 4).  This value is already set to the optimum value, and most signal noise comes from other source, but in certain cases increasing the value may yield improved signal.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -428,8 +400,6 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 ```Javascript
 "number_samples": <number>,
 ```
-
-**Editor:** fixed
 
 **Dependancies:**
 
@@ -449,7 +419,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 When `open_close_start` is set to 1, the protocol waits until the user fully opens the clamp and closes the clamp before proceeding.  Also works if the clamp starts fully open and then closes.  Open and close is detected using the Hall effect sensor on the main body and magnet on the clamp (same sensor used to determine sample thickness).  If the device is not calibrated, or calibration is off, or the clamping mechanism does not fully open or close, this function will not work.  Calibration details can be found by typing print_memory into the console - see thickness_a, thickness_b, thickness_c, thickness_min, and thickness_max for relevant calibration values.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -460,8 +430,6 @@ When `open_close_start` is set to 1, the protocol waits until the user fully ope
 ```Javascript
 "open_close_start": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -474,15 +442,13 @@ When `open_close_start` is set to 1, the protocol waits until the user fully ope
 
 The Ambient light is recreated inside the instrument on closing the clamp. During the hold time, the ambient light is resampled in ~100 ms intervals and the LED output is adjusted to match. When the hold event occurs (e.g. the clamp is closed), the final ambient intensity and LED setting are held and used in the protocol. The number for the LED is defining the LED used for matching the ambient light intensity.
 
-**Input:** number
+**Input:** [number]
 
 **Example:**
 
 ```Javascript
 "par_led_start_on_close": <number for LED>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -495,15 +461,13 @@ The Ambient light is recreated inside the instrument on closing the clamp. Durin
 
 The Ambient light is recreated inside the instrument on opening the clamp. During the hold time, the ambient light is resampled in ~100 ms intervals and the LED output is adjusted to match. When the hold event occurs (e.g. the clamp is closed), the final ambient intensity and LED setting are held and used in the protocol. The number for the LED is defining the LED used for matching the ambient light intensity.
 
-**Input:** number
+**Input:** [number]
 
 **Example:**
 
 ```Javascript
 "par_led_start_on_open": <number for LED>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -516,15 +480,13 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 The Ambient light is recreated inside the instrument on opening the clamp. During the hold time, the ambient light is resampled in ~100 ms intervals and the LED output is adjusted to match. When the hold event occurs (e.g. the clamp is closed), the final ambient intensity and LED setting are held and used in the protocol. The number for the LED is defining the LED used for matching the ambient light intensity.
 
-**Input:** number
+**Input:** [number]
 
 **Example:**
 
 ```Javascript
 "par_led_start_on_open_close": <number for LED>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -537,7 +499,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 `protocols` sets the number of times to repeat the protocol. Unlike `averages`, this outputs data every time the protocol is repeated (instead of averaging the repeats and outputting data only once).
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -548,8 +510,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 ```Javascript
 "protocols": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -574,8 +534,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 "protocols_delay": <number>,
 ```
 
-**Editor:** fixed
-
 **Dependancies:**
 
 + protocols
@@ -591,7 +549,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 `pulse_distance` defines the distance, in microseconds (µs) between pulses.
 
-**Input:** array
+**Input:** [array]
 
 **Values:**
 
@@ -605,8 +563,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
   ...
 ],
 ```
-
-**Editor:** table
 
 **Dependancies:**
 
@@ -641,8 +597,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 ],
 ```
 
-**Editor:** table
-
 **Dependancies:**
 
 + pulses
@@ -675,8 +629,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
   ...
 ],
 ```
-
-**Editor:** table
 
 **Dependancies:**
 
@@ -711,8 +663,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 ],
 ```
 
-**Editor:** table
-
 **Dependancies:**
 
 + pulses
@@ -731,7 +681,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 `pulses` defines the number of pulse sets, and quantity of pulses per set.
 
-**Input:** array
+**Input:** [array]
 
 **Values:**
 
@@ -745,8 +695,6 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
   ...
 ],
 ```
-
-**Editor:** table
 
 **Dependancies:**
 
@@ -766,7 +714,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 This command returns values from the device memory (EEPROM). This includes values saved by the user (see Examples below for details) as well as values saved during factory calibration.  For a full list of saved values which can be recalled, see expr.cpp .  Expressions may be applied to "recall" requests ([more](https://github.com/Photosynq/PhotosynQ-Firmware/wiki/How-to-use-Expressions)).
 
-**Input:** array
+**Input:** [array]
 
 **Example:**
 
@@ -776,8 +724,6 @@ This command returns values from the device memory (EEPROM). This includes value
   ...
 ],
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -807,8 +753,6 @@ The MultispeQ is designed to be able to nearly simultaneously measure two detect
 ],
 ```
 
-**Editor:** table
-
 **Dependancies:**
 
 + pulses
@@ -837,8 +781,6 @@ This command saves a value to a location in the device memory (EEPROM). Expressi
 ],
 ```
 
-**Editor:** fixed
-
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035` `1.17` `1.16` `1.14` `1.11` `1.10` `1.08` `1.07` `1.06`
@@ -850,7 +792,7 @@ This command saves a value to a location in the device memory (EEPROM). Expressi
 
 Saving Time Scale Values. Setting the value to 0 will inactivate the function (preset), setting it to 1 will activate the function. If activated `data_raw_time` will be added to the measurement, containing the timing information.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -861,8 +803,6 @@ Saving Time Scale Values. Setting the value to 0 will inactivate the function (p
 ```Javascript
 "save_trace_time_scale": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -896,8 +836,6 @@ Pre-illuminating a sample. It is often useful to pre-illuminate a sample at a gi
 
 ```
 
-**Editor:** fixed
-
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035`
@@ -911,15 +849,13 @@ Instead of measuring the ambient light intensity, use `set_light_intensity` to s
 
 **Note:** Instead of defining the light intensity for each pulse set use `set_light_intensity` to only have one place to change the light intensity.
 
-**Input:** number
+**Input:** [number]
 
 **Example:**
 
 ```Javascript
 "set_light_intensity": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -932,7 +868,7 @@ Instead of measuring the ambient light intensity, use `set_light_intensity` to s
 
 If set to 0, the command will be ignored. If set to 1, will wait until the clamp is closed, then proceed with the rest of the experiment.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -943,8 +879,6 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 ```Javascript
 "start_on_close": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -957,7 +891,7 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 
 If set to 0, the command will be ignored. If set to 1 or higher, it will wait until the clamp is opened, then proceed with the rest of the experiment.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -968,8 +902,6 @@ If set to 0, the command will be ignored. If set to 1 or higher, it will wait un
 ```Javascript
 "start_on_open": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -984,15 +916,11 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 
 **Alias:** `open_close_start`
 
-**Input:** 
-
 **Example:**
 
 ```Javascript
 "start_on_open_close": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -1005,7 +933,7 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 
 When "adc_show" is 1, the readings taken by the ADC (analog to digital converter) on the sample and hold circuit are outputted in "data_raw" instead of the normal output.  No other output is recorded, and only the last set of adc readings is shown (all other readings are not outputted).  By default there are 19 samples, but this can be changed using "number_samples".
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -1016,8 +944,6 @@ When "adc_show" is 1, the readings taken by the ADC (analog to digital converter
 ```Javascript
 "adc_show": <number>,
 ```
-
-**Editor:** fixed
 
 **Instruments:**
 
@@ -1032,7 +958,7 @@ The value of time is in milliseconds, and must be between zero and 10^6 millisec
 
 **Important:** Note that the change in `energy_min_wake_time` will remain in effect until the instrument is reset, when it will return to the default value of 10 s.
 
-**Input:** number
+**Input:** [number]
 
 **Values:**
 
@@ -1044,9 +970,13 @@ The value of time is in milliseconds, and must be between zero and 10^6 millisec
 "energy_min_wake_time": <number>,
 ```
 
-**Editor:** fixed
-
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035`
 + MultispeQ 2: `2.0038` `2.0036` `2.0035`
+
+[array]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[number]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[object]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[string]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[boolean]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean

@@ -104,6 +104,8 @@ device_info
 
 Asks for address location and output value (0 or 1) and sets the digital address to this value. This is a dangerous if you do not know what you are doing.
 
+**Input:** [number]
+
 **Values:**
 
 + 0 + 1
@@ -268,6 +270,8 @@ hello
 
 Sets the indicator LED (RGB LED). Values in the range from 0-255 need to be set for the Red, Green and Blue channel.
 
+**Input:** [number]
+
 **Example:**
 
 ```bash
@@ -333,6 +337,8 @@ p2p
 ***
 
 ### par\_led
+
+**Input:** par_led
 
 **Example:**
 
@@ -641,6 +647,8 @@ hours+min+sec+day+month+year
 
 ### set\_default\_flow\_rate
 
+**Input:** [number]
+
 **Example:**
 
 ```bash
@@ -735,6 +743,8 @@ set_device_info
 
 ### set\_energy\_save\_time
 
+**Input:** [number]
+
 **Example:**
 
 ```bash
@@ -749,6 +759,8 @@ set_energy_save_time+<number>
 ***
 
 ### set\_flow
+
+**Input:** [number]
 
 **Example:**
 
@@ -810,6 +822,8 @@ set_magnetometer_bias
 
 ### set\_open\_closed\_positions
 
+**Input:** set_open_closed_positions
+
 **Instruments:**
 
 + MultispeQ 1: `2.0038` `2.0036` `2.0035`
@@ -850,6 +864,8 @@ set_serial
 ### set\_shutdown\_time
 
 Sets the time (in seconds) before the device automatically shuts down to save energy.
+
+**Input:** [number]
 
 **Example:**
 
