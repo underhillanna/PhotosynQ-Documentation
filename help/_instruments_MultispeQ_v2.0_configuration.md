@@ -115,7 +115,7 @@ Kuhlgert, S., Austic, G., Zegarac, R. Osei-Bonsu, I.,Hoh, D., Chilvers, M. I., e
 
 [MAG3110FCR1]: https://www.nxp.com/products/sensors/magnetometers/high-accuracy-3d-magnetometer:MAG3110?lang_cd=en
 
-[[OHS3150U]: https://media.digikey.com/pdf/Data%20Sheets/TT%20Electronics%20PDFs/OHS3150U,51U.pdf
+[OHS3150U]: https://media.digikey.com/pdf/Data%20Sheets/TT%20Electronics%20PDFs/OHS3150U,51U.pdf
 
 [TCS34715FN]: https://ams.com/eng/Products/Light-Sensors/Color-Sensors/TCS34715
 
