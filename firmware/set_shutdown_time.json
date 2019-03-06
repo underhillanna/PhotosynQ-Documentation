@@ -1,5 +1,6 @@
 {
   "name": "set_shutdown_time",
+  "abstract": "",
   "description": "Sets the time (in seconds) before the device automatically shuts down to save energy.",
   "alias": [],
   "input": "number",

@@ -1,5 +1,6 @@
 {
   "name": "nonpulsed_lights",
+  "abstract": "",
   "description": "`nonpulsed_lights` defines which lights are not pulsed (always on) during a pulse set, and in what order.",
   "alias": [],
   "input": "nested array",

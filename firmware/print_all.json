@@ -1,5 +1,6 @@
 {
   "name": "print_all",
+  "abstract": "",
   "description": "print everything in the eeprom (all values defined in eeprom.h)",
   "alias": [],
   "input": "",

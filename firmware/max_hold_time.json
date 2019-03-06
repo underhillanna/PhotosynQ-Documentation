@@ -1,5 +1,6 @@
 {
   "name": "max_hold_time",
+  "abstract": "",
   "description": "This parameter sets the time (in ms) at which the hold commands timeout. The default value is 15000, or 15 seconds. This value applies to the following control points: `start_on_open`, `start_on_close`, `start_on_open_close`.",
   "alias": [],
   "input": "number",

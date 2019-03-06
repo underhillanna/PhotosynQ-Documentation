@@ -1,5 +1,6 @@
 {
   "name": "single_pulse",
+  "abstract": "",
   "description": "Read and analyze noise on ADC from a single LED pulse (only in testmode).",
   "alias": [],
   "input": "",

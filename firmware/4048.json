@@ -1,5 +1,6 @@
 {
   "name": "4048",
+  "abstract": "",
   "description": "Read multiple pulses with increasing intensity or pulse width for linearity test. With constant DAC value and pulse width, it is good for a pulse-to-pulse stdev test.",
   "alias": [],
   "input": "",

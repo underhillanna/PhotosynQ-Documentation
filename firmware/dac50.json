@@ -1,5 +1,6 @@
 {
   "name": "dac50",
+  "abstract": "",
   "description": "Set all DAC outputs to 50%",
   "alias": [],
   "input": "",

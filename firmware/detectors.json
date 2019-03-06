@@ -1,5 +1,6 @@
 {
   "name": "detectors",
+  "abstract": "",
   "description": "`detectors` defines which detectors are being measured, and in what order.  The chosen `meas_light` supplies the light source to be measured. The detector measurement is recorded in \"data_raw\" in the data received from the MultispeQ, which is then graphed for the user.  When `detectors` is set to 0, no detector is read and responses will be recorded as zero.",
   "alias": [],
   "input": "nested array",

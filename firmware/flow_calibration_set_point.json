@@ -1,5 +1,6 @@
 {
   "name": "flow_calibration_set_point",
+  "abstract": "",
   "description": "",
   "alias": [
     "fcsp"

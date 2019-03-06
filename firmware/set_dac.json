@@ -1,5 +1,6 @@
 {
   "name": "set_dac",
+  "abstract": "",
   "description": "Set DAC addresses to 1,2,3 assuming addresses are unset and all are factory (0,0,0).",
   "alias": [],
   "input": "",

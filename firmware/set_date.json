@@ -1,5 +1,6 @@
 {
   "name": "set_date",
+  "abstract": "",
   "description": "Set the date of the RTC of the instrument (if available)",
   "alias": [],
   "input": "",

@@ -1,5 +1,6 @@
 {
   "name": "readonce",
+  "abstract": "",
   "description": "Access write once flash",
   "alias": [],
   "input": "",

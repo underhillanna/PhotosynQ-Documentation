@@ -1,5 +1,6 @@
 {
   "name": "reset",
+  "abstract": "",
   "description": "Reboot the instrument.",
   "alias": [
     "1027"

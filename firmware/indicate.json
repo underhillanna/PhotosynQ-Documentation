@@ -1,5 +1,6 @@
 {
   "name": "indicate",
+  "abstract": "",
   "description": "Sets the indicator LED (RGB LED). Values in the range from 0-255 need to be set for the Red, Green and Blue channel.",
   "alias": [],
   "input": "number",

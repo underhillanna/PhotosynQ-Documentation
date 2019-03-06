@@ -1,5 +1,6 @@
 {
   "name": "set_default_flow_rate",
+  "abstract": "",
   "description": "",
   "alias": [],
   "input": "number",

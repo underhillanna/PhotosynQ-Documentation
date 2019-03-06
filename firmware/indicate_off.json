@@ -1,5 +1,6 @@
 {
   "name": "indicate_off",
+  "abstract": "",
   "description": "Turn off indicator LED",
   "alias": [],
   "input": "",

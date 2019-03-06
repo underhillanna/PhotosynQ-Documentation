@@ -1,5 +1,6 @@
 {
   "name": "reset_flow_calibration",
+  "abstract": "",
   "description": "Set air flow calibration to factory settings",
   "alias": [],
   "input": "",

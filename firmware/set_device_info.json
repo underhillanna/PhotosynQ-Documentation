@@ -1,5 +1,6 @@
 {
   "name": "set_device_info",
+  "abstract": "",
   "description": "Set the device name",
   "alias": [
     "1008"

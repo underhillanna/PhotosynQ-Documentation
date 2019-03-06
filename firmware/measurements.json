@@ -1,5 +1,6 @@
 {
   "name": "measurements",
+  "abstract": "",
   "description": "number of times to repeat a measurement, which is a set of protocols",
   "alias": [],
   "input": "",
