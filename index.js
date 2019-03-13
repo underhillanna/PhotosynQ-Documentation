@@ -355,8 +355,9 @@ var compileMD = function(options){
 	for(var i in list){
 
 		if (options.source){
-			file = list[i].split('/');
-			file = file[file.length-2] + '/' + file[file.length-1];
+
+			var c = src_path.replace(/\.{0,2}\/?/,'').split('/').length;
+			file = list[i].split('/').slice(c).join('/');
 		}
 		else{
 			file = list[i];
@@ -367,15 +368,10 @@ var compileMD = function(options){
 		// Remove docsify specific tags
 		files[file] = files[file].replace(/([\t ]{0,}\{docsify\-[\d\w]+\}\s{0,})/gm, '');
 
-		// when source is define, path needs to be added
-		// if (options.source)
-		// 	files[file] = files[file].replace(/\]\(\.\.\/images\//gm, ']('+jetpack.path(src_path, 'docs', 'images')+'/');
-		// else{
-			var dir = file.split('/').slice(0,-1).join('/');
-			files[file] = files[file].replace(/!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g, function(match, g1, g2, g3){
-				return `![${g1}](${jetpack.path(dir, g2)})`;
-			});
-		// }
+		var dir = file.split('/').slice(0,-1).join('/');
+		files[file] = files[file].replace(/!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g, function(match, g1, g2, g3){
+			return `![${g1}](${jetpack.path(dir, g2)})`;
+		});
 	}
 	md = Mustache.render(md, {date: date, version: (options.tag || '--') }, files);
 	jetpack.write(options.output, md);
