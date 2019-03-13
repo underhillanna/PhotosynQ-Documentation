@@ -24,10 +24,6 @@ rm ./dist/latest.zip
 # Get all the firmware commands and build the help files
 node index.js cmd --documents -s ./dist/tmp
 
-# Generate new documentation index
-echo "Generate Search index"
-node index.js index -s ./dist/tmp
-
 # Compiling the master markdown files from templates
 echo "Compile master files from build templates"
 node index.js compile -i ./dist/tmp/build/help-master.md -o ./dist/PhotosynQ-Help-Manual.md -t $TAG -d $DATE -s ./dist/tmp
