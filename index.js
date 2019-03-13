@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const program = require('commander');
-const lunr = require('lunr');
 const jetpack = require('fs-jetpack');
-const mime = require('mime');
 const moment = require('moment-timezone');
 const Mustache = require('mustache');
 const epub = require('epub-gen');
@@ -18,89 +16,6 @@ const hljs = require('highlight.js');
 const hljsLinenums = require('code-highlight-linenums');
 const puppeteer = require('puppeteer');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
-
-var createIDX = function(options){
-
-	// Set up index and loop through the files in help
-	var hfc = 0;
-	var src_path = './help/';
-
-	if(options.source)
-		src_path = jetpack.path(options.source, 'help') + '/';
-
-	if(!jetpack.exists(src_path)){
-		console.log(chalk.red('Error:') + ' Source files not found');
-		return;
-	}
-
-	var titles = {};
-
-	var lunrIDX = lunr(function(){
-		this.field('title');
-		this.field('content');
-		// the id
-		this.ref('href');
-
-		var files = jetpack.inspectTree(src_path).children;
-
-		for(var i in files){
-			if( files[i].type != 'file' || mime.getType(files[i].name) != 'text/markdown')
-				continue;
-			var entry = jetpack.read( jetpack.path('./help/', files[i].name) );
-			var title = files[i].name.substr(1).substr(-3).split('_').join(' ');
-
-			titles[files[i].name.substr(1)] = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
-
-			if(entry.match(/#{3}\s.+/))
-				title = entry.match(/#{3}\s.+/)[0].substr(4).replace(/\\/g,'');
-
-			var mdParser = new Remarkable({
-				"html":true,
-				"linkify": true,
-				"plugins": []
-			});
-
-			entry = mdParser.render(entry);
-
-			this.add({
-				href: files[i].name.substr(1),
-				title: title,
-				content: entry.replace(/<[^>]*>/g, ' ')
-			});
-
-			hfc++;
-		}
-	});
-
-	// Now generate the help index
-	lunrIDX = JSON.parse(JSON.stringify(lunrIDX));
-
-	lunrIDX.displayFields = titles;
-
-	jetpack.write(__dirname+'/dist/lunr-help-idx.json', lunrIDX, { jsonIndent: 0 });
-	hfc++;
-	console.log('Search index for '+hfc+' files generated ('+ (jetpack.inspect( jetpack.path(__dirname,'dist','lunr-help-idx.json') ).size / 1024).toFixed(2) +' kb).');
-};
-
-var searchIDX = function(options){
-
-	var idxfile = jetpack.read( jetpack.path(__dirname,'dist','lunr-help-idx.json') ,'json');
-	var idx = lunr.Index.load(idxfile);
-
-	if(options.query !== undefined || options.query != ''){
-		var results = idx.search( options.query);
-		console.log('\nSearch for "'+ options.query + '" (Hits: '+results.length+')\n');
-
-		console.log( JSON.stringify(results, null, 2) );
-
-		for(var i in results){
-			console.log((parseInt(i)+1)+'. '+results[i].ref+' (score: '+ results[i].score +')' );
-		}
-	}
-	else{
-		console.log('Enter a search term.');
-	}
-};
 
 var commands = function(options){
 	var time = moment().utc().format(timeStamp);
@@ -293,9 +208,15 @@ var commands = function(options){
 		protocols += '[object]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object\n';
 		protocols += '[string]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String\n';
 		protocols += '[boolean]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean\n';
+		
+		var consolecmdfile = jetpack.read('./docs/instruments/console-commands.md');
+		consolecmds = consolecmdfile.replace(/(## Available Commands\s+)((.|\n)*)/gm, '$1') + consolecmds;
 
-		jetpack.write('./help/_instruments_Console_Commands.md', consolecmds);
-		jetpack.write('./help/_protocols_Commands.md', protocols);
+		var protocolsfile = jetpack.read('./docs/protocols/commands.md');
+		protocols = protocolsfile.replace(/(## Available Commands\s+)((.|\n)*)/gm, '$1') + protocols;
+
+		jetpack.write('./docs/instruments/console-commands.md', consolecmds);
+		jetpack.write('./docs/protocols/commands.md', protocols);
 		console.log(chalk.green(`Documents created`));
 		return;
 	}
@@ -327,7 +248,7 @@ var commands = function(options){
 };
 
 var pingLinks = function(){
-	var list = jetpack.find('.', { matching: ['help/*.md', 'tutorials/*.md'] });
+	var list = jetpack.find('.', { matching: ['docs/*/*.md'] });
 	var files = {};
 	var linkList = [];
 	var localList = [];
@@ -440,24 +361,31 @@ var compileMD = function(options){
 		return;
 	}
 
-	var list = jetpack.find(src_path, { matching: ['help/*.md', 'tutorials/*.md'] });
+	var list = jetpack.find(src_path, { matching: ['docs/*/*.md'] });
 	var files = {};
 	var file = null;
 	for(var i in list){
+
 		if (options.source){
-			file = list[i].split('/');
-			file = file[file.length-2] + '/' + file[file.length-1];
+
+			var c = src_path.replace(/\.{0,2}\/?/,'').split('/').length;
+			file = list[i].split('/').slice(c).join('/');
 		}
 		else{
 			file = list[i];
 		}
+
 		files[file] = jetpack.read(list[i]) + '\n';
+
+		// Remove docsify specific tags
+		files[file] = files[file].replace(/([\t ]{0,}\{docsify\-[\d\w]+\}\s{0,})/gm, '');
+
+		var dir = file.split('/').slice(0,-1).join('/');
+		files[file] = files[file].replace(/!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g, function(match, g1, g2, g3){
+			return `![${g1}](${jetpack.path(dir, g2)})`;
+		});
 	}
 	md = Mustache.render(md, {date: date, version: (options.tag || '--') }, files);
-	if (options.source)
-		md = md.replace(/\]\(\.\.\/images\//gm, ']('+jetpack.path(src_path, 'images')+'/');
-	else
-		md = md.replace(/\]\(\.\.\/images\//gm, '](images/');
 	jetpack.write(options.output, md);
 };
 
@@ -504,12 +432,16 @@ function compileHTML(md){
 			}
 		}
 
-		if(element.match(/<em>Tips?:<\/em>/)){
-			element = element.replace(/^<p>/i, '<p class="tip">');
+		if(element.match(/\s{0,}(\!>|\!\&gt;)/)){
+			element = element.replace(/^(<p>)(\s{0,}(\!>|\!\&gt;)\s{0,})/i, '<p class="note">');
 		}
 
-		if(element.match(/<em>Notes?:<\/em>/)){
-			element = element.replace(/^<p>/i, '<p class="note">');
+		if(element.match(/\s{0,}(\?>|\?\&gt;)/)){
+			element = element.replace(/^(<p>)(\s{0,}(\?>|\?\&gt;)\s{0,})/i, '<p class="tip">');
+		}
+
+		if(element.match(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i)){
+			element = element.replace(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i, `$1 class="chapter"$2$4` ) || element;
 		}
 
 		if(element.match(/<img\/?[^>]+(>|$)/g)){
@@ -536,7 +468,7 @@ function compileHTML(md){
 		return element;
 	});
 	// Clean up to avoid empty pages
-	html = html.join('\n').replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
+	html = html.join('\n'); //.replace(/(<hr>)(\n<h[1-4]>)/gim,'$2'); // h1-4 can lead to a page break
 	html = html.replace(/<hr>\n{0,}<hr>/gim, '<hr>'); // Two page breaking <hr> in a row
 	// jetpack.write('./dist/'+html.length+'.html',html);
 	return html;
@@ -721,12 +653,17 @@ var createEPUB = function (){
 		var chapterTitle = null;
 
 		for(var i in _html){
-			if(_html[i].match(/^<h2>/)){
+			if(_html[i].match(/^<h1/)){
+				if(_html[i].match(/(class="chapter")/) || _html[parseInt(i)+1].match(/<span class="text-muted">Modified/)){
+					continue;
+				}
 				chapterTitle = _html[i].replace(/<\/?[^>]+(>|$)/g, "");
 				chapters[chapterTitle] = "";
 				continue;
 			}
 			if(chapterTitle){
+				if( _html[i].match(/<span class="text-muted">Modified/) || _html[i].match(/<span class="text-muted">Version/) )
+					continue;
 				chapters[chapterTitle] += _html[i]+'\n';
 			}
 		}
@@ -759,18 +696,6 @@ var createEPUB = function (){
 
 program
   .version(version);
-
-program
-	.command('index')
-	.option('-s, --source [dir]','Use files from a different source')
-	.description('Generate search index')
-	.action(createIDX);
-
-program
-	.command('search')
-	.option('-q, --query <query>','Query (e.g. measurement)')
-	.description('Search terms based on the search index')
-	.action(searchIDX);
 
 program
 	.command('cmd')

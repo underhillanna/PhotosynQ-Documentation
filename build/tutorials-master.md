@@ -2,51 +2,22 @@
 *<span class="text-muted">Modified:</span> {{ date }}
 <span class="text-muted">Version:</span> {{ version }}*
 
-## Getting Started
+{{> docs/tutorials/getting-started.md}}
 
-{{> tutorials/_getting_started.md}}
+{{> docs/tutorials/creating-a-project.md}}
 
-## Creating a Project
+{{> docs/tutorials/data-collection.md}}
 
-{{> tutorials/_creating_a_project.md}}
+{{> docs/tutorials/data-viewing.md}}
 
-## Data Collection
+{{> docs/tutorials/data-quality.md}}
 
-{{> tutorials/_data_collection.md}}
+{{> docs/tutorials/data-analysis.md}}
 
-## Data Viewing
+{{> docs/tutorials/building-a-protocol.md}}
 
-{{> tutorials/_data_viewing.md}}
+{{> docs/tutorials/building-an-advanced-protocol.md}}
 
-## Data Quality
+{{> docs/tutorials/building-a-macro.md}}
 
-{{> tutorials/_data_quality.md}}
-
-## Data Analysis
-
-{{> tutorials/_data_analysis.md}}
-
-## Protocols
-
-{{> tutorials/_building_a_protocol.md}}
-
-## Protocols (Advanced)
-
-{{> tutorials/_building_an_advanced_protocol.md}}
-
-## Macros
-
-{{> tutorials/_building_a_macro.md}}
-
-## Macros
-
-{{> tutorials/_building_an_advanced_macro.md}}
-
-## More Resources
-
-+ [Help](https://photosynq.org/help)
-+ [Tutorials](https://photosynq.org/tutorials)
-+ [Forums](https://photosynq.org/forums)
-+ [Latest Updates (Blog)](https://blog.photosynq.org/)
-+ [API (Documentation)](https://photosynq.org/rdoc)
-+ [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
+{{> docs/tutorials/building-an-advanced-macro.md}}
