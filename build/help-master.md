@@ -2,327 +2,318 @@
 *<span class="text-muted">Modified:</span> {{ date }}
 <span class="text-muted">Version:</span> {{ version }}*
 
-## Account Basics
+# Account Basics {main-chapter}
 
-{{> help/_account_Create_an_Account.md}}
+{{> docs/account/create-an-account.md}}
 
 ***
 
-{{> help/_account_Edit_your_Profile.md}}
+{{> docs/account/edit-your-profile.md}}
 
 ***
 
-{{> help/_account_Manage_your_password.md}}
+{{> docs/account/manage-your-password.md}}
 
 ***
 
-{{> help/_account_PhotosynQ_Glossary.md}}
+{{> docs/account/photosynq-glossary.md}}
 
 ***
 
-{{> help/_account_Sign_in_to_PhotosynQ.md}}
+{{> docs/account/sign-in-to-photosynq.md}}
 
 ***
 
-{{> help/_account_Change_your_email_address.md}}
+{{> docs/account/change-your-email-address.md}}
 
 ***
 
-{{> help/_account_Your_subscriptions.md}}
+{{> docs/account/your-subscriptions.md}}
 
 ***
 
-{{> help/_account_Project_invitations.md}}
+{{> docs/account/project-invitations.md}}
 
 ***
 
-{{> help/_account_Sign_out_of_PhotosynQ.md}}
+{{> docs/account/sign-out-of-photosynq.md}}
 
 ***
 
-{{> help/_account_Deactivate_your_PhotosynQ_Account.md}}
+{{> docs/account/deactivate-your-photosynq-account.md}}
 
-## Mobile Application
+# Mobile Application {main-chapter}
 
-{{> help/_mobile-app_PhotosynQ_for_Android.md}}
+{{> docs/mobile-application/photosynq-for-android.md}}
 
 ***
 
-{{> help/_mobile-app_Installation.md}}
+{{> docs/mobile-application/installation.md}}
 
 ***
 
-{{> help/_mobile-app_General.md}}
+{{> docs/mobile-application/general.md}}
 
 ***
 
-{{> help/_mobile-app_Connect_an_Instrument.md}}
+{{> docs/mobile-application/connect-an-instrument.md}}
 
 ***
 
-{{> help/_mobile-app_Settings.md}}
+{{> docs/mobile-application/settings.md}}
 
 ***
 
-{{> help/_mobile-app_Projects.md}}
+{{> docs/mobile-application/projects.md}}
 
 ***
 
-{{> help/_mobile-app_Discover.md}}
+{{> docs/mobile-application/discover.md}}
 
 ***
 
-{{> help/_mobile-app_Quick_Measurements.md}}
+{{> docs/mobile-application/quick-measurements.md}}
 
 ***
 
-{{> help/_mobile-app_Measurements.md}}
+{{> docs/mobile-application/measurements.md}}
 
 ***
 
-{{> help/_mobile-app_Adding_Notes_and_Pictures.md}}
+{{> docs/mobile-application/adding-notes-and-pictures.md}}
 
-## Desktop Application
+# Desktop Application {main-chapter}
 
-{{> help/_desktop-app_Installation.md}}
+{{> docs/desktop-application/installation.md}}
 
 ***
 
-{{> help/_desktop-app_General.md}}
+{{> docs/desktop-application/general.md}}
 
 ***
 
-{{> help/_desktop-app_Connect_an_Instrument.md}}
+{{> docs/desktop-application/connect-an-instrument.md}}
 
 ***
 
-{{> help/_desktop-app_Settings.md}}
+{{> docs/desktop-application/settings.md}}
 
 ***
 
-{{> help/_desktop-app_Projects.md}}
+{{> docs/desktop-application/projects.md}}
 
 ***
 
-{{> help/_desktop-app_Adding_Notes_and_Pictures.md}}
+{{> docs/desktop-application/adding-notes-and-pictures.md}}
 
 ***
 
-{{> help/_desktop-app_Notebook.md}}
+{{> docs/desktop-application/notebook.md}}
 
 ***
 
-{{> help/_desktop-app_Protocols.md}}
+{{> docs/desktop-application/protocols.md}}
 
 ***
 
-{{> help/_desktop-app_Macros.md}}
+{{> docs/desktop-application/macros.md}}
 
 ***
 
-{{> help/_desktop-app_Protocol_Editor.md}}
+{{> docs/desktop-application/protocol-editor.md}}
 
 ***
 
-{{> help/_desktop-app_Macro_Editor.md}}
+{{> docs/desktop-application/macro-editor.md}}
 
 ***
 
-{{> help/_desktop-app_Console.md}}
+{{> docs/desktop-application/console.md}}
 
-## Projects
+# Projects {main-chapter}
 
-{{> help/_projects_What_are_projects.md}}
+{{> docs/projects/what-are-projects.md}}
 
 ***
 
-{{> help/_projects_Join_a_project.md}}
+{{> docs/projects/join-a-project.md}}
 
 ***
 
-{{> help/_projects_Create_a_new_Project.md}}
+{{> docs/projects/create-a-new-project.md}}
 
 ***
 
-{{> help/_projects_Select_a_protocol.md}}
+{{> docs/projects/select-a-protocol.md}}
 
 ***
 
-{{> help/_projects_Adding_Project_Questions.md}}
+{{> docs/projects/adding-project-questions.md}}
 
 ***
 
-{{> help/_projects_Project_Locations.md}}
+{{> docs/projects/project-locations.md}}
 
 ***
 
-{{> help/_projects_Adding_a_Project_Description.md}}
+{{> docs/projects/adding-a-project-description.md}}
 
 ***
 
-{{> help/_projects_Editing_a_Project.md}}
+{{> docs/projects/editing-a-project.md}}
 
 ***
 
-{{> help/_projects_Managing_Project_Settings.md}}
+{{> docs/projects/managing-project-settings.md}}
 
-## View & Analyze Data
+# View & Analyze Data {main-chapter}
 
-{{> help/_data_View_your_Project_Data.md}}
+{{> docs/view-and-analyze-data/view-your-project-data.md}}
 
 ***
 
-{{> help/_data_The_Dashboard.md}}
+{{> docs/view-and-analyze-data/the-dashboard.md}}
 
 ***
 
-{{> help/_data_Plot_Data.md}}
+{{> docs/view-and-analyze-data/plot-data.md}}
 
 ***
 
-{{> help/_data_The_Map.md}}
+{{> docs/view-and-analyze-data/the-map.md}}
 
 ***
 
-{{> help/_data_The_Spreadsheet.md}}
+{{> docs/view-and-analyze-data/the-spreadsheet.md}}
 
 ***
 
-{{> help/_data_Statistics.md}}
+{{> docs/view-and-analyze-data/statistics.md}}
 
 ***
 
-{{> help/_data_Series_Data_subsets.md}}
+{{> docs/view-and-analyze-data/series-data-subsets.md}}
 
 ***
 
-{{> help/_data_Filter_Data.md}}
+{{> docs/view-and-analyze-data/filter-data.md}}
 
 ***
 
-{{> help/_data_Set_Thresholds.md}}
+{{> docs/view-and-analyze-data/set-thresholds.md}}
 
 ***
 
-{{> help/_data_Viewing_Notes_and_Pictures.md}}
+{{> docs/view-and-analyze-data/viewing-notes-and-pictures.md}}
 
 ***
 
-{{> help/_data_Advanced_Parameters.md}}
+{{> docs/view-and-analyze-data/advanced-parameters.md}}
 
 ***
 
-{{> help/_data_Data_Issues.md}}
+{{> docs/view-and-analyze-data/data-issues.md}}
 
 ***
 
-{{> help/_data_Flag_Measurements.md}}
+{{> docs/view-and-analyze-data/flag-measurements.md}}
 
 ***
 
-{{> help/_data_Sessions.md}}
+{{> docs/view-and-analyze-data/sessions.md}}
 
 ***
 
-{{> help/_data_Download_Data.md}}
+{{> docs/view-and-analyze-data/download-data.md}}
 
 ***
 
-{{> help/_data_External_Libraries.md}}
+{{> docs/view-and-analyze-data/external-libraries.md}}
 
 ***
 
-{{> help/_data_How_to_Cite.md}}
+{{> docs/view-and-analyze-data/how-to-cite.md}}
 
-## Protocols
+# Protocols {main-chapter}
 
-{{> help/_protocols_Protocol_Basics.md}}
+{{> docs/protocols/protocol-basics.md}}
 
 ***
 
-{{> help/_protocols_View_your_Protocols.md}}
+{{> docs/protocols/view-your-protocols.md}}
 
 ***
 
-{{> help/_protocols_Create_a_new_Protocol.md}}
+{{> docs/protocols/create-a-new-protocol.md}}
 
 ***
 
-{{> help/_protocols_Save_a_Protocol.md}}
+{{> docs/protocols/save-a-protocol.md}}
 
 ***
 
-{{> help/_protocols_Edit_a_Protocol.md}}
+{{> docs/protocols/edit-a-protocol.md}}
 
 ***
 
-{{> help/_protocols_Run_a_Protocol.md}}
+{{> docs/protocols/run-a-protocol.md}}
 
 ***
 
-{{> help/_protocols_Commands.md}}
+{{> docs/protocols/commands.md}}
 
-## Macros
+# Macros {main-chapter}
 
-{{> help/_macros_View_your_Macros.md}}
+{{> docs/macros/view-your-macros.md}}
 
 ***
 
-{{> help/_macros_Create_a_new_Macro.md}}
+{{> docs/macros/create-a-new-macro.md}}
 
 ***
 
-{{> help/_macros_Save_a_Macro.md}}
+{{> docs/macros/save-a-macro.md}}
 
 ***
 
-{{> help/_macros_Edit_a_Macro.md}}
+{{> docs/macros/edit-a-macro.md}}
 
 ***
 
-{{> help/_macros_Coding_and_Functions.md}}
+{{> docs/macros/coding-and-functions.md}}
 
 ***
 
-{{> help/_macros_Provided_Functions.md}}
+{{> docs/macros/provided-functions.md}}
 
-## Instruments
+# Instruments {main-chapter}
 
-{{> help/_instruments_Instrument_basics.md}}
+{{> docs/instruments/instrument-basics.md}}
 
 ***
 
-{{> help/_instruments_What_does_the_MultispeQ_measure.md}}
+{{> docs/instruments/what-does-the-multispeq-measure.md}}
 
 ***
 
-{{> help/_instruments_Instrument_Settings.md}}
+{{> docs/instruments/instrument-settings.md}}
 
 ***
 
-{{> help/_instruments_Instrument_Calibrations.md}}
+{{> docs/instruments/instrument-calibrations.md}}
 
 ***
 
-{{> help/_instruments_How_to_Install_Firmware_Updates.md}}
+{{> docs/instruments/how-to-install-firmware-updates.md}}
 
 ***
 
-{{> help/_instruments_MultispeQ_v1.0_configuration.md}}
+{{> docs/instruments/multispeq-v1.0-configuration.md}}
 
 ***
 
-{{> help/_instruments_MultispeQ_v2.0_configuration.md}}
+{{> docs/instruments/multispeq-v2.0-configuration.md}}
 
-## Console Commands
+# Console Commands {main-chapter}
 
-{{> help/_instruments_Console_Commands.md}}
-
-## More Resources
-
-+ [Help](https://photosynq.org/help)
-+ [Tutorials](https://photosynq.org/tutorials)
-+ [Forums](https://photosynq.org/forums)
-+ [Latest Updates (Blog)](https://blog.photosynq.org/)
-+ [API (Documentation)](https://photosynq.org/rdoc)
-+ [Videos (YouTube)](https://www.youtube.com/channel/UCvJrVf_OUX8ukD01AjmDwSg)
+{{> docs/instruments/console-commands.md}}

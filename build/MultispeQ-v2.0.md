@@ -1,5 +1,5 @@
-# MultispeQ v2.0 Configuration
+# MultispeQ v2.0
 *<span class="text-muted">Modified:</span> {{ date }}
 <span class="text-muted">Version:</span> {{ version }}*
 
-{{> help/_instruments_MultispeQ_v2.0_configuration.md}}
+{{> docs/instruments/multispeq-v2.0-configuration.md}}
