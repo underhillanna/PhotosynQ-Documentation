@@ -16,8 +16,8 @@
 * ### Parameters {docsify-ignore}
   The MultispeQ is capable to measure a large variety of parameters. Find a list of the most common ones [here](/instruments/what-does-the-multispeq-measure).
 
-> Interested in contributing and helping to improve the documentation? Visit **[CONTRIBUTING.md]** to learn how to become part of the project!
+> Interested in contributing and helping to improve the documentation? Visit **[contributing.md]** to learn how to become part of the project!
 
 ![GitHub release](https://img.shields.io/github/release/Photosynq/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom") ![GitHub Release Date](https://img.shields.io/github/release-date/PhotosynQ/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom") ![GitHub](https://img.shields.io/github/license/PhotosynQ/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom")
 
-[CONTRIBUTING.md]: https://github.com/PhotosynQ/PhotosynQ-Documentation/CONTRIBUTING.md
+[contributing.md]: https://github.com/PhotosynQ/PhotosynQ-Documentation/contributing.md
