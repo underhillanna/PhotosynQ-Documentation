@@ -65,7 +65,8 @@ The standard structure for documenting a command is the following:
 ```Javascript
 {
     "name": "<string>",             // Command Name
-    "description": "<string>",      // Short Description of the Command's function
+    "abstract": "<string>",         // A brief one line description about the Command's function
+    "description": "<string>",      // Description of the Command's function
     "alias": ["<string"],           // If the Command has an alias add it here, no separate file needed
     "input": "string|array|number", // If the Command expects a string, number or array
     "values": [],
