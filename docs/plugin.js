@@ -13,8 +13,8 @@ function docsifyListColumns(hook, vm) {
   hook.afterEach(function(html, next) {
     if (hasColumns) {
       var re = /(<!-+\s+columns:\s*?(\d)\s+-+>)[\r\n\s]+(<ul\s?>)/g;
-      html = html.replace(re, function(match, g1, g2) { 
-        return `${g1}\n<ul class="docsify-columns" style="column-count: ${g2};">`
+      html = html.replace(re, function(match, g1, g2) {
+        return `${g1}\n<ul class="docsify-columns" style="column-count: ${g2};">`;
       });
     }
     next(html);
@@ -30,7 +30,7 @@ function docsifyReadTime(hook, vm) {
       var readTime = content.split(' ').length / 200;
       var re = /(\{docsify-readtime\})/g;
       content = content.replace(re, function() {
-        readTime = (readTime > 1)? Math.ceil(readTime) : 'about a'
+        readTime = (readTime > 1)? Math.ceil(readTime) : 'about a';
         return `<p class="docsify-readtime">${readTime} min read</p>\n`;
       });
     }
@@ -44,7 +44,7 @@ function docsifyFeedback(hook, vm){
 
   hook.afterEach(function(html, next) {
     if(ga && location.hash != "#/")
-      html += `<p class="docsify-feedback" style="text-align:center;"></p>`
+      html += `<p class="docsify-feedback" style="text-align:center;"></p>`;
     next(html);
   });
   hook.doneEach(function () {
@@ -57,7 +57,7 @@ function docsifyFeedback(hook, vm){
 
     document.querySelector(".docsify-feedback_yes").addEventListener("click", function(o) {
       try{
-        // window.ga('send', 'event', 'Help', 'Yes', location.hash);
+        window.ga('send', 'event', 'Help', 'Yes', location.hash);
       }
       catch(err){}
       container.innerHTML = `<small>Thank you for your feedback!</small>`;
@@ -65,7 +65,7 @@ function docsifyFeedback(hook, vm){
 
     document.querySelector(".docsify-feedback_no").addEventListener("click", function(o) {
       try{
-        // window.ga('send', 'event', 'Help', 'No', location.hash);
+        window.ga('send', 'event', 'Help', 'No', location.hash);
       }
       catch(err){}
       container.innerHTML = `<textarea class="docsify-feedback_text" placeholder="Please let us know what we can do better!"></textarea> <button class="docsify-feedback_submit">Send</button>`;
