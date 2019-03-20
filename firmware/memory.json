@@ -1,5 +1,6 @@
 {
   "name": "memory",
+  "abstract": "",
   "description": "Returns the memory usage of the instrument.",
   "alias": [],
   "input": "",

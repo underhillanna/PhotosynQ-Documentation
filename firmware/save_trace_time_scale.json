@@ -1,5 +1,6 @@
 {
   "name": "save_trace_time_scale",
+  "abstract": "",
   "description": "Saving Time Scale Values. Setting the value to 0 will inactivate the function (preset), setting it to 1 will activate the function. If activated `data_raw_time` will be added to the measurement, containing the timing information.",
   "alias": [],
   "input": "number",

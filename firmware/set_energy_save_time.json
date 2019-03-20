@@ -1,5 +1,6 @@
 {
   "name": "set_energy_save_time",
+  "abstract": "",
   "description": "",
   "alias": [],
   "input": "number",

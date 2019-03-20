@@ -1,5 +1,6 @@
 {
   "name": "set_flow",
+  "abstract": "",
   "description": "",
   "alias": [],
   "input": "number",

@@ -1,5 +1,6 @@
 {
   "name": "set_led_delay",
+  "abstract": "",
   "description": "Pre-illuminating a sample. It is often useful to pre-illuminate a sample at a given light intensity, for a given amount of time.",
   "alias": [],
   "input": "nested array",

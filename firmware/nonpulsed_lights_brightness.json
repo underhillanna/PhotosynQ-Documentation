@@ -1,5 +1,6 @@
 {
   "name": "nonpulsed_lights_brightness",
+  "abstract": "",
   "description": "`nonpulsed_lights_brightness` sets the brightness in microEinsteins (µE * s⁻¹ * m⁻²) of the nonpulsed lights.",
   "alias": [],
   "input": "nested array",

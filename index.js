@@ -31,6 +31,7 @@ var commands = function(options){
 		// The command data code
 		var data = {
 			"name": options.new,
+			"abstract": "",
 			"description": "",
 			"alias": [],
 			"input": "",
@@ -65,13 +66,14 @@ var commands = function(options){
 		var cmd = jetpack.read(file, 'json');
 		var output = chalk.yellow('\n'+ cmd.name);
 		output += '\n------------------------\n';
+		if(cmd.abstract !== '')
+			output += chalk.grey(cmd.abstract+'\n\n');
 		output += chalk.grey(cmd.description+'\n\n');
 		output += 'Alias: '+ chalk.grey( (cmd.alias.join(', ') || '') +'\n');
 		output += 'Input: '+ chalk.grey(cmd.input+'\n');
 		output += 'Values: '+ chalk.grey( (cmd.values.join(', ') || '') +'\n');
 		output += 'Example: '+ chalk.grey(cmd.example+'\n');
 		output += 'Type: '+ chalk.grey(cmd.type+'\n');
-		output += 'Editor: '+ chalk.grey(cmd.editor+'\n');
 		output += 'Instruments:\n';
 
 		var instruments = Object.keys(cmd.compatibility);
@@ -144,8 +146,14 @@ var commands = function(options){
 						return '`' + a + '`';
 					}) + '\n\n';
 
-				if(content.editor != "")
-					document += '**Input:** '+ content.input +'\n\n';
+				if(content.input != ""){
+					document += '**Input:** ';
+					if(['array','boolean','number','object','string'].indexOf(content.input) > -1)
+						document += `[${content.input}]`;
+					else
+						document += content.input;
+					document += '\n\n';
+				}
 
 				if(content.values.length > 0)
 					document += '**Values:**\n\n'+ content.values.map(function(a){
@@ -157,9 +165,6 @@ var commands = function(options){
 
 				if(content.example != "" && content.type == 'protocol')
 					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
-
-				if(content.editor != "" && content.type == 'protocol')
-					document += '**Editor:** '+ content.editor +'\n\n';
 
 				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
 
@@ -197,6 +202,13 @@ var commands = function(options){
 		consolecmds = consolecmds.join('\n\n***\n\n').trim();
 		protocols = protocols.join('\n\n***\n\n').trim();
 
+		protocols += '\n\n';
+		protocols += '[array]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array\n';
+		protocols += '[number]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number\n';
+		protocols += '[object]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object\n';
+		protocols += '[string]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String\n';
+		protocols += '[boolean]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean\n';
+		
 		var consolecmdfile = jetpack.read('./docs/instruments/console-commands.md');
 		consolecmds = consolecmdfile.replace(/(## Available Commands\s+)((.|\n)*)/gm, '$1') + consolecmds;
 

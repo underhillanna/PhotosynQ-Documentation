@@ -1,5 +1,6 @@
 {
   "name": "battery",
+  "abstract": "",
   "description": "Test the instruments battery with load returning the charge state in percent (%)",
   "alias": [],
   "input": "",

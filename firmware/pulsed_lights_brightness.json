@@ -1,5 +1,6 @@
 {
   "name": "pulsed_lights_brightness",
+  "abstract": "",
   "description": "`pulsed_lights_brightness` sets the brightness in microEinsteins (µE * s⁻¹ * m⁻²) of the pulsed lights.",
   "alias": [],
   "input": "nested array",

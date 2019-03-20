@@ -1,5 +1,6 @@
 {
   "name": "usb",
+  "abstract": "",
   "description": "Check, if the Instrument is connected via USB",
   "alias": [],
   "input": "",

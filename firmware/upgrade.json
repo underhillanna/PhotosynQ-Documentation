@@ -1,5 +1,6 @@
 {
   "name": "upgrade",
+  "abstract": "",
   "description": "Start over the air firmware update. The instrument is waiting for the new firmware to be transfered to the instrument.",
   "alias": [
     "1078"

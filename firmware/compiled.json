@@ -1,5 +1,6 @@
 {
   "name": "compiled",
+  "abstract": "",
   "description": "Returns date and time for when the Firmware was compiled.",
   "alias": [],
   "input": "",

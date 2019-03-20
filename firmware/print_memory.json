@@ -1,5 +1,6 @@
 {
   "name": "print_memory",
+  "abstract": "",
   "description": "Print all calibration values as they are saved to the instruments storage (EEPROM). Output is formated as a JSON with a checksum.",
   "alias": [
     "print_calibrations"

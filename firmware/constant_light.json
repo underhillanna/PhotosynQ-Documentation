@@ -1,5 +1,6 @@
 {
   "name": "constant_light",
+  "abstract": "",
   "description": "Starting constant light source. Stop output using the command `-1+`.",
   "alias": [],
   "input": "",

@@ -1,5 +1,6 @@
 {
   "name": "adc_check",
+  "abstract": "",
   "description": "Output all ADC values",
   "alias": [],
   "input": "",

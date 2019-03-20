@@ -1,5 +1,6 @@
 {
   "name": "get_co2",
+  "abstract": "",
   "description": "Sensair S8 CO2 requests.  Only works if you have connected the sensair on Serial Port 3",
   "alias": [],
   "input": "",

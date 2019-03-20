@@ -1,5 +1,6 @@
 {
   "name": "1053",
+  "abstract": "",
   "description": "Continous feed of roll, pitch, compass, direction, tilt and tilt direction. Cancel the command with `-1+`",
   "alias": [],
   "input": "",

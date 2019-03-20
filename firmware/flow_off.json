@@ -1,5 +1,6 @@
 {
   "name": "flow_off",
+  "abstract": "",
   "description": "Set air flow to zero",
   "alias": [],
   "input": "",

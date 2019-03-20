@@ -1,5 +1,6 @@
 {
   "name": "measurements_delay",
+  "abstract": "",
   "description": "delay between measurements in milliseconds",
   "alias": [],
   "input": "",

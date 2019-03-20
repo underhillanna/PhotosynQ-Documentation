@@ -1,5 +1,6 @@
 {
   "name": "scan_i2c",
+  "abstract": "",
   "description": "Scan for available i2c devices.",
   "alias": [],
   "input": "",

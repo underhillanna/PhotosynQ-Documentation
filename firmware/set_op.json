@@ -1,5 +1,6 @@
 {
   "name": "set_op",
+  "abstract": "",
   "description": "Set the **open** position of the leave clamp.",
   "alias": [],
   "input": "",
