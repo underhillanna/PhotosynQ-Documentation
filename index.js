@@ -361,7 +361,45 @@ var compileMD = function(options){
 		return;
 	}
 
-	var list = jetpack.find(src_path, { matching: ['docs/*/*.md'] });
+	/**
+	 * Read Files from help directory
+	 */
+	var list = jetpack.find(src_path, { matching: ['docs/**/*.md','!docs/**/_*.md','!docs/**/README.md'] });
+
+	/**
+	 * Get file order from help master
+	 */
+	var helpMaster = "";
+	var masterList = jetpack.find(src_path, { matching: ['build/**/*.md'] });
+	for(var i in masterList){
+		helpMaster += jetpack.read(masterList[i]);
+	}
+
+	var hmFiles = [];
+	hmFiles = helpMaster.match(/(\{+\s?\>\s)([\w\d\.\/-]+)(\}+)/g);
+
+	for(var i in hmFiles){
+		hmFiles[i] = src_path.replace(/^(\.\/)/,'') + "/"+ hmFiles[i].replace(/(\{+\s?\>\s)([\w\d\.\/-]+)(\}+)/,'$2');
+	}
+
+	/**
+	 * Files not in help-master
+	 */
+
+	for(var i in list){
+		if( hmFiles.indexOf(list[i]) == -1 )
+			console.log( chalk.red('File missing in master: ') + list[i] );
+	}
+
+	/**
+	 * Files not in directory
+	 */
+	for(var i in hmFiles){
+		var q = hmFiles[i];
+		if( list.indexOf( q ) == -1 )
+			console.log( chalk.red('File missing in directory: ') + q );
+	}
+
 	var files = {};
 	var file = null;
 	for(var i in list){
@@ -387,6 +425,7 @@ var compileMD = function(options){
 	}
 	md = Mustache.render(md, {date: date, version: (options.tag || '--') }, files);
 	jetpack.write(options.output, md);
+	console.log(`${chalk.green('Done')} ${options.output}\n`);
 };
 
 function compileHTML(md){
