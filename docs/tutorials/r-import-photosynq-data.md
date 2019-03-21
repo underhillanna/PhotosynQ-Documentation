@@ -1,11 +1,13 @@
 Import PhotosynQ data Into R Studio
 ---
+
 {docsify-readtime}
+
 You can import Project data right out of PhotosynQ into R. All you need is a login to <https://photosynq.org> and the ID for the Project you want to analyze. You can find this ID on the left side of the Project page or in the list of Projects on your User page. Otherwise you can import Project data into R studio by reading the data from a csv file on your computer.
 
 ### Import Libraries
 
-```{r}
+```r
 library(PhotosynQ)
 ```
 
@@ -15,7 +17,7 @@ If you don't have the library installed go to <https://github.com/PhotosynQ/Phot
 
 We will use the same Project for all three R tutorials in this section. Project data is also available for download as a csv so that you can follow along and, hopefully, get the same results!
 
-```{r}
+```r
 # Call the function to add the Project data into a Data Frame
 # 243 equals the Project ID for the data that you want to import into R for data analysis.
 df <- PhotosynQ::getProject("john.doe@domain.com",243)
@@ -30,7 +32,7 @@ Now we want to view all of the data in our Project. In this example we used two 
 
 Also, unless we tell R otherwise, we will import all of the data from the Project. In this example, we will limit the data-frame to only measurements that were not flagged (if a data point is not flagged, then its status is listed as 'submitted'), and only the measurements where 'top' was the answer to the Project questions "Leaf.Location".
 
-```{r}
+```r
 # Select a Protocol from the List of Data Frames. This is based on the measurement protocol that your Project uses. 
 # This line of code also filters out "flagged" data points and any measurements that have an answer other than "Top" for the Leaf.Location question.
 chlorophyll <- subset(df$`Chlorophyll content (SPAD) I`, status == "submitted" & Leaf.location == "Top")
@@ -60,7 +62,7 @@ Standard transformations include:
 +transform the light intensity by its square root to make its effect on photosynthetic parameters linear. This is important when you are using linear models like the ANOVA and Mixed Effects models in the next two tutorials
 +Convert the time data from the date/time column to a numeric variable. 
 
-```{r}
+```r
 # We are calculating the square root of the light intensity (PAR). This transformation helps to make the effect of light intensity on Phi2 linear.
 photosynthesis$sqrtPAR <- sqrt(photosynthesis$light_intensity)
 
@@ -72,7 +74,7 @@ photosynthesis$TimeOfDay <- as.POSIXlt(photosynthesis$time)$hour + as.POSIXlt(ph
 
 You may need to upload data from a csv into R for analysis. You can do this using the following code.
 
-```{r}
+```r
 # Set the main folder location for your data
 your_location = "C:/.../"
 # The main data file, located in the main folder, is called... 
