@@ -1,12 +1,13 @@
 # Installation
 
-The mobile Android application is distributed through the [Google Play store] and requires a Google account.
+The mobile Android application is available on [Google Play] and requires a Google account.
 
 ## Download
 
-1. Search for **PhotosynQ** in the [Google Play store].
-2. Tab the **Install** button. Check your permissions and **Accept**
-3. Start the app by selecting the app icon from your phone start screen.
+1. Open [Google Play]
+2. Search for **PhotosynQ**
+3. Tab the **Install** button. Check your permissions and **Accept**
+4. Start the app by selecting the app icon from your phone start screen
 
 ## Permissions
 
@@ -31,4 +32,4 @@ Sometimes the app does not work as expected. Please try this first:
 - Make sure you have sufficient storage.
 - Make sure you have an internet connection.
 
-[Google Play store]: https://play.google.com
+[Google Play]: https://play.google.com
