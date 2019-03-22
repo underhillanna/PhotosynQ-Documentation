@@ -20,4 +20,4 @@
 
 ![GitHub release](https://img.shields.io/github/release/Photosynq/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom") ![GitHub Release Date](https://img.shields.io/github/release-date/PhotosynQ/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom") ![GitHub](https://img.shields.io/github/license/PhotosynQ/PhotosynQ-Documentation.svg?style=flat-square ":no-zoom")
 
-[contributing.md]: https://github.com/PhotosynQ/PhotosynQ-Documentation/contributing.md
+[contributing.md]: https://github.com/Photosynq/PhotosynQ-Documentation/blob/master/contributing.md

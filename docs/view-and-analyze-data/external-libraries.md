@@ -1,6 +1,6 @@
 # External Libraries
 
-PhotosynQ offers you **External Libraries** for [Python](python) and [R-Project](r-project). To get started, install the library for the language you are using. Then navigate to your Project page. Select **External Libraries** from the download options which brings up a dialog with code examples for **Python** and **R**. Simply copy the code into your script to generate a data-frame. Your email address and Project ID are already included, so you can execute the code right away.
+PhotosynQ offers you **External Libraries** for [Python] and [R-Project]. To get started, install the library for the language you are using. Then navigate to your Project page. Select **External Libraries** from the download options which brings up a dialog with code examples for **Python** and **R**. Simply copy the code into your script to generate a data-frame. Your email address and Project ID are already included, so you can execute the code right away.
 
 ![Dialog with code snippet to import the Project data into a data-frame](images/external-libraries.png)
 
@@ -8,9 +8,9 @@ PhotosynQ offers you **External Libraries** for [Python](python) and [R-Project]
 
 ### Installation
 
-Make sure you have [Python](python) (2.7+ or 3.3+) and [pip](https://pypi.org/project/pip/) installed. Use the following command in your terminal to install the Library.
+Make sure you have [Python] (2.7+ or 3.3+) and [pip](https://pypi.org/project/pip/) installed. Use the following command in your terminal to install the Library.
 
-```Bash
+```bash
 pip install git+https://github.com/Photosynq/PhotosynQ-Python.git --upgrade --no-cache-dir
 ```
 
@@ -22,7 +22,7 @@ To access the data from a Project you just need a [PhotosynQ Account](account/cr
 
 The following simple script can be used to generate a data-frame containing the project data.
 
-```Python
+```python
 import photosynq_py as ps
 
 # use your photosynq account to login (you will be prompted for your password)
@@ -43,7 +43,7 @@ When you run the script you will be prompted to enter your PhotosynQ password. I
 
 The object returned is a dictionary of data-frames. You can select a frame by using the Protocol name. If multiple Protocols were used, multiple data-frames are available, one for each Protocol.
 
-```Bash
+```bash
 Dictionary of n
   Dictionary['Protocol Name'] (DataFrame):
     'datum_id': int64
@@ -53,7 +53,7 @@ Dictionary of n
 
 The dataset contains flagged data as well, so when you analyze your dataset you might want to filter out the flagged data points.
 
-```Python
+```python
 protocol = 'Protocol name'
 dt_filtered = df[( df[protocol]['status'] == 'submitted')]
 ```
@@ -64,9 +64,9 @@ dt_filtered = df[( df[protocol]['status'] == 'submitted')]
 
 ### Installation
 
-Make sure you have [R](r-project) installed. We recommend using it in combination with [R-Studio](https://www.rstudio.com/). Then run the following two commands in the R-Console.
+Make sure you have [R][R-Project] installed. We recommend using it in combination with [R-Studio](https://www.rstudio.com/). Then run the following two commands in the R-Console.
 
-```R
+```r
 ## Makes the developer tools avaialble
 library(devtools)
 
@@ -82,7 +82,7 @@ To access the data from a Project you just need a [PhotosynQ Account](account/cr
 
 The following simple script can be used to generate a data-frame containing the project data and viewing the data from the data-frame.
 
-```R
+```r
 # retrieve a dataframe with data from the given project ID
 ID <- 1556
 df <- PhotosynQ::getProject("john.doe@domain.com",ID)
@@ -97,7 +97,7 @@ When you run the script you will be prompted to enter your PhotosynQ password. I
 
 The object returned is a list of data-frames. You can select a frame by using the Protocol name. If multiple Protocols were used, multiple data-frames are available, one for each Protocol.
 
-```Bash
+```bash
 List of n
  $ Protocol Name:'data.frame':
   ..$ datum_id      : num [1:n] 335742 335741 ...
@@ -107,7 +107,7 @@ List of n
 
 The dataset contains flagged data as well, so when you analyze your dataset you might want to filter out the flagged data points.
 
-```R
+```r
 # Library to make the filter function available
 library(dplyr)
 
@@ -117,5 +117,5 @@ df_filtered <- filter(df$`Protocol Name`, status == "submitted")
 
 ?> **Tip:** Please find more information about functions in this library on [GitHub](https://github.com/Photosynq/PhotosynQ-R)
 
-[python]: https://www.python.org/
-[r-project]: https://www.r-project.org/
+[Python]: https://www.python.org/
+[R-Project]: https://www.r-project.org/
