@@ -16,7 +16,7 @@ Protocols are separate units which produce separate data sets. Using `_protocol_
 
 **Example:**
 
-```Javascript
+```javascript
 "_protocol_set_": [
    { Protocol 1 },
    ...
@@ -44,7 +44,7 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 
 **Example:**
 
-```Javascript
+```javascript
 "autogain": [
   [<index>, <pulsed_LED>, <detector>, <pulse_duration>, <target_value>],
   ...
@@ -70,7 +70,7 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 
 **Example:**
 
-```Javascript
+```javascript
 "averages": <number>,
 ```
 
@@ -93,7 +93,7 @@ The `autogain` function is added to the main section of the protocol. Multiple `
 
 **Example:**
 
-```Javascript
+```javascript
 "averages_delay": <number>,
 ```
 
@@ -122,7 +122,7 @@ When `dac_lights` is set to 1, `pulsed_lights_brightness` and `nonpulsed_lights_
 
 **Example:**
 
-```Javascript
+```javascript
 "dac_lights": <number>,
 ```
 
@@ -145,7 +145,7 @@ When `dac_lights` is set to 1, `pulsed_lights_brightness` and `nonpulsed_lights_
 
 **Example:**
 
-```Javascript
+```javascript
 "detectors": [
   [ <detector> ],
   ...
@@ -181,7 +181,7 @@ Adjusting Energy Save Timeout Time. The value of time is in milliseconds, and mu
 
 **Example:**
 
-```Javascript
+```javascript
 "energy_save_timeout": <number>,
 ```
 
@@ -202,7 +202,7 @@ The returned sensor values from most `environmental` calls are accessible inside
 
 **Example:**
 
-```Javascript
+```javascript
 "environmental": [
   [ <sensor> ],
   ...
@@ -224,7 +224,7 @@ The returned sensor values from most `environmental` calls are accessible inside
 
 **Example:**
 
-```Javascript
+```javascript
 "environmental_array": [
   [ <number> ],
   ...
@@ -263,7 +263,7 @@ Each protocol or sub-protocol can now output a `label` that can be used to indic
 
 **Example:**
 
-```Javascript
+```javascript
 "label": <string>,
 ```
 
@@ -282,7 +282,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 **Example:**
 
-```Javascript
+```javascript
 "max_hold_time": <number>,
 ```
 
@@ -305,7 +305,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 **Example:**
 
-```Javascript
+```javascript
 "message": [
   [ <message type>, <message> ],
   ...
@@ -337,7 +337,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 **Example:**
 
-```Javascript
+```javascript
 "nonpulsed_lights": [
   [ <number> ],
   ...
@@ -370,7 +370,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 **Example:**
 
-```Javascript
+```javascript
 "nonpulsed_lights_brightness": [
   [ <number> ],
   ...
@@ -403,7 +403,7 @@ This parameter sets the time (in ms) at which the hold commands timeout. The def
 
 **Example:**
 
-```Javascript
+```javascript
 "number_samples": <number>,
 ```
 
@@ -433,7 +433,7 @@ When `open_close_start` is set to 1, the protocol waits until the user fully ope
 
 **Example:**
 
-```Javascript
+```javascript
 "open_close_start": <number>,
 ```
 
@@ -452,7 +452,7 @@ The Ambient light is recreated inside the instrument on closing the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "par_led_start_on_close": <number for LED>,
 ```
 
@@ -471,7 +471,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "par_led_start_on_open": <number for LED>,
 ```
 
@@ -490,7 +490,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "par_led_start_on_open_close": <number for LED>,
 ```
 
@@ -513,7 +513,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "protocols": <number>,
 ```
 
@@ -536,7 +536,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "protocols_delay": <number>,
 ```
 
@@ -563,7 +563,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "pulse_distance": [
   <number>,
   ...
@@ -596,7 +596,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "pulse_length": [
   [ <number> ],
   ...
@@ -629,7 +629,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "pulsed_lights": [
   [ <number> ],
   ...
@@ -662,7 +662,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "pulsed_lights_brightness": [
   [ <number> ],
   ...
@@ -695,7 +695,7 @@ The Ambient light is recreated inside the instrument on opening the clamp. Durin
 
 **Example:**
 
-```Javascript
+```javascript
 "pulses": [
   <number>,
   ...
@@ -724,7 +724,7 @@ This command returns values from the device memory (EEPROM). This includes value
 
 **Example:**
 
-```Javascript
+```javascript
 "recall": [
   "userdef[<location>]",
   ...
@@ -752,7 +752,7 @@ The MultispeQ is designed to be able to nearly simultaneously measure two detect
 
 **Example:**
 
-```Javascript
+```javascript
 "reference": [
   [ <detector> ],
   ...
@@ -780,7 +780,7 @@ This command saves a value to a location in the device memory (EEPROM). Expressi
 
 **Example:**
 
-```Javascript
+```javascript
 "save": [
   [ <location, <value> ],
   ...
@@ -806,7 +806,7 @@ Saving Time Scale Values. Setting the value to 0 will inactivate the function (p
 
 **Example:**
 
-```Javascript
+```javascript
 "save_trace_time_scale": <number>,
 ```
 
@@ -825,7 +825,7 @@ Pre-illuminating a sample. It is often useful to pre-illuminate a sample at a gi
 
 **Example:**
 
-```Javascript
+```javascript
 "set_led_delay": [
   [ <number LED>, <number duration in ms>, <number PAR> ],
   ...
@@ -859,7 +859,7 @@ Instead of measuring the ambient light intensity, use `set_light_intensity` to s
 
 **Example:**
 
-```Javascript
+```javascript
 "set_light_intensity": <number>,
 ```
 
@@ -882,7 +882,7 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 
 **Example:**
 
-```Javascript
+```javascript
 "start_on_close": <number>,
 ```
 
@@ -905,7 +905,7 @@ If set to 0, the command will be ignored. If set to 1 or higher, it will wait un
 
 **Example:**
 
-```Javascript
+```javascript
 "start_on_open": <number>,
 ```
 
@@ -924,7 +924,7 @@ If set to 0, the command will be ignored. If set to 1, will wait until the clamp
 
 **Example:**
 
-```Javascript
+```javascript
 "start_on_open_close": <number>,
 ```
 
@@ -947,7 +947,7 @@ When "adc_show" is 1, the readings taken by the ADC (analog to digital converter
 
 **Example:**
 
-```Javascript
+```javascript
 "adc_show": <number>,
 ```
 
@@ -972,7 +972,7 @@ The value of time is in milliseconds, and must be between zero and 10^6 millisec
 
 **Example:**
 
-```Javascript
+```javascript
 "energy_min_wake_time": <number>,
 ```
 

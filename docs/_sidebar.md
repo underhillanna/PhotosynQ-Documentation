@@ -3,12 +3,12 @@
 * **Account Basics**
   * [Create an Account](account/create-an-account.md)
   * [Edit your Profile](account/edit-your-profile.md)
-  * [Manage your password](account/manage-your-password.md)
+  * [Manage your Password](account/manage-your-password.md)
   * [PhotosynQ Glossary](account/photosynq-glossary.md)
   * [Sign in to PhotosynQ](account/sign-in-to-photosynq.md)
-  * [Change your email address](account/change-your-email-address.md)
-  * [Your subscriptions](account/your-subscriptions.md)
-  * [Project invitations](account/project-invitations.md)
+  * [Change your Email Address](account/change-your-email-address.md)
+  * [Your Subscriptions](account/your-subscriptions.md)
+  * [Project Invitations](account/project-invitations.md)
   * [Sign out of PhotosynQ](account/sign-out-of-photosynq.md)
   * [Deactivate your PhotosynQ Account](account/deactivate-your-photosynq-account.md)
 

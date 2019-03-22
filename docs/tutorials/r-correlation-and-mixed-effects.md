@@ -11,7 +11,7 @@ The first step will be to generate a correlation matrix of crop yield against th
 
 ### Import Libraries
 
-```{r}
+```r
 library("broom")
 library("dplyr")
 library("data.table")
@@ -26,7 +26,7 @@ We will use the dataset 'sun2.' This dataset contains the mean values of each Ph
 
 First, we need to open up our data file.
 
-```{r}
+```r
 # Set the main folder location for your data
 your_location = "C:/Users/Dan/Desktop/"
 # The main data file, located in the main folder, is called... 
@@ -39,7 +39,7 @@ View(my_data)
 
 Now, lets generate a correlation matrix.
 
-```{r}
+```r
 my_data <- my_data[c(3,4,5,6,7)]
 head(my_data, 6)
 ```
@@ -54,7 +54,7 @@ head(my_data, 6)
 | 6 | 1444 | 0.4229167 | 0.2138182 | 0.3446364 | 45.34083 |
 
 
-```{r}
+```r
 res2 <- rcorr(as.matrix(my_data))
 res2
 ```
@@ -89,7 +89,7 @@ We will use the dataset 'sun,' which is the same dataset used in the "ANOVA and 
 
 First, we need to read our data file
 
-```{r}
+```r
 # Set the main folder location for your data
 your_location = "C:/Users/Dan/Desktop/"
 # The main data file, located in the main folder, is called... 
@@ -102,19 +102,19 @@ View(data)
 
 We need to set block to a categorical variable
 
-```{r}
+```r
 data$Block <- factor(data$Block, ordered = TRUE)
 ```
 
 Now we will run a mixed effect model for SPAD. We will set block as a random effect. Plot is the fixed effect whose coefficient we are interested in.
 
-```{r}
+```r
 SPAD <- lmer(SPAD ~ Plot + (1|Block), data)
 ```
 
 	unable to evaluate scaled gradient Hessian is numerically singular: parameters are not uniquely determined
 
-```{r}
+```r
 summary(SPAD)
 ```
 
@@ -161,7 +161,7 @@ summary(SPAD)
       unable to evaluate scaled gradient
       Hessian is numerically singular: parameters are not uniquely determined
 
-```{r}
+```r
 SPAD = tidy(SPAD)
 setnames(SPAD, "estimate", "SPAD")
 write.csv(SPAD, file = "C:/Users/Dan/Desktop/SPAD.csv")
@@ -169,12 +169,12 @@ write.csv(SPAD, file = "C:/Users/Dan/Desktop/SPAD.csv")
 
 For the photosynthesis parameters (Phi2, PhiNPQ, PhiNO, qL, NPQt, and LEF) we will include sqrtPAR and TimeofDay has fixed effects. Again, block is set as a random effect.
 
-```{r}
+```r
 Phi2 <- lmer(Phi2 ~ sqrtPAR + TimeofDay + Plot + (1|Block), data)
 ```
 	unable to evaluate scaled gradient Hessian is numerically singular: parameters are not uniquely determined
 
-```{r}
+```r
 summary(Phi2)
 ```
 
@@ -223,7 +223,7 @@ summary(Phi2)
       unable to evaluate scaled gradient
       Hessian is numerically singular: parameters are not uniquely determined
 
-```{r}
+```r
 Phi2 = tidy(Phi2)
 setnames(Phi2, "estimate", "Phi2")
 write.csv(Phi2, file = "C:/Users/Dan/Desktop/Phi2.csv")
@@ -272,7 +272,7 @@ summary(PhiNPQ)
       Use print(x, correlation=TRUE)  or
       vcov(x)     if you need it
 
-```{r}
+```r
 PhiNPQ = tidy(PhiNPQ)
 setnames(PhiNPQ, "estimate", "PhiNPQ")
 write.csv(PhiNPQ, file = "C:/Users/Dan/Desktop/PhiNPQ.csv")
@@ -321,7 +321,7 @@ summary(PhiNO)
       Use print(x, correlation=TRUE)  or
       vcov(x)     if you need it
 
-```{r}
+```r
 PhiNO = tidy(PhiNO)
 setnames(PhiNO, "estimate", "PhiNO")
 write.csv(PhiNO, file = "C:/Users/Dan/Desktop/PhiNO.csv")
@@ -333,7 +333,7 @@ We wrote all of our results into a csv and saved them to our computer. Using the
 ### Correlations using our new values
 
 We need to read our new dataset, 'sun3.'
-```{r}
+```r
 # Set the main folder location for your data
 your_location = "C:/Users/Dan/Desktop/"
 # The main data file, located in the main folder, is called... 
@@ -345,7 +345,7 @@ View(data)
 ```
 
 Now, we will generate a correlation matrix using crop yield and the coefficients from the mixed effects model above.
-```{r}
+```r
 data <- data[c(4,5,6,7,8)]
 head(data, 6)
 ```
@@ -360,7 +360,7 @@ head(data, 6)
 | 6 | 1444 | 0.05738775 | -0.04856991 | -0.008147453 | -0.2204167 |
 
 
-```{r}
+```r
 res2 <- rcorr(as.matrix(data))
 res2
 ```

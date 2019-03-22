@@ -62,7 +62,7 @@ node index.js cmd --new <command>
 
 The standard structure for documenting a command is the following:
 
-```Javascript
+```javascript
 {
     "name": "<string>",             // Command Name
     "abstract": "<string>",         // A brief one line description about the Command's function
