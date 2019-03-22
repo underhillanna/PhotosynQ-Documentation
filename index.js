@@ -17,13 +17,13 @@ const hljsLinenums = require('code-highlight-linenums');
 const puppeteer = require('puppeteer');
 const timeStamp = 'YYYY-MM-DDTHH:mm:ssZ';
 
-var commands = function(options){
+var commands = function (options) {
 	var time = moment().utc().format(timeStamp);
 
-	if(options.new !== undefined){
-		var file = "./firmware/"+options.new+".json";
+	if (options.new !== undefined) {
+		var file = "./firmware/" + options.new + ".json";
 
-		if(jetpack.exists(file)){
+		if (jetpack.exists(file)) {
 			console.log(chalk.red('Error: Command already exists'));
 			return;
 		}
@@ -40,12 +40,12 @@ var commands = function(options){
 			"type": "",
 			"editor": "",
 			"compatibility": {},
-			"time":{
+			"time": {
 				"modified": time,
 				"created": time
 			},
 			"deprecated": false,
-			"dependencies":[],
+			"dependencies": [],
 			"parent": "",
 			"access": "public"
 		};
@@ -55,65 +55,65 @@ var commands = function(options){
 		return;
 	}
 
-	if(options.view !== undefined){
-		var file = "./firmware/"+options.view+".json";
+	if (options.view !== undefined) {
+		var file = "./firmware/" + options.view + ".json";
 
-		if(!jetpack.exists(file)){
+		if (!jetpack.exists(file)) {
 			console.log(chalk.red('Error: Command doesn\'t exists'));
 			return;
 		}
 
 		var cmd = jetpack.read(file, 'json');
-		var output = chalk.yellow('\n'+ cmd.name);
+		var output = chalk.yellow('\n' + cmd.name);
 		output += '\n------------------------\n';
-		if(cmd.abstract !== '')
-			output += chalk.grey(cmd.abstract+'\n\n');
-		output += chalk.grey(cmd.description+'\n\n');
-		output += 'Alias: '+ chalk.grey( (cmd.alias.join(', ') || '') +'\n');
-		output += 'Input: '+ chalk.grey(cmd.input+'\n');
-		output += 'Values: '+ chalk.grey( (cmd.values.join(', ') || '') +'\n');
-		output += 'Example: '+ chalk.grey(cmd.example+'\n');
-		output += 'Type: '+ chalk.grey(cmd.type+'\n');
+		if (cmd.abstract !== '')
+			output += chalk.grey(cmd.abstract + '\n\n');
+		output += chalk.grey(cmd.description + '\n\n');
+		output += 'Alias: ' + chalk.grey((cmd.alias.join(', ') || '') + '\n');
+		output += 'Input: ' + chalk.grey(cmd.input + '\n');
+		output += 'Values: ' + chalk.grey((cmd.values.join(', ') || '') + '\n');
+		output += 'Example: ' + chalk.grey(cmd.example + '\n');
+		output += 'Type: ' + chalk.grey(cmd.type + '\n');
 		output += 'Instruments:\n';
 
 		var instruments = Object.keys(cmd.compatibility);
-		for(var i in instruments){
-			output += chalk.cyan( instruments[i]+':\n');
-			output += chalk.grey( ' + ' + cmd.compatibility[instruments[i]].join('\n + ') +'\n');
+		for (var i in instruments) {
+			output += chalk.cyan(instruments[i] + ':\n');
+			output += chalk.grey(' + ' + cmd.compatibility[instruments[i]].join('\n + ') + '\n');
 		}
 
-		output += 'Created: '+ chalk.grey(cmd.time.created+'\n');
-		output += 'Modified: '+ chalk.grey(cmd.time.modified+'\n');
-		output += 'Url: '+ chalk.grey(cmd.url+'\n');
-		output += 'Dependancies: '+ chalk.cyan( (cmd.dependencies.join(', ') || '') +'\n');
-		output += 'Parent: '+ chalk.grey(cmd.parent+'\n');
+		output += 'Created: ' + chalk.grey(cmd.time.created + '\n');
+		output += 'Modified: ' + chalk.grey(cmd.time.modified + '\n');
+		output += 'Url: ' + chalk.grey(cmd.url + '\n');
+		output += 'Dependancies: ' + chalk.cyan((cmd.dependencies.join(', ') || '') + '\n');
+		output += 'Parent: ' + chalk.grey(cmd.parent + '\n');
 
-		if(cmd.deprecated)
+		if (cmd.deprecated)
 			output += chalk.red('Command is deprecated');
 
 		console.log(output);
 		return;
 	}
 
-	if(options.release !== undefined){
+	if (options.release !== undefined) {
 		var files = jetpack.list('./firmware');
-		for(var f in files){
+		for (var f in files) {
 			var content = null;
-			if(files[f].match(/\.json$/)){
-				content = jetpack.read('./firmware/'+files[f], 'json');
-				if(!content.depreacted){
+			if (files[f].match(/\.json$/)) {
+				content = jetpack.read('./firmware/' + files[f], 'json');
+				if (!content.depreacted) {
 					content.time.modified = time;
-					if(content.versions.indexOf(options.release) == -1)
+					if (content.versions.indexOf(options.release) == -1)
 						content.versions.push(options.release);
 				}
-				jetpack.write('./firmware/'+files[f], content, { jsonIndent: 2 });
+				jetpack.write('./firmware/' + files[f], content, { jsonIndent: 2 });
 			}
 		}
 		console.log(chalk.green(`Release ${options.release} created`));
 		return;
 	}
 
-	if(options.documents !== undefined){
+	if (options.documents !== undefined) {
 		var protocols = [];
 		var consolecmds = [];
 
@@ -121,11 +121,11 @@ var commands = function(options){
 		var active = [];
 		var deprecated = [];
 
-		for(var f in files){
+		for (var f in files) {
 			var content = null;
-			if(files[f].match(/\.json$/)){
-				content = jetpack.read('./firmware/'+files[f], 'json');
-				if(content.deprecated)
+			if (files[f].match(/\.json$/)) {
+				content = jetpack.read('./firmware/' + files[f], 'json');
+				if (content.deprecated)
 					deprecated.push(files[f]);
 				else
 					active.push(files[f]);
@@ -134,66 +134,66 @@ var commands = function(options){
 
 		files = active.concat(deprecated);
 
-		for(var f in files){
+		for (var f in files) {
 			var content = null;
-			if(files[f].match(/\.json$/)){
-				content = jetpack.read('./firmware/'+files[f], 'json');
-				var document = '### '+ content.name.replace(/(\_)/g,'\\$1') + ((content.deprecated) ? ' `deprecated`' : '') + '\n\n' ;
-				if(content.description != "")
-					document += content.description+'\n\n';
-				if(content.alias.length > 0)
-					document += '**Alias:** '+ content.alias.map(function(a){
+			if (files[f].match(/\.json$/)) {
+				content = jetpack.read('./firmware/' + files[f], 'json');
+				var document = '### ' + content.name.replace(/(\_)/g, '\\$1') + ((content.deprecated) ? ' `deprecated`' : '') + '\n\n';
+				if (content.description != "")
+					document += content.description + '\n\n';
+				if (content.alias.length > 0)
+					document += '**Alias:** ' + content.alias.map(function (a) {
 						return '`' + a + '`';
 					}) + '\n\n';
 
-				if(content.input != ""){
+				if (content.input != "") {
 					document += '**Input:** ';
-					if(['array','boolean','number','object','string'].indexOf(content.input) > -1)
+					if (['array', 'boolean', 'number', 'object', 'string'].indexOf(content.input) > -1)
 						document += `[${content.input}]`;
 					else
 						document += content.input;
 					document += '\n\n';
 				}
 
-				if(content.values.length > 0)
-					document += '**Values:**\n\n'+ content.values.map(function(a){
-						return '+ '+ a;
+				if (content.values.length > 0)
+					document += '**Values:**\n\n' + content.values.map(function (a) {
+						return '+ ' + a;
 					}).join(' ') + '\n\n';
 
-				if(content.example != "" && content.type == 'console')
-					document += '**Example:**\n\n```bash\n'+ content.example + '\n```\n\n';
+				if (content.example != "" && content.type == 'console')
+					document += '**Example:**\n\n```bash\n' + content.example + '\n```\n\n';
 
-				if(content.example != "" && content.type == 'protocol')
-					document += '**Example:**\n\n```Javascript\n'+ content.example + '\n```\n\n';
+				if (content.example != "" && content.type == 'protocol')
+					document += '**Example:**\n\n```javascript\n' + content.example + '\n```\n\n';
 
 				// document += '**Last Edited:** '+ moment(content.time.modified).format('LL') +'\n\n';
 
-				if(content.dependencies.length > 0)
-					document += '**Dependancies:**\n\n'+ content.dependencies.map(function(a){
+				if (content.dependencies.length > 0)
+					document += '**Dependancies:**\n\n' + content.dependencies.map(function (a) {
 						return `+ ${a}`;
 					}).join('\n') + '\n\n';
 
-				if(content.parent != "")
-					document += '**Parent:** <'+ content.parent+'>\n\n';
+				if (content.parent != "")
+					document += '**Parent:** <' + content.parent + '>\n\n';
 
-				if(Object.keys(content.compatibility).length > 0){
+				if (Object.keys(content.compatibility).length > 0) {
 					document += '**Instruments:**\n\n';
-					document += Object.keys(content.compatibility).map(function(a){
-						if(content.compatibility[a].length == 0)
+					document += Object.keys(content.compatibility).map(function (a) {
+						if (content.compatibility[a].length == 0)
 							return `+ ${a}: \`not available\``;
-						return `+ ${a}: `+ content.compatibility[a].reverse().map(function(b){
-							return '`'+b+'`';
+						return `+ ${a}: ` + content.compatibility[a].reverse().map(function (b) {
+							return '`' + b + '`';
 						}).join(' ');
 
 					}).join('\n') + '\n\n';
 
 				}
 
-				if(content.type == 'console'){
+				if (content.type == 'console') {
 					consolecmds.push(document.trim());
 				}
 
-				if(content.type == 'protocol'){
+				if (content.type == 'protocol') {
 					protocols.push(document.trim());
 				}
 			}
@@ -208,7 +208,7 @@ var commands = function(options){
 		protocols += '[object]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object\n';
 		protocols += '[string]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String\n';
 		protocols += '[boolean]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean\n';
-		
+
 		var consolecmdfile = jetpack.read('./docs/instruments/console-commands.md');
 		consolecmds = consolecmdfile.replace(/(## Available Commands\s+)((.|\n)*)/gm, '$1') + consolecmds;
 
@@ -221,20 +221,20 @@ var commands = function(options){
 		return;
 	}
 
-	if(options.merge !== undefined){
+	if (options.merge !== undefined) {
 		var src_path = './firmware';
-		if(options.source)
-			src_path = jetpack.path(options.source, 'firmware' );
+		if (options.source)
+			src_path = jetpack.path(options.source, 'firmware');
 
-		if(!jetpack.exists(src_path)){
+		if (!jetpack.exists(src_path)) {
 			console.log(chalk.red('Error:') + ' Source files not found');
 			return;
 		}
 		var files = jetpack.list(src_path);
 		var merged = {};
 		var file_path = null;
-		for(var f in files){
-			if(files[f].match(/\.json$/)){
+		for (var f in files) {
+			if (files[f].match(/\.json$/)) {
 				file_path = jetpack.path(src_path, files[f]);
 				content = jetpack.read(file_path, 'json');
 				merged[content.name] = content;
@@ -247,43 +247,43 @@ var commands = function(options){
 
 };
 
-var pingLinks = function(){
+var pingLinks = function () {
 	var list = jetpack.find('.', { matching: ['docs/*/*.md'] });
 	var files = {};
 	var linkList = [];
 	var localList = [];
 	var deadLinks = [];
-	for(var i in list){
+	for (var i in list) {
 		var content = jetpack.read(list[i]);
-		files[list[i]] = {'links':[], 'local': []}
+		files[list[i]] = { 'links': [], 'local': [] }
 		var links = content.match(/(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim)
 		var internalLinks = content.match(/[^!]\[(.*?)\]\((\.{0,2}\/.*?)\)/gm);
 		var images = content.match(/!\[(.*?)\]\((.*?)\)/gm);
-		if(links){
-			for(var l in links){
+		if (links) {
+			for (var l in links) {
 				files[list[i]].links.push(links[l]);
-				if(linkList.indexOf(links[l]) == -1)
+				if (linkList.indexOf(links[l]) == -1)
 					linkList.push(links[l]);
 			}
 		}
-		if(internalLinks){
-			internalLinks = internalLinks.map(function(x){
+		if (internalLinks) {
+			internalLinks = internalLinks.map(function (x) {
 				return x.match(/[^!]\[(.*?)\]\((\.{0,2}\/.*?)\)/m)[2];
 			});
-			for(var l in internalLinks){
+			for (var l in internalLinks) {
 				files[list[i]].local.push(internalLinks[l]);
-				if(localList.indexOf(internalLinks[l]) == -1)
+				if (localList.indexOf(internalLinks[l]) == -1)
 					localList.push(internalLinks[l]);
 			}
 		}
-		if(images){
-			images = images.map(function(x){
+		if (images) {
+			images = images.map(function (x) {
 				return x.match(/(!\[(.*?)\]\()(.*?)(\))/m)[3];
 			});
-			for(var l in images){
+			for (var l in images) {
 				files[list[i]].local.push(images[l]);
-				if(localList.indexOf(images[l]) == -1)
-					localList.push('../'+images[l]);
+				if (localList.indexOf(images[l]) == -1)
+					localList.push('../' + images[l]);
 			}
 		}
 	}
@@ -299,17 +299,17 @@ var pingLinks = function(){
 			return;
 		}
 		results.forEach(function (result) {
-			if(result.status == 'dead')
+			if (result.status == 'dead')
 				deadLinks.push(result.link);
 		});
 		var errors = false;
-		for(var file in files){
+		for (var file in files) {
 			console.log(`\n${chalk.cyan(file)}`);
 			var toCheck = false;
-			if(files[file]['links'] !== undefined){
-				for(var l in files[file]['links']){
+			if (files[file]['links'] !== undefined) {
+				for (var l in files[file]['links']) {
 					toCheck = true;
-					if(deadLinks.indexOf(files[file]['links'][l]) > -1){
+					if (deadLinks.indexOf(files[file]['links'][l]) > -1) {
 						console.log(`[${chalk.red('✖')}] ${chalk.yellow('LINK')} ${files[file]['links'][l]}`);
 						errors = true;
 					}
@@ -317,12 +317,12 @@ var pingLinks = function(){
 						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LINK')} ${files[file]['links'][l]}`);
 				}
 			}
-			if(files[file].local !== undefined){
-				for(var l in files[file].local){
+			if (files[file].local !== undefined) {
+				for (var l in files[file].local) {
 					toCheck = true;
-					if(files[file].local[l].match(/^data:image/))
+					if (files[file].local[l].match(/^data:image/))
 						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LOCAL')} base64 image`);
-					else if(jetpack.exists(files[file].local[l])){
+					else if (jetpack.exists(files[file].local[l])) {
 						console.log(`[${chalk.red('✖')}] ${chalk.yellow('LOCAL')} ${files[file].local[l]}`);
 						errors = true;
 					}
@@ -330,17 +330,17 @@ var pingLinks = function(){
 						console.log(`[${chalk.green('✓')}] ${chalk.yellow('LOCAL')} ${files[file].local[l]}`);
 				}
 			}
-			if(!toCheck)
+			if (!toCheck)
 				console.log(`- ${chalk.yellow('Nothing to Check')}`);
 		}
-		if(errors)
+		if (errors)
 			console.log(chalk.red(`\nError: ${deadLinks.length} Dead links or missing files found`));
 	});
 };
 
-var compileMD = function(options){
+var compileMD = function (options) {
 
-	if(options.input === undefined){
+	if (options.input === undefined) {
 		console.log(chalk.red('Error:') + ' Input file not found');
 		return;
 	}
@@ -349,14 +349,14 @@ var compileMD = function(options){
 	var src_path = '.';
 
 	var date = moment().format('LL');
-	if(options.date !== undefined){
+	if (options.date !== undefined) {
 		date = moment(options.date).format('LL');
 	}
 
 	if (options.source !== undefined)
 		src_path = options.source;
 
-	if(!jetpack.exists(src_path)){
+	if (!jetpack.exists(src_path)) {
 		console.log(chalk.red('Error:') + ' Source files not found');
 		return;
 	}
@@ -364,52 +364,52 @@ var compileMD = function(options){
 	/**
 	 * Read Files from help directory
 	 */
-	var list = jetpack.find(src_path, { matching: ['docs/**/*.md','!docs/**/_*.md','!docs/**/README.md'] });
+	var list = jetpack.find(src_path, { matching: ['docs/**/*.md', '!docs/**/_*.md', '!docs/**/README.md'] });
 
 	/**
 	 * Get file order from help master
 	 */
 	var helpMaster = "";
 	var masterList = jetpack.find(src_path, { matching: ['build/**/*.md'] });
-	for(var i in masterList){
+	for (var i in masterList) {
 		helpMaster += jetpack.read(masterList[i]);
 	}
 
 	var hmFiles = [];
 	hmFiles = helpMaster.match(/(\{+\s?\>\s)([\w\d\.\/-]+)(\}+)/g);
 
-	for(var i in hmFiles){
-		hmFiles[i] = src_path.replace(/^(\.\/)/,'') + "/"+ hmFiles[i].replace(/(\{+\s?\>\s)([\w\d\.\/-]+)(\}+)/,'$2');
+	for (var i in hmFiles) {
+		hmFiles[i] = src_path.replace(/^(\.\/)/, '') + "/" + hmFiles[i].replace(/(\{+\s?\>\s)([\w\d\.\/-]+)(\}+)/, '$2');
 	}
 
 	/**
 	 * Files not in help-master
 	 */
 
-	for(var i in list){
-		if( hmFiles.indexOf(list[i]) == -1 )
-			console.log( chalk.red('File missing in master: ') + list[i] );
+	for (var i in list) {
+		if (hmFiles.indexOf(list[i]) == -1)
+			console.log(chalk.red('File missing in master: ') + list[i]);
 	}
 
 	/**
 	 * Files not in directory
 	 */
-	for(var i in hmFiles){
+	for (var i in hmFiles) {
 		var q = hmFiles[i];
-		if( list.indexOf( q ) == -1 )
-			console.log( chalk.red('File missing in directory: ') + q );
+		if (list.indexOf(q) == -1)
+			console.log(chalk.red('File missing in directory: ') + q);
 	}
 
 	var files = {};
 	var file = null;
-	for(var i in list){
+	for (var i in list) {
 
-		if (options.source){
+		if (options.source) {
 
-			var c = src_path.replace(/\.{0,2}\/?/,'').split('/').length;
+			var c = src_path.replace(/\.{0,2}\/?/, '').split('/').length;
 			file = list[i].split('/').slice(c).join('/');
 		}
-		else{
+		else {
 			file = list[i];
 		}
 
@@ -418,17 +418,17 @@ var compileMD = function(options){
 		// Remove docsify specific tags
 		files[file] = files[file].replace(/([\t ]{0,}\{docsify\-[\d\w]+\}\s{0,})/gm, '');
 
-		var dir = file.split('/').slice(0,-1).join('/');
-		files[file] = files[file].replace(/!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g, function(match, g1, g2, g3){
+		var dir = file.split('/').slice(0, -1).join('/');
+		files[file] = files[file].replace(/!\[([^\]]*)\]\((.*?)\s*("(?:.*[^"])")?\s*\)/g, function (match, g1, g2, g3) {
 			return `![${g1}](${jetpack.path(dir, g2)})`;
 		});
 	}
-	md = Mustache.render(md, {date: date, version: (options.tag || '--') }, files);
+	md = Mustache.render(md, { date: date, version: (options.tag || '--') }, files);
 	jetpack.write(options.output, md);
 	console.log(`${chalk.green('Done')} ${options.output}\n`);
 };
 
-function compileHTML(md){
+function compileHTML(md) {
 	md = md.trim();
 	var mdParser = new Remarkable({
 		html: true,
@@ -437,13 +437,13 @@ function compileHTML(md){
 		plugins: [],
 		highlight: function (str, lang) {
 			if (lang && hljs.getLanguage(lang)) {
-			  try {
-				return hljsLinenums(str.trim(), {
-					hljs: hljs,
-					lang: lang,
-					start: 1
-				});
-			  } catch (err) {}
+				try {
+					return hljsLinenums(str.trim(), {
+						hljs: hljs,
+						lang: lang,
+						start: 1
+					});
+				} catch (err) { }
 			}
 
 			try {
@@ -452,56 +452,56 @@ function compileHTML(md){
 					lang: 'auto',
 					start: 1
 				});
-			} catch (err) {}
+			} catch (err) { }
 
 			return ''; // use external default escaping
 		}
 	});
 	var html = mdParser.render(md);
 	html = html.split('\n');
-	html = html.map(function(element){
+	html = html.map(function (element) {
 
 		var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
-		if(src){
-			if(jetpack.exists(src[2])){
+		if (src) {
+			if (jetpack.exists(src[2])) {
 				var dimensions = sizeOf(src[2]);
-				if(dimensions.height > 800 && (dimensions.width / dimensions.height) < 0.6 ){
-					element = element.replace('<img','<img style="max-width:50%" ');
+				if (dimensions.height > 800 && (dimensions.width / dimensions.height) < 0.6) {
+					element = element.replace('<img', '<img style="max-width:50%" ');
 				}
 			}
 		}
 
-		if(element.match(/\s{0,}(\!>|\!\&gt;)/)){
+		if (element.match(/\s{0,}(\!>|\!\&gt;)/)) {
 			element = element.replace(/^(<p>)(\s{0,}(\!>|\!\&gt;)\s{0,})/i, '<p class="note">');
 		}
 
-		if(element.match(/\s{0,}(\?>|\?\&gt;)/)){
+		if (element.match(/\s{0,}(\?>|\?\&gt;)/)) {
 			element = element.replace(/^(<p>)(\s{0,}(\?>|\?\&gt;)\s{0,})/i, '<p class="tip">');
 		}
 
-		if(element.match(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i)){
-			element = element.replace(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i, `$1 class="chapter"$2$4` ) || element;
+		if (element.match(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i)) {
+			element = element.replace(/(<h1)(.+)(\{main\-chapter\})(<\/h1>)/i, `$1 class="chapter"$2$4`) || element;
 		}
 
-		if(element.match(/<img\/?[^>]+(>|$)/g)){
+		if (element.match(/<img\/?[^>]+(>|$)/g)) {
 			var img = '';
 			img += '<figure>';
 			img += element.match(/<img\/?[^>]+(>|$)/)[0].replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
-			if(!jetpack.exists( element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] ))
-				console.log(chalk.red(`Error - Missing file: `) + element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] +'\n');
+			if (!jetpack.exists(element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2]))
+				console.log(chalk.red(`Error - Missing file: `) + element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] + '\n');
 			img += '<figcaption>';
-			img +=  mdParser.render( element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, '') );
+			img += mdParser.render(element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, ''));
 			img += '</figcaption>';
 			img += '</figure>';
 			element = element.replace(/<img\/?[^>]+(>|$)/, img);
 		}
 
-		if(element.match(/^<li>/)){
+		if (element.match(/^<li>/)) {
 			element = element.replace(/^(\<li\>\s{0,})(\[x\])/i, `$1`);
 		}
 
 		var href = element.match(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im);
-		if(href){
+		if (href) {
 			element = element.replace(/(a href\s?=\s?\")(\.{0,2})(\/.*?)(\")/im, '$1https://photosynq.org$3$4');
 		}
 		return element;
@@ -513,18 +513,18 @@ function compileHTML(md){
 	return html;
 }
 
-var createPDF = function (options){
+var createPDF = function (options) {
 
 	var md = jetpack.read(options.input);
 	var html = compileHTML(md);
 
 	var filename = jetpack.inspect(options.input).name;
-	filename = filename.substr(0,(filename.length -3)).split('-').slice(1).join(' ');
+	filename = filename.substr(0, (filename.length - 3)).split('-').slice(1).join(' ');
 
 	(async () => {
 		const browser = await puppeteer.launch({
 			headless: true,
-			args: [ "--disable-web-security" ]
+			args: ["--disable-web-security"]
 		});
 
 		const page = await browser.newPage();
@@ -532,7 +532,7 @@ var createPDF = function (options){
 		await page.setContent(html);
 
 		await page.addStyleTag({
-			content: jetpack.read( jetpack.path(__dirname, "src", "css", "print.css") ).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}` )
+			content: jetpack.read(jetpack.path(__dirname, "src", "css", "print.css")).replace(/(url\(\s?\')(\.{1,2})/g, `$1file://${__dirname}`)
 		});
 
 		await page.addStyleTag({
@@ -563,12 +563,12 @@ var createPDF = function (options){
 				bottom: "20mm",
 				left: "20mm"
 			},
-			path: jetpack.path(__dirname,options.output),
+			path: jetpack.path(__dirname, options.output),
 			printBackground: true,
 			scale: 1
-		}).then(function(){
+		}).then(function () {
 			console.log('PDF created: ', options.output);
-		}, function(error) {
+		}, function (error) {
 			console.log(error);
 		});
 
@@ -577,28 +577,28 @@ var createPDF = function (options){
 	})();
 };
 
-var createEPUB = function (){
+var createEPUB = function () {
 	var cwd = jetpack.cwd();
-	var cssString = jetpack.read( jetpack.path( cwd, 'src', 'css', 'epub.css' ) );
-	cssString += jetpack.read( jetpack.path( cwd, "node_modules", "highlight.js", "styles", "github.css") );
-	cssString += jetpack.read( jetpack.path( cwd, "src", "css", "linenumbers.css") );
-	cssString += jetpack.read( jetpack.path( cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css' ) ).replace( /\.\.\/fonts\/fontawesome/g , './fonts/fontawesome');
+	var cssString = jetpack.read(jetpack.path(cwd, 'src', 'css', 'epub.css'));
+	cssString += jetpack.read(jetpack.path(cwd, "node_modules", "highlight.js", "styles", "github.css"));
+	cssString += jetpack.read(jetpack.path(cwd, "src", "css", "linenumbers.css"));
+	cssString += jetpack.read(jetpack.path(cwd, 'node_modules', 'font-awesome', 'css', 'font-awesome.css')).replace(/\.\.\/fonts\/fontawesome/g, './fonts/fontawesome');
 
-  var option = {
-    title: "", // *Required, title of the book.
-    author: "", // *Required, string or array.
+	var option = {
+		title: "", // *Required, title of the book.
+		author: "", // *Required, string or array.
 		// publisher: "", // optional
 		version: 3, // or 2
 		css: cssString, // sting with css
-		fonts: [ jetpack.path( cwd, 'node_modules', 'font-awesome', 'fonts', 'fontawesome-webfont.ttf' ) ],
+		fonts: [jetpack.path(cwd, 'node_modules', 'font-awesome', 'fonts', 'fontawesome-webfont.ttf')],
 		lang: 'en',
 		tocTitle: 'Contents',
-		customHtmlTocTemplatePath: jetpack.path( cwd, 'src', 'templates', 'toc.xhtml.ejs' ),
+		customHtmlTocTemplatePath: jetpack.path(cwd, 'src', 'templates', 'toc.xhtml.ejs'),
 		customOpfTemplatePath: './src/templates/content.opf.ejs',
-    	cover: jetpack.path( cwd, 'src', 'css', 'epub-cover.png' ), // Url or File path, both ok.
+		cover: jetpack.path(cwd, 'src', 'css', 'epub-cover.png'), // Url or File path, both ok.
 		content: [],
 		remarkable: {
-			html:true,
+			html: true,
 			linkify: true,
 			plugins: []
 		},
@@ -608,177 +608,177 @@ var createEPUB = function (){
 	const entities = new Entities();
 	var output = null;
 	var collect = false;
-	for(var i in process.argv){
-		if(process.argv[i].match(/^-i|--input/)){
+	for (var i in process.argv) {
+		if (process.argv[i].match(/^-i|--input/)) {
 			collect = true;
 			continue;
 		}
-		if(process.argv[i].match(/^-o|--output/)){
-			if(process.argv[(parseInt(i)+1)] !== undefined){
-				output = process.argv[(parseInt(i)+1)];
+		if (process.argv[i].match(/^-o|--output/)) {
+			if (process.argv[(parseInt(i) + 1)] !== undefined) {
+				output = process.argv[(parseInt(i) + 1)];
 			}
 			collect = false;
 			continue;
 		}
-		if(process.argv[i].match(/^-d|--date/)){
-			if(process.argv[(parseInt(i)+1)] !== undefined){
-				option.date = process.argv[(parseInt(i)+1)];
+		if (process.argv[i].match(/^-d|--date/)) {
+			if (process.argv[(parseInt(i) + 1)] !== undefined) {
+				option.date = process.argv[(parseInt(i) + 1)];
 			}
 			collect = false;
 			continue;
 		}
-		if(process.argv[i].match(/^-v|--version/)){
-			if(process.argv[(parseInt(i)+1)] !== undefined){
-				option.version = process.argv[(parseInt(i)+1)];
+		if (process.argv[i].match(/^-v|--version/)) {
+			if (process.argv[(parseInt(i) + 1)] !== undefined) {
+				option.version = process.argv[(parseInt(i) + 1)];
 			}
 			collect = false;
 			continue;
 		}
-		if(process.argv[i].match(/^-a|--author/)){
-			if(process.argv[(parseInt(i)+1)] !== undefined){
-				option.author = process.argv[(parseInt(i)+1)];
-				try{
+		if (process.argv[i].match(/^-a|--author/)) {
+			if (process.argv[(parseInt(i) + 1)] !== undefined) {
+				option.author = process.argv[(parseInt(i) + 1)];
+				try {
 					option.author = JSON.parse(option.author);
 				}
-				catch(e){}
+				catch (e) { }
 			}
 			collect = false;
 			continue;
 		}
-		if(process.argv[i].match(/^-t|--title/)){
-			if(process.argv[(parseInt(i)+1)] !== undefined){
-				option.title = process.argv[(parseInt(i)+1)];
+		if (process.argv[i].match(/^-t|--title/)) {
+			if (process.argv[(parseInt(i) + 1)] !== undefined) {
+				option.title = process.argv[(parseInt(i) + 1)];
 			}
 			collect = false;
 			continue;
 		}
-		if(collect){
+		if (collect) {
 			var read = jetpack.read(process.argv[i]);
-			if(read !== undefined)
-				jetpack.append( jetpack.path( cwd, 'dist', 'temp.md' ), read);
+			if (read !== undefined)
+				jetpack.append(jetpack.path(cwd, 'dist', 'temp.md'), read);
 		}
 	}
 
-	if(!output){
+	if (!output) {
 		console.log('\nNo output file defined\n');
 		return;
 	}
 
-	if(!jetpack.exists(jetpack.path( cwd, 'dist', 'temp.md' ))){
+	if (!jetpack.exists(jetpack.path(cwd, 'dist', 'temp.md'))) {
 		console.log('\nNo input file defined\n');
 		return;
 	}
 
 	var _html = "";
 
-	jetpack.createReadStream(jetpack.path( cwd, 'dist', 'temp.md' ))
-	.pipe(
-		through2(
-			function transform (chunk, enc, cb) {
-				_html += chunk;
-				cb();
-			},
-			function flush (cb) {
-				var self = this;
-				self.push( compileHTML(_html) )
-				self.push(null);
-				cb();
-			}
+	jetpack.createReadStream(jetpack.path(cwd, 'dist', 'temp.md'))
+		.pipe(
+			through2(
+				function transform(chunk, enc, cb) {
+					_html += chunk;
+					cb();
+				},
+				function flush(cb) {
+					var self = this;
+					self.push(compileHTML(_html))
+					self.push(null);
+					cb();
+				}
+			)
 		)
-	)
-	.on('data', function (data) {
-		_html = data.toString().trim().split('\n');
-		var chapters = {};
-		var chapterTitle = null;
+		.on('data', function (data) {
+			_html = data.toString().trim().split('\n');
+			var chapters = {};
+			var chapterTitle = null;
 
-		for(var i in _html){
-			if(_html[i].match(/^<h1/)){
-				if(_html[i].match(/(class="chapter")/) || _html[parseInt(i)+1].match(/<span class="text-muted">Modified/)){
+			for (var i in _html) {
+				if (_html[i].match(/^<h1/)) {
+					if (_html[i].match(/(class="chapter")/) || _html[parseInt(i) + 1].match(/<span class="text-muted">Modified/)) {
+						continue;
+					}
+					chapterTitle = _html[i].replace(/<\/?[^>]+(>|$)/g, "");
+					chapters[chapterTitle] = "";
 					continue;
 				}
-				chapterTitle = _html[i].replace(/<\/?[^>]+(>|$)/g, "");
-				chapters[chapterTitle] = "";
-				continue;
+				if (chapterTitle) {
+					if (_html[i].match(/<span class="text-muted">Modified/) || _html[i].match(/<span class="text-muted">Version/))
+						continue;
+					chapters[chapterTitle] += _html[i] + '\n';
+				}
 			}
-			if(chapterTitle){
-				if( _html[i].match(/<span class="text-muted">Modified/) || _html[i].match(/<span class="text-muted">Version/) )
-					continue;
-				chapters[chapterTitle] += _html[i]+'\n';
-			}
-		}
-		var date = moment( (option.date === undefined) ? new Date() : option.date ).format('LL') || moment().format('LL');
-		var version = (option.version === undefined) ? "unknown" : option.version;
+			var date = moment((option.date === undefined) ? new Date() : option.date).format('LL') || moment().format('LL');
+			var version = (option.version === undefined) ? "unknown" : option.version;
 
-		var header = '<div style="margin-top:45%; text-align:center">';
+			var header = '<div style="margin-top:45%; text-align:center">';
 			header += '<p>PhotosynQ Documentation</p>';
-			header += '<small>Modified: '+date+'</small><br>';
-			header += '<small>Version: '+version+'</small>';
-		header += '</div>';
+			header += '<small>Modified: ' + date + '</small><br>';
+			header += '<small>Version: ' + version + '</small>';
+			header += '</div>';
 
-		option.content.push({
-			data: header,
-			excludeFromToc: true,
-			beforeToc: false
-		});
-
-		for(var c in chapters){
 			option.content.push({
-				title: entities.decode(c),
-				data: chapters[c]
+				data: header,
+				excludeFromToc: true,
+				beforeToc: false
 			});
-		}
 
-		new epub(option, output)
-		jetpack.remove(jetpack.path( cwd, 'dist', 'temp.md' ));
-	});
+			for (var c in chapters) {
+				option.content.push({
+					title: entities.decode(c),
+					data: chapters[c]
+				});
+			}
+
+			new epub(option, output)
+			jetpack.remove(jetpack.path(cwd, 'dist', 'temp.md'));
+		});
 };
 
 program
-  .version(version);
+	.version(version);
 
 program
 	.command('cmd')
-	.option('-n, --new <command>','Add a new command')
-	.option('-v, --view <command>','View a new command')
-	.option('-r, --release <version>','Add a new release version to commands that are not deprecated')
-	.option('-d, --documents','Generate new help documents')
-	.option('-m, --merge','Merge all files into one JSON file')
-	.option('-s, --source [dir]','Compile files from a different source')
+	.option('-n, --new <command>', 'Add a new command')
+	.option('-v, --view <command>', 'View a new command')
+	.option('-r, --release <version>', 'Add a new release version to commands that are not deprecated')
+	.option('-d, --documents', 'Generate new help documents')
+	.option('-m, --merge', 'Merge all files into one JSON file')
+	.option('-s, --source [dir]', 'Compile files from a different source')
 	.description('Manage firmware commands')
 	.action(commands);
 
 
 program
 	.command('test-links')
-	.option('-s, --source [dir]','Compile files from a different source')
+	.option('-s, --source [dir]', 'Compile files from a different source')
 	.description('Ping all links in markdown documents to see if they are alive')
 	.action(pingLinks);
 
 program
 	.command('compile')
-	.option('-i, --input <input>','Markdown Template File')
-	.option('-o, --output <output>','Output file')
-	.option('-t, --tag <tag>','Set Version (tag) of the document')
-	.option('-d, --date <date>','Set Date (date) of the document (ISO 8601 format)')
-	.option('-s, --source [dir]','Compile files from a different source')
+	.option('-i, --input <input>', 'Markdown Template File')
+	.option('-o, --output <output>', 'Output file')
+	.option('-t, --tag <tag>', 'Set Version (tag) of the document')
+	.option('-d, --date <date>', 'Set Date (date) of the document (ISO 8601 format)')
+	.option('-s, --source [dir]', 'Compile files from a different source')
 	.description('Generate master markdown file from template')
 	.action(compileMD);
 
 program
 	.command('pdf')
-	.option('-i, --input <input>','Markdown File')
-	.option('-o, --output <output>','PDF File')
+	.option('-i, --input <input>', 'Markdown File')
+	.option('-o, --output <output>', 'PDF File')
 	.description('Generate PDF from Markdown')
 	.action(createPDF);
 
 program
 	.command('epub')
-	.option('-i, --input <input>','Markdown File')
-	.option('-o, --output <output>','ePub File')
-	.option('-t, --title [title]','Ebook Title')
-	.option('-a, --author','Ebook Author(s)')
-	.option('-v, --version <version>','Version (Github tag)')
-	.option('-d, --date <date>','Release Date')
+	.option('-i, --input <input>', 'Markdown File')
+	.option('-o, --output <output>', 'ePub File')
+	.option('-t, --title [title]', 'Ebook Title')
+	.option('-a, --author', 'Ebook Author(s)')
+	.option('-v, --version <version>', 'Version (Github tag)')
+	.option('-d, --date <date>', 'Release Date')
 	.description('Generate ePub from Markdown')
 	.action(createEPUB);
 
