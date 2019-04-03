@@ -288,7 +288,19 @@
 
 # Instruments {main-chapter}
 
-{{> docs/instruments/instrument-basics.md}}
+{{> docs/instruments/instruments.md}}
+
+***
+
+{{> docs/instruments/multispeq-v2.0.md}}
+
+***
+
+{{> docs/instruments/multispeq-v2.0-configuration.md}}
+
+***
+
+{{> docs/instruments/multispeq-v1.0-configuration.md}}
 
 ***
 
@@ -305,14 +317,6 @@
 ***
 
 {{> docs/instruments/how-to-install-firmware-updates.md}}
-
-***
-
-{{> docs/instruments/multispeq-v1.0-configuration.md}}
-
-***
-
-{{> docs/instruments/multispeq-v2.0-configuration.md}}
 
 # Console Commands {main-chapter}
 
