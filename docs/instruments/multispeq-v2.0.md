@@ -39,7 +39,7 @@ The leaf Temperature can be measured with the IR Contactless Temperature. When t
 
 ### Temperature & rel. Humidity Vent
 
-The two vents are 
+The two vents allowing air to be exchanged inside the Instrument. There are two sensors inside the clamp, one is close to the vents and the light guide, the other one is located on the other end of the clamp. Tubes can be attached in combination with a pump to provide a constant air flow and/or gas exchange.
 
 ### Instrument Action Indicator
 
