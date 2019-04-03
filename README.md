@@ -32,7 +32,7 @@ Files are named using the help or tutorial title, e.g. `this-is-the-chapter-1.md
 │   ├── tutorials               // Tutorials folder
 │   │   └── images
 │   └── view-and-analyze-data   // Data viewing and analysis Chapters folder
-│   │   └── images
+│       └── images
 └── firmware                    // Firmware Commands folder
 ```
 
@@ -72,7 +72,6 @@ The standard structure for documenting a command is the following:
     "values": [],
     "example": "<string>",          // Add an example on how to use the command
     "type": "console|protocol",     // Where the Command can be used
-    "editor": "table|fixed",        // Location in the Protocol Editor
     "compatibility": {},            // "Instrument Name": ["firmware version",...]
     "time":{
         "modified": "<time>",       // Timestamp YYYY-MM-DDTHH:mm:ssZ
