@@ -460,7 +460,6 @@ function compileHTML(md) {
 	var html = mdParser.render(md);
 	html = html.split('\n');
 	html = html.map(function (element) {
-
 		var src = element.match(/(img\s?src\s?=\s?\")(.*?)(\")/im);
 		if (src) {
 			if (jetpack.exists(src[2])) {
@@ -484,15 +483,18 @@ function compileHTML(md) {
 		}
 
 		if (element.match(/<img\/?[^>]+(>|$)/g)) {
-			var img = '';
-			img += '<figure>';
-			img += element.match(/<img\/?[^>]+(>|$)/)[0].replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
+			var img = element.match(/<img\/?[^>]+(>|$)/)[0].replace(/(img\s?src\s?=\s?\")(.*?)(\")/im, `$1file://$2$3`);
 			if (!jetpack.exists(element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2]))
 				console.log(chalk.red(`Error - Missing file: `) + element.match(/<img\/?[^>]+(>|$)/)[0].match(/(img\s?src\s?=\s?\")(.*?)(\")/im)[2] + '\n');
-			img += '<figcaption>';
-			img += mdParser.render(element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, ''));
-			img += '</figcaption>';
-			img += '</figure>';
+			if( !element.match(/<td>/g) ){
+				var fig = '<figure>';
+				fig += img;
+				fig += '<figcaption>';
+				fig += mdParser.render(element.match(/(alt=)(\"([^>]+)(\"|$))/)[3].replace(/<\/?p>/g, ''));
+				fig += '</figcaption>';
+				fig += '</figure>';
+				img = fig;
+			}
 			element = element.replace(/<img\/?[^>]+(>|$)/, img);
 		}
 
