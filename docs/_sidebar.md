@@ -86,13 +86,14 @@
   * [Provided Functions](macros/provided-functions.md)
 
 * **Instruments**
-  * [Instrument basics](instruments/instrument-basics.md)
+  * [Instruments](instruments/instruments.md)
+  * [MultispeQ v2.0](instruments/multispeq-v2.0.md)
+  * [MultispeQ v2.0 configuration](instruments/multispeq-v2.0-configuration.md)
+  * [MultispeQ v1.0 configuration](instruments/multispeq-v1.0-configuration.md)
   * [What does the MultispeQ measure](instruments/what-does-the-multispeq-measure.md)
   * [Instrument Settings](instruments/instrument-settings.md)
   * [Instrument Calibrations](instruments/instrument-calibrations.md)
   * [How to Install Firmware Updates](instruments/how-to-install-firmware-updates.md)
-  * [MultispeQ v1.0 configuration](instruments/multispeq-v1.0-configuration.md)
-  * [MultispeQ v2.0 configuration](instruments/multispeq-v2.0-configuration.md)
   * [Console Commands](instruments/console-commands.md)
 
 * **Tutorials**

@@ -1,4 +1,4 @@
-# Instrument Basics
+# Instruments
 
 ## What Instruments can be used with PhotosynQ?
 
