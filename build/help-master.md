@@ -166,6 +166,10 @@
 
 {{> docs/projects/managing-project-settings.md}}
 
+***
+
+{{> docs/projects/import-custom-data.md}}
+
 # View & Analyze Data {main-chapter}
 
 {{> docs/view-and-analyze-data/view-your-project-data.md}}

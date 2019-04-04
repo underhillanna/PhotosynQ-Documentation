@@ -48,6 +48,7 @@
   * [Adding a Project Description](projects/adding-a-project-description.md)
   * [Editing a Project](projects/editing-a-project.md)
   * [Managing Project Settings](projects/managing-project-settings.md)
+  * [Import Custom Data](projects/import-custom-data.md)
 
 * **View & Analyze Data**
   * [View your Project Data](view-and-analyze-data/view-your-project-data.md)
