@@ -97,6 +97,7 @@
   * [Instrument Calibrations](instruments/instrument-calibrations.md)
   * [How to Install Firmware Updates](instruments/how-to-install-firmware-updates.md)
   * [Console Commands](instruments/console-commands.md)
+  * [Light Guide Mask](instruments/light-guide-mask.md)
 
 * **Tutorials**
   * [Getting Started](tutorials/getting-started.md)

@@ -326,6 +326,10 @@
 
 {{> docs/instruments/how-to-install-firmware-updates.md}}
 
+***
+
+{{> docs/instruments/light-guide-mask.md}}
+
 # Console Commands {main-chapter}
 
 {{> docs/instruments/console-commands.md}}
