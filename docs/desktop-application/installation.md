@@ -20,6 +20,8 @@ Taking measurements in the in the lab, developing new measurement protocols and 
 3. The app gets installed into the default windows application folder (e.g. `C:\Program Files`).
 4. A short-cut is added to the Desktop.
 
+?> When using Windows older than Windows 10, a serial driver needs to be installed. Download the **Windows Serial Installer** from here: [Download](https://www.pjrc.com/teensy/serial_install.exe)
+
 ### **Mac**
 
 ![Installation of the Application from the Disk-Image (macOS)](images/install-application-mac.png)
