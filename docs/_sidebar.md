@@ -48,6 +48,9 @@
   * [Adding a Project Description](projects/adding-a-project-description.md)
   * [Editing a Project](projects/editing-a-project.md)
   * [Managing Project Settings](projects/managing-project-settings.md)
+  * [Import Custom Data](projects/import-custom-data.md)
+  * [Using Barcodes](projects/barcodes.md)
+  * [Large Scale Projects](projects/large-scale-projects.md)
 
 * **View & Analyze Data**
   * [View your Project Data](view-and-analyze-data/view-your-project-data.md)
@@ -95,6 +98,7 @@
   * [Instrument Calibrations](instruments/instrument-calibrations.md)
   * [How to Install Firmware Updates](instruments/how-to-install-firmware-updates.md)
   * [Console Commands](instruments/console-commands.md)
+  * [Light Guide Mask](instruments/light-guide-mask.md)
 
 * **Tutorials**
   * [Getting Started](tutorials/getting-started.md)

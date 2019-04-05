@@ -166,6 +166,18 @@
 
 {{> docs/projects/managing-project-settings.md}}
 
+***
+
+{{> docs/projects/import-custom-data.md}}
+
+***
+
+{{> docs/projects/barcodes.md}}
+
+***
+
+{{> docs/projects/large-scale-projects.md}}
+
 # View & Analyze Data {main-chapter}
 
 {{> docs/view-and-analyze-data/view-your-project-data.md}}
@@ -317,6 +329,10 @@
 ***
 
 {{> docs/instruments/how-to-install-firmware-updates.md}}
+
+***
+
+{{> docs/instruments/light-guide-mask.md}}
 
 # Console Commands {main-chapter}
 
