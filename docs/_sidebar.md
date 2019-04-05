@@ -50,6 +50,7 @@
   * [Managing Project Settings](projects/managing-project-settings.md)
   * [Import Custom Data](projects/import-custom-data.md)
   * [Using Barcodes](projects/barcodes.md)
+  * [Large Scale Projects](projects/large-scale-projects.md)
 
 * **View & Analyze Data**
   * [View your Project Data](view-and-analyze-data/view-your-project-data.md)

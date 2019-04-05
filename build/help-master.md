@@ -174,6 +174,10 @@
 
 {{> docs/projects/barcodes.md}}
 
+***
+
+{{> docs/projects/large-scale-projects.md}}
+
 # View & Analyze Data {main-chapter}
 
 {{> docs/view-and-analyze-data/view-your-project-data.md}}
