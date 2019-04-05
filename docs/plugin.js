@@ -84,7 +84,14 @@ function docsifyFeedback(hook, vm){
   });
 }
 
+function docsifySidebarScroll(hook, vm){
+  hook.doneEach(function() {
+    document.querySelector(".sidebar-nav .active").scrollIntoView(true);
+  });
+}
+
 window.$docsify = window.$docsify || {};
 window.$docsify.plugins = [docsifyListColumns].concat(window.$docsify.plugins || []);
 window.$docsify.plugins = [docsifyReadTime].concat(window.$docsify.plugins || []);
 window.$docsify.plugins = [docsifyFeedback].concat(window.$docsify.plugins || []);
+window.$docsify.plugins = [docsifySidebarScroll].concat(window.$docsify.plugins || []);
