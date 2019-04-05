@@ -170,6 +170,10 @@
 
 {{> docs/projects/import-custom-data.md}}
 
+***
+
+{{> docs/projects/barcodes.md}}
+
 # View & Analyze Data {main-chapter}
 
 {{> docs/view-and-analyze-data/view-your-project-data.md}}
