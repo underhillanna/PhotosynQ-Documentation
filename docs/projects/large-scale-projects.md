@@ -40,17 +40,6 @@ Once the **Auto Increment** box has been checked, all available answers are list
 
 ?> **Tip:** When multiple people are collecting data in the field, they should start at different locations to randomize the data collection. This will be easier to accomplish when using the preset Question/Answer combinations as they guide the data collectors through the experiment.
 
-<!-- Choose where to start
-
-Let’s say that multiple people are planning on collecting data at the same time and are starting at different locations in the field.
-Once ‘auto-increment’ has been checked, a screen will pop up allowing you to choose your starting point (near right)
-If you are going to start at pot # 81, scroll down and select pot # 81 (far right).
-
-
-Choose where to start
-• Now you will need to repeat the same process with the genotype, irrigation, and replicate questions
-• The bold number on the left are the answer number, and help to ensure that your answers are properly aligned -->
-
 ### New Measurement
 
 After each measurement, the Mobile Application will automatically input the next answers when **New Measurement** is selected.
