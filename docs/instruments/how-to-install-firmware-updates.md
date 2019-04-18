@@ -81,11 +81,9 @@ Make sure you have a verified .hex file from [PhotosynQ][Firmware-Github]. Selec
 Connect your Instrument to a USB port. To avoid confusion, make sure it is the only Instrument connected to the USB.
 Open the Settings dialog from the left menu bar and connect your Instrument.
 
-Select the **"Check"** button to bring up the firmware update dialog.
-
 ### Step 2
 
-Click on the **"Manual Update" button and select the previously downloaded file. Confirm that you want to update the firmware on your Instrument.
+Click on the **"Manual"** button and confirm that you want to update the firmware on your Instrument.Next select the previously downloaded file and select open to start the firmware update.
 
 ### Step 3
 
