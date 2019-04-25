@@ -2,9 +2,10 @@
 
 The standard MultispeQ protocol measures the following parameters*:
 
+## Primary Parameters
+
 | Parameter | What does it mean? |
-| ---------- | ------- |
-|**Primary Parameters**| |
+| --------- | ------------------ |
 |Ambient Humidity|Relative humidity in percent (%)|
 |Ambient Pressure|Atmospheric pressure (mbar) - This value is not corrected to sea level as found in weather reports|
 |Ambient Temperature|Ambient temperature in degree Celsius (°C)|
@@ -25,7 +26,11 @@ The standard MultispeQ protocol measures the following parameters*:
 |Relative Chlorophyll|Otherwise known has "SPAD" (Special Products Analysis Division), relative chlorophyll is a measure of leaf “greenness”. This measurement is often correlated with leaf nitrogen levels|
 |Thickness| The thickness of the leaf as measured by the Hall Effect sensor embedded in the MultispeQ clamp.
 |gH+|  Proton conductivity of the chloroplast ATP synthase. *[Avenson et al. Plant Cell Environ. (2005)][doi:10.1111/j.1365-3040.2005.01294.x]*|
-|**Advanced**| |
+
+## Advanced Parameters
+
+| Parameter | What does it mean? |
+|---------- | ------------------ |
 |absorbance_wavelength|The absorbance of light from each wavelength that passed through the leaf|
 |angle_direction|Abbreviated cardinal direction (e.g. NW - North West)|
 |B|The raw amount of blue light captured by the PAR sensor|

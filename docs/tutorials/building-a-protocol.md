@@ -199,4 +199,4 @@ Putting all the pieces together, the protocol to measure Phi2 looks like this:
 
 [JSON_URL]: https://www.w3schools.com/js/js_json_intro.asp
 [Desktop App]: https://photosynq.org/software#desktop
-[Help Center]: https://photosynq.org/help/protocols_Commands
+[Help Center]: protocols/commands.md

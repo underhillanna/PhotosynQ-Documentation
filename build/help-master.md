@@ -16,10 +16,6 @@
 
 ***
 
-{{> docs/account/photosynq-glossary.md}}
-
-***
-
 {{> docs/account/sign-in-to-photosynq.md}}
 
 ***
@@ -40,7 +36,11 @@
 
 ***
 
-{{> docs/account/deactivate-your-photosynq-account.md}}
+{{> docs/account/deactivate-an-account.md}}
+
+***
+
+{{> docs/account/photosynq-glossary.md}}
 
 # Mobile Application {main-chapter}
 
@@ -252,23 +252,19 @@
 
 ***
 
-{{> docs/protocols/view-your-protocols.md}}
-
-***
-
-{{> docs/protocols/create-a-new-protocol.md}}
-
-***
-
-{{> docs/protocols/save-a-protocol.md}}
-
-***
-
-{{> docs/protocols/edit-a-protocol.md}}
-
-***
-
 {{> docs/protocols/run-a-protocol.md}}
+
+***
+
+{{> docs/protocols/create-edit-protocol.md}}
+
+***
+
+{{> docs/protocols/repeats.md}}
+
+***
+
+{{> docs/protocols/variables.md}}
 
 ***
 
@@ -276,19 +272,11 @@
 
 # Macros {main-chapter}
 
-{{> docs/macros/view-your-macros.md}}
+{{> docs/macros/macro-basics.md}}
 
 ***
 
-{{> docs/macros/create-a-new-macro.md}}
-
-***
-
-{{> docs/macros/save-a-macro.md}}
-
-***
-
-{{> docs/macros/edit-a-macro.md}}
+{{> docs/macros/create-edit-a-macro.md}}
 
 ***
 
@@ -299,10 +287,6 @@
 {{> docs/macros/provided-functions.md}}
 
 # Instruments {main-chapter}
-
-{{> docs/instruments/instruments.md}}
-
-***
 
 {{> docs/instruments/multispeq-v2.0.md}}
 
@@ -328,7 +312,7 @@
 
 ***
 
-{{> docs/instruments/how-to-install-firmware-updates.md}}
+{{> docs/instruments/firmware-updates.md}}
 
 ***
 

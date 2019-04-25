@@ -34,7 +34,7 @@
   We are providing libraries for Python and R to access PhotosynQ Project Data to perform an advanced data analysis. [Software](https://photosynq.org/software#analysis).
 
 * ### Firmware {docsify-ignore}
-  You get notified when there is an update available for your Instrument if you use the PhotosynQ mobile or desktop application. More on [How to Install Firmware Updates](instruments/how-to-install-firmware-updates) and [Firmware Releases](https://github.com/Photosynq/MultispeQ-Firmware/releases)
+  You get notified when there is an update available for your Instrument if you use the PhotosynQ mobile or desktop application. More on [Firmware Updates](instruments/firmware-updates) and [Firmware Releases](https://github.com/Photosynq/MultispeQ-Firmware/releases)
 
 > Interested in contributing and helping to improve the documentation? Visit **[contributing.md]** to learn how to become part of the project!
 

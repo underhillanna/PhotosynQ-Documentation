@@ -4,13 +4,13 @@
   * [Create an Account](account/create-an-account.md)
   * [Edit your Profile](account/edit-your-profile.md)
   * [Manage your Password](account/manage-your-password.md)
-  * [PhotosynQ Glossary](account/photosynq-glossary.md)
   * [Sign in to PhotosynQ](account/sign-in-to-photosynq.md)
   * [Change your Email Address](account/change-your-email-address.md)
   * [Your Subscriptions](account/your-subscriptions.md)
   * [Project Invitations](account/project-invitations.md)
   * [Sign out of PhotosynQ](account/sign-out-of-photosynq.md)
-  * [Deactivate your PhotosynQ Account](account/deactivate-your-photosynq-account.md)
+  * [Deactivate an Account](account/deactivate-an-account.md)
+  * [PhotosynQ Glossary](account/photosynq-glossary.md)
 
 * **Mobile Application**
   * [PhotosynQ for Android](mobile-application/photosynq-for-android.md)
@@ -73,30 +73,26 @@
 
 * **Protocols**
   * [Protocol Basics](protocols/protocol-basics.md)
-  * [View your Protocols](protocols/view-your-protocols.md)
-  * [Create a new Protocol](protocols/create-a-new-protocol.md)
-  * [Save a Protocol](protocols/save-a-protocol.md)
-  * [Edit a Protocol](protocols/edit-a-protocol.md)
   * [Run a Protocol](protocols/run-a-protocol.md)
+  * [Create/Edit a Protocol](protocols/create-edit-protocol.md)
+  * [Repeats](protocols/repeats.md)
+  * [Variables](protocols/variables.md)
   * [Commands](protocols/commands.md)
 
 * **Macros**
-  * [View your Macros](macros/view-your-macros.md)
-  * [Create a new Macro](macros/create-a-new-macro.md)
-  * [Save a Macro](macros/save-a-macro.md)
-  * [Edit a Macro](macros/edit-a-macro.md)
+  * [Macro Basics](macros/macro-basics.md)
+  * [Create/Edit a Macro](macros/create-edit-a-macro.md)
   * [Coding and Functions](macros/coding-and-functions.md)
   * [Provided Functions](macros/provided-functions.md)
 
 * **Instruments**
-  * [Instruments](instruments/instruments.md)
   * [MultispeQ v2.0](instruments/multispeq-v2.0.md)
   * [MultispeQ v2.0 configuration](instruments/multispeq-v2.0-configuration.md)
   * [MultispeQ v1.0 configuration](instruments/multispeq-v1.0-configuration.md)
   * [What does the MultispeQ measure](instruments/what-does-the-multispeq-measure.md)
   * [Instrument Settings](instruments/instrument-settings.md)
   * [Instrument Calibrations](instruments/instrument-calibrations.md)
-  * [How to Install Firmware Updates](instruments/how-to-install-firmware-updates.md)
+  * [Firmware Updates](instruments/firmware-updates.md)
   * [Console Commands](instruments/console-commands.md)
   * [Light Guide Mask](instruments/light-guide-mask.md)
 
