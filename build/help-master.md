@@ -272,7 +272,7 @@
 
 # Macros {main-chapter}
 
-{{> docs/macros/macro-basics..md}}
+{{> docs/macros/macro-basics.md}}
 
 ***
 
