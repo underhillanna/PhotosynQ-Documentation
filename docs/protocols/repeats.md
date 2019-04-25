@@ -11,11 +11,11 @@ The following example shows how to use two types of repeats, the `set_repeats` a
 ```javascript
 [
     {
-        "set_repeats": "#2",
+        "set_repeats": 2,
         "_protocol_set_": [
             {
                 "label": "Protocol 1",
-                "protocol_repeats": 3,
+                "protocol_repeats": 2,
                 ...
             },
             {
@@ -28,9 +28,38 @@ The following example shows how to use two types of repeats, the `set_repeats` a
 ]
 ```
 
-`set_repeats` have to be used together with the command `_protocol_set_`. When used, the protocols within the protocol-set will be repeated as defined by the number of repeats. When defining the number of repeats, the number needs to be preceded by the `#` character.
+`set_repeats` have to be used together with the command `_protocol_set_`. When used, the protocols within the protocol-set will be repeated as defined by the number of repeats.
 
 `protocol_repeats` will repeat a single protocol within a `_protocol_set_`. Each protocol can have a different number of repeats.
+
+### Protocol Sequence
+
+![Repeat sequence](images/repeat-timeline.png)
+
+## Repeats and variables
+
+When using variable arrays (`v_arrays`) the number of repeats can be based on the number of values within one of the arrays in the `v_arrays`. The array can be referenced using the indicator `#l` with the position (index) of the array `#l<index>`. Find help on how to use variable arrays [here](protocols/variables.md).
+
+```javascript
+[
+    {
+        "v_arrays": [ [ 1, 2 ], [ 1, 2 ] ],
+        "set_repeats": "#l0",
+        "_protocol_set_": [
+            {
+                "label": "Protocol 1",
+                "protocol_repeats": "#l1",
+                ...
+            },
+            {
+                "label": "Protocol 2",
+                ...
+            }
+            ...
+        ],
+    }
+]
+```
 
 ### Protocol Sequence
 
@@ -43,11 +72,11 @@ When creating a Protocol using `_protocol_set_` in combination with `set_repeats
 ```javascript
 [
     {
-        "set_repeats": "#2",
+        "set_repeats": 2,
         "_protocol_set_": [
             {
                 "label": "Protocol 1",
-                "protocol_repeats": 3,
+                "protocol_repeats": 2,
                 ...
             },
             {
