@@ -1,18 +1,30 @@
 # Run a Protocol
 
-All the protocols you or the community developed on PhotosynQ can use independent from Projects. Those measurements can be saved to your notebook using the desktop app.
+All the Protocols you or the community developed on PhotosynQ can be used independent from Projects. When using the desktop application, those measurements can be saved to the notebook.
 
-## Desktop
+## Desktop Application
 
-1. Open your protocols by selecting **Protocols** from the left menu bar.
-2. Double click on the protocol you want to run, or click on a list and select **Run** from the sidebar.
+![Run a Protocol from the list or the Sidebar](images/protocols-list.png)
 
-?> **Tip:** Use **Add** next to **Run** in the sidebar to run multiple protocols one after another.
+There are two ways to run a Protocol outside of a Project. Open the list of Protocols by selecting **Protocols** from the left menu bar or using the shortcut `Ctrl+3 / ⌘3`.
+
+1. A **Single Click** on a Protocol from the list will bring up the information in the side bar. Select **Run** to start the Protocol.
+2. A **Double Click** on a Protocol from the list will start it immediately.
 
 ?> **Tip:** You can use the protocols from others when you select **Explore** from the top menu.
 
-## Android
+### Protocol Editor
+
+The Desktop Application also allows to edit Protocols. When using the Protocol Editor, the Protocol can be started by selecting **<i class="fa fa-play"></i> Run** from the menu.
+
+## Mobile Application
+
+The Mobile Application allows to run Protocols without Projects as **Quick Measurements**. These measurements cannot be saved.
+
+![Run a Protocol as a Quick Measurement](images/android-quick-measurements.png)
 
 1. Tab the <i class="fa fa-bars"></i> overflow menu in the top left corner.
 2. Select **Quick Measurements** from the menu.
 3. Tab on a protocol in the list to **run** it
+
+?> **Tip:** Quick Measurements only show your Protocols. Use search to find a Protocols made by other users.
