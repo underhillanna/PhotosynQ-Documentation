@@ -61,7 +61,7 @@ When using variable arrays (`v_arrays`) the number of repeats can be based on th
 ]
 ```
 
-### Protocol Sequence
+### Protocol Sequence (variable arrays)
 
 ![Repeat sequence](images/repeat-timeline.png)
 
