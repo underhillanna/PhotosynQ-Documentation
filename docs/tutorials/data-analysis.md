@@ -42,10 +42,10 @@ These are basic tutorials on how to do advanced data analysis outside the data v
 [R-View2]: /tutorials/r-anova-and-multivariate-analysis
 [R-View3]: /tutorials/r-correlation-and-mixed-effects
 
-[R-PDF1]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_import_photosynq_data.pdf
-[R-PDF2]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_anova_and_multivariate_analysis.pdf
-[R-PDF3]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_correlation_and_mixed_effects.pdf
+[R-PDF1]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_import_photosynq_data.pdf
+[R-PDF2]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_anova_and_multivariate_analysis.pdf
+[R-PDF3]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_correlation_and_mixed_effects.pdf
 
-[R-Rmd1]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_import_photosynq_data.Rmd
-[R-Rmd2]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_anova_and_multivariate_analysis.Rmd
-[R-Rmd3]: https://photosynqprod.s3.amazonaws.com/files/photosynq.org/tutorials/data_analysis/r_correlation_and_mixed_effects.Rmd
+[R-Rmd1]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_import_photosynq_data.Rmd
+[R-Rmd2]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_anova_and_multivariate_analysis.Rmd
+[R-Rmd3]: https://photosynqprod.s3.amazonaws.com/files/tutorials/data_analysis/r_correlation_and_mixed_effects.Rmd

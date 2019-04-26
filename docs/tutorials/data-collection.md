@@ -16,7 +16,7 @@ Once you have selected the Project that you want to contribute measurements to, 
    - Do not pull the leaf out of the shade and into the sun or vice versa
    - Do not change the angle of the leaf, this will change how the leaf is intercepting light
    - In order for the compass measurement to be accurate, clamp the leaf on the left side when facing the stem.
-   - Make sure the leaf completely covers the light guide (B). If the leaves you are measuring are too small, you may need to [mask](https://photosynqprod.s3.amazonaws.com/files/photosynq.org/specialfeatures/measuring-small-leaves.pdf) the light guides and recalibrate the MultispeQ
+   - Make sure the leaf completely covers the light guide (B). If the leaves you are measuring are too small, you may need to [mask](https://photosynqprod.s3.amazonaws.com/files/specialfeatures/measuring-small-leaves.pdf) the light guides and recalibrate the MultispeQ
 
 ![Best Measurement Practices](images/data-collection-clamp-leaf.jpg)
 
