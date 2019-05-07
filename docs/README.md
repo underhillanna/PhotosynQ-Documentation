@@ -13,8 +13,8 @@
 
 * ### Projects {docsify-ignore}
   On the PhotosynQ platform measurements are collected for a Project, including measurement Projects and Questions. Learn how to [set up a Project](tutorials/creating-a-project).
-* ### Parameters {docsify-ignore}
-  The MultispeQ is capable to measure a large variety of parameters. Find a list of the most common ones [here](/instruments/what-does-the-multispeq-measure).
+* ### Parameters & References {docsify-ignore}
+  The MultispeQ is capable to measure a large variety of parameters. Find a list of the most common ones [here](/view-and-analyze-data/how-to-cite).
 
 ***
 
