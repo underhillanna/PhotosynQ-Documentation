@@ -49,6 +49,12 @@ node index.js pdf -i ./dist/PhotosynQ-MultispeQ-v2.0.md -o ./dist/PhotosynQ-Mult
 echo "Compiling markdown into ebook";
 node index epub -t "PhotosynQ Documentation" -a 'PhotosynQ' -v $TAG -d $DATE -o ./dist/PhotosynQ-Documentation.epub -i ./dist/PhotosynQ-Help-Manual.md ./dist/PhotosynQ-Getting-Started.md ./dist/PhotosynQ-Firmware.md
 
+if [ "$1" != "HEAD" ]
+then
+    echo "Deploy Release"
+    . deploy.sh
+fi
+
 echo "Cleaning up temporary files..."
 rm ./dist/*.md
 rm -r ./dist/tmp
