@@ -55,7 +55,7 @@ Knowing how answers work is key for fast data collection and successful data ana
 You might notice there is a question for uploading questions/answers via a CSV, and this can be a powerful tool, especially if you have a large, well thought out experiment.
 
 1. We only have a few varieties of one crop to test, but if we had many varieties, and we knew how our field was laid out, we could preload exactly how we plan to walk through the field.
-2. Interested in CSV upload for a larger field? Check out our Guide [here](https://photosynqprod.s3.amazonaws.com/files/photosynq.org/specialfeatures/uploading-project-questions-as-a-csv.pdf).
+2. Interested in CSV upload for a larger field? Check out our Guide [here](https://photosynqprod.s3.amazonaws.com/files/specialfeatures/uploading-project-questions-as-a-csv.pdf).
 
 ***
 

@@ -50,6 +50,10 @@ Kramer, D.M., Johnson, G., Kiirats, O., and Edwards, G.E. (2004) **New fluoresce
 
 ### gH⁺ - Proton conductivity
 
+Kanazawa, A., Kramer, D. K. (2002). ***In vivo* modulation of nonphotochemical exciton quenching (NPQ) by regulation of the chloroplast ATP synthase.** *Proc. Nat. Acad. Sci.* 99: 12789-12794. [doi:10.1073/pnas.182427499]
+
+### vH⁺ - Steady-State Proton Flux
+
 Avenson, T. J., Kanazawa, A., Cruz, J. A., Takizawa, K., Ettinger, W.E., Kramer, D. K. (2005). **Integrating the proton circuit into photosynthesis: progress and challenges.** *Plant Cell Environ.* 28: 97-109. [doi:10.1111/j.1365-3040.2005.01294.x].
 
 ### ECS<sub>t</sub> - Magnitutue of Electrochromic Shift
@@ -59,10 +63,6 @@ Sacksteder, C. A., Kanazawa, A., Jacoby, M. E., Kramer, D. M. (2000). **The prot
 Kramer, D. M., Sacksteder, C. A., Cruz, J. A. (1999). **How acidic is the lumen?** *Photosynthesis Res.* 60: 151-163 [doi:10.1023/A:1006212014787]
 
 Cruz, J.A., Sacksteder, C.A., Kanazawa, A., and Kramer, D.M. (2001) **Contribution of electric field (delta psi) to steady-state transthylakoid proton motive force (*pmf*) in vitro and in vivo. Control of *pmf* parsing into delta psi and delta pH by ionic strength.** *Biochemistry* 40: 1226-1237 [doi:10.1021/bi0018741]
-
-### vH⁺ - Steady-State Proton Flux
-
-Kanazawa, A., Kramer, D. K. (2002). ***In vivo* modulation of nonphotochemical exciton quenching (NPQ) by regulation of the chloroplast ATP synthase.** *Proc. Nat. Acad. Sci.* 99: 12789-12794. [doi:10.1073/pnas.182427499]
 
 ### Phi1 - Photosystem I Center State
 
